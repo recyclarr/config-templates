@@ -58,6 +58,11 @@
       "hidden": true
     },
     {
+      "template": "radarr/sqp/sqp-1-2160p.yml",
+      "id": "sqp-1-2160p",
+      "hidden": true
+    },
+    {
       "template": "radarr/sqp/sqp-2.yml",
       "id": "sqp-2",
       "hidden": true
