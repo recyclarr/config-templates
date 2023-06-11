@@ -82,12 +82,12 @@ radarr:
       # - trash_ids:
           # - ed27ebfef2f323e964fb1f61391bcb35  # HD Bluray Tier 01
         # quality_profiles:
-          # - name: Bluray|WEB-1080p
+          # - name: Bluray|WEB-2160p
             # score: 1100
       # - trash_ids:
           # - c20c8647f2746a1f4c4262b0fbbeeeae  # HD Bluray Tier 02
         # quality_profiles:
-          # - name: Bluray|WEB-1080p
+          # - name: Bluray|WEB-2160p
             # score: 1050
       # --HQ Release Groups section ends--
 
