@@ -104,7 +104,7 @@ radarr:
           - a570d4a0e56a2874b64e5bfa55202a1b  # FLAC
           - e7c2fcae07cbada050a0af3357491d7b  # PCM
           - 1c1a4c5e823891c75bc50380a6866f73  # DTS
-          - c2998bd0d90ed5621d8df281e839436e  # DD
+          - 240770601cc226190c367ef59aba7463  # AAC
           # Streaming Services
           - b3b3a6ac74ecbd56bcdbefa4799fb9df  # AMZN
           - 40e9380490e748672c2522eaaeb692f7  # ATVP
