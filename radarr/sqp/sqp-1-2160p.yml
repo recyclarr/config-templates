@@ -1,6 +1,6 @@
 # Note: this config will work with both 'Bluray|WEB-2160p' and 'SQP-1 (2160p) - (Max compatibility, prefer BHDstudio)' variants.
 # Rename your quality profiles in Radarr and in this config accordingly
-# Updated: 2023-06-10
+# Updated: 2023-06-26
 radarr:
   radarr-sqp-streaming:  # A custom name used to identify this particular instance.
     base_url: [radarr_url_goes_here]
@@ -33,7 +33,6 @@ radarr:
           - 08d6d8834ad9ec87b1dc7ec8148e7a1f  # PQ
           - 9364dd386c9b4a1100dde8264690add7  # HLG
           # Movie Versions
-          - 0f12c086e289cf966fa5948eac571f44  # Hybrid
           - 570bc9ebecd92723d2d21500f4be314c  # Remaster
           - eca37840c13c6ef2dd0262b141a5482f  # 4K Remaster
           - e0c07d59beb37348e975a930d5e50319  # Criterion Collection
@@ -74,11 +73,12 @@ radarr:
           # Streaming Services
           - cc5e51a9e85a6296ceefe097a77f12f4  # BCORE
           - 2a6039655313bf5dab1e43523b62c374  # MA
+          - 16622a6911d1ab5d5b8b713d5b0036d4  # CRiT
         quality_profiles:
           - name: Bluray|WEB-2160p
 
       # Custom Scoring
-      # HQ Release Groups - Optional - Uncomment the next section (10 lines) to enable other Bluray Encodes (less or not streaming optimized)
+      # HQ Release Groups - Optional - Uncomment the next section (15 lines) to enable other Bluray Encodes (less or not streaming optimized)
       # - trash_ids:
           # - ed27ebfef2f323e964fb1f61391bcb35  # HD Bluray Tier 01
         # quality_profiles:
@@ -89,6 +89,11 @@ radarr:
         # quality_profiles:
           # - name: Bluray|WEB-2160p
             # score: 1050
+      # - trash_ids:
+          # - 5608c71bcebba0a5e666223bae8c9227  # HD Bluray Tier 03
+        # quality_profiles:
+          # - name: Bluray|WEB-2160p
+            # score: 1000
       # --HQ Release Groups section ends--
 
       - trash_ids:

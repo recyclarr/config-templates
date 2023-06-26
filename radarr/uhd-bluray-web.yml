@@ -45,7 +45,6 @@ radarr:
           # HDR10Plus Boost - Uncomment the next line if any of your devices DO support HDR10+
           # - b17886cb4158d9fea189859409975758  # HDR10Plus Boost
           # Movie Versions
-          - 0f12c086e289cf966fa5948eac571f44  # Hybrid
           - 570bc9ebecd92723d2d21500f4be314c  # Remaster
           - eca37840c13c6ef2dd0262b141a5482f  # 4K Remaster
           - e0c07d59beb37348e975a930d5e50319  # Criterion Collection
@@ -74,6 +73,7 @@ radarr:
           # Streaming Services
           - cc5e51a9e85a6296ceefe097a77f12f4  # BCORE
           - 2a6039655313bf5dab1e43523b62c374  # MA
+          - 16622a6911d1ab5d5b8b713d5b0036d4  # CRiT
         quality_profiles:
           - name: UHD Bluray + WEB
       # Custom Scoring
