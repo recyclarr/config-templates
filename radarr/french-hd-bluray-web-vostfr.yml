@@ -4,6 +4,7 @@
 
 # Cet exemple est pour radarr et le profil "HD Bluray + WEB" present dans le guide, mais avec une configuration pour obtenir de la VOSTFR
 # https://trash-guides.info/Radarr/radarr-setup-quality-profiles-french-en/#hd-bluray-web
+# Updated: 2023-05-26
 radarr:
   radarr_french_vostfr_bluray_web_1080p:
     # L'URL de base ainsi que la clé API de votre instance Radarr
@@ -29,7 +30,6 @@ radarr:
           - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
           - 7f9b93f82b7e996391525f2be1d891e0  # FastSUB
           # ===== Version du film =====
-          - 0f12c086e289cf966fa5948eac571f44  # Hybrid
           - 570bc9ebecd92723d2d21500f4be314c  # Remaster
           - eca37840c13c6ef2dd0262b141a5482f  # 4K Remaster
           - e0c07d59beb37348e975a930d5e50319  # Criterion Collection
@@ -44,6 +44,7 @@ radarr:
           # ===== Services de Streaming =====
           - b3b3a6ac74ecbd56bcdbefa4799fb9df  # AMZN
           - 40e9380490e748672c2522eaaeb692f7  # ATVP
+          - 16622a6911d1ab5d5b8b713d5b0036d4  # CRiT
           - 84272245b2988854bfb76a16e60baea5  # DSNP
           - cc5e51a9e85a6296ceefe097a77f12f4  # BCORE
           - 509e5f41146e278f9eab1ddaceb34515  # HBO
@@ -66,6 +67,7 @@ radarr:
           # Les tiers suivant sont les tiers originaux du guide (groupes anglophones)
           - ed27ebfef2f323e964fb1f61391bcb35  # HD Bluray Tier 01
           - c20c8647f2746a1f4c4262b0fbbeeeae  # HD Bluray Tier 02
+          - 5608c71bcebba0a5e666223bae8c9227  # HD Bluray Tier 03
           - c20f169ef63c5f40c2def54abaf4438e  # WEB Tier 01
           - 403816d65392c79236dcb6dd591aeda4  # WEB Tier 02
           - af94e0fe497124d1f9ce732069ec8c3b  # WEB Tier 03
