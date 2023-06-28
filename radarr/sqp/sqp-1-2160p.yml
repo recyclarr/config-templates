@@ -1,5 +1,5 @@
-# Note: this config will work with both 'Bluray|WEB-2160p' and 'SQP-1 (2160p) - (Max compatibility, prefer BHDstudio)' variants.
-# Rename your quality profiles in Radarr and in this config accordingly
+# Note: this config will work with both 'Bluray|WEB-2160p' and 'SQP-1 (2160p) - (Max compatibility,
+# prefer BHDstudio)' variants. Rename your quality profiles in Radarr and in this config accordingly
 # Updated: 2023-06-26
 radarr:
   radarr-sqp-streaming:  # A custom name used to identify this particular instance.
@@ -21,6 +21,7 @@ radarr:
           - 1af239278386be2919e1bcee0bde047e  # DD+ ATMOS
           - 185f1dd7264c4562b9022d963ac37424  # DD+
           - c2998bd0d90ed5621d8df281e839436e  # DD
+
           # HDR Formats
           - e23edd2482476e595fb990b12e7c609c  # DV HDR10
           - 58d6a88f13e2db7f5059c41047876f00  # DV
@@ -32,6 +33,7 @@ radarr:
           - 2a4d9069cc1fe3242ff9bdaebed239bb  # HDR (undefined)
           - 08d6d8834ad9ec87b1dc7ec8148e7a1f  # PQ
           - 9364dd386c9b4a1100dde8264690add7  # HLG
+
           # Movie Versions
           - 570bc9ebecd92723d2d21500f4be314c  # Remaster
           - eca37840c13c6ef2dd0262b141a5482f  # 4K Remaster
@@ -42,14 +44,17 @@ radarr:
           # Uncomment the next line(s) if you prefer IMAX/IMAX Enhanced to BHDStudio
           # - eecf3a857724171f968a66cb5719e152  # IMAX
           # - 9f6cbff8cfe4ebbc1bde14c7b7bec0de  # IMAX Enhanced
+
           # HQ Release Groups
           - 5153ec7413d9dae44e24275589b5e944  # BHDStudio
           - c20f169ef63c5f40c2def54abaf4438e  # WEB Tier 01
           - 403816d65392c79236dcb6dd591aeda4  # WEB Tier 02
           - af94e0fe497124d1f9ce732069ec8c3b  # WEB Tier 03
+
           # Misc
           - e7718d7a3ce595f289bfee26adc178f5  # Repack/Proper
           - ae43b294509409a6a13919dedd4764c4  # Repack2
+
           # Unwanted
           - ed38b889b31be83fda192888e2286d83  # BR-DISK
           - 90a6f9a284dff5103f6346090e6280c8  # LQ
@@ -57,19 +62,24 @@ radarr:
           - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
           - 839bea857ed2c0a8e084f3cbdbd65ecb  # x265 (no HDR/DV)
           - 9c38ebb7384dada637be8899efa68e6f  # SDR
+
           # Optional
-          # Uncomment any of the following optional custom formats if you want them to be added to the quality profile
+          # Uncomment any of the following optional custom formats if you want them to be added to
+          # the quality profile
           # - b6832f586342ef70d9c128d40c07b872  # Bad Dual Groups
-          # - b17886cb4158d9fea189859409975758  # HDR10+ Boost - Uncomment this line if you have a setup that supports HDR10+
+          # Uncomment the below line if you have a setup that supports HDR10+
+          # - b17886cb4158d9fea189859409975758  # HDR10+ Boost
           # - 90cedc1fea7ea5d11298bebd3d1d3223  # EVO (no WEBDL)
           # - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5  # No-RlsGroup
           # - 7357cf5161efbf8c4d5d0c30b4815ee2  # Obfuscated
           # - 5c44f52a8714fdd79bb4d98e2673be1f  # Retags
           # - f537cf427b64c38c8e36298f657e4828  # Scene
           # - 0a3f082873eb454bde444150b70253cc  # Extras
+
           # Resolution
           - b2be17d608fc88818940cd1833b0b24c  # 720p
           - 820b09bb9acbfde9c35c71e0e565dad8  # 1080p
+
           # Streaming Services
           - cc5e51a9e85a6296ceefe097a77f12f4  # BCORE
           - 2a6039655313bf5dab1e43523b62c374  # MA
@@ -78,22 +88,26 @@ radarr:
           - name: Bluray|WEB-2160p
 
       # Custom Scoring
-      # HQ Release Groups - Optional - Uncomment the next section (15 lines) to enable other Bluray Encodes (less or not streaming optimized)
+      # HQ Release Groups - Optional
+      # Uncomment the next section (15 lines) to enable other Bluray Encodes (less or not streaming
+      # optimized)
       # - trash_ids:
-          # - ed27ebfef2f323e964fb1f61391bcb35  # HD Bluray Tier 01
-        # quality_profiles:
-          # - name: Bluray|WEB-2160p
-            # score: 1100
+      #     - ed27ebfef2f323e964fb1f61391bcb35  # HD Bluray Tier 01
+      #   quality_profiles:
+      #     - name: Bluray|WEB-2160p
+      #       score: 1100
+
       # - trash_ids:
-          # - c20c8647f2746a1f4c4262b0fbbeeeae  # HD Bluray Tier 02
-        # quality_profiles:
-          # - name: Bluray|WEB-2160p
-            # score: 1050
+      #     - c20c8647f2746a1f4c4262b0fbbeeeae  # HD Bluray Tier 02
+      #   quality_profiles:
+      #     - name: Bluray|WEB-2160p
+      #       score: 1050
+
       # - trash_ids:
-          # - 5608c71bcebba0a5e666223bae8c9227  # HD Bluray Tier 03
-        # quality_profiles:
-          # - name: Bluray|WEB-2160p
-            # score: 1000
+      #     - 5608c71bcebba0a5e666223bae8c9227  # HD Bluray Tier 03
+      #   quality_profiles:
+      #     - name: Bluray|WEB-2160p
+      #       score: 1000
       # --HQ Release Groups section ends--
 
       - trash_ids:
@@ -101,7 +115,8 @@ radarr:
           - 923b6abef9b17f937fab56cfcf89e1f1  # DV (WEBDL)
         quality_profiles:
           - name: Bluray|WEB-2160p
-            # If you and all of your users have a setup that fully supports DV, then uncomment the next line to override the default DV (WEBDL) score of -10000
+            # If you and all of your users have a setup that fully supports DV, then uncomment the
+            # next line to override the default DV (WEBDL) score of -10000
             # score: 0
 
       - trash_ids:
@@ -110,6 +125,7 @@ radarr:
           - e7c2fcae07cbada050a0af3357491d7b  # PCM
           - 1c1a4c5e823891c75bc50380a6866f73  # DTS
           - 240770601cc226190c367ef59aba7463  # AAC
+
           # Streaming Services
           - b3b3a6ac74ecbd56bcdbefa4799fb9df  # AMZN
           - 40e9380490e748672c2522eaaeb692f7  # ATVP

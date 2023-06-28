@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: YAML Lint
+
+on:
+  push:
+    paths:
+      - "**.yml"
+      - "**.yaml"
+      - .github/workflows/yaml-lint.yml
+  pull_request:
+    paths:
+      - "**.yml"
+      - "**.yaml"
+      - .github/workflows/yaml-lint.yml
+
+jobs:
+  markdownlint:
+    name: YAML Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Lint YAML Files
+        uses: ibiqlik/action-yamllint@v3

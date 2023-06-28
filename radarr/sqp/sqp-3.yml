@@ -29,6 +29,7 @@ radarr:
           - 1c1a4c5e823891c75bc50380a6866f73  # DTS
           - 240770601cc226190c367ef59aba7463  # AAC
           - c2998bd0d90ed5621d8df281e839436e  # DD
+
           # HDR Formats
           - e23edd2482476e595fb990b12e7c609c  # DV HDR10
           - 58d6a88f13e2db7f5059c41047876f00  # DV
@@ -40,6 +41,7 @@ radarr:
           - 2a4d9069cc1fe3242ff9bdaebed239bb  # HDR (undefined)
           - 08d6d8834ad9ec87b1dc7ec8148e7a1f  # PQ
           - 9364dd386c9b4a1100dde8264690add7  # HLG
+
           # Movie Versions
           - 0f12c086e289cf966fa5948eac571f44  # Hybrid
           - f700d29429c023a5734505e77daeaea7  # DV (FEL)
@@ -52,6 +54,7 @@ radarr:
           - eecf3a857724171f968a66cb5719e152  # IMAX
           # Uncomment the next line if you prefer IMAX Enhanced releases
           # - 9f6cbff8cfe4ebbc1bde14c7b7bec0de  # IMAX Enhanced
+
           # HQ Release Groups
           - 3a3ff47579026e76d6504ebea39390de  # Remux Tier 01
           - 9f98181fe5a3fbeb0cc29340da2a468a  # Remux Tier 02
@@ -59,19 +62,24 @@ radarr:
           - c20f169ef63c5f40c2def54abaf4438e  # WEB Tier 01
           - 403816d65392c79236dcb6dd591aeda4  # WEB Tier 02
           - af94e0fe497124d1f9ce732069ec8c3b  # WEB Tier 03
+
           # Misc
           - e7718d7a3ce595f289bfee26adc178f5  # Repack/Proper
           - ae43b294509409a6a13919dedd4764c4  # Repack2
+
           # Unwanted
           - ed38b889b31be83fda192888e2286d83  # BR-DISK
           - 90a6f9a284dff5103f6346090e6280c8  # LQ
           - b8cd450cbfa689c0259a01d9e29ba3d6  # 3D
           - 839bea857ed2c0a8e084f3cbdbd65ecb  # x265 (no HDR/DV)
           - 9c38ebb7384dada637be8899efa68e6f  # SDR
+
           # Optional
-          # Uncomment any of the following optional custom formats if you want them to be added to the quality profile
+          # Uncomment any of the following optional custom formats if you want them to be added to
+          # the quality profile
           # - b6832f586342ef70d9c128d40c07b872  # Bad Dual Groups
-          # - b17886cb4158d9fea189859409975758  # HDR10+ Boost - Uncomment this line if you have a setup that supports HDR10+
+          # Uncomment the below line if you have a setup that supports HDR10+
+          # - b17886cb4158d9fea189859409975758  # HDR10+ Boost
           # - 90cedc1fea7ea5d11298bebd3d1d3223  # EVO (no WEBDL)
           # - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5  # No-RlsGroup
           # - 7357cf5161efbf8c4d5d0c30b4815ee2  # Obfuscated
@@ -79,14 +87,17 @@ radarr:
           # - f537cf427b64c38c8e36298f657e4828  # Scene
           # - 0a3f082873eb454bde444150b70253cc  # Extras
           # - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
+
           # Resolution
           - 820b09bb9acbfde9c35c71e0e565dad8  # 1080p
+
           # Streaming Services
           - cc5e51a9e85a6296ceefe097a77f12f4  # BCORE
           - 2a6039655313bf5dab1e43523b62c374  # MA
           - 16622a6911d1ab5d5b8b713d5b0036d4  # CRiT
         quality_profiles:
           - name: Remux|IMAX-E|2160p
+
       # Custom Scoring
       - trash_ids:
           # Resolution
@@ -99,15 +110,19 @@ radarr:
           - 923b6abef9b17f937fab56cfcf89e1f1  # DV (WEBDL)
         quality_profiles:
           - name: Remux|IMAX-E|2160p
-            # If you and all of your users have a setup that fully supports DV, then uncomment the next line to override the default DV (WEBDL) score of -10000
+            # If you and all of your users have a setup that fully supports DV, then uncomment the
+            # next line to override the default DV (WEBDL) score of -10000
             # score: 0
-      # If you are only running one Radarr instance, you can comment out the next six lines so you will get the HD release if there is no UHD version
+
+      # If you are only running one Radarr instance, you can comment out the next six lines so you
+      # will get the HD release if there is no UHD version
       - trash_ids:
           # Misc
           - 2899d84dc9372de3408e6d8cc18e9666  # x264
         quality_profiles:
           - name: Remux|IMAX-E|2160p
             score: -10000
+
       - trash_ids:
           # Streaming Services
           - b3b3a6ac74ecbd56bcdbefa4799fb9df  # AMZN

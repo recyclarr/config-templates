@@ -1,0 +1,6 @@
+# Default configuration values: https://yamllint.readthedocs.io/en/stable/configuration.html
+# Rules reference: https://yamllint.readthedocs.io/en/stable/rules.html
+rules:
+  line-length: {max: 100, allow-non-breakable-words: true}
+  document-start: disable
+  comments-indentation: disable
