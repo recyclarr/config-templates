@@ -32,19 +32,24 @@ sonarr:
           - bb019e1cd00f304f80971c965de064dc  # HDR (undefined)
           - 2a7e3be05d3861d6df7171ec74cad727  # PQ
           - 17e889ce13117940092308f48b48b45b  # HLG
-          # La ligne suivante garantit que les releases WEB avec un layer Dolby Vision ne seront prises en compte que si elles ont un fallback en HDR10.
-          # Vous pouvez commenter cette ligne SI ET SEULEMENT SI TOUS les appareils utilisant votre bibliothèque supportent le Dolby Vision et que vous n'avez pas besoin du fallback en HDR10.
+          # La ligne suivante garantit que les releases WEB avec un layer Dolby Vision ne seront
+          # prises en compte que si elles ont un fallback en HDR10. Vous pouvez commenter cette
+          # ligne SI ET SEULEMENT SI TOUS les appareils utilisant votre bibliothèque supportent le
+          # Dolby Vision et que vous n'avez pas besoin du fallback en HDR10.
           - 9b27ab6498ec0f31a3353992e19434ca  # DV (WEBDL)
+
           # ===== Indésirables =====
           - 85c61753df5da1fb2aab6f2a47426b09  # BR-DISK
           - 3ba797e5dc13af4b8d9bb25e83d90de2  # FR LQ
           - 9c11cd3f07101cdba90a2d81cf0e56b4  # LQ
           - 2016d1676f5ee13a5b7257ff86ac9a93  # SDR
           - ea0bb4b6ba388992fad1092703b5ff7b  # FastSUB
+
           # ===== Misc =====
           - ec8fa7296b64e8cd390a1600981f3923  # Repack/Proper
           - eb3d5cc0a2be0db205fb823640db6a3c  # Repack2
           - 44e7c4de10ae50265753082e5dc76047  # Repack3
+
           # ===== Services de Streaming =====
           - d660701077794679fd59e8bdf4ce3a29  # AMZN
           - f67c9ca88f463a48346062e8ad07713f  # ATVP
@@ -65,15 +70,19 @@ sonarr:
           - 1efe8da11bfd74fbbcd4d8117ddb9213  # STAN
           - 5d2317d99af813b6529c7ebf01c83533  # VDL
           - 77a7b25585c18af08f60b1547bb9b4fb  # CC
-          # Ceux-ci sont optionnels, car les services de streaming francophones sont rarement indiqués sur les releases et les Formats Personnalisés ne possèdent pas de score. Vous pouvez les supprimer sans craintes.
+          # Ceux-ci sont optionnels, car les services de streaming francophones sont rarement
+          # indiqués sur les releases et les Formats Personnalisés ne possèdent pas de score. Vous
+          # pouvez les supprimer sans craintes.
           - f27d46a831e6b16fa3fee2c4e5d10984  # Canal+
           - 0455d6519a550dbf648c97b56e7231d2  # SALTO
           - b0d6195c23ae254932da00512db7e8a8  # RTBF
+
           # ===== HQ Source Groups =====
           - ddb8eaa9c85a549c50034d280539d54d  # FR WEB Tier 01
           - a4c51febd4d8b2a0db10a3c974f21d92  # FR WEB Tier 02
           - dbfc0a4b5cb4cbd693311c4482ae9683  # FR WEB Tier 03
-          # Vous pouvez commenter/supprimer le groupe scene si vous ne souhaitez pas de releases venant de la Scene française
+          # Vous pouvez commenter/supprimer le groupe scene si vous ne souhaitez pas de releases
+          # venant de la Scene française
           - 2f3422339d185eb227a324644a2fbfca  # FR Scene Groups
           # Les tiers suivant sont les tiers originaux du guide (groupes anglophones)
           - d0c516558625b04b363fa6c5c2c7cfd4  # WEB Scene
@@ -98,7 +107,8 @@ sonarr:
             score: -10000
 
       # ===== Versions françaises =====
-      # Seul le VOSTFR est présent et possède un score de '1000' car on souhaite obtenir du VOSTFR et non du MULTi/DUAL audio.
+      # Seul le VOSTFR est présent et possède un score de '1000' car on souhaite obtenir du VOSTFR
+      # et non du MULTi/DUAL audio.
       # https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles-french-fr/#type-de-versions-francaises
       - trash_ids:
           - 07a32f77690263bb9fda1842db7e273f  # VOSTFR

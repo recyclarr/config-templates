@@ -2,7 +2,8 @@
 # https://recyclarr.dev/wiki/
 # https://github.com/recyclarr/recyclarr
 
-# Cet exemple est pour radarr et le profil "Remux + WEB 1080p" present dans le guide, mais avec une configuration pour obtenir de la VOSTFR
+# Cet exemple est pour radarr et le profil "Remux + WEB 1080p" present dans le guide, mais avec une
+# configuration pour obtenir de la VOSTFR
 # https://trash-guides.info/Radarr/radarr-setup-quality-profiles-french-en/#remux-web-1080p
 # Updated: 2023-05-26
 radarr:
@@ -38,6 +39,7 @@ radarr:
           # - 1c1a4c5e823891c75bc50380a6866f73  # DTS
           # - 240770601cc226190c367ef59aba7463  # AAC
           # - c2998bd0d90ed5621d8df281e839436e  # DD
+
           # ===== Indésirables =====
           - ed38b889b31be83fda192888e2286d83  # BR-DISK
           - b8cd450cbfa689c0259a01d9e29ba3d6  # 3D
@@ -46,6 +48,7 @@ radarr:
           - dc98083864ea246d05a42df0d05f81cc  # x265 (HD)
           - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
           - 7f9b93f82b7e996391525f2be1d891e0  # FastSUB
+
           # ===== Version du film =====
           - 0f12c086e289cf966fa5948eac571f44  # Hybrid
           - 570bc9ebecd92723d2d21500f4be314c  # Remaster
@@ -56,9 +59,11 @@ radarr:
           - 957d0f44b592285f26449575e8b1167e  # Special Edition
           - eecf3a857724171f968a66cb5719e152  # IMAX
           - 9f6cbff8cfe4ebbc1bde14c7b7bec0de  # IMAX Enhanced
+
           # ===== Misc =====
           - e7718d7a3ce595f289bfee26adc178f5  # Repack/Proper
           - ae43b294509409a6a13919dedd4764c4  # Repack2
+
           # ===== Services de Streaming =====
           - b3b3a6ac74ecbd56bcdbefa4799fb9df  # AMZN
           - 40e9380490e748672c2522eaaeb692f7  # ATVP
@@ -75,12 +80,14 @@ radarr:
           - c9fd353f8f5f1baf56dc601c4cb29920  # PCOK
           - e36a0ba1bc902b26ee40818a1d59b8bd  # PMTP
           - c2863d2a50c9acad1fb50e53ece60817  # STAN
+
           # ===== HQ Source Groups =====
           - 5583260016e0b9f683f53af41fb42e4a  # FR Remux Tier 01
           - 9019d81307e68cd4a7eb06a567e833b8  # FR Remux Tier 02
           - 9790a618cec1aeac8ce75601a17ea40d  # FR WEB Tier 01
           - 3c83a765f84239716bd5fd2d7af188f9  # FR WEB Tier 02
-          # Vous pouvez commenter/supprimer le groupe scene si vous ne souhaitez pas de releases venant de la Scene française
+          # Vous pouvez commenter/supprimer le groupe scene si vous ne souhaitez pas de releases
+          # venant de la Scene française
           - 0d94489c0d5828cd3bf9409d309fb32b  # FR Scene Groups
           # Les tiers suivant sont les tiers originaux du guide (groupes anglophones)
           - 3a3ff47579026e76d6504ebea39390de  # Remux Tier 01
@@ -101,7 +108,8 @@ radarr:
             score: -10000
 
       # ===== Versions françaises =====
-      # Seul le VOSTFR est présent et possède un score de '1000' car on souhaite obtenir du VOSTFR et non du MULTi/DUAL audio.
+      # Seul le VOSTFR est présent et possède un score de '1000' car on souhaite obtenir du VOSTFR
+      # et non du MULTi/DUAL audio.
       # https://trash-guides.info/Radarr/radarr-setup-quality-profiles-french-en/#french-audio-versions
       - trash_ids:
           - 9172b2f683f6223e3a1846427b417a3d  # VOSTFR

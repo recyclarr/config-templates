@@ -24,8 +24,10 @@ radarr:
           # ===== MULTi Audio =====
           - 72b1548df1ac3175ca105a9ce7043c91  # Multi-Audio
           - d5f3a1afdb77e6b95e489f7654532d04  # Multi-French
-          # Décommentez la ligne suivante si vous voulez donner un léger bonus à la release si elle possède effectivement un audio français.
+          # Décommentez la ligne suivante si vous voulez donner un léger bonus à la release si elle
+          # possède effectivement un audio français.
           # - 6d27683346c78d6a3f772e30877910a7  # French Audio
+
           # ===== Indésirables =====
           - ed38b889b31be83fda192888e2286d83  # BR-DISK
           - b8cd450cbfa689c0259a01d9e29ba3d6  # 3D
@@ -33,6 +35,7 @@ radarr:
           - 90a6f9a284dff5103f6346090e6280c8  # LQ
           - dc98083864ea246d05a42df0d05f81cc  # x265 (HD)
           - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
+
           # ===== Version du film =====
           - 570bc9ebecd92723d2d21500f4be314c  # Remaster
           - eca37840c13c6ef2dd0262b141a5482f  # 4K Remaster
@@ -42,9 +45,11 @@ radarr:
           - 957d0f44b592285f26449575e8b1167e  # Special Edition
           - eecf3a857724171f968a66cb5719e152  # IMAX
           - 9f6cbff8cfe4ebbc1bde14c7b7bec0de  # IMAX Enhanced
+
           # ===== Misc =====
           - e7718d7a3ce595f289bfee26adc178f5  # Repack/Proper
           - ae43b294509409a6a13919dedd4764c4  # Repack2
+
           # ===== Services de Streaming =====
           - b3b3a6ac74ecbd56bcdbefa4799fb9df  # AMZN
           - 40e9380490e748672c2522eaaeb692f7  # ATVP
@@ -61,17 +66,21 @@ radarr:
           - c9fd353f8f5f1baf56dc601c4cb29920  # PCOK
           - e36a0ba1bc902b26ee40818a1d59b8bd  # PMTP
           - c2863d2a50c9acad1fb50e53ece60817  # STAN
+
           # ===== HQ Source Groups =====
           - 5322da05b19d857acc1e75be3edf47b3  # FR HD Bluray Tier 01
           - 57f34251344be2e283fc30e00e458be6  # FR HD Bluray Tier 02
           - 9790a618cec1aeac8ce75601a17ea40d  # FR WEB Tier 01
           - 3c83a765f84239716bd5fd2d7af188f9  # FR WEB Tier 02
-          # Vous pouvez commenter/supprimer le groupe scene si vous ne souhaitez pas de releases venant de la Scene française
+          # Vous pouvez commenter/supprimer le groupe scene si vous ne souhaitez pas de releases
+          # venant de la Scene française
           - 0d94489c0d5828cd3bf9409d309fb32b  # FR Scene Groups
-          # Les tiers suivant sont les tiers originaux du guide (groupes anglophones)
-          # vous pouvez les activer si vous souhaitez aussi récupérer de bonnes releases en VO si jamais une release MULTi n'existes pas.
+          # Les tiers suivant sont les tiers originaux du guide (groupes anglophones) vous pouvez
+          # les activer si vous souhaitez aussi récupérer de bonnes releases en VO si jamais une
+          # release MULTi n'existes pas.
           #
-          # Il est tout de fois possible que dans ce cas Radarr récupére une release VO au lieu d'un MULTi/DUAL car celle-ci possède un score plus important.
+          # Il est tout de fois possible que dans ce cas Radarr récupére une release VO au lieu d'un
+          # MULTi/DUAL car celle-ci possède un score plus important.
           # - ed27ebfef2f323e964fb1f61391bcb35  # HD Bluray Tier 01
           # - c20c8647f2746a1f4c4262b0fbbeeeae  # HD Bluray Tier 02
           # - 5608c71bcebba0a5e666223bae8c9227  # HD Bluray Tier 03
@@ -82,10 +91,10 @@ radarr:
           - name: FR-MULTi-BLURAY-WEB-1080p
 
       # ===== Versions françaises =====
-      # Activez ou désactiver les Formats Personnalisés suivant si vous souhaitez noter vos releases avec.
-      # Vous pouvez aussi leur attribuer un score en fonction de si vous souhaitez préférer un certain
-      # type d'audio français. Par exemple si vous préférez la VFF.
-      # Pensez à vérifier aussi à quoi corresponde les différents types de version francophones :
+      # Activez ou désactiver les Formats Personnalisés suivant si vous souhaitez noter vos releases
+      # avec. Vous pouvez aussi leur attribuer un score en fonction de si vous souhaitez préférer un
+      # certain type d'audio français. Par exemple si vous préférez la VFF. Pensez à vérifier aussi
+      # à quoi corresponde les différents types de version francophones :
       # https://trash-guides.info/Radarr/radarr-setup-quality-profiles-french-en/#french-audio-versions
       - trash_ids:
           - 404c08fd0bd67f39b4d8e5709319094e  # VFF
