@@ -50,3 +50,10 @@ sonarr:
           - d0c516558625b04b363fa6c5c2c7cfd4  # WEB Scene
         quality_profiles:
           - name: WEB-1080p
+
+      - trash_ids:
+          # Streaming Services
+          - 4e9a630db98d5391aec1368a0256e2fe  # CRAV
+        quality_profiles:
+          - name: WEB-1080p
+            score: 0
