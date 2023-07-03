@@ -1,5 +1,5 @@
 # This config file is for use with Sonarr V4 only
-# Updated: 2023-06-03
+# Updated: 2023-07-03
 sonarr:
   sonarr:  # A custom name used to identify this particular instance.
     base_url: Put your Sonarr URL here

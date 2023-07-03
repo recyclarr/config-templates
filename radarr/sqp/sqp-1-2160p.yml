@@ -1,6 +1,6 @@
 # Note: this config will work with both 'Bluray|WEB-2160p' and 'SQP-1 (2160p) - (Max compatibility,
 # prefer BHDstudio)' variants. Rename your quality profiles in Radarr and in this config accordingly
-# Updated: 2023-06-26
+# Updated: 2023-07-03
 radarr:
   radarr-sqp-streaming:  # A custom name used to identify this particular instance.
     base_url: [radarr_url_goes_here]
