@@ -1,4 +1,4 @@
-# Updated: 2023-05-26
+# Updated: 2023-07-03
 radarr:
   radarr:  # A custom name used to identify this particular instance.
     base_url: Put your Radarr URL here
