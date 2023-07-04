@@ -53,6 +53,7 @@ radarr:
           - eecf3a857724171f968a66cb5719e152  # IMAX
           # Uncomment the next line if you prefer IMAX Enhanced releases
           # - 9f6cbff8cfe4ebbc1bde14c7b7bec0de  # IMAX Enhanced
+
           # HQ Release Groups
           - 3a3ff47579026e76d6504ebea39390de  # Remux Tier 01
           - 9f98181fe5a3fbeb0cc29340da2a468a  # Remux Tier 02
@@ -85,8 +86,10 @@ radarr:
           # - f537cf427b64c38c8e36298f657e4828  # Scene
           # - 0a3f082873eb454bde444150b70253cc  # Extras
           # - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
+
           # Resolution
           - 820b09bb9acbfde9c35c71e0e565dad8  # 1080p
+
           # Streaming Services
           - cc5e51a9e85a6296ceefe097a77f12f4  # BCORE
           - 2a6039655313bf5dab1e43523b62c374  # MA

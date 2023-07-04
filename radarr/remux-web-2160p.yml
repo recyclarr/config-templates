@@ -85,6 +85,7 @@ radarr:
           - 16622a6911d1ab5d5b8b713d5b0036d4  # CRiT
         quality_profiles:
           - name: Remux + WEB 2160p
+
       # Custom Scoring
       - trash_ids:
           # Streaming Services
