@@ -49,6 +49,7 @@ sonarr:
           # Streaming Services
           - d660701077794679fd59e8bdf4ce3a29  # AMZN
           - f67c9ca88f463a48346062e8ad07713f  # ATVP
+          - 4e9a630db98d5391aec1368a0256e2fe  # CRAV
           - 36b72f59f4ea20aad9316f475f2d9fbb  # DCU
           - 89358767a60cc28783cdc3d0be9388a4  # DSNP
           - 7a235133c87f7da4c8cccceca7e3c7a6  # HBO
@@ -76,10 +77,3 @@ sonarr:
           - d0c516558625b04b363fa6c5c2c7cfd4  # WEB Scene
         quality_profiles:
           - name: WEB-2160p
-
-      - trash_ids:
-          # Streaming Services
-          - 4e9a630db98d5391aec1368a0256e2fe  # CRAV
-        quality_profiles:
-          - name: WEB-2160p
-            score: 0
