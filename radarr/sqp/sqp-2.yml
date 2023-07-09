@@ -59,9 +59,6 @@ radarr:
           - 3a3ff47579026e76d6504ebea39390de  # Remux Tier 01
           - 9f98181fe5a3fbeb0cc29340da2a468a  # Remux Tier 02
           - 8baaf0b3142bf4d94c42a724f034e27a  # Remux Tier 03
-          - 4d74ac4c4db0b64bff6ce0cffef99bf0  # UHD Bluray Tier 01
-          - a58f517a70193f8e578056642178419d  # UHD Bluray Tier 02
-          - e71939fae578037e7aed3ee219bbe7c1  # UHD Bluray Tier 03
           - c20f169ef63c5f40c2def54abaf4438e  # WEB Tier 01
           - 403816d65392c79236dcb6dd591aeda4  # WEB Tier 02
           - af94e0fe497124d1f9ce732069ec8c3b  # WEB Tier 03
@@ -102,6 +99,25 @@ radarr:
           - name: Remux|Bluray|IMAX-E|2160p
 
       # Custom Scoring
+      # UHD Bluray Tiers
+      - trash_ids:
+          - 4d74ac4c4db0b64bff6ce0cffef99bf0  # UHD Bluray Tier 01
+        quality_profiles:
+          - name: Remux|Bluray|IMAX-E|2160p
+            score: 2300
+
+      - trash_ids:
+          - a58f517a70193f8e578056642178419d  # UHD Bluray Tier 02
+        quality_profiles:
+          - name: Remux|Bluray|IMAX-E|2160p
+            score: 2200
+
+      - trash_ids:
+          - e71939fae578037e7aed3ee219bbe7c1  # UHD Bluray Tier 03
+        quality_profiles:
+          - name: Remux|Bluray|IMAX-E|2160p
+            score: 2100
+
       - trash_ids:
           # Resolution
           - fb392fb0d61a010ae38e49ceaa24a1ef  # 2160p
