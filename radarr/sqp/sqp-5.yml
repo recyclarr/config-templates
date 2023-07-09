@@ -101,6 +101,25 @@ radarr:
           - name: Bluray|IMAX-E|2160p
 
       # Custom Scoring
+      # UHD Bluray Tiers
+      - trash_ids:
+          - 4d74ac4c4db0b64bff6ce0cffef99bf0  # UHD Bluray Tier 01
+        quality_profiles:
+          - name: Bluray|IMAX-E|2160p
+            score: 2300
+
+      - trash_ids:
+          - a58f517a70193f8e578056642178419d  # UHD Bluray Tier 02
+        quality_profiles:
+          - name: Bluray|IMAX-E|2160p
+            score: 2200
+
+      - trash_ids:
+          - e71939fae578037e7aed3ee219bbe7c1  # UHD Bluray Tier 03
+        quality_profiles:
+          - name: Bluray|IMAX-E|2160p
+            score: 2100
+
       - trash_ids:
           # Resolution
           - fb392fb0d61a010ae38e49ceaa24a1ef  # 2160p
