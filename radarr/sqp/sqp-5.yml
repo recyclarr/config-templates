@@ -1,4 +1,4 @@
-# Updated: 2023-07-03
+# Updated: 2023-07-11
 radarr:
   radarr-sqp-uhd:  # A custom name used to identify this particular instance.
     base_url: [radarr_url_goes_here]
