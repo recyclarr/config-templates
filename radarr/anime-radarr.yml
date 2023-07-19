@@ -1,3 +1,4 @@
+# Updated: 2023-07-19
 radarr:
   radarr-anime:  # A custom name used to identify this particular instance.
     base_url: Put your Radarr URL here
@@ -38,6 +39,7 @@ radarr:
           - 60f6d50cbd3cfc3e9a8c00e3a30c3114  # VRV
         quality_profiles:
           - name: Remux-1080p - Anime
+
       # Custom Scoring
       # Anime CF/Scoring
       - trash_ids:
@@ -45,37 +47,70 @@ radarr:
         quality_profiles:
           - name: Remux-1080p - Anime
             score: -10000
+
+      # Main Guide Remux Tier Scoring
       - trash_ids:
           - 3a3ff47579026e76d6504ebea39390de  # Remux Tier 01
         quality_profiles:
           - name: Remux-1080p - Anime
             score: 1050  # required as this differs from the standard scoring
+
       - trash_ids:
           - 9f98181fe5a3fbeb0cc29340da2a468a  # Remux Tier 02
         quality_profiles:
           - name: Remux-1080p - Anime
             score: 1000  # required as this differs from the standard scoring
+
+      - trash_ids:
+          - 8baaf0b3142bf4d94c42a724f034e27a  # Remux Tier 03
+        quality_profiles:
+          - name: Remux-1080p - Anime
+            score: 950  # required as this differs from the standard scoring
+
+      # Main Guide WEB Tier Scoring
+      - trash_ids:
+          - c20f169ef63c5f40c2def54abaf4438e  # WEB Tier 01
+        quality_profiles:
+          - name: Remux-1080p - Anime
+            score: 350  # required as this differs from the standard scoring
+
+      - trash_ids:
+          - 403816d65392c79236dcb6dd591aeda4  # WEB Tier 02
+        quality_profiles:
+          - name: Remux-1080p - Anime
+            score: 300  # required as this differs from the standard scoring
+
+      - trash_ids:
+          - af94e0fe497124d1f9ce732069ec8c3b  # WEB Tier 03
+        quality_profiles:
+          - name: Remux-1080p - Anime
+            score: 250  # required as this differs from the standard scoring
+
       # Adjustable scoring section
-      - trash_ids:
-          - 4a3b087eea2ce012fcc1ce319259a3be  # Anime Dual Audio
-        quality_profiles:
-          - name: Remux-1080p - Anime
-            score: 0  # adjust as desired
-      - trash_ids:
-          - 064af5f084a0a24458cc8ecd3220f93f  # Uncensored
-        quality_profiles:
-          - name: Remux-1080p - Anime
-            score: 0  # adjust as desired
-      - trash_ids:
-          - a5d148168c4506b55cf53984107c396e  # 10bit
-        quality_profiles:
-          - name: Remux-1080p - Anime
-            score: 0  # adjust as desired
       - trash_ids:
           - 06b6542a47037d1e33b15aa3677c2365  # Anime Raws
         quality_profiles:
           - name: Remux-1080p - Anime
             score: -10000  # adjust as desired
+
+      - trash_ids:
+          - 064af5f084a0a24458cc8ecd3220f93f  # Uncensored
+        quality_profiles:
+          - name: Remux-1080p - Anime
+            score: 0  # adjust as desired
+
+      - trash_ids:
+          - a5d148168c4506b55cf53984107c396e  # 10bit
+        quality_profiles:
+          - name: Remux-1080p - Anime
+            score: 0  # adjust as desired
+
+      - trash_ids:
+          - 4a3b087eea2ce012fcc1ce319259a3be  # Anime Dual Audio
+        quality_profiles:
+          - name: Remux-1080p - Anime
+            score: 0  # adjust as desired
+
       - trash_ids:
           - b23eae459cc960816f2d6ba84af45055  # Dubs Only
         quality_profiles:
