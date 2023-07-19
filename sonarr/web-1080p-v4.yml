@@ -1,5 +1,5 @@
 # This config file is for use with Sonarr V4 only
-# Updated: 2023-07-03
+# Updated: 2023-07-19
 sonarr:
   sonarr:  # A custom name used to identify this particular instance.
     base_url: Put your Sonarr URL here
@@ -38,6 +38,7 @@ sonarr:
           - 81d1fbf600e2540cee87f3a23f9d3c1c  # MAX
           - d34870697c9db575f17700212167be23  # NF
           - b2b980877494b560443631eb1f473867  # NLZ
+          - fb1a91cdc0f26f7ca0696e0e95274645  # OViD
           - 1656adc6d7bb2c8cca6acfb6592db421  # PCOK
           - c67a75ae4a1715f2bb4d492755ba4195  # PMTP
           - 3ac5d84fce98bab1b531393e9c82f467  # QIBI
