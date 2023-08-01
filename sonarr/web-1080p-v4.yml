@@ -1,9 +1,9 @@
 # This config file is for use with Sonarr V4 only
-# Updated: 2023-07-19
+# Updated: 2023-08-01
 sonarr:
-  sonarr:  # A custom name used to identify this particular instance.
-    base_url: Put your Sonarr URL here
-    api_key: Put your API key here
+  web-1080p-v4:  # A custom name used to identify this particular instance.
+    base_url: [sonarr_url_goes_here]
+    api_key: [api_key_goes_here]
 
     quality_definition:
       type: series
