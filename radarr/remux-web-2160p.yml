@@ -1,8 +1,8 @@
 # Updated: 2023-07-19
 radarr:
-  radarr:  # A custom name used to identify this particular instance.
-    base_url: Put your Radarr URL here
-    api_key: Put your API key here
+  remux-web-2160p:  # A custom name used to identify this particular instance.
+    base_url: [radarr_url_goes_here]
+    api_key: [api_key_goes_here]
 
     quality_definition:
       type: movie
