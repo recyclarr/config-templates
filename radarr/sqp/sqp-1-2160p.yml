@@ -111,7 +111,9 @@ radarr:
       # Unwanted
           - ed38b889b31be83fda192888e2286d83  # BR-DISK
           - 90a6f9a284dff5103f6346090e6280c8  # LQ
-          - dc98083864ea246d05a42df0d05f81cc  # x265 (HD)
+          # If you want to use x265 (HD) instead of x265 (no HDR/DV) then
+          # uncomment the next line, and comment out line 134. Do not use both.
+          # - dc98083864ea246d05a42df0d05f81cc  # x265 (HD)
           - b8cd450cbfa689c0259a01d9e29ba3d6  # 3D
           - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
           - 9c38ebb7384dada637be8899efa68e6f  # SDR
@@ -120,23 +122,18 @@ radarr:
           # Uncomment any of the following optional custom formats if you want them to be added to
           # the quality profile
           # - b6832f586342ef70d9c128d40c07b872  # Bad Dual Groups
-
           # Uncomment the next line if you have a setup that supports HDR10+
           # - b17886cb4158d9fea189859409975758  # HDR10+ Boost
-
           # - 90cedc1fea7ea5d11298bebd3d1d3223  # EVO (no WEBDL)
           # - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5  # No-RlsGroup
           # - 7357cf5161efbf8c4d5d0c30b4815ee2  # Obfuscated
           # - 5c44f52a8714fdd79bb4d98e2673be1f  # Retags
           # - f537cf427b64c38c8e36298f657e4828  # Scene
-
-          # If you want to allow x265 releases that have HDR and/or DV, uncomment
-          # the next line, then comment out line 114
-          # - 839bea857ed2c0a8e084f3cbdbd65ecb  # x265 (no HDR/DV)
-
+          # If you also want to block x265 releases that have HDR and/or DV, comment out
+          # the next line, then uncomment line 116. Do not use both.
+          - 839bea857ed2c0a8e084f3cbdbd65ecb  # x265 (no HDR/DV)
           # - 0a3f082873eb454bde444150b70253cc  # Extras
-
-          # Uncomment lines 140-149 if you want to block AV1 releases
+          # Uncomment lines 137-146 if you want to block AV1 releases
         # quality_profiles:
           # - name: SQP-1 (2160p)
 
@@ -147,7 +144,6 @@ radarr:
           #   score: -10000
 
       # - trash_ids:
-
       # Resolution
           - 820b09bb9acbfde9c35c71e0e565dad8  # 1080p
           - b2be17d608fc88818940cd1833b0b24c  # 720p
