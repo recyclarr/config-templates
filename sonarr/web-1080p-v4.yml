@@ -1,17 +1,50 @@
-# This config file is for use with Sonarr V4 only
-# Updated: 2023-08-01
+###################################################################################################
+# Recyclarr Configuration Template: WEB-1080p (V4)                                                #
+# Updated: 2023-08-13                                                                             #
+# Documentation: https://recyclarr.dev                                                            #
+# Note: If you are using multiple profiles in a single instance, please read the following        #
+# documentation about file merging:                                                               #
+# https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
+# This config file is for use with Sonarr V4 only                                                 #
+###################################################################################################
+
+# Instance Definition
+# This section defines your instance type, name, and authentication
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#basic
 sonarr:
-  web-1080p-v4:  # A custom name used to identify this particular instance.
+  web-1080p-v4:
     base_url: Put your Sonarr URL here
     api_key: Put your API key here
 
+# Quality Definition
+# This section defines the Quality Definitions that will be used in your Sonarr instance
+# Only one set of Quality Definitions can be used per instance
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#quality-def-settings
     quality_definition:
       type: series
 
+# Quality Profiles
+# This section creates and/or updates Quality Profile(s) in your Sonarr instance
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#quality-profiles
     quality_profiles:
       - name: WEB-1080p
         reset_unmatched_scores: true
+        upgrade:
+          allowed: true
+          until_quality: WEB 1080p
+          until_score: 10000
+        min_format_score: 0
+        quality_sort: top
+        qualities:
+          - name: WEB 1080p
+            qualities:
+              - WEBDL-1080p
+              - WEBRip-1080p
 
+# Custom Formats
+# This section creates and/or updates Custom Formats in your Sonarr instance,
+# and applies them and their scores to Quality Profiles
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#custom-format-settings
     custom_formats:
       # Scores from TRaSH json
       - trash_ids:

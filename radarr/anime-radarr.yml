@@ -1,16 +1,67 @@
-# Updated: 2023-08-01
+###################################################################################################
+# Recyclarr Configuration Template: Anime Radarr                                                  #
+# Updated: 2023-08-13                                                                             #
+# Documentation: https://recyclarr.dev                                                            #
+# Note: If you are using multiple profiles in a single instance, please read the following        #
+# documentation about file merging:                                                               #
+# https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
+###################################################################################################
+
+# Instance Definition
+# This section defines your instance type, name, and authentication
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#basic
 radarr:
-  anime-radarr:  # A custom name used to identify this particular instance.
+  anime-radarr:
     base_url: Put your Radarr URL here
     api_key: Put your API key here
 
+# Quality Definition
+# This section defines the Quality Definitions that will be used in your Radarr instance
+# Only one set of Quality Definitions can be used per instance
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#quality-def-settings
     quality_definition:
       type: movie
 
+# Quality Profiles
+# This section creates and/or updates Quality Profile(s) in your Radarr instance
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#quality-profiles
     quality_profiles:
       - name: Remux-1080p - Anime
         reset_unmatched_scores: true
+        upgrade:
+          allowed: true
+          until_quality: Remux-1080p
+          until_score: 10000
+        min_format_score: 100
+        quality_sort: top
+        qualities:
+          - name: Remux-1080p
+            qualities:
+              - Bluray-1080p
+              - Remux-1080p
+          - name: WEB 1080p
+            qualities:
+              - WEBDL-1080p
+              - WEBRip-1080p
+              - HDTV-1080p
+          - name: Bluray-720p
+          - name: WEB 720p
+            qualities:
+              - WEBDL-720p
+              - WEBRip-720p
+              - HDTV-720p
+          - name: Bluray-480p
+          - name: WEB 480p
+            qualities:
+              - WEBDL-480p
+              - WEBRip-480p
+          - name: DVD
+          - name: SDTV
 
+# Custom Formats
+# This section creates and/or updates Custom Formats in your Radarr instance,
+# and applies them and their scores to Quality Profiles
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#custom-format-settings
     custom_formats:
       # Scores from TRaSH json
       - trash_ids:

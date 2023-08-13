@@ -1,16 +1,72 @@
-# Updated: 2023-08-02
+###################################################################################################
+# Recyclarr Configuration Template: SQP-1 (2160p)                                                 #
+# Updated: 2023-08-13                                                                             #
+# Documentation: https://recyclarr.dev                                                            #
+# Note: If you are using multiple profiles in a single instance, please read the following        #
+# documentation about file merging:                                                               #
+# https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
+###################################################################################################
+
+# Instance Definition
+# This section defines your instance type, name, and authentication
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#basic
 radarr:
-  sqp-1-2160p:  # A custom name used to identify this particular instance.
+  sqp-1-2160p:
     base_url: Put your Radarr URL here
     api_key: Put your API key here
 
+# Quality Definition
+# This section defines the Quality Definitions that will be used in your Radarr instance
+# Only one set of Quality Definitions can be used per instance
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#quality-def-settings
     quality_definition:
       type: sqp-streaming
 
+# Quality Profiles
+# This section creates and/or updates Quality Profile(s) in your Radarr instance
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#quality-profiles
     quality_profiles:
       - name: SQP-1 (2160p)
         reset_unmatched_scores: true
+        upgrade:
+          allowed: true
+          # If you prefer 2160p WEBDL releases with IMAX-E, comment out line 33, and
+          # uncomment line 34
+          until_quality: Bluray-2160p
+          # until_quality: Bluray|WEB-2160p
+          until_score: 10000
+        # If you're limited to public indexers, don't have access to top-tier indexers, or are
+        # searching for content that is more rare, you might want to lower the min_format_score
+        # to 10.
+        min_format_score: 1000
+        quality_sort: top
+        qualities:
+          # If you prefer 2160p WEBDL releases with IMAX-E, comment out lines 44-48, and
+          # uncomment lines 49-53
+          - name: Bluray-2160p
+          - name: WEB-2160p
+            qualities:
+              - WEBDL-2160p
+              - WEBRip-2160p
+          # - name: Bluray|WEB-2160p
+            # qualities:
+              # - Bluray-2160p
+              # - WEBDL-2160p
+              # - WEBRip-2160p
+          # If you use SQP-1 (1080p) in another instance of Radarr, comment out lines 55-62
+          - name: Bluray|WEB-1080p
+            qualities:
+              - Bluray-1080p
+              - WEBDL-1080p
+              - WEBRip-1080p
+              - WEBDL-720p
+              - WEBRip-720p
+          - name: Bluray-720p
 
+# Custom Formats
+# This section creates and/or updates Custom Formats in your Radarr instance,
+# and applies them and their scores to Quality Profiles
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#custom-format-settings
     custom_formats:
       # Audio
       - trash_ids:
