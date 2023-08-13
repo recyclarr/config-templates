@@ -1,20 +1,57 @@
-# Updated: 2023-08-01
+###################################################################################################
+# Recyclarr Configuration Template: SQP-2                                                         #
+# Updated: 2023-08-13                                                                             #
+# Documentation: https://recyclarr.dev                                                            #
+# Note: If you are using multiple profiles in a single instance, please read the following        #
+# documentation about file merging:                                                               #
+# https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
+###################################################################################################
+
+# Instance Definition
+# This section defines your instance type, name, and authentication
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#basic
 radarr:
-  sqp-2:  # A custom name used to identify this particular instance.
+  sqp-2:
     base_url: Put your Radarr URL here
     api_key: Put your API key here
 
+# Quality Definition
+# This section defines the Quality Definitions that will be used in your Radarr instance
+# Only one set of Quality Definitions can be used per instance
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#quality-def-settings
     quality_definition:
       type: sqp-uhd
 
+# Quality Profiles
+# This section creates and/or updates Quality Profile(s) in your Radarr instance
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#quality-profiles
     quality_profiles:
-      - name: Remux|Bluray|IMAX-E|2160p
+      - name: SQP-2
         reset_unmatched_scores: true
+        upgrade:
+          allowed: true
+          until_quality: WEB|Remux|Bluray|2160p
+          until_score: 10000
+        min_format_score: 550
+        quality_sort: top
+        qualities:
+          - name: WEB|Remux|Bluray|2160p
+            qualities:
+              - WEBDL-2160p
+              - WEBRip-2160p
+              - Bluray-2160p
+              - Remux-2160p
+              - WEBDL-1080p
+              - WEBRip-1080p
+          - name: Remux-1080p
 
+# Custom Formats
+# This section creates and/or updates Custom Formats in your Radarr instance,
+# and applies them and their scores to Quality Profiles
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#custom-format-settings
     custom_formats:
-      # Scores from TRaSH json
+      # Audio
       - trash_ids:
-          # Audio
           - 496f355514737f7d83bf7aa4d24f8169  # TrueHD Atmos
           - 2f22d89048b01681dde8afe203bf2e95  # DTS X
           - 417804f7f2c4308c1f4c5d380d4c4475  # ATMOS (undefined)
@@ -30,7 +67,7 @@ radarr:
           - 240770601cc226190c367ef59aba7463  # AAC
           - c2998bd0d90ed5621d8df281e839436e  # DD
 
-          # HDR Formats
+      # HDR Formats
           - e23edd2482476e595fb990b12e7c609c  # DV HDR10
           - 58d6a88f13e2db7f5059c41047876f00  # DV
           - 55d53828b9d81cbe20b02efd00aa0efd  # DV HLG
@@ -41,8 +78,20 @@ radarr:
           - 2a4d9069cc1fe3242ff9bdaebed239bb  # HDR (undefined)
           - 08d6d8834ad9ec87b1dc7ec8148e7a1f  # PQ
           - 9364dd386c9b4a1100dde8264690add7  # HLG
+        quality_profiles:
+          - name: SQP-2
 
-          # Movie Versions
+      - trash_ids:
+          # DV (WEBDL)
+          - 923b6abef9b17f937fab56cfcf89e1f1  # DV (WEBDL)
+        quality_profiles:
+          - name: SQP-2
+            # If you and all of your users have a setup that fully supports DV, then uncomment the
+            # next line to override the default DV (WEBDL) score of -10000
+            # score: 0
+
+      # Movie Versions
+      - trash_ids: 
           - 0f12c086e289cf966fa5948eac571f44  # Hybrid
           - f700d29429c023a5734505e77daeaea7  # DV (FEL)
           - 570bc9ebecd92723d2d21500f4be314c  # Remaster
@@ -55,26 +104,60 @@ radarr:
           # Uncomment the next line if you prefer IMAX Enhanced releases
           # - 9f6cbff8cfe4ebbc1bde14c7b7bec0de  # IMAX Enhanced
 
-          # HQ Release Groups
+      # HQ Release Groups
           - 3a3ff47579026e76d6504ebea39390de  # Remux Tier 01
           - 9f98181fe5a3fbeb0cc29340da2a468a  # Remux Tier 02
           - 8baaf0b3142bf4d94c42a724f034e27a  # Remux Tier 03
+        quality_profiles:
+          - name: SQP-2
+
+      - trash_ids:
+          - 4d74ac4c4db0b64bff6ce0cffef99bf0  # UHD Bluray Tier 01
+        quality_profiles:
+          - name: SQP-2
+            score: 2300
+
+      - trash_ids:
+          - a58f517a70193f8e578056642178419d  # UHD Bluray Tier 02
+        quality_profiles:
+          - name: SQP-2
+            score: 2200
+
+      - trash_ids:
+          - e71939fae578037e7aed3ee219bbe7c1  # UHD Bluray Tier 03
+        quality_profiles:
+          - name: SQP-2
+            score: 2100
+
+      - trash_ids:
           - c20f169ef63c5f40c2def54abaf4438e  # WEB Tier 01
           - 403816d65392c79236dcb6dd591aeda4  # WEB Tier 02
           - af94e0fe497124d1f9ce732069ec8c3b  # WEB Tier 03
 
-          # Misc
+      # Misc
           - e7718d7a3ce595f289bfee26adc178f5  # Repack/Proper
           - ae43b294509409a6a13919dedd4764c4  # Repack2
+        quality_profiles:
+          - name: SQP-2
 
-          # Unwanted
+      - trash_ids:
+          - 2899d84dc9372de3408e6d8cc18e9666  # x264
+        quality_profiles:
+          - name: SQP-2
+            score: -10000
+
+      # Unwanted
+      - trash_ids:
           - ed38b889b31be83fda192888e2286d83  # BR-DISK
           - 90a6f9a284dff5103f6346090e6280c8  # LQ
-          - b8cd450cbfa689c0259a01d9e29ba3d6  # 3D
           - 839bea857ed2c0a8e084f3cbdbd65ecb  # x265 (no HDR/DV)
+          - b8cd450cbfa689c0259a01d9e29ba3d6  # 3D
+          - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
           - 9c38ebb7384dada637be8899efa68e6f  # SDR
+        quality_profiles:
+          - name: SQP-2
 
-          # Optional
+      # Optional
           # Uncomment any of the following optional custom formats if you want them to be added to
           # the quality profile
           # - b6832f586342ef70d9c128d40c07b872  # Bad Dual Groups
@@ -86,62 +169,26 @@ radarr:
           # - 5c44f52a8714fdd79bb4d98e2673be1f  # Retags
           # - f537cf427b64c38c8e36298f657e4828  # Scene
           # - 0a3f082873eb454bde444150b70253cc  # Extras
-          # - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
 
-          # Resolution
+      # Resolution
+      - trash_ids:
           - 820b09bb9acbfde9c35c71e0e565dad8  # 1080p
+        quality_profiles:
+          - name: SQP-2
 
-          # Streaming Services
+      - trash_ids:
+          - fb392fb0d61a010ae38e49ceaa24a1ef  # 2160p
+        quality_profiles:
+          - name: SQP-2
+            score: 151
+
+      # Streaming Services
+      - trash_ids:
           - cc5e51a9e85a6296ceefe097a77f12f4  # BCORE
           - 2a6039655313bf5dab1e43523b62c374  # MA
           - 16622a6911d1ab5d5b8b713d5b0036d4  # CRiT
         quality_profiles:
-          - name: Remux|Bluray|IMAX-E|2160p
-
-      # Custom Scoring
-      # UHD Bluray Tiers
-      - trash_ids:
-          - 4d74ac4c4db0b64bff6ce0cffef99bf0  # UHD Bluray Tier 01
-        quality_profiles:
-          - name: Remux|Bluray|IMAX-E|2160p
-            score: 2300
-
-      - trash_ids:
-          - a58f517a70193f8e578056642178419d  # UHD Bluray Tier 02
-        quality_profiles:
-          - name: Remux|Bluray|IMAX-E|2160p
-            score: 2200
-
-      - trash_ids:
-          - e71939fae578037e7aed3ee219bbe7c1  # UHD Bluray Tier 03
-        quality_profiles:
-          - name: Remux|Bluray|IMAX-E|2160p
-            score: 2100
-
-      - trash_ids:
-          # Resolution
-          - fb392fb0d61a010ae38e49ceaa24a1ef  # 2160p
-        quality_profiles:
-          - name: Remux|Bluray|IMAX-E|2160p
-            score: 151
-
-      - trash_ids:
-          # DV (WEBDL)
-          - 923b6abef9b17f937fab56cfcf89e1f1  # DV (WEBDL)
-        quality_profiles:
-          - name: Remux|Bluray|IMAX-E|2160p
-            # If you and all of your users have a setup that fully supports DV, then uncomment the
-            # next line to override the default DV (WEBDL) score of -10000
-            # score: 0
-
-      # If you are only running one Radarr instance, you can comment out the next six lines so you
-      # will get the HD release if there is no UHD version
-      - trash_ids:
-          # Misc
-          - 2899d84dc9372de3408e6d8cc18e9666  # x264
-        quality_profiles:
-          - name: Remux|Bluray|IMAX-E|2160p
-            score: -10000
+          - name: SQP-2
 
       - trash_ids:
           # Streaming Services
@@ -160,5 +207,5 @@ radarr:
           - e36a0ba1bc902b26ee40818a1d59b8bd  # PMTP
           - c2863d2a50c9acad1fb50e53ece60817  # STAN
         quality_profiles:
-          - name: Remux|Bluray|IMAX-E|2160p
+          - name: SQP-2
             score: 0
