@@ -68,6 +68,8 @@ sonarr:
           # Unwanted UHD
           - 85c61753df5da1fb2aab6f2a47426b09  # BR-DISK
           - 9c11cd3f07101cdba90a2d81cf0e56b4  # LQ
+          - 47435ece6b99a0b477caf360e79ba0bb  # x265 (HD)
+          - fbcb31d8dabd2a319072b84fc0b7249c  # Extras
           - 2016d1676f5ee13a5b7257ff86ac9a93  # SDR
 
           # Misc
