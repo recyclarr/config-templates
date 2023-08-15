@@ -153,8 +153,6 @@ radarr:
           - b8cd450cbfa689c0259a01d9e29ba3d6  # 3D
           - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
           - 9c38ebb7384dada637be8899efa68e6f  # SDR
-        quality_profiles:
-          - name: SQP-5
 
       # Optional
           # Uncomment any of the following optional custom formats if you want them to be added to
@@ -168,6 +166,8 @@ radarr:
           # - 5c44f52a8714fdd79bb4d98e2673be1f  # Retags
           # - f537cf427b64c38c8e36298f657e4828  # Scene
           # - 0a3f082873eb454bde444150b70253cc  # Extras
+        quality_profiles:
+          - name: SQP-5
 
       # Resolution
       - trash_ids:
