@@ -30,8 +30,8 @@ radarr:
         reset_unmatched_scores: true
         upgrade:
           allowed: true
-          # If you prefer 2160p WEBDL releases with IMAX-E, comment out line 33, and
-          # uncomment line 34
+          # If you prefer 2160p WEBDL releases with IMAX-E, comment out line 35, and
+          # uncomment line 36
           until_quality: Bluray-2160p
           # until_quality: Bluray|WEB-2160p
           until_score: 10000
@@ -41,8 +41,8 @@ radarr:
         min_format_score: 1000
         quality_sort: top
         qualities:
-          # If you prefer 2160p WEBDL releases with IMAX-E, comment out lines 44-48, and
-          # uncomment lines 49-53
+          # If you prefer 2160p WEBDL releases with IMAX-E, comment out lines 46-50, and
+          # uncomment lines 51-55
           - name: Bluray-2160p
           - name: WEB-2160p
             qualities:
@@ -53,7 +53,7 @@ radarr:
               # - Bluray-2160p
               # - WEBDL-2160p
               # - WEBRip-2160p
-          # If you use SQP-1 (1080p) in another instance of Radarr, comment out lines 55-62
+          # If you use SQP-1 (1080p) in another instance of Radarr, comment out lines 57-64
           - name: Bluray|WEB-1080p
             qualities:
               - Bluray-1080p
@@ -140,7 +140,6 @@ radarr:
         quality_profiles:
           - name: SQP-1 (2160p)
 
-      # If you use SQP-1 (1080p) as your main/second Radarr, you need to comment out lines 88-104
       - trash_ids:
           - ed27ebfef2f323e964fb1f61391bcb35  # HD Bluray Tier 01
         quality_profiles:
@@ -172,7 +171,6 @@ radarr:
           # - dc98083864ea246d05a42df0d05f81cc  # x265 (HD)
           - b8cd450cbfa689c0259a01d9e29ba3d6  # 3D
           - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
-          - 9c38ebb7384dada637be8899efa68e6f  # SDR
 
       # Optional
           # Uncomment any of the following optional custom formats if you want them to be added to
@@ -189,17 +187,18 @@ radarr:
           # the next line, then uncomment line 116. Do not use both.
           - 839bea857ed2c0a8e084f3cbdbd65ecb  # x265 (no HDR/DV)
           # - 0a3f082873eb454bde444150b70253cc  # Extras
-          # Uncomment lines 137-146 if you want to block AV1 releases
-        # quality_profiles:
-          # - name: SQP-1 (2160p)
+          - 9c38ebb7384dada637be8899efa68e6f  # SDR
+        quality_profiles:
+          - name: SQP-1 (2160p)
 
-      # - trash_ids:
-          # - cae4ca30163749b891686f95532519bd  # AV1
-        # quality_profiles:
-          # - name: SQP-1 (2160p)
-          #   score: -10000
+          # Comment out lines 195-199 if you don't want to block AV1 releases
+      - trash_ids:
+          - cae4ca30163749b891686f95532519bd  # AV1
+        quality_profiles:
+          - name: SQP-1 (2160p)
+            score: -10000
 
-      # - trash_ids:
+      - trash_ids:
       # Resolution
           - 820b09bb9acbfde9c35c71e0e565dad8  # 1080p
           - b2be17d608fc88818940cd1833b0b24c  # 720p
