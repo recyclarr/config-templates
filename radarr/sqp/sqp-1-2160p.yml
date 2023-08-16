@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: SQP-1 (2160p)                                                 #
-# Updated: 2023-08-15                                                                             #
+# Updated: 2023-08-16                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -167,7 +167,7 @@ radarr:
           - ed38b889b31be83fda192888e2286d83  # BR-DISK
           - 90a6f9a284dff5103f6346090e6280c8  # LQ
           # If you want to use x265 (HD) instead of x265 (no HDR/DV) then
-          # uncomment the next line, and comment out line 134. Do not use both.
+          # uncomment the next line, and comment out line 188. Do not use both.
           # - dc98083864ea246d05a42df0d05f81cc  # x265 (HD)
           - b8cd450cbfa689c0259a01d9e29ba3d6  # 3D
           - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
@@ -184,7 +184,7 @@ radarr:
           # - 5c44f52a8714fdd79bb4d98e2673be1f  # Retags
           # - f537cf427b64c38c8e36298f657e4828  # Scene
           # If you also want to block x265 releases that have HDR and/or DV, comment out
-          # the next line, then uncomment line 116. Do not use both.
+          # the next line, then uncomment line 171. Do not use both.
           - 839bea857ed2c0a8e084f3cbdbd65ecb  # x265 (no HDR/DV)
           # - 0a3f082873eb454bde444150b70253cc  # Extras
           - 9c38ebb7384dada637be8899efa68e6f  # SDR
