@@ -53,7 +53,7 @@
       "id": "french-remux-web-2160p-vostfr"
     },
     {
-      "template": "radarr/sqp/sqp-1.yml",
+      "template": "radarr/sqp/sqp-1-1080p.yml",
       "id": "sqp-1",
       "hidden": true
     },

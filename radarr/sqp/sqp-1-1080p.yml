@@ -1,6 +1,6 @@
 ###################################################################################################
-# Recyclarr Configuration Template: SQP-1 (2160p)                                                 #
-# Updated: 2023-08-13                                                                             #
+# Recyclarr Configuration Template: SQP-1 (1080p)                                                 #
+# Updated: 2023-08-16                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -78,19 +78,19 @@ radarr:
           - 1af239278386be2919e1bcee0bde047e  # DD+ ATMOS
         quality_profiles:
           - name: SQP-1 (1080p)
-            score: 35
+            score: 135
 
       - trash_ids:
           - 185f1dd7264c4562b9022d963ac37424  # DD+
         quality_profiles:
           - name: SQP-1 (1080p)
-            score: 25
+            score: 125
 
       - trash_ids:
           - c2998bd0d90ed5621d8df281e839436e  # DD
         quality_profiles:
           - name: SQP-1 (1080p)
-            score: 15
+            score: 115
           
       # Movie Versions
       - trash_ids:
