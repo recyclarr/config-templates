@@ -27,7 +27,8 @@ radarr:
 # Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#quality-profiles
     quality_profiles:
       - name: SQP-1 (2160p)
-        reset_unmatched_scores: true
+        reset_unmatched_scores:
+          enabled: true
         upgrade:
           allowed: true
           # If you prefer 2160p WEBDL releases with IMAX-E, comment out line 35, and
