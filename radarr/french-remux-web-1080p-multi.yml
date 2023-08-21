@@ -16,7 +16,8 @@ radarr:
 
     quality_profiles:
       - name: FR-MULTi-REMUX-WEB-1080p
-        reset_unmatched_scores: true
+        reset_unmatched_scores:
+          enabled: true
 
     # La liste de Formats Personnalisés à synchroniser avec Radarr.
     custom_formats:

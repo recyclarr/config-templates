@@ -27,7 +27,8 @@ radarr:
 # Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#quality-profiles
     quality_profiles:
       - name: SQP-5
-        reset_unmatched_scores: true
+        reset_unmatched_scores:
+          enabled: true
         upgrade:
           allowed: true
           until_quality: WEB|Bluray|2160p
@@ -90,7 +91,7 @@ radarr:
             # score: 0
 
       # Movie Versions
-      - trash_ids: 
+      - trash_ids:
           - 0f12c086e289cf966fa5948eac571f44  # Hybrid
           - f700d29429c023a5734505e77daeaea7  # DV (FEL)
           - 570bc9ebecd92723d2d21500f4be314c  # Remaster

@@ -15,7 +15,8 @@ sonarr:
 
     quality_profiles:
       - name: FR-MULTi-WEB-1080p
-        reset_unmatched_scores: true
+        reset_unmatched_scores:
+          enabled: true
 
     # La liste de Formats Personnalisés à synchroniser avec Sonarr.
     custom_formats:
