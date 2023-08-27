@@ -54,33 +54,33 @@
     },
     {
       "template": "radarr/sqp/sqp-1-1080p.yml",
-      "id": "sqp-1",
-      "hidden": true
+      "id": "sqp-1-1080p",
+      "hidden": false
     },
     {
       "template": "radarr/sqp/sqp-1-2160p.yml",
       "id": "sqp-1-2160p",
-      "hidden": true
+      "hidden": false
     },
     {
       "template": "radarr/sqp/sqp-2.yml",
       "id": "sqp-2",
-      "hidden": true
+      "hidden": false
     },
     {
       "template": "radarr/sqp/sqp-3.yml",
       "id": "sqp-3",
-      "hidden": true
+      "hidden": false
     },
     {
       "template": "radarr/sqp/sqp-4.yml",
       "id": "sqp-4",
-      "hidden": true
+      "hidden": false
     },
     {
       "template": "radarr/sqp/sqp-5.yml",
       "id": "sqp-5",
-      "hidden": true
+      "hidden": false
     }
   ],
   "sonarr": [
