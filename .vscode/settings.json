@@ -1,5 +1,9 @@
 {
   "yaml.schemas": {
-    "https://raw.githubusercontent.com/recyclarr/recyclarr/master/schemas/config-schema.json": "*.yml"
+    "https://raw.githubusercontent.com/recyclarr/recyclarr/master/schemas/config-schema.json": [
+      "radarr/templates/*.yml",
+      "sonarr/templates/*.yml"
+    ],
+    "https://json.schemastore.org/github-workflow.json": ".github/workflows/*.yml"
   }
 }
