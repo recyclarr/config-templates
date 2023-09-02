@@ -1,0 +1,28 @@
+name: Check Paths
+
+on:
+  push:
+    paths:
+      - "sonarr/**.ya?ml"
+      - "sonarr/**.ya?ml"
+      - ci/CheckInvalidTemplatePaths.ps1
+      - .github/workflows/check-paths.yml
+      - templates.json
+  pull_request:
+    paths:
+      - "sonarr/**.ya?ml"
+      - "sonarr/**.ya?ml"
+      - ci/CheckInvalidTemplatePaths.ps1
+      - .github/workflows/check-paths.yml
+      - templates.json
+
+jobs:
+  checkpaths:
+    name: Check Paths
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Check templates.json
+        run: pwsh ci/CheckInvalidTemplatePaths.ps1 templates.json
