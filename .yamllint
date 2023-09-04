@@ -1,6 +1,17 @@
 # Default configuration values: https://yamllint.readthedocs.io/en/stable/configuration.html
 # Rules reference: https://yamllint.readthedocs.io/en/stable/rules.html
+extends: default
+
+ignore:
+  - .github
+
 rules:
-  line-length: {max: 100, allow-non-breakable-words: true}
+  line-length:
+    max: 100
+    allow-non-breakable-words: true
+    allow-non-breakable-inline-mappings: true
   document-start: disable
   comments-indentation: disable
+
+  # Let .gitattributes manage EOL
+  new-lines: disable
