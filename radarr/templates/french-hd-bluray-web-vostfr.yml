@@ -21,7 +21,8 @@
 
 # Définition de l'instance
 # Cette section définit le type d'instance, le nom et l'authentification.
-# Documentation (en anglais) : https://recyclarr.dev/wiki/yaml/config-reference/#basic
+# Documentation (en anglais) :
+# https://recyclarr.dev/wiki/yaml/config-reference/#basic
 radarr:
   french-hd-bluray-web-vostfr:
     base_url: Put your Radarr URL here
@@ -30,13 +31,15 @@ radarr:
 # Définition de la qualité
 # Cette section fixe les définitions de la qualité qui seront utilisées dans votre instance Radarr.
 # Un seul ensemble de définitions de la qualité peut être utilisé par instance.
-# Documentation (en anglais) : https://recyclarr.dev/wiki/yaml/config-reference/#quality-def-settings
+# Documentation (en anglais) :
+# https://recyclarr.dev/wiki/yaml/config-reference/#quality-def-settings
     quality_definition:
       type: movie
 
 # Profils de qualité
 # Cette section crée et/ou met à jour le(s) profil(s) de qualité dans votre instance Radarr.
-# Documentation (en anglais) : https://recyclarr.dev/wiki/yaml/config-reference/#quality-profiles
+# Documentation (en anglais) :
+# https://recyclarr.dev/wiki/yaml/config-reference/#quality-profiles
     quality_profiles:
       - name: FR HD Bluray + WEB (VOSTFR)
         reset_unmatched_scores:
@@ -59,7 +62,8 @@ radarr:
 # Formats Personnalisés (Custom Formats)
 # Cette section crée et/ou met à jour les Formats Personnalisés dans votre instance Radarr,
 # et les applique, ainsi que leurs scores, aux profils de qualité indiqués
-# Documentation (en anglais) : https://recyclarr.dev/wiki/yaml/config-reference/#custom-format-settings
+# Documentation (en anglais) :
+# https://recyclarr.dev/wiki/yaml/config-reference/#custom-format-settings
     custom_formats:
       - trash_ids:
           # ===== Versions françaises =====

@@ -21,7 +21,8 @@
 
 # Définition de l'instance
 # Cette section définit le type d'instance, le nom et l'authentification.
-# Documentation (en anglais) : https://recyclarr.dev/wiki/yaml/config-reference/#basic
+# Documentation (en anglais) :
+# https://recyclarr.dev/wiki/yaml/config-reference/#basic
 radarr:
   french-remux-web-2160p-multi:
     base_url: Put your Radarr URL here
@@ -30,13 +31,15 @@ radarr:
 # Définition de la qualité
 # Cette section fixe les définitions de la qualité qui seront utilisées dans votre instance Radarr.
 # Un seul ensemble de définitions de la qualité peut être utilisé par instance.
-# Documentation (en anglais) : https://recyclarr.dev/wiki/yaml/config-reference/#quality-def-settings
+# Documentation (en anglais) :
+# https://recyclarr.dev/wiki/yaml/config-reference/#quality-def-settings
     quality_definition:
       type: movie
 
 # Profils de qualité
 # Cette section crée et/ou met à jour le(s) profil(s) de qualité dans votre instance Radarr.
-# Documentation (en anglais) : https://recyclarr.dev/wiki/yaml/config-reference/#quality-profiles
+# Documentation (en anglais) :
+# https://recyclarr.dev/wiki/yaml/config-reference/#quality-profiles
     quality_profiles:
       - name: FR Remux + WEB 2160p (MULTi)
         reset_unmatched_scores:
@@ -57,7 +60,8 @@ radarr:
 # Formats Personnalisés (Custom Formats)
 # Cette section crée et/ou met à jour les Formats Personnalisés dans votre instance Radarr,
 # et les applique, ainsi que leurs scores, aux profils de qualité indiqués
-# Documentation (en anglais) : https://recyclarr.dev/wiki/yaml/config-reference/#custom-format-settings
+# Documentation (en anglais) :
+# https://recyclarr.dev/wiki/yaml/config-reference/#custom-format-settings
     custom_formats:
       - trash_ids:
           # ===== MULTi Audio =====
@@ -96,11 +100,13 @@ radarr:
           - 2a4d9069cc1fe3242ff9bdaebed239bb  # HDR (undefined)
           - 08d6d8834ad9ec87b1dc7ec8148e7a1f  # PQ
           - 9364dd386c9b4a1100dde8264690add7  # HLG
-          # DV (WEBDL) - La ligne suivante n'est pas commentée par défaut, et garantit que les sorties
-          # avec Dolby Vision ne seront prises en compte que si elles ont un fallback HDR10. 
+          # DV (WEBDL) - La ligne suivante n'est pas commentée par défaut, et garantit
+          # que les sorties avec Dolby Vision ne seront prises en compte que si elles ont
+          # un fallback HDR10. 
           # Vous pouvez commenter cette ligne si vous n'avez pas besoin du fallback HDR10.
           - 923b6abef9b17f937fab56cfcf89e1f1  # DV (WEBDL)
-          # HDR10Plus Boost - Décommentez la ligne suivante si l'un de vos appareils supporte le HDR10+.
+          # HDR10Plus Boost - Décommentez la ligne suivante si l'un de vos appareils
+          # supporte le HDR10+.
           # - b17886cb4158d9fea189859409975758  # HDR10Plus Boost
 
           # ===== Version du film =====
