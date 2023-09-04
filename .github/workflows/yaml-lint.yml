@@ -2,15 +2,7 @@ name: YAML Lint
 
 on:
   push:
-    paths:
-      - "**.yml"
-      - "**.yaml"
-      - .github/workflows/yaml-lint.yml
   pull_request:
-    paths:
-      - "**.yml"
-      - "**.yaml"
-      - .github/workflows/yaml-lint.yml
 
 jobs:
   markdownlint:

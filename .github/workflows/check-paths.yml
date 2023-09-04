@@ -2,19 +2,7 @@ name: Check Paths
 
 on:
   push:
-    paths:
-      - "sonarr/**.ya?ml"
-      - "sonarr/**.ya?ml"
-      - ci/CheckInvalidTemplatePaths.ps1
-      - .github/workflows/check-paths.yml
-      - templates.json
   pull_request:
-    paths:
-      - "sonarr/**.ya?ml"
-      - "sonarr/**.ya?ml"
-      - ci/CheckInvalidTemplatePaths.ps1
-      - .github/workflows/check-paths.yml
-      - templates.json
 
 jobs:
   checkpaths:
