@@ -1,36 +1,69 @@
-# Ce fichier propose un example de configuration pour le logiciel "recyclarr" :
-# https://recyclarr.dev/wiki/
-# https://github.com/recyclarr/recyclarr
+###################################################################################################
+# Recyclarr Configuration Template: French HD Bluray + WEB (VOSTFR)                               #
+# Updated: 2023-09-03                                                                             #
+# Documentation: https://recyclarr.dev                                                            #
+# Note: If you are using multiple profiles in a single instance, please read the following        #
+# documentation about file merging:                                                               #
+# https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
+###################################################################################################
 
-# Cet exemple est pour radarr et le profil "HD Bluray + WEB" present dans le guide, mais avec une
-# configuration pour obtenir de la VOSTFR
-# https://trash-guides.info/Radarr/radarr-setup-quality-profiles-french-en/#hd-bluray-web
-# Updated: 2023-05-26
+# Note: The following explanations will be in French only, but they are basically translated
+# from the ones inside the corresponding "original" template.
+
+###################################################################################################
+# Modèle de configuration Recyclarr : French HD Bluray + WEB (VOSTFR)                             #
+# Mis à jour : 2023-09-03                                                                         #
+# Documentation (en anglais) : https://recyclarr.dev                                              #
+# Note: Si vous utilisez plusieurs profils dans une seule instance, veuillez lire                 #
+# documentation suivante sur la mise en commun des instances (en anglais) :                       #
+# https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
+###################################################################################################
+
+# Définition de l'instance
+# Cette section définit le type d'instance, le nom et l'authentification.
+# Documentation (en anglais) : https://recyclarr.dev/wiki/yaml/config-reference/#basic
 radarr:
-  radarr_french_vostfr_bluray_web_1080p:
-    # L'URL de base ainsi que la clé API de votre instance Radarr
+  french-hd-bluray-web-vostfr:
     base_url: Put your Radarr URL here
     api_key: Put your API key here
 
+# Définition de la qualité
+# Cette section fixe les définitions de la qualité qui seront utilisées dans votre instance Radarr.
+# Un seul ensemble de définitions de la qualité peut être utilisé par instance.
+# Documentation (en anglais) : https://recyclarr.dev/wiki/yaml/config-reference/#quality-def-settings
     quality_definition:
       type: movie
 
+# Profils de qualité
+# Cette section crée et/ou met à jour le(s) profil(s) de qualité dans votre instance Radarr.
+# Documentation (en anglais) : https://recyclarr.dev/wiki/yaml/config-reference/#quality-profiles
     quality_profiles:
-      - name: FR-VOSTFR-BLURAY-WEB-1080p
+      - name: FR HD Bluray + WEB (VOSTFR)
         reset_unmatched_scores:
           enabled: true
+        upgrade:
+          allowed: true
+          until_quality: Bluray-1080p
+          until_score: 10000
+        min_format_score: 0
+        score_set: french-vostfr
+        quality_sort: top
+        qualities:
+          - name: Bluray-1080p
+          - name: WEB 1080p
+            qualities:
+              - WEBDL-1080p
+              - WEBRip-1080p
+          - name: Bluray-720p
 
-    # La liste de Formats Personnalisés à synchroniser avec Radarr.
+# Formats Personnalisés (Custom Formats)
+# Cette section crée et/ou met à jour les Formats Personnalisés dans votre instance Radarr,
+# et les applique, ainsi que leurs scores, aux profils de qualité indiqués
+# Documentation (en anglais) : https://recyclarr.dev/wiki/yaml/config-reference/#custom-format-settings
     custom_formats:
       - trash_ids:
-          # ===== Indésirables =====
-          - ed38b889b31be83fda192888e2286d83  # BR-DISK
-          - b8cd450cbfa689c0259a01d9e29ba3d6  # 3D
-          - 48f031e76111f17ea94898f4cdc34fdc  # FR LQ
-          - 90a6f9a284dff5103f6346090e6280c8  # LQ
-          - dc98083864ea246d05a42df0d05f81cc  # x265 (HD)
-          - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
-          - 7f9b93f82b7e996391525f2be1d891e0  # FastSUB
+          # ===== Versions françaises =====
+          - 9172b2f683f6223e3a1846427b417a3d  # VOSTFR
 
           # ===== Version du film =====
           - 570bc9ebecd92723d2d21500f4be314c  # Remaster
@@ -42,9 +75,31 @@ radarr:
           - eecf3a857724171f968a66cb5719e152  # IMAX
           - 9f6cbff8cfe4ebbc1bde14c7b7bec0de  # IMAX Enhanced
 
+          # ===== HQ Release Groups =====
+          - 5322da05b19d857acc1e75be3edf47b3  # FR HD Bluray Tier 01
+          - 57f34251344be2e283fc30e00e458be6  # FR HD Bluray Tier 02
+          - 9790a618cec1aeac8ce75601a17ea40d  # FR WEB Tier 01
+          - 3c83a765f84239716bd5fd2d7af188f9  # FR WEB Tier 02
+          - 0d94489c0d5828cd3bf9409d309fb32b  # FR Scene Groups
+          # Les tiers suivant sont les tiers originaux du guide (groupes anglophones)
+          - ed27ebfef2f323e964fb1f61391bcb35  # HD Bluray Tier 01
+          - c20c8647f2746a1f4c4262b0fbbeeeae  # HD Bluray Tier 02
+          - 5608c71bcebba0a5e666223bae8c9227  # HD Bluray Tier 03
+          - c20f169ef63c5f40c2def54abaf4438e  # WEB Tier 01
+          - 403816d65392c79236dcb6dd591aeda4  # WEB Tier 02
+          - af94e0fe497124d1f9ce732069ec8c3b  # WEB Tier 03
+
           # ===== Misc =====
           - e7718d7a3ce595f289bfee26adc178f5  # Repack/Proper
           - ae43b294509409a6a13919dedd4764c4  # Repack2
+
+          # ===== Indésirables =====
+          - ed38b889b31be83fda192888e2286d83  # BR-DISK
+          - 48f031e76111f17ea94898f4cdc34fdc  # FR LQ
+          - 90a6f9a284dff5103f6346090e6280c8  # LQ
+          - dc98083864ea246d05a42df0d05f81cc  # x265 (HD)
+          - b8cd450cbfa689c0259a01d9e29ba3d6  # 3D
+          - 7f9b93f82b7e996391525f2be1d891e0  # FastSUB
 
           # ===== Services de Streaming =====
           - b3b3a6ac74ecbd56bcdbefa4799fb9df  # AMZN
@@ -62,46 +117,12 @@ radarr:
           - c9fd353f8f5f1baf56dc601c4cb29920  # PCOK
           - e36a0ba1bc902b26ee40818a1d59b8bd  # PMTP
           - c2863d2a50c9acad1fb50e53ece60817  # STAN
-
-          # ===== HQ Source Groups =====
-          - 5322da05b19d857acc1e75be3edf47b3  # FR HD Bluray Tier 01
-          - 57f34251344be2e283fc30e00e458be6  # FR HD Bluray Tier 02
-          - 9790a618cec1aeac8ce75601a17ea40d  # FR WEB Tier 01
-          - 3c83a765f84239716bd5fd2d7af188f9  # FR WEB Tier 02
-          # Vous pouvez commenter/supprimer le groupe scene si vous ne souhaitez pas de releases
-          # venant de la Scene française
-          - 0d94489c0d5828cd3bf9409d309fb32b  # FR Scene Groups
-          # Les tiers suivant sont les tiers originaux du guide (groupes anglophones)
-          - ed27ebfef2f323e964fb1f61391bcb35  # HD Bluray Tier 01
-          - c20c8647f2746a1f4c4262b0fbbeeeae  # HD Bluray Tier 02
-          - 5608c71bcebba0a5e666223bae8c9227  # HD Bluray Tier 03
-          - c20f169ef63c5f40c2def54abaf4438e  # WEB Tier 01
-          - 403816d65392c79236dcb6dd591aeda4  # WEB Tier 02
-          - af94e0fe497124d1f9ce732069ec8c3b  # WEB Tier 03
         quality_profiles:
-          - name: FR-VOSTFR-BLURAY-WEB-1080p
-
-      # ===== MULTi Audio =====
-      # Nécessaire vu qu'on ne souhaite pas de MULTi
-      - trash_ids:
-          - 72b1548df1ac3175ca105a9ce7043c91  # Multi-Audio
-        quality_profiles:
-          - name: FR-VOSTFR-BLURAY-WEB-1080p
-            score: -10000
-
-      # ===== Versions françaises =====
-      # Seul le VOSTFR est présent et possède un score de '1000' car on souhaite obtenir du VOSTFR
-      # et non du MULTi/DUAL audio.
-      # https://trash-guides.info/Radarr/radarr-setup-quality-profiles-french-en/#french-audio-versions
-      - trash_ids:
-          - 9172b2f683f6223e3a1846427b417a3d  # VOSTFR
-        quality_profiles:
-          - name: FR-VOSTFR-BLURAY-WEB-1080p
-            score: 1000
+          - name: FR HD Bluray + WEB (VOSTFR)
 
       # Si vous ne voulez pas non-plus de FanSUB.
       - trash_ids:
           - 02e48d30a176c91baf9e15de05e5dc6a  # FanSUB
         quality_profiles:
-          - name: FR-VOSTFR-BLURAY-WEB-1080p
+          - name: FR HD Bluray + WEB (VOSTFR)
             # score: -10000
