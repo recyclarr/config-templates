@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: SQP-5                                                         #
-# Updated: 2023-08-27                                                                             #
+# Updated: 2023-09-07                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -79,7 +79,7 @@ radarr:
           - 2a4d9069cc1fe3242ff9bdaebed239bb  # HDR (undefined)
           - 08d6d8834ad9ec87b1dc7ec8148e7a1f  # PQ
           - 9364dd386c9b4a1100dde8264690add7  # HLG
-          # Uncomment the next line if you and all of your users' setups are fully DV compatible
+          # Comment out the next line if you and all of your users' setups are fully DV compatible
           - 923b6abef9b17f937fab56cfcf89e1f1  # DV (WEBDL)
 
       # Movie Versions
