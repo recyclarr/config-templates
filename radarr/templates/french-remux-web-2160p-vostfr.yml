@@ -99,7 +99,7 @@ radarr:
           - 9364dd386c9b4a1100dde8264690add7  # HLG
           # DV (WEBDL) - La ligne suivante n'est pas commentée par défaut, et garantit
           # que les sorties avec Dolby Vision ne seront prises en compte que si elles ont
-          # un fallback HDR10. 
+          # un fallback HDR10.
           # Vous pouvez commenter cette ligne si vous n'avez pas besoin du fallback HDR10.
           - 923b6abef9b17f937fab56cfcf89e1f1  # DV (WEBDL)
           # HDR10Plus Boost - Décommentez la ligne suivante si l'un de vos appareils
