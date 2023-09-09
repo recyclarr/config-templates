@@ -10,7 +10,7 @@
 
 # Instance Definition
 # This section defines your instance type, name, and authentication
-# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#basic
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/basic/
 sonarr:
   web-1080p-v4:
     base_url: Put your Sonarr URL here
@@ -19,13 +19,13 @@ sonarr:
 # Quality Definition
 # This section defines the Quality Definitions that will be used in your Sonarr instance
 # Only one set of Quality Definitions can be used per instance
-# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#quality-def-settings
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/quality-definition/
     quality_definition:
       type: series
 
 # Quality Profiles
 # This section creates and/or updates Quality Profile(s) in your Sonarr instance
-# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#quality-profiles
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/quality-profiles/
     quality_profiles:
       - name: WEB-1080p
         reset_unmatched_scores:
@@ -45,7 +45,7 @@ sonarr:
 # Custom Formats
 # This section creates and/or updates Custom Formats in your Sonarr instance,
 # and applies them and their scores to Quality Profiles
-# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/#custom-format-settings
+# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
     custom_formats:
       # Scores from TRaSH json
       - trash_ids:
