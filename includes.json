@@ -1,6 +1,22 @@
 {
   "radarr": [
+    {
+      "template": "radarr/includes/hd-bluray-web.yml",
+      "id": "hd-bluray-web"
+    },
+    {
+      "template": "radarr/includes/sqp/sqp-2.yml",
+      "id": "sqp-2"
+    }
   ],
   "sonarr": [
+    {
+      "template": "sonarr/includes/anime-sonarr-v4.yml",
+      "id": "anime-sonarr-v4"
+    },
+    {
+      "template": "sonarr/includes/web-2160p-v4.yml",
+      "id": "web-2160p-v4"
+    }
   ]
 }
