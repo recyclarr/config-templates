@@ -5,14 +5,50 @@
       "id": "hd-bluray-web"
     },
     {
+      "template": "radarr/includes/sqp/sqp-1-1080p.yml",
+      "id": "sqp-1-1080p"
+    },
+    {
+      "template": "radarr/includes/sqp/sqp-1-2160p-qp-default.yml",
+      "id": "sqp-1-2160p-qp-default"
+    },
+    {
+      "template": "radarr/includes/sqp/sqp-1-2160p-4k-only-qp-default.yml",
+      "id": "sqp-1-2160p-4k-only-qp-default"
+    },
+    {
+      "template": "radarr/includes/sqp/sqp-1-2160p-qp-prefer-imax-e.yml",
+      "id": "sqp-1-2160p-qp-prefer-imax-e"
+    },
+    {
+      "template": "radarr/includes/sqp/sqp-1-2160p-4k-only-qp-prefer-imax-e.yml",
+      "id": "sqp-1-2160p-4k-only-qp-prefer-imax-e"
+    },
+    {
       "template": "radarr/includes/sqp/sqp-2.yml",
       "id": "sqp-2"
+    },
+    {
+      "template": "radarr/includes/sqp/sqp-3.yml",
+      "id": "sqp-3"
+    },
+    {
+      "template": "radarr/includes/sqp/sqp-4.yml",
+      "id": "sqp-4"
+    },
+    {
+      "template": "radarr/includes/sqp/sqp-5.yml",
+      "id": "sqp-5"
     }
   ],
   "sonarr": [
     {
       "template": "sonarr/includes/anime-sonarr-v4.yml",
       "id": "anime-sonarr-v4"
+    },
+    {
+      "template": "sonarr/includes/web-1080p-v4.yml",
+      "id": "web-1080p-v4"
     },
     {
       "template": "sonarr/includes/web-2160p-v4.yml",
