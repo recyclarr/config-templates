@@ -5,6 +5,18 @@
       "id": "hd-bluray-web"
     },
     {
+      "template": "radarr/includes/uhd-bluray-web.yml",
+      "id": "uhd-bluray-web"
+    },
+    {
+      "template": "radarr/includes/remux-web-1080p.yml",
+      "id": "remux-web-1080p"
+    },
+    {
+      "template": "radarr/includes/remux-web-2160p.yml",
+      "id": "remux-web-2160p"
+    },
+    {
       "template": "radarr/includes/sqp/sqp-1-1080p.yml",
       "id": "sqp-1-1080p"
     },
