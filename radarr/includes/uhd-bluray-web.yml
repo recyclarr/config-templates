@@ -2,25 +2,36 @@ quality_definition:
   type: movie
 
 quality_profiles:
-  - name: HD Bluray + WEB
+  - name: UHD Bluray + WEB
     reset_unmatched_scores:
       enabled: true
     upgrade:
       allowed: true
-      until_quality: Bluray-1080p
+      until_quality: Bluray-2160p
       until_score: 10000
     min_format_score: 0
     quality_sort: top
     qualities:
-      - name: Bluray-1080p
-      - name: WEB 1080p
+      - name: Bluray-2160p
+      - name: WEB 2160p
         qualities:
-          - WEBDL-1080p
-          - WEBRip-1080p
-      - name: Bluray-720p
+          - WEBDL-2160p
+          - WEBRip-2160p
 
 custom_formats:
   - trash_ids:
+      # All HDR Formats
+      - e23edd2482476e595fb990b12e7c609c  # DV HDR10
+      - 58d6a88f13e2db7f5059c41047876f00  # DV
+      - 55d53828b9d81cbe20b02efd00aa0efd  # DV HLG
+      - a3e19f8f627608af0211acd02bf89735  # DV SDR
+      - b974a6cd08c1066250f1f177d7aa1225  # HDR10+
+      - dfb86d5941bc9075d6af23b09c2aeecd  # HDR10
+      - e61e28db95d22bedcadf030b8f156d96  # HDR
+      - 2a4d9069cc1fe3242ff9bdaebed239bb  # HDR (undefined)
+      - 08d6d8834ad9ec87b1dc7ec8148e7a1f  # PQ
+      - 9364dd386c9b4a1100dde8264690add7  # HLG
+
       # Movie Versions
       - 570bc9ebecd92723d2d21500f4be314c  # Remaster
       - eca37840c13c6ef2dd0262b141a5482f  # 4K Remaster
@@ -32,9 +43,9 @@ custom_formats:
       - 9f6cbff8cfe4ebbc1bde14c7b7bec0de  # IMAX Enhanced
 
       # HQ Release Groups
-      - ed27ebfef2f323e964fb1f61391bcb35  # HD Bluray Tier 01
-      - c20c8647f2746a1f4c4262b0fbbeeeae  # HD Bluray Tier 02
-      - 5608c71bcebba0a5e666223bae8c9227  # HD Bluray Tier 03
+      - 4d74ac4c4db0b64bff6ce0cffef99bf0  # UHD Bluray Tier 01
+      - a58f517a70193f8e578056642178419d  # UHD Bluray Tier 02
+      - e71939fae578037e7aed3ee219bbe7c1  # UHD Bluray Tier 03
       - c20f169ef63c5f40c2def54abaf4438e  # WEB Tier 01
       - 403816d65392c79236dcb6dd591aeda4  # WEB Tier 02
       - af94e0fe497124d1f9ce732069ec8c3b  # WEB Tier 03
@@ -48,6 +59,8 @@ custom_formats:
       - 90a6f9a284dff5103f6346090e6280c8  # LQ
       - dc98083864ea246d05a42df0d05f81cc  # x265 (HD)
       - b8cd450cbfa689c0259a01d9e29ba3d6  # 3D
+      - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
+      - 9c38ebb7384dada637be8899efa68e6f  # SDR
 
       # Streaming Services
       - b3b3a6ac74ecbd56bcdbefa4799fb9df  # AMZN
@@ -68,5 +81,5 @@ custom_formats:
       - e36a0ba1bc902b26ee40818a1d59b8bd  # PMTP
       - c2863d2a50c9acad1fb50e53ece60817  # STAN
     quality_profiles:
-      - name: HD Bluray + WEB
+      - name: UHD Bluray + WEB
         score: 0

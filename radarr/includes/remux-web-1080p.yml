@@ -2,26 +2,26 @@ quality_definition:
   type: movie
 
 quality_profiles:
-  - name: HD Bluray + WEB
+  - name: Remux + WEB 1080p
     reset_unmatched_scores:
       enabled: true
     upgrade:
       allowed: true
-      until_quality: Bluray-1080p
+      until_quality: Remux-1080p
       until_score: 10000
     min_format_score: 0
     quality_sort: top
     qualities:
-      - name: Bluray-1080p
+      - name: Remux-1080p
       - name: WEB 1080p
         qualities:
           - WEBDL-1080p
           - WEBRip-1080p
-      - name: Bluray-720p
 
 custom_formats:
   - trash_ids:
       # Movie Versions
+      - 0f12c086e289cf966fa5948eac571f44  # Hybrid
       - 570bc9ebecd92723d2d21500f4be314c  # Remaster
       - eca37840c13c6ef2dd0262b141a5482f  # 4K Remaster
       - e0c07d59beb37348e975a930d5e50319  # Criterion Collection
@@ -32,9 +32,9 @@ custom_formats:
       - 9f6cbff8cfe4ebbc1bde14c7b7bec0de  # IMAX Enhanced
 
       # HQ Release Groups
-      - ed27ebfef2f323e964fb1f61391bcb35  # HD Bluray Tier 01
-      - c20c8647f2746a1f4c4262b0fbbeeeae  # HD Bluray Tier 02
-      - 5608c71bcebba0a5e666223bae8c9227  # HD Bluray Tier 03
+      - 3a3ff47579026e76d6504ebea39390de  # Remux Tier 01
+      - 9f98181fe5a3fbeb0cc29340da2a468a  # Remux Tier 02
+      - 8baaf0b3142bf4d94c42a724f034e27a  # Remux Tier 03
       - c20f169ef63c5f40c2def54abaf4438e  # WEB Tier 01
       - 403816d65392c79236dcb6dd591aeda4  # WEB Tier 02
       - af94e0fe497124d1f9ce732069ec8c3b  # WEB Tier 03
@@ -68,5 +68,5 @@ custom_formats:
       - e36a0ba1bc902b26ee40818a1d59b8bd  # PMTP
       - c2863d2a50c9acad1fb50e53ece60817  # STAN
     quality_profiles:
-      - name: HD Bluray + WEB
+      - name: Remux + WEB 1080p
         score: 0
