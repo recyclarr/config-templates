@@ -17,6 +17,10 @@
       "id": "remux-web-2160p"
     },
     {
+      "template": "radarr/includes/anime-radarr.yml",
+      "id": "anime-radarr"
+    },
+    {
       "template": "radarr/includes/sqp/sqp-1-1080p.yml",
       "id": "sqp-1-1080p"
     },
