@@ -69,4 +69,3 @@ custom_formats:
       - c2863d2a50c9acad1fb50e53ece60817  # STAN
     quality_profiles:
       - name: Remux + WEB 1080p
-        score: 0

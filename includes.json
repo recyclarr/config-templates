@@ -33,12 +33,12 @@
       "id": "sqp-1-2160p-4k-only-qp-default"
     },
     {
-      "template": "radarr/includes/sqp/sqp-1-2160p-qp-prefer-imax-e.yml",
-      "id": "sqp-1-2160p-qp-prefer-imax-e"
+      "template": "radarr/includes/sqp/sqp-1-2160p-qp-imax-e.yml",
+      "id": "sqp-1-2160p-qp-imax-e"
     },
     {
-      "template": "radarr/includes/sqp/sqp-1-2160p-4k-only-qp-prefer-imax-e.yml",
-      "id": "sqp-1-2160p-4k-only-qp-prefer-imax-e"
+      "template": "radarr/includes/sqp/sqp-1-2160p-4k-only-qp-imax-e.yml",
+      "id": "sqp-1-2160p-4k-only-qp-imax-e"
     },
     {
       "template": "radarr/includes/sqp/sqp-2.yml",
