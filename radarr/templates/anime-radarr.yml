@@ -89,7 +89,6 @@ radarr:
           - db92c27ba606996b146b57fbe6d09186  # v3
           - d4e5e842fad129a3c097bdb2d20d31a0  # v4
           - 06b6542a47037d1e33b15aa3677c2365  # Anime Raws
-          - a5d148168c4506b55cf53984107c396e  # 10bit
           - 9172b2f683f6223e3a1846427b417a3d  # VOSTFR
           - b23eae459cc960816f2d6ba84af45055  # Dubs Only
           # Anime Streaming Services
@@ -109,6 +108,12 @@ radarr:
       # Adjustable scoring section
       - trash_ids:
           - 064af5f084a0a24458cc8ecd3220f93f  # Uncensored
+        quality_profiles:
+          - name: Remux-1080p - Anime
+            score: 0  # Adjust scoring as desired
+
+      - trash_ids:
+          - a5d148168c4506b55cf53984107c396e  # 10bit
         quality_profiles:
           - name: Remux-1080p - Anime
             score: 0  # Adjust scoring as desired
