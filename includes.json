@@ -41,6 +41,10 @@
       "id": "sqp-1-2160p-4k-only-qp-imax-e"
     },
     {
+      "template": "radarr/includes/sqp/sqp-1-2160p-shared.yml",
+      "id": "sqp-1-2160p-shared"
+    },
+    {
       "template": "radarr/includes/sqp/sqp-2.yml",
       "id": "sqp-2"
     },
