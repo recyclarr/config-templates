@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: SQP-1 (2160p)                                                 #
-# Updated: 2023-09-14                                                                             #
+# Updated: 2023-09-16                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -14,6 +14,11 @@ radarr:
   sqp-1-2160p:
     base_url: Put your Radarr URL here
     api_key: Put your API key here
+
+    quality_profiles:
+      - name: SQP-1 (2160p)
+        # Uncomment the below line if you don't have access to top-tier indexers
+        # min_format_score: 10
 
     include:
     # Choose ONE of the following four options to determine quality profile behavior.
