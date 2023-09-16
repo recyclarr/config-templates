@@ -26,6 +26,7 @@ radarr:
       # - template: sqp-1-2160p-qp-imax-e  # Prefer IMAX-E, enable IMAX-E below
       # - template: sqp-1-2160p-4k-only-qp-default  # Default, 4K qualities only
       # - template: sqp-1-2160p-4k-only-qp-imax-e  # Prefer IMAX-E, 4K only, enable IMAX-E below
+
       # Do not comment out the next line as it enables this profile's custom formats
       - template: sqp-1-2160p-shared
 
