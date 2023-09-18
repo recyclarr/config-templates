@@ -54,7 +54,6 @@ custom_formats:
 
   # Movie Versions
       - 0f12c086e289cf966fa5948eac571f44  # Hybrid
-      - f700d29429c023a5734505e77daeaea7  # DV (FEL)
       - 570bc9ebecd92723d2d21500f4be314c  # Remaster
       - eca37840c13c6ef2dd0262b141a5482f  # 4K Remaster
       - e0c07d59beb37348e975a930d5e50319  # Criterion Collection
@@ -82,10 +81,8 @@ custom_formats:
   # Unwanted
       - ed38b889b31be83fda192888e2286d83  # BR-DISK
       - 90a6f9a284dff5103f6346090e6280c8  # LQ
-      - 839bea857ed2c0a8e084f3cbdbd65ecb  # x265 (no HDR/DV)
       - b8cd450cbfa689c0259a01d9e29ba3d6  # 3D
       - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
-      - 9c38ebb7384dada637be8899efa68e6f  # SDR
 
   # Resolution
       - 820b09bb9acbfde9c35c71e0e565dad8  # 1080p
