@@ -7,9 +7,7 @@
 # https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
 ###################################################################################################
 
-# Instance Definition
-# This section defines your instance type, name, and authentication
-# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/basic/
+# Instance Definition: https://recyclarr.dev/wiki/yaml/config-reference/basic/
 radarr:
   remux-web-2160p:
     base_url: Put your Radarr URL here
@@ -18,12 +16,8 @@ radarr:
     include:
       - template: remux-web-2160p
 
-# Custom Formats
-# This section creates and/or updates Custom Formats in your Radarr instance,
-# and applies them and their scores to Quality Profiles
-# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
+# Custom Formats: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
 
-# You must comment out lines 27, 28, 50 and 51 if you disable all the custom formats below
     custom_formats:
       - trash_ids:
       # Audio - Uncomment the next section if you are using the Advanced Audio Formats
@@ -47,5 +41,8 @@ radarr:
           - 923b6abef9b17f937fab56cfcf89e1f1  # DV (WEBDL)
           # HDR10Plus Boost - Uncomment the next line if any of your devices DO support HDR10+
           # - b17886cb4158d9fea189859409975758  # HDR10Plus Boost
+
+      # Optional
+          - 2016d1676f5ee13a5b7257ff86ac9a93  # SDR
         quality_profiles:
           - name: Remux + WEB 2160p

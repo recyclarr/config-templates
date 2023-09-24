@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: Anime Sonarr                                                  #
-# Updated: 2023-09-16                                                                             #
+# Updated: 2023-09-24                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -8,9 +8,7 @@
 # This config file is for use with Sonarr V4 only                                                 #
 ###################################################################################################
 
-# Instance Definition
-# This section defines your instance type, name, and authentication
-# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/basic/
+# Instance Definition: https://recyclarr.dev/wiki/yaml/config-reference/basic/
 sonarr:
   anime-sonarr-v4:
     base_url: Put your Sonarr URL here
@@ -19,10 +17,7 @@ sonarr:
     include:
       - template: anime-sonarr-v4
 
-# Custom Formats
-# This section creates and/or updates Custom Formats in your Sonarr instance,
-# and applies them and their scores to Quality Profiles
-# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
+# Custom Formats: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
     custom_formats:
       - trash_ids:
           - 026d5aadd1a6b4e550b134cb6c72b3ca  # Uncensored

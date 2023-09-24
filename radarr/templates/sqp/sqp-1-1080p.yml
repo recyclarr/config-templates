@@ -1,15 +1,13 @@
 ###################################################################################################
 # Recyclarr Configuration Template: SQP-1 (1080p)                                                 #
-# Updated: 2023-09-16                                                                             #
+# Updated: 2023-09-24                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
 # https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
 ###################################################################################################
 
-# Instance Definition
-# This section defines your instance type, name, and authentication
-# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/basic/
+# Instance Definition: https://recyclarr.dev/wiki/yaml/config-reference/basic/
 radarr:
   sqp-1-1080p:
     base_url: Put your Radarr URL here
@@ -23,14 +21,9 @@ radarr:
     include:
       - template: sqp-1-1080p
 
-# Custom Formats
-# This section creates and/or updates Custom Formats in your Radarr instance,
-# and applies them and their scores to Quality Profiles
-# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
-
-# You must uncomment lines 27, 28, 41 and 42 if you enable any custom formats below
-    # custom_formats:
-      # - trash_ids:
+# Custom Formats: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
+    custom_formats:
+      - trash_ids:
       # IMAX-E - Uncomment the next line if you prefer WEBDL with IMAX Enhanced to BHDStudio
           # - 9f6cbff8cfe4ebbc1bde14c7b7bec0de  # IMAX Enhanced
 
@@ -43,5 +36,5 @@ radarr:
           # - f537cf427b64c38c8e36298f657e4828  # Scene
           # - 0a3f082873eb454bde444150b70253cc  # Extras
           # - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
-        # quality_profiles:
-          # - name: SQP-1 (1080p)
+        quality_profiles:
+          - name: SQP-1 (1080p)

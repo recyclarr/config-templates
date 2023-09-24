@@ -1,15 +1,13 @@
 ###################################################################################################
 # Recyclarr Configuration Template: Anime Radarr                                                  #
-# Updated: 2023-09-16                                                                             #
+# Updated: 2023-09-24                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
 # https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
 ###################################################################################################
 
-# Instance Definition
-# This section defines your instance type, name, and authentication
-# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/basic/
+# Instance Definition: https://recyclarr.dev/wiki/yaml/config-reference/basic/
 radarr:
   anime-radarr:
     base_url: Put your Radarr URL here
@@ -18,10 +16,7 @@ radarr:
     include:
       - template: anime-radarr
 
-# Custom Formats
-# This section creates and/or updates Custom Formats in your Radarr instance,
-# and applies them and their scores to Quality Profiles
-# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
+# Custom Formats: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
     custom_formats:
       - trash_ids:
           - 064af5f084a0a24458cc8ecd3220f93f  # Uncensored

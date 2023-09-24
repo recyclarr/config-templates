@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: WEB-1080p (V4)                                                #
-# Updated: 2023-09-16                                                                             #
+# Updated: 2023-09-24                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -8,9 +8,7 @@
 # This config file is for use with Sonarr V4 only                                                 #
 ###################################################################################################
 
-# Instance Definition
-# This section defines your instance type, name, and authentication
-# Documentation: https://recyclarr.dev/wiki/yaml/config-reference/basic/
+# Instance Definition: https://recyclarr.dev/wiki/yaml/config-reference/basic/
 sonarr:
   web-1080p-v4:
     base_url: Put your Sonarr URL here
