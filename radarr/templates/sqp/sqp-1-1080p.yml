@@ -25,16 +25,16 @@ radarr:
     custom_formats:
       - trash_ids:
       # IMAX-E - Uncomment the next line if you prefer WEBDL with IMAX Enhanced to BHDStudio
-          # - 9f6cbff8cfe4ebbc1bde14c7b7bec0de  # IMAX Enhanced
+          # - 9f6cbff8cfe4ebbc1bde14c7b7bec0de # IMAX Enhanced
 
 # Optional - Uncomment any of the following custom formats if you want them added to your profile
-          # - b6832f586342ef70d9c128d40c07b872  # Bad Dual Groups
-          # - 90cedc1fea7ea5d11298bebd3d1d3223  # EVO (no WEBDL)
-          # - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5  # No-RlsGroup
-          # - 7357cf5161efbf8c4d5d0c30b4815ee2  # Obfuscated
-          # - 5c44f52a8714fdd79bb4d98e2673be1f  # Retags
-          # - f537cf427b64c38c8e36298f657e4828  # Scene
-          # - 0a3f082873eb454bde444150b70253cc  # Extras
-          # - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
+          # - b6832f586342ef70d9c128d40c07b872 # Bad Dual Groups
+          # - 90cedc1fea7ea5d11298bebd3d1d3223 # EVO (no WEBDL)
+          # - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5 # No-RlsGroup
+          # - 7357cf5161efbf8c4d5d0c30b4815ee2 # Obfuscated
+          # - 5c44f52a8714fdd79bb4d98e2673be1f # Retags
+          # - f537cf427b64c38c8e36298f657e4828 # Scene
+          # - 0a3f082873eb454bde444150b70253cc # Extras
+          # - bfd8eb01832d646a0a89c4deb46f8564 # Upscaled
         quality_profiles:
           - name: SQP-1 (1080p)
