@@ -20,10 +20,10 @@ radarr:
 
     include:
     # Choose ONE of the following four options to determine quality profile behavior.
-      - template: sqp-1-2160p-qp-default  # Default
-      # - template: sqp-1-2160p-qp-imax-e  # Prefer IMAX-E, enable IMAX-E below
-      # - template: sqp-1-2160p-4k-only-qp-default  # Default, 4K qualities only
-      # - template: sqp-1-2160p-4k-only-qp-imax-e  # Prefer IMAX-E, 4K only, enable IMAX-E below
+      - template: sqp-1-2160p-qp-default # Default
+      # - template: sqp-1-2160p-qp-imax-e # Prefer IMAX-E, enable IMAX-E below
+      # - template: sqp-1-2160p-4k-only-qp-default # Default, 4K qualities only
+      # - template: sqp-1-2160p-4k-only-qp-imax-e # Prefer IMAX-E, 4K only, enable IMAX-E below
 
       # Do not comment out the next line as it enables this profile's custom formats
       - template: sqp-1-2160p-shared
@@ -33,28 +33,28 @@ radarr:
       - trash_ids:
       # IMAX-E
           # Uncomment the next line if you prefer 1080p/2160p WEBDL with IMAX Enhanced
-          # - 9f6cbff8cfe4ebbc1bde14c7b7bec0de  # IMAX Enhanced
+          # - 9f6cbff8cfe4ebbc1bde14c7b7bec0de # IMAX Enhanced
 
       # x265
           # Use ONE of the following two options to determine whether all 1080p x265 releases are
           # blocked, or whether to permit those with DV/HDR
-          - 839bea857ed2c0a8e084f3cbdbd65ecb  # x265 (no HDR/DV)
-          # - dc98083864ea246d05a42df0d05f81cc  # x265 (HD)
+          - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
+          # - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
 
       # Optional
           # Uncomment any of the following optional custom formats if you want them to be added to
           # the quality profile
-          # - b6832f586342ef70d9c128d40c07b872  # Bad Dual Groups
+          # - b6832f586342ef70d9c128d40c07b872 # Bad Dual Groups
           # Uncomment the next line if you have a setup that supports HDR10+
-          # - b17886cb4158d9fea189859409975758  # HDR10+ Boost
-          # - 90cedc1fea7ea5d11298bebd3d1d3223  # EVO (no WEBDL)
-          # - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5  # No-RlsGroup
-          # - 7357cf5161efbf8c4d5d0c30b4815ee2  # Obfuscated
-          # - 5c44f52a8714fdd79bb4d98e2673be1f  # Retags
-          # - f537cf427b64c38c8e36298f657e4828  # Scene
-          # - 0a3f082873eb454bde444150b70253cc  # Extras
-          - 9c38ebb7384dada637be8899efa68e6f  # SDR
+          # - b17886cb4158d9fea189859409975758 # HDR10+ Boost
+          # - 90cedc1fea7ea5d11298bebd3d1d3223 # EVO (no WEBDL)
+          # - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5 # No-RlsGroup
+          # - 7357cf5161efbf8c4d5d0c30b4815ee2 # Obfuscated
+          # - 5c44f52a8714fdd79bb4d98e2673be1f # Retags
+          # - f537cf427b64c38c8e36298f657e4828 # Scene
+          # - 0a3f082873eb454bde444150b70253cc # Extras
+          - 9c38ebb7384dada637be8899efa68e6f # SDR
           # Comment out the next line if you don't want to block AV1 releases
-          - cae4ca30163749b891686f95532519bd  # AV1
+          - cae4ca30163749b891686f95532519bd # AV1
         quality_profiles:
           - name: SQP-1 (2160p)
