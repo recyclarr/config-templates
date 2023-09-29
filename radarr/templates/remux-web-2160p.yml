@@ -43,6 +43,6 @@ radarr:
           # - b17886cb4158d9fea189859409975758 # HDR10Plus Boost
 
       # Optional
-          - 2016d1676f5ee13a5b7257ff86ac9a93 # SDR
+          - 9c38ebb7384dada637be8899efa68e6f # SDR
         quality_profiles:
           - name: Remux + WEB 2160p
