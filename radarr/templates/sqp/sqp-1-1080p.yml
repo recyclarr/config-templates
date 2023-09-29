@@ -13,6 +13,12 @@ radarr:
     base_url: Put your Radarr URL here
     api_key: Put your API key here
 
+    media_naming:
+      folder: default # Optionally change this to plex/emby/jellyfin
+      movie:
+        rename: true
+        standard: default # if not using plex change to emby/jellyfin or use original for {Original Title}
+
     quality_profiles:
       - name: SQP-1 (1080p)
       # Uncomment the below line if you don't have access to top-tier indexers

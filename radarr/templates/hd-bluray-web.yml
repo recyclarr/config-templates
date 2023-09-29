@@ -13,5 +13,11 @@ radarr:
     base_url: Put your Radarr URL here
     api_key: Put your API key here
 
+    media_naming:
+      folder: default # Optionally change this to plex/emby/jellyfin
+      movie:
+        rename: true
+        standard: default # if not using plex change to emby/jellyfin or use original for {Original Title}
+
     include:
       - template: hd-bluray-web
