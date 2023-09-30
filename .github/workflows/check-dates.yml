@@ -1,0 +1,25 @@
+name: Check Dates
+
+on:
+  pull_request:
+
+jobs:
+  check_dates:
+    name: Check Dates
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Get Changed Files
+        id: files
+        uses: tj-actions/changed-files@v39
+        with:
+          separator: ","
+
+      - name: Check Dates
+        shell: pwsh
+        run: |
+          $files = "${{ steps.files.outputs.all_changed_files }}".Split(',')
+          $nowDate = Get-Date -Format "yyyy-MM-dd"
+          ci/CheckInvalidDates.ps1 $files $nowDate
