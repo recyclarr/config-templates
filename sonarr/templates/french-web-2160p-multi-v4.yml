@@ -35,7 +35,7 @@ sonarr:
           - 1f733af03141f068a540eec352589a89  # DV HLG
           - 27954b0a80aab882522a88a4d9eae1cd  # DV SDR
           - a3d82cbef5039f8d295478d28a887159  # HDR10+
-          - 3497799d29a085e2ac2df9d468413c94  # HDR10
+          - 3497799d29a085e2acz2df9d468413c94  # HDR10
           - 3e2c4e748b64a1a1118e0ea3f4cf6875  # HDR
           - bb019e1cd00f304f80971c965de064dc  # HDR (undefined)
           - 2a7e3be05d3861d6df7171ec74cad727  # PQ
