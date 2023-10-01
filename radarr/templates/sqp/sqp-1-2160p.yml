@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: SQP-1 (2160p)                                                 #
-# Updated: 2023-09-24                                                                             #
+# Updated: 2023-10-01                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -30,18 +30,27 @@ radarr:
 
 # Custom Formats: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
     custom_formats:
+      # Movie Versions
       - trash_ids:
-      # IMAX-E
           # Uncomment the next line if you prefer 1080p/2160p WEBDL with IMAX Enhanced
           # - 9f6cbff8cfe4ebbc1bde14c7b7bec0de # IMAX Enhanced
+        quality_profiles:
+          - name: SQP-1 (2160p)
 
-      # x265
-          # Use ONE of the following two options to determine whether all 1080p x265 releases are
-          # blocked, or whether to permit those with DV/HDR
-          - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
+      # Unwanted
+      - trash_ids:
+          # Uncomment the next six lines to block all x265 HD releases
+          # - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
+        # quality_profiles:
+          # - name: SQP-1 (2160p)
+            # score: 0
+      # - trash_ids:
           # - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
+        quality_profiles:
+          - name: SQP-1 (2160p)
 
       # Optional
+      - trash_ids:
           # Uncomment any of the following optional custom formats if you want them to be added to
           # the quality profile
           # - b6832f586342ef70d9c128d40c07b872 # Bad Dual Groups
@@ -52,9 +61,17 @@ radarr:
           # - 7357cf5161efbf8c4d5d0c30b4815ee2 # Obfuscated
           # - 5c44f52a8714fdd79bb4d98e2673be1f # Retags
           # - f537cf427b64c38c8e36298f657e4828 # Scene
-          # - 0a3f082873eb454bde444150b70253cc # Extras
+        quality_profiles:
+          - name: SQP-1 (2160p)
+
+      - trash_ids:
           - 9c38ebb7384dada637be8899efa68e6f # SDR
-          # Comment out the next line if you don't want to block AV1 releases
+        quality_profiles:
+          - name: SQP-1 (2160p)
+            # score: 0 # Uncomment this line to allow SDR releases
+
+      - trash_ids:
           - cae4ca30163749b891686f95532519bd # AV1
         quality_profiles:
           - name: SQP-1 (2160p)
+            # score: 0 # Uncomment this line to allow AV1 releases

@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: HD Bluray + WEB                                               #
-# Updated: 2023-09-24                                                                             #
+# Updated: 2023-10-01                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -15,3 +15,11 @@ radarr:
 
     include:
       - template: hd-bluray-web
+
+    custom_formats:
+      # Movie Versions
+      - trash_ids:
+          - 9f6cbff8cfe4ebbc1bde14c7b7bec0de # IMAX Enhanced
+        quality_profiles:
+          - name: HD Bluray + WEB
+            # score: 0 # Uncomment this line to disable prioritised IMAX Enhanced releases
