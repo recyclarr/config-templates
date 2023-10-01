@@ -46,20 +46,10 @@ radarr:
 
       # Optional
       - trash_ids:
-          # Comment out the next line if you and all of your users' setups are fully DV compatible
-          - 923b6abef9b17f937fab56cfcf89e1f1 # DV (WEBDL)
-        quality_profiles:
-          - name: SQP-5
-
-      - trash_ids:
-          - 9c38ebb7384dada637be8899efa68e6f # SDR
-        quality_profiles:
-          - name: SQP-5
-            # score: 0 # Uncomment this line to enable SDR releases
-
-      - trash_ids:
           # Uncomment any of the following if you want them to be added to the quality profile
           # - b6832f586342ef70d9c128d40c07b872 # Bad Dual Groups
+          # Comment out the next line if you and all of your users' setups are fully DV compatible
+          - 923b6abef9b17f937fab56cfcf89e1f1 # DV (WEBDL)
           # Uncomment the below line if you have a setup that supports HDR10+
           # - b17886cb4158d9fea189859409975758 # HDR10+ Boost
           # - 90cedc1fea7ea5d11298bebd3d1d3223 # EVO (no WEBDL)
@@ -70,3 +60,9 @@ radarr:
           # - f700d29429c023a5734505e77daeaea7 # DV (FEL)
         quality_profiles:
           - name: SQP-5
+
+      - trash_ids:
+          - 9c38ebb7384dada637be8899efa68e6f # SDR
+        quality_profiles:
+          - name: SQP-5
+            # score: 0 # Uncomment this line to enable SDR releases
