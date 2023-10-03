@@ -12,6 +12,8 @@ rules:
     allow-non-breakable-inline-mappings: true
   document-start: disable
   comments-indentation: disable
+  comments:
+    min-spaces-from-content: 1
 
   # Let .gitattributes manage EOL
   new-lines: disable
