@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: WEB-2160p (V4)                                                #
-# Updated: 2023-09-24                                                                             #
+# Updated: 2023-10-03                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -19,14 +19,18 @@ sonarr:
 
 # Custom Formats: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
     custom_formats:
-      - trash_ids:
       # HDR Formats
+      - trash_ids:
           # Comment out the next line if you and all of your users' setups are fully DV compatible
           - 9b27ab6498ec0f31a3353992e19434ca # DV (WEBDL)
           # HDR10Plus Boost - Uncomment the next line if any of your devices DO support HDR10+
           # - 0dad0a507451acddd754fe6dc3a7f5e7 # HDR10Plus Boost
+        quality_profiles:
+          - name: WEB-2160p
 
       # Optional
+      - trash_ids:
           - 2016d1676f5ee13a5b7257ff86ac9a93 # SDR
         quality_profiles:
           - name: WEB-2160p
+            # score: 0 # Uncomment this line to enable SDR releases

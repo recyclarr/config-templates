@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: SQP-1 (1080p)                                                 #
-# Updated: 2023-09-24                                                                             #
+# Updated: 2023-10-03                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -23,11 +23,12 @@ radarr:
 
 # Custom Formats: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
     custom_formats:
+      # Movie Versions
       - trash_ids:
-      # IMAX-E - Uncomment the next line if you prefer WEBDL with IMAX Enhanced to BHDStudio
+      # Uncomment the next line if you prefer WEBDL with IMAX Enhanced to BHDStudio
           # - 9f6cbff8cfe4ebbc1bde14c7b7bec0de # IMAX Enhanced
 
-# Optional - Uncomment any of the following custom formats if you want them added to your profile
+      # Optional - uncomment any of the following if you want them added to your profile
           # - b6832f586342ef70d9c128d40c07b872 # Bad Dual Groups
           # - 90cedc1fea7ea5d11298bebd3d1d3223 # EVO (no WEBDL)
           # - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5 # No-RlsGroup

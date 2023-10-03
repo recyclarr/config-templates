@@ -61,6 +61,7 @@ custom_formats:
       - db9b4c4b53d312a3ca5f1378f6440fc9 # Vinegar Syndrome
       - 957d0f44b592285f26449575e8b1167e # Special Edition
       - eecf3a857724171f968a66cb5719e152 # IMAX
+      - 9f6cbff8cfe4ebbc1bde14c7b7bec0de # IMAX Enhanced
 
   # HQ Release Groups
       - 3a3ff47579026e76d6504ebea39390de # Remux Tier 01
@@ -80,6 +81,11 @@ custom_formats:
       - 90a6f9a284dff5103f6346090e6280c8 # LQ
       - b8cd450cbfa689c0259a01d9e29ba3d6 # 3D
       - bfd8eb01832d646a0a89c4deb46f8564 # Upscaled
+      - 0a3f082873eb454bde444150b70253cc # Extras
+
+  # Optional
+      - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
+      - 9c38ebb7384dada637be8899efa68e6f # SDR
 
   # Resolution
       - 820b09bb9acbfde9c35c71e0e565dad8 # 1080p

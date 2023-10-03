@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: Remux + WEB 1080p                                             #
-# Updated: 2023-09-24                                                                             #
+# Updated: 2023-10-03                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -18,8 +18,9 @@ radarr:
 
 # Custom Formats: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
     custom_formats:
+      # Audio
       - trash_ids:
-      # Audio - Uncomment the next section if you are using the Advanced Audio Formats
+          # Uncomment the next section to enable Advanced Audio Formats
           # - 496f355514737f7d83bf7aa4d24f8169 # TrueHD Atmos
           # - 2f22d89048b01681dde8afe203bf2e95 # DTS X
           # - 417804f7f2c4308c1f4c5d380d4c4475 # ATMOS (undefined)
@@ -36,3 +37,10 @@ radarr:
           # - c2998bd0d90ed5621d8df281e839436e # DD
         quality_profiles:
           - name: Remux + WEB 1080p
+
+      # Movie Versions
+      - trash_ids:
+          - 9f6cbff8cfe4ebbc1bde14c7b7bec0de # IMAX Enhanced
+        quality_profiles:
+          - name: Remux + WEB 1080p
+            # score: 0 # Uncomment this line to disable prioritised IMAX Enhanced releases
