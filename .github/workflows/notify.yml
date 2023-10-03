@@ -1,0 +1,22 @@
+name: Discord Notification
+
+on:
+  # includes PR merges as well as pushes without a PR
+  push:
+    branches:
+      - master
+
+jobs:
+  check_dates:
+    name: Discord Notification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Discord Commits
+        uses: Sniddl/discord-commits@v1.6
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          template: simple-link
+          include-extras: true
