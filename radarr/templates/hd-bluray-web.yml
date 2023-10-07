@@ -14,7 +14,10 @@ radarr:
     api_key: Put your API key here
 
     include:
-      - template: hd-bluray-web
+      # Comment out any of the following includes to disable them
+      - template: radarr-quality-definition-movie
+      - template: radarr-quality-profile-hd-bluray-web
+      - template: radarr-custom-formats-hd-bluray-web
 
     custom_formats:
       # Movie Versions

@@ -14,7 +14,10 @@ radarr:
     api_key: Put your API key here
 
     include:
-      - template: sqp-5
+      # Comment out any of the following includes to disable them
+      - template: radarr-quality-definition-sqp-uhd
+      - template: radarr-quality-profile-sqp-5
+      - template: radarr-custom-formats-sqp-5
 
 # Custom Formats: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
     custom_formats:

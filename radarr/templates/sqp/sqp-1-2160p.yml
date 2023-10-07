@@ -19,14 +19,18 @@ radarr:
         # min_format_score: 10
 
     include:
-    # Choose ONE of the following four options to determine quality profile behavior.
-      - template: sqp-1-2160p-qp-default # Default
-      # - template: sqp-1-2160p-qp-imax-e # Prefer IMAX-E, enable IMAX-E below
-      # - template: sqp-1-2160p-4k-only-qp-default # Default, 4K qualities only
-      # - template: sqp-1-2160p-4k-only-qp-imax-e # Prefer IMAX-E, 4K only, enable IMAX-E below
+      # Comment out any of the following includes to disable them
+      - template: radarr-quality-definition-sqp-streaming
 
-      # Do not comment out the next line as it enables this profile's custom formats
-      - template: sqp-1-2160p-shared
+      # Choose *one* of the following four options to determine quality profile preference
+      # IMAX-E options also require uncommenting the IMAX Enhanced custom format below
+      # Comment out all four options to disable quality profile sync
+      - template: radarr-quality-profile-sqp-1-2160p-default
+      # - template: radarr-quality-profile-sqp-1-2160p-imax-e
+      # - template: radarr-quality-profile-sqp-1-2160p-4k-only-default
+      # - template: radarr-quality-profile-sqp-1-2160p-4k-only-imax-e
+
+      - template: radarr-custom-formats-sqp-1-2160p
 
 # Custom Formats: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
     custom_formats:
