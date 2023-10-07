@@ -1,77 +1,77 @@
 {
   "radarr": [
     {
-      "template": "radarr/includes/hd-bluray-web.yml",
+      "template": "radarr/includes/legacy/hd-bluray-web.yml",
       "id": "hd-bluray-web"
     },
     {
-      "template": "radarr/includes/uhd-bluray-web.yml",
+      "template": "radarr/includes/legacy/uhd-bluray-web.yml",
       "id": "uhd-bluray-web"
     },
     {
-      "template": "radarr/includes/remux-web-1080p.yml",
+      "template": "radarr/includes/legacy/remux-web-1080p.yml",
       "id": "remux-web-1080p"
     },
     {
-      "template": "radarr/includes/remux-web-2160p.yml",
+      "template": "radarr/includes/legacy/remux-web-2160p.yml",
       "id": "remux-web-2160p"
     },
     {
-      "template": "radarr/includes/anime-radarr.yml",
+      "template": "radarr/includes/legacy/anime-radarr.yml",
       "id": "anime-radarr"
     },
     {
-      "template": "radarr/includes/sqp/sqp-1-1080p.yml",
+      "template": "radarr/includes/legacy/sqp/sqp-1-1080p.yml",
       "id": "sqp-1-1080p"
     },
     {
-      "template": "radarr/includes/sqp/sqp-1-2160p-qp-default.yml",
+      "template": "radarr/includes/legacy/sqp/sqp-1-2160p-qp-default.yml",
       "id": "sqp-1-2160p-qp-default"
     },
     {
-      "template": "radarr/includes/sqp/sqp-1-2160p-4k-only-qp-default.yml",
+      "template": "radarr/includes/legacy/sqp/sqp-1-2160p-4k-only-qp-default.yml",
       "id": "sqp-1-2160p-4k-only-qp-default"
     },
     {
-      "template": "radarr/includes/sqp/sqp-1-2160p-qp-imax-e.yml",
+      "template": "radarr/includes/legacy/sqp/sqp-1-2160p-qp-imax-e.yml",
       "id": "sqp-1-2160p-qp-imax-e"
     },
     {
-      "template": "radarr/includes/sqp/sqp-1-2160p-4k-only-qp-imax-e.yml",
+      "template": "radarr/includes/legacy/sqp/sqp-1-2160p-4k-only-qp-imax-e.yml",
       "id": "sqp-1-2160p-4k-only-qp-imax-e"
     },
     {
-      "template": "radarr/includes/sqp/sqp-1-2160p-shared.yml",
+      "template": "radarr/includes/legacy/sqp/sqp-1-2160p-shared.yml",
       "id": "sqp-1-2160p-shared"
     },
     {
-      "template": "radarr/includes/sqp/sqp-2.yml",
+      "template": "radarr/includes/legacy/sqp/sqp-2.yml",
       "id": "sqp-2"
     },
     {
-      "template": "radarr/includes/sqp/sqp-3.yml",
+      "template": "radarr/includes/legacy/sqp/sqp-3.yml",
       "id": "sqp-3"
     },
     {
-      "template": "radarr/includes/sqp/sqp-4.yml",
+      "template": "radarr/includes/legacy/sqp/sqp-4.yml",
       "id": "sqp-4"
     },
     {
-      "template": "radarr/includes/sqp/sqp-5.yml",
+      "template": "radarr/includes/legacy/sqp/sqp-5.yml",
       "id": "sqp-5"
     }
   ],
   "sonarr": [
     {
-      "template": "sonarr/includes/anime-sonarr-v4.yml",
+      "template": "sonarr/includes/legacy/anime-sonarr-v4.yml",
       "id": "anime-sonarr-v4"
     },
     {
-      "template": "sonarr/includes/web-1080p-v4.yml",
+      "template": "sonarr/includes/legacy/web-1080p-v4.yml",
       "id": "web-1080p-v4"
     },
     {
-      "template": "sonarr/includes/web-2160p-v4.yml",
+      "template": "sonarr/includes/legacy/web-2160p-v4.yml",
       "id": "web-2160p-v4"
     }
   ]
