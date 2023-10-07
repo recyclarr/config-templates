@@ -59,6 +59,118 @@
     {
       "template": "radarr/includes/legacy/sqp/sqp-5.yml",
       "id": "sqp-5"
+    },
+    {
+      "template": "radarr/includes/custom-formats/radarr-custom-formats-anime.yml",
+      "id": "radarr-custom-formats-anime"
+    },
+    {
+      "template": "radarr/includes/custom-formats/radarr-custom-formats-hd-bluray-web.yml",
+      "id": "radarr-custom-formats-hd-bluray-web"
+    },
+    {
+      "template": "radarr/includes/custom-formats/radarr-custom-formats-remux-web-1080p.yml",
+      "id": "radarr-custom-formats-remux-web-1080p"
+    },
+    {
+      "template": "radarr/includes/custom-formats/radarr-custom-formats-remux-web-2160p.yml",
+      "id": "radarr-custom-formats-remux-web-2160p"
+    },
+    {
+      "template": "radarr/includes/custom-formats/radarr-custom-formats-uhd-bluray-web.yml",
+      "id": "radarr-custom-formats-uhd-bluray-web"
+    },
+    {
+      "template": "radarr/includes/custom-formats/sqp/radarr-custom-formats-sqp-1-1080p.yml",
+      "id": "radarr-custom-formats-sqp-1-1080p"
+    },
+    {
+      "template": "radarr/includes/custom-formats/sqp/radarr-custom-formats-sqp-1-2160p.yml",
+      "id": "radarr-custom-formats-sqp-1-2160p"
+    },
+    {
+      "template": "radarr/includes/custom-formats/sqp/radarr-custom-formats-sqp-2.yml",
+      "id": "radarr-custom-formats-sqp-2"
+    },
+    {
+      "template": "radarr/includes/custom-formats/sqp/radarr-custom-formats-sqp-3.yml",
+      "id": "radarr-custom-formats-sqp-3"
+    },
+    {
+      "template": "radarr/includes/custom-formats/sqp/radarr-custom-formats-sqp-4.yml",
+      "id": "radarr-custom-formats-sqp-4"
+    },
+    {
+      "template": "radarr/includes/custom-formats/sqp/radarr-custom-formats-sqp-5.yml",
+      "id": "radarr-custom-formats-sqp-5"
+    },
+    {
+      "template": "radarr/includes/quality-definitions/radarr-quality-definition-movie.yml",
+      "id": "radarr-quality-definition-movie"
+    },
+    {
+      "template": "radarr/includes/quality-definitions/sqp/radarr-quality-definition-sqp-streaming.yml",
+      "id": "radarr-quality-definition-sqp-streaming"
+    },
+    {
+      "template": "radarr/includes/quality-definitions/sqp/radarr-quality-definition-sqp-uhd.yml",
+      "id": "radarr-quality-definition-sqp-uhd"
+    },
+    {
+      "template": "radarr/includes/quality-profiles/radarr-quality-profile-anime.yml",
+      "id": "radarr-quality-profile-anime"
+    },
+    {
+      "template": "radarr/includes/quality-profiles/radarr-quality-profile-hd-bluray-web.yml",
+      "id": "radarr-quality-profile-hd-bluray-web"
+    },
+    {
+      "template": "radarr/includes/quality-profiles/radarr-quality-profile-remux-web-1080p.yml",
+      "id": "radarr-quality-profile-remux-web-1080p"
+    },
+    {
+      "template": "radarr/includes/quality-profiles/radarr-quality-profile-remux-web-2160p.yml",
+      "id": "radarr-quality-profile-remux-web-2160p"
+    },
+    {
+      "template": "radarr/includes/quality-profiles/radarr-quality-profile-uhd-bluray-web.yml",
+      "id": "radarr-quality-profile-uhd-bluray-web"
+    },
+    {
+      "template": "radarr/includes/quality-profiles/sqp/radarr-quality-profile-sqp-1-1080p.yml",
+      "id": "radarr-quality-profile-sqp-1-1080p"
+    },
+    {
+      "template": "radarr/includes/quality-profiles/sqp/radarr-quality-profile-sqp-1-2160p-4k-only-default.yml",
+      "id": "radarr-quality-profile-sqp-1-2160p-4k-only-default"
+    },
+    {
+      "template": "radarr/includes/quality-profiles/sqp/radarr-quality-profile-sqp-1-2160p-4k-only-imax-e.yml",
+      "id": "radarr-quality-profile-sqp-1-2160p-4k-only-imax-e"
+    },
+    {
+      "template": "radarr/includes/quality-profiles/sqp/radarr-quality-profile-sqp-1-2160p-default.yml",
+      "id": "radarr-quality-profile-sqp-1-2160p-default"
+    },
+    {
+      "template": "radarr/includes/quality-profiles/sqp/radarr-quality-profile-sqp-1-2160p-imax-e.yml",
+      "id": "radarr-quality-profile-sqp-1-2160p-imax-e"
+    },
+    {
+      "template": "radarr/includes/quality-profiles/sqp/radarr-quality-profile-sqp-2.yml",
+      "id": "radarr-quality-profile-sqp-2"
+    },
+    {
+      "template": "radarr/includes/quality-profiles/sqp/radarr-quality-profile-sqp-3.yml",
+      "id": "radarr-quality-profile-sqp-3"
+    },
+    {
+      "template": "radarr/includes/quality-profiles/sqp/radarr-quality-profile-sqp-4.yml",
+      "id": "radarr-quality-profile-sqp-4"
+    },
+    {
+      "template": "radarr/includes/quality-profiles/sqp/radarr-quality-profile-sqp-5.yml",
+      "id": "radarr-quality-profile-sqp-5"
     }
   ],
   "sonarr": [
@@ -73,6 +185,38 @@
     {
       "template": "sonarr/includes/legacy/web-2160p-v4.yml",
       "id": "web-2160p-v4"
+    },
+    {
+      "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-anime.yml",
+      "id": "sonarr-v4-custom-formats-anime"
+    },
+    {
+      "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-web-1080p.yml",
+      "id": "sonarr-v4-custom-formats-web-1080p"
+    },
+    {
+      "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-web-2160p.yml",
+      "id": "sonarr-v4-custom-formats-web-2160p"
+    },
+    {
+      "template": "sonarr/includes/quality-definitions/sonarr-quality-definition-anime.yml",
+      "id": "sonarr-quality-definition-anime"
+    },
+    {
+      "template": "sonarr/includes/quality-definitions/sonarr-quality-definition-series.yml",
+      "id": "sonarr-quality-definition-series"
+    },
+    {
+      "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-anime.yml",
+      "id": "sonarr-v4-quality-profile-anime"
+    },
+    {
+      "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-web-1080p.yml",
+      "id": "sonarr-v4-quality-profile-web-1080p"
+    },
+    {
+      "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-web-2160p.yml",
+      "id": "sonarr-v4-quality-profile-web-2160p"
     }
   ]
 }
