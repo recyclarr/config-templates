@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: Anime Sonarr                                                  #
-# Updated: 2023-09-24                                                                             #
+# Updated: 2023-10-07                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -15,7 +15,10 @@ sonarr:
     api_key: Put your API key here
 
     include:
-      - template: anime-sonarr-v4
+      # Comment out any of the following includes to disable them
+      - template: sonarr-quality-definition-anime
+      - template: sonarr-v4-quality-profile-anime
+      - template: sonarr-v4-custom-formats-anime
 
 # Custom Formats: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
     custom_formats:

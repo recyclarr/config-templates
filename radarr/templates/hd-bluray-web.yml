@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: HD Bluray + WEB                                               #
-# Updated: 2023-10-03                                                                             #
+# Updated: 2023-10-07                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -14,7 +14,10 @@ radarr:
     api_key: Put your API key here
 
     include:
-      - template: hd-bluray-web
+      # Comment out any of the following includes to disable them
+      - template: radarr-quality-definition-movie
+      - template: radarr-quality-profile-hd-bluray-web
+      - template: radarr-custom-formats-hd-bluray-web
 
     custom_formats:
       # Movie Versions

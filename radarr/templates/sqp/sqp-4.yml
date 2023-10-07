@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: SQP-4                                                         #
-# Updated: 2023-10-03                                                                             #
+# Updated: 2023-10-07                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -14,7 +14,10 @@ radarr:
     api_key: Put your API key here
 
     include:
-      - template: sqp-4
+      # Comment out any of the following includes to disable them
+      - template: radarr-quality-definition-sqp-uhd
+      - template: radarr-quality-profile-sqp-4
+      - template: radarr-custom-formats-sqp-4
 
 # Custom Formats: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
     custom_formats:
