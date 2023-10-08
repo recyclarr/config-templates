@@ -15,8 +15,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Discord Commits
-        uses: Sniddl/discord-commits@v1.6
+        uses: recyclarr/discord-commits@v2
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           template: simple-link
-          include-extras: true
+          commit-filters: |
+            ^feat:
+            ^fix:
