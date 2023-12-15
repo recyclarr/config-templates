@@ -1,6 +1,7 @@
 custom_formats:
   - trash_ids:
       # HDR Formats
+      - 2b239ed870daba8126a53bd5dc8dc1c8 # DV HDR10Plus
       - 7878c33f1963fefb3d6c8657d46c2f0a # DV HDR10
       - 1f733af03141f068a540eec352589a89 # DV HLG
       - 27954b0a80aab882522a88a4d9eae1cd # DV SDR

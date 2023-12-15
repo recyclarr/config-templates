@@ -17,6 +17,7 @@ custom_formats:
       - c2998bd0d90ed5621d8df281e839436e # DD
 
       # HDR Formats
+      - c53085ddbd027d9624b320627748612f # DV HDR10Plus
       - e23edd2482476e595fb990b12e7c609c # DV HDR10
       - 58d6a88f13e2db7f5059c41047876f00 # DV
       - 55d53828b9d81cbe20b02efd00aa0efd # DV HLG
