@@ -25,6 +25,7 @@ quality_profiles:
           - WEBDL-720p
           - WEBRip-720p
           - HDTV-720p
+      - name: Bluray-576p
       - name: Bluray-480p
       - name: WEB 480p
         qualities:
