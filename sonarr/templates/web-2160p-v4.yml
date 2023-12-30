@@ -33,6 +33,28 @@ sonarr:
 
       # Optional
       - trash_ids:
+          # - 32b367365729d530ca1c124a0b180c64 # Bad Dual Groups
+          # - 82d40da2bc6923f41e14394075dd4b03 # No-RlsGroup
+          # - e1a997ddb54e3ecbfe06341ad323c458 # Obfuscated
+          # - 06d66ab109d4d2eddb2794d21526d140 # Retags
+          # - 1b3994c551cbb92a2c781af061f4ab44 # Scene
+        quality_profiles:
+          - name: WEB-2160p
+
+      # x265 (no HDR/DV)
+      # Uncomment the next 10 lines to use x265 (no HDR/DV) instead of x265 (HD)
+      # - trash_ids:
+          # - 47435ece6b99a0b477caf360e79ba0bb # x265 (HD)
+        # quality_profiles:
+          # - name: WEB-2160p
+            # score: 0
+
+      # - trash_ids:
+          # - 9b64dff695c2115facf1b6ea59c9bd07 # x265 (no HDR/DV)
+        # quality_profiles:
+          # - name: WEB-2160p
+
+      - trash_ids:
           - 2016d1676f5ee13a5b7257ff86ac9a93 # SDR
         quality_profiles:
           - name: WEB-2160p
