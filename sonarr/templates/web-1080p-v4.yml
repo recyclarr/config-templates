@@ -32,15 +32,13 @@ sonarr:
         quality_profiles:
           - name: WEB-1080p
 
-      # x265 (no HDR/DV)
-      # Uncomment the next 10 lines to use x265 (no HDR/DV) instead of x265 (HD)
-      # - trash_ids:
+      - trash_ids:
+          # Uncomment the next six lines to allow x265 HD releases with HDR/DV
           # - 47435ece6b99a0b477caf360e79ba0bb # x265 (HD)
         # quality_profiles:
           # - name: WEB-1080p
             # score: 0
-
       # - trash_ids:
           # - 9b64dff695c2115facf1b6ea59c9bd07 # x265 (no HDR/DV)
-        # quality_profiles:
-          # - name: WEB-1080p
+        quality_profiles:
+          - name: WEB-1080p

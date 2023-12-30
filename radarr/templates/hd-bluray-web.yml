@@ -38,15 +38,13 @@ radarr:
         quality_profiles:
           - name: HD Bluray + WEB
 
-      # x265 (no HDR/DV)
-      # Uncomment the next 10 lines to use x265 (no HDR/DV) instead of x265 (HD)
-      # - trash_ids:
+      - trash_ids:
+          # Uncomment the next six lines to allow x265 HD releases with HDR/DV
           # - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
         # quality_profiles:
           # - name: HD Bluray + WEB
             # score: 0
-
       # - trash_ids:
           # - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
-        # quality_profiles:
-          # - name: HD Bluray + WEB
+        quality_profiles:
+          - name: HD Bluray + WEB

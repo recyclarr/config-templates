@@ -28,6 +28,7 @@ custom_formats:
       - e204b80c87be9497a8a6eaff48f72905 # LQ (Release Title)
       - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
       - b8cd450cbfa689c0259a01d9e29ba3d6 # 3D
+      - bfd8eb01832d646a0a89c4deb46f8564 # Upscaled
       - 0a3f082873eb454bde444150b70253cc # Extras
 
       # Streaming Services

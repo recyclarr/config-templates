@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: SQP-5                                                         #
-# Updated: 2023-10-07                                                                             #
+# Updated: 2023-12-30                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -60,7 +60,7 @@ radarr:
           # - 7357cf5161efbf8c4d5d0c30b4815ee2 # Obfuscated
           # - 5c44f52a8714fdd79bb4d98e2673be1f # Retags
           # - f537cf427b64c38c8e36298f657e4828 # Scene
-          # - f700d29429c023a5734505e77daeaea7 # DV (FEL)
+          # - f700d29429c023a5734505e77daeaea7 # DV (Disk)
         quality_profiles:
           - name: SQP-5
 
