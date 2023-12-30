@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: Remux + WEB 1080p                                             #
-# Updated: 2023-10-07                                                                             #
+# Updated: 2023-12-30                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -47,3 +47,25 @@ radarr:
         quality_profiles:
           - name: Remux + WEB 1080p
             # score: 0 # Uncomment this line to disable prioritised IMAX Enhanced releases
+
+      # Optional
+      - trash_ids:
+          # - b6832f586342ef70d9c128d40c07b872 # Bad Dual Groups
+          # - 90cedc1fea7ea5d11298bebd3d1d3223 # EVO (no WEBDL)
+          # - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5 # No-RlsGroup
+          # - 7357cf5161efbf8c4d5d0c30b4815ee2 # Obfuscated
+          # - 5c44f52a8714fdd79bb4d98e2673be1f # Retags
+          # - f537cf427b64c38c8e36298f657e4828 # Scene
+        quality_profiles:
+          - name: Remux + WEB 1080p
+
+      - trash_ids:
+          # Uncomment the next six lines to allow x265 HD releases with HDR/DV
+          # - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
+        # quality_profiles:
+          # - name: Remux + WEB 1080p
+            # score: 0
+      # - trash_ids:
+          # - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
+        quality_profiles:
+          - name: Remux + WEB 1080p
