@@ -20,8 +20,9 @@ custom_formats:
       - af94e0fe497124d1f9ce732069ec8c3b # WEB Tier 03
 
       # Misc
-      - e7718d7a3ce595f289bfee26adc178f5 # Repack/Proper
+      - a06f27e686bda44e19515ccf51af279f # Repack
       - ae43b294509409a6a13919dedd4764c4 # Repack2
+      - 482da74d7594524acd1cd9de5d5fb0dc # Proper
 
       # Unwanted
       - ed38b889b31be83fda192888e2286d83 # BR-DISK
