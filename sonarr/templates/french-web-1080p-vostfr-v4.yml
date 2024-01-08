@@ -29,9 +29,10 @@ sonarr:
           - ea0bb4b6ba388992fad1092703b5ff7b  # FastSUB
 
           # ===== Misc =====
-          - ec8fa7296b64e8cd390a1600981f3923  # Repack/Proper
-          - eb3d5cc0a2be0db205fb823640db6a3c  # Repack2
-          - 44e7c4de10ae50265753082e5dc76047  # Repack3
+          - f11b533d6db941b84f36cab756b29ea5  # Repack
+          - eb3d5cc0a2be0db205fb823640db6a3c  # Repack v2
+          - 44e7c4de10ae50265753082e5dc76047  # Repack v3
+          - 003262633471ef9477b1d685a73b5e93  # Proper
 
           # ===== Services de Streaming =====
           - d660701077794679fd59e8bdf4ce3a29  # AMZN
