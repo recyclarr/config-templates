@@ -1,66 +1,6 @@
 {
   "radarr": [
     {
-      "template": "radarr/includes/legacy/hd-bluray-web.yml",
-      "id": "hd-bluray-web"
-    },
-    {
-      "template": "radarr/includes/legacy/uhd-bluray-web.yml",
-      "id": "uhd-bluray-web"
-    },
-    {
-      "template": "radarr/includes/legacy/remux-web-1080p.yml",
-      "id": "remux-web-1080p"
-    },
-    {
-      "template": "radarr/includes/legacy/remux-web-2160p.yml",
-      "id": "remux-web-2160p"
-    },
-    {
-      "template": "radarr/includes/legacy/anime-radarr.yml",
-      "id": "anime-radarr"
-    },
-    {
-      "template": "radarr/includes/legacy/sqp/sqp-1-1080p.yml",
-      "id": "sqp-1-1080p"
-    },
-    {
-      "template": "radarr/includes/legacy/sqp/sqp-1-2160p-qp-default.yml",
-      "id": "sqp-1-2160p-qp-default"
-    },
-    {
-      "template": "radarr/includes/legacy/sqp/sqp-1-2160p-4k-only-qp-default.yml",
-      "id": "sqp-1-2160p-4k-only-qp-default"
-    },
-    {
-      "template": "radarr/includes/legacy/sqp/sqp-1-2160p-qp-imax-e.yml",
-      "id": "sqp-1-2160p-qp-imax-e"
-    },
-    {
-      "template": "radarr/includes/legacy/sqp/sqp-1-2160p-4k-only-qp-imax-e.yml",
-      "id": "sqp-1-2160p-4k-only-qp-imax-e"
-    },
-    {
-      "template": "radarr/includes/legacy/sqp/sqp-1-2160p-shared.yml",
-      "id": "sqp-1-2160p-shared"
-    },
-    {
-      "template": "radarr/includes/legacy/sqp/sqp-2.yml",
-      "id": "sqp-2"
-    },
-    {
-      "template": "radarr/includes/legacy/sqp/sqp-3.yml",
-      "id": "sqp-3"
-    },
-    {
-      "template": "radarr/includes/legacy/sqp/sqp-4.yml",
-      "id": "sqp-4"
-    },
-    {
-      "template": "radarr/includes/legacy/sqp/sqp-5.yml",
-      "id": "sqp-5"
-    },
-    {
       "template": "radarr/includes/custom-formats/radarr-custom-formats-anime.yml",
       "id": "radarr-custom-formats-anime"
     },
@@ -174,18 +114,6 @@
     }
   ],
   "sonarr": [
-    {
-      "template": "sonarr/includes/legacy/anime-sonarr-v4.yml",
-      "id": "anime-sonarr-v4"
-    },
-    {
-      "template": "sonarr/includes/legacy/web-1080p-v4.yml",
-      "id": "web-1080p-v4"
-    },
-    {
-      "template": "sonarr/includes/legacy/web-2160p-v4.yml",
-      "id": "web-2160p-v4"
-    },
     {
       "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-anime.yml",
       "id": "sonarr-v4-custom-formats-anime"
