@@ -51,9 +51,8 @@ custom_formats:
       - e71939fae578037e7aed3ee219bbe7c1 # UHD Bluray Tier 03
 
       # Misc
-      - a06f27e686bda44e19515ccf51af279f # Repack
+      - e7718d7a3ce595f289bfee26adc178f5 # Repack/Proper
       - ae43b294509409a6a13919dedd4764c4 # Repack2
-      - 482da74d7594524acd1cd9de5d5fb0dc # Proper
 
       # Unwanted
       - ed38b889b31be83fda192888e2286d83 # BR-DISK

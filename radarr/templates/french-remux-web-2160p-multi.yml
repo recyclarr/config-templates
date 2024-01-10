@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: French Remux + WEB 2160p (MULTi)                              #
-# Updated: 2024-01-08                                                                             #
+# Updated: 2024-01-10                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -12,7 +12,7 @@
 
 ###################################################################################################
 # Modèle de configuration Recyclarr : French Remux + WEB 2160p (MULTi)                            #
-# Mis à jour : 2024-01-08                                                                         #
+# Mis à jour : 2024-01-10                                                                         #
 # Documentation (en anglais) : https://recyclarr.dev                                              #
 # Note: Si vous utilisez plusieurs profils dans une seule instance, veuillez lire                 #
 # documentation suivante sur la mise en commun des instances (en anglais) :                       #
@@ -140,9 +140,8 @@ radarr:
           # - af94e0fe497124d1f9ce732069ec8c3b  # WEB Tier 03
 
           # ===== Misc =====
-          - a06f27e686bda44e19515ccf51af279f  # Repack
+          - e7718d7a3ce595f289bfee26adc178f5  # Repack/Proper
           - ae43b294509409a6a13919dedd4764c4  # Repack2
-          - 482da74d7594524acd1cd9de5d5fb0dc  # Proper
 
           # ===== Indésirables =====
           - ed38b889b31be83fda192888e2286d83  # BR-DISK
