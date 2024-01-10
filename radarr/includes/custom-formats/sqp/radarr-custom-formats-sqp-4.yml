@@ -49,9 +49,8 @@ custom_formats:
       - af94e0fe497124d1f9ce732069ec8c3b # WEB Tier 03
 
       # Misc
-      - a06f27e686bda44e19515ccf51af279f # Repack
+      - e7718d7a3ce595f289bfee26adc178f5 # Repack/Proper
       - ae43b294509409a6a13919dedd4764c4 # Repack2
-      - 482da74d7594524acd1cd9de5d5fb0dc # Proper
       - 2899d84dc9372de3408e6d8cc18e9666 # x264
 
       # Unwanted
