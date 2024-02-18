@@ -27,6 +27,7 @@ custom_formats:
       - f6cce30f1733d5c8194222a7507909bb # HULU
       - dc503e2425126fa1d0a9ad6168c83b3f # iP
       - 0ac24a2a68a9700bcb7eeca8e5cd644c # iT
+      - fa5a16b951004c23e980d2913694a137 # ITVX
       - 81d1fbf600e2540cee87f3a23f9d3c1c # MAX
       - d34870697c9db575f17700212167be23 # NF
       - b2b980877494b560443631eb1f473867 # NLZ
@@ -40,6 +41,7 @@ custom_formats:
       - d100ea972d1af2150b65b1cffb80f6b5 # TVer
       - 0e99e7cc719a8a73b2668c3a0c3fe10c # U-NEXT
       - 5d2317d99af813b6529c7ebf01c83533 # VDL
+      - 93c9d1e566dca8b34d57f5efbbf85f28 # VIU
 
       # HQ Source Groups
       - e6258996055b9fbab7e9cb2f75819294 # WEB Tier 01

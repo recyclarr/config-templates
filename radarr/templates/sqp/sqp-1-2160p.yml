@@ -55,11 +55,13 @@ radarr:
 
       # Optional
       - trash_ids:
+          # Uncomment the next two lines if you have a setup that supports HDR10+
+          # - b17886cb4158d9fea189859409975758 # HDR10+ Boost
+          # - 55a5b50cb416dea5a50c4955896217ab # DV HDR10+ Boost
+
           # Uncomment any of the following optional custom formats if you want them to be added to
           # the quality profile
           # - b6832f586342ef70d9c128d40c07b872 # Bad Dual Groups
-          # Uncomment the next line if you have a setup that supports HDR10+
-          # - b17886cb4158d9fea189859409975758 # HDR10+ Boost
           # - 90cedc1fea7ea5d11298bebd3d1d3223 # EVO (no WEBDL)
           # - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5 # No-RlsGroup
           # - 7357cf5161efbf8c4d5d0c30b4815ee2 # Obfuscated
