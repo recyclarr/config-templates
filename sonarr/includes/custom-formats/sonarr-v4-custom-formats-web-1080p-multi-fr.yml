@@ -1,0 +1,18 @@
+custom_formats:
+  - trash_ids:
+      # MULTi Audio
+      - 2f6e84efc47246ec9071e311e71c4953 # Multi-Audio
+      - 7982e39789f17864f57b11f1996844f4 # Multi-French
+      - 4721382d9ee05f1b4967a25e75072911 # French Audio
+
+      # French Audio Version
+      - 2c29a39a4fdfd6d258799bc4c09731b9 # VFF
+      - 7ae924ee9b2f39df3283c6c0beb8a2aa # VOF
+      - b6816a0e1d4b64bf3550ad3b74b009b6 # VFI
+      - 34789ec3caa819f087e23bbf9999daf7 # VF2
+      - 7a7f4e4f58bd1058440236d033a90b67 # VFQ
+      - 802dd70b856c423a9b0cb7f34ac42be1 # VOQ
+      - 82085412d9a53ba8d8e46fc624eb701d # VQ
+      - 0ce1e39a4676c6692ce47935278dac76 # VFB
+    quality_profiles:
+      - name: FR-MULTi-WEB-1080p
