@@ -32,7 +32,8 @@ sonarr:
           # Dolby Vision et que vous n'avez pas besoin du fallback en HDR10.
           - 9b27ab6498ec0f31a3353992e19434ca # DV (WEBDL)
 
-          # HDR10+ Boost - Décommentez les deux lignes suivantes si l'un de vos appareils supporte HDR10+.
+          # HDR10+ Boost
+          # Décommentez les deux lignes suivantes si l'un de vos appareils supporte HDR10+.
           # - 0dad0a507451acddd754fe6dc3a7f5e7 # HDR10+ Boost
           # - 385e9e8581d33133c3961bdcdeffb7b4 # DV HDR10+ Boost
         quality_profiles:
