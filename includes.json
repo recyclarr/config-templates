@@ -127,6 +127,38 @@
       "id": "sonarr-v4-custom-formats-web-2160p"
     },
     {
+      "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-anime-fr.yml",
+      "id": "sonarr-v4-custom-formats-anime-fr"
+    },
+    {
+      "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-anime-vostfr.yml",
+      "id": "sonarr-v4-custom-formats-anime-vostfr"
+    },
+    {
+      "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-web-1080p-fr.yml",
+      "id": "sonarr-v4-custom-formats-web-1080p-fr"
+    },
+    {
+      "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-web-1080p-multi-fr.yml",
+      "id": "sonarr-v4-custom-formats-web-1080p-multi-fr"
+    },
+    {
+      "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-web-1080p-vostfr.yml",
+      "id": "sonarr-v4-custom-formats-web-1080p-vostfr"
+    },
+    {
+      "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-web-2160p-fr.yml",
+      "id": "sonarr-v4-custom-formats-web-2160p-fr"
+    },
+    {
+      "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-web-2160p-multi-fr.yml",
+      "id": "sonarr-v4-custom-formats-web-2160p-multi-fr"
+    },
+    {
+      "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-web-2160p-vostfr.yml",
+      "id": "sonarr-v4-custom-formats-web-2160p-vostfr"
+    },
+    {
       "template": "sonarr/includes/quality-definitions/sonarr-quality-definition-anime.yml",
       "id": "sonarr-quality-definition-anime"
     },
@@ -145,6 +177,31 @@
     {
       "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-web-2160p.yml",
       "id": "sonarr-v4-quality-profile-web-2160p"
+    },
+    {
+      "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-anime-fr.yml",
+      "id": "sonarr-v4-quality-profile-anime-fr"
+    },
+    {
+      "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-anime-vostfr.yml",
+      "id": "sonarr-v4-quality-profile-anime-vostfr"
+    },
+    {
+      "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-web-1080p-fr.yml",
+      "id": "sonarr-v4-quality-profile-web-1080p-fr"
+    },
+    {
+      "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-web-1080p-vostfr.yml",
+      "id": "sonarr-v4-quality-profile-web-1080p-vostfr"
+    },
+    {
+      "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-web-2160p-fr.yml",
+      "id": "sonarr-v4-quality-profile-web-2160p-fr"
+    },
+    {
+      "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-web-2160p-vostfr.yml",
+      "id": "sonarr-v4-quality-profile-web-2160p-vostfr"
     }
   ]
 }
+
