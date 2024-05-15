@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Config Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Checkout Trash Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: TRaSH-Guides/Guides
           path: trash
