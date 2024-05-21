@@ -57,7 +57,7 @@ sonarr:
       # Optional SDR
       # Only ever use ONE of the following custom formats:
       # SDR - block ALL SDR releases
-      # SDR (WEBDL) - block UHD/4k Remux and Bluray encode SDR releases, but allow SDR WEB
+      # SDR (no WEBDL) - block UHD/4k Remux and Bluray encode SDR releases, but allow SDR WEB
       - trash_ids:
           - 2016d1676f5ee13a5b7257ff86ac9a93 # SDR
           # - 83304f261cf516bb208c18c54c0adf97 # SDR (no WEBDL)
