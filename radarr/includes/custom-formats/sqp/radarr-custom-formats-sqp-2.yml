@@ -54,6 +54,7 @@ custom_formats:
       # Misc
       - e7718d7a3ce595f289bfee26adc178f5 # Repack/Proper
       - ae43b294509409a6a13919dedd4764c4 # Repack2
+      - 5caaaa1c08c1742aa4342d8c4cc463f2 # Repack3
       - 2899d84dc9372de3408e6d8cc18e9666 # x264
 
       # Unwanted
