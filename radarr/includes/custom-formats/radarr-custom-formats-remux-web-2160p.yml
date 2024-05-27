@@ -35,6 +35,7 @@ custom_formats:
       # Misc
       - e7718d7a3ce595f289bfee26adc178f5 # Repack/Proper
       - ae43b294509409a6a13919dedd4764c4 # Repack2
+      - 5caaaa1c08c1742aa4342d8c4cc463f2 # Repack3
 
       # Unwanted
       - ed38b889b31be83fda192888e2286d83 # BR-DISK
