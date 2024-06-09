@@ -79,4 +79,3 @@ radarr:
           # - 25c12f78430a3a23413652cbd1d48d77 # SDR (no WEBDL)
         quality_profiles:
           - name: SQP-1 (2160p)
-
