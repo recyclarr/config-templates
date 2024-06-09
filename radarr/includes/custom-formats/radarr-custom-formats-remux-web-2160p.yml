@@ -45,6 +45,7 @@ custom_formats:
       - b8cd450cbfa689c0259a01d9e29ba3d6 # 3D
       - bfd8eb01832d646a0a89c4deb46f8564 # Upscaled
       - 0a3f082873eb454bde444150b70253cc # Extras
+      - cae4ca30163749b891686f95532519bd # AV1
 
       # Streaming Services
       - cc5e51a9e85a6296ceefe097a77f12f4 # BCORE

@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: SQP-1 (2160p)                                                 #
-# Updated: 2024-05-21                                                                             #
+# Updated: 2024-06-09                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -79,9 +79,3 @@ radarr:
           # - 25c12f78430a3a23413652cbd1d48d77 # SDR (no WEBDL)
         quality_profiles:
           - name: SQP-1 (2160p)
-
-      - trash_ids:
-          - cae4ca30163749b891686f95532519bd # AV1
-        quality_profiles:
-          - name: SQP-1 (2160p)
-            # score: 0 # Uncomment this line to allow AV1 releases

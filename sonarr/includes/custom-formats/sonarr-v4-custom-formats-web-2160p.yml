@@ -19,6 +19,7 @@ custom_formats:
       - e2315f990da2e2cbfc9fa5b7a6fcfe48 # LQ (Release Title)
       - 47435ece6b99a0b477caf360e79ba0bb # x265 (HD)
       - fbcb31d8dabd2a319072b84fc0b7249c # Extras
+      - 15a05bc7c1a36e2b57fd628f8977e2fc # AV1
 
       # Misc
       - ec8fa7296b64e8cd390a1600981f3923 # Repack/Proper
