@@ -80,8 +80,3 @@ radarr:
         quality_profiles:
           - name: SQP-1 (2160p)
 
-      - trash_ids:
-          - cae4ca30163749b891686f95532519bd # AV1
-        quality_profiles:
-          - name: SQP-1 (2160p)
-            # score: 0 # Uncomment this line to allow AV1 releases

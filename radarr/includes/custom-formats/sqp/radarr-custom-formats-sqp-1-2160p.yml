@@ -63,6 +63,7 @@ custom_formats:
       - bfd8eb01832d646a0a89c4deb46f8564 # Upscaled
       - 0a3f082873eb454bde444150b70253cc # Extras
       - a5d148168c4506b55cf53984107c396e # Hi10P
+      - cae4ca30163749b891686f95532519bd # AV1
 
       # Optional
       - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
