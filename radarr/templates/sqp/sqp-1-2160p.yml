@@ -38,19 +38,19 @@ radarr:
       - trash_ids:
           # Uncomment the next line if you prefer 1080p/2160p WEBDL with IMAX Enhanced
           # - 9f6cbff8cfe4ebbc1bde14c7b7bec0de # IMAX Enhanced
-        quality_profiles:
+        assign_scores_to:
           - name: SQP-1 (2160p)
 
       # Unwanted
       - trash_ids:
           # Uncomment the next six lines to block all x265 HD releases
           # - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
-        # quality_profiles:
+        # assign_scores_to:
           # - name: SQP-1 (2160p)
             # score: 0
       # - trash_ids:
           # - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
-        quality_profiles:
+        assign_scores_to:
           - name: SQP-1 (2160p)
 
       # Optional
@@ -67,7 +67,7 @@ radarr:
           # - 7357cf5161efbf8c4d5d0c30b4815ee2 # Obfuscated
           # - 5c44f52a8714fdd79bb4d98e2673be1f # Retags
           # - f537cf427b64c38c8e36298f657e4828 # Scene
-        quality_profiles:
+        assign_scores_to:
           - name: SQP-1 (2160p)
 
       # Optional SDR
@@ -77,5 +77,5 @@ radarr:
       - trash_ids:
           - 9c38ebb7384dada637be8899efa68e6f # SDR
           # - 25c12f78430a3a23413652cbd1d48d77 # SDR (no WEBDL)
-        quality_profiles:
+        assign_scores_to:
           - name: SQP-1 (2160p)

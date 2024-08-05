@@ -74,7 +74,7 @@ custom_formats:
       - cc5e51a9e85a6296ceefe097a77f12f4 # BCORE
       - 16622a6911d1ab5d5b8b713d5b0036d4 # CRiT
       - 2a6039655313bf5dab1e43523b62c374 # MA
-    quality_profiles:
+    assign_scores_to:
       - name: SQP-4
 
   - trash_ids:
@@ -91,6 +91,6 @@ custom_formats:
       - c9fd353f8f5f1baf56dc601c4cb29920 # PCOK
       - e36a0ba1bc902b26ee40818a1d59b8bd # PMTP
       - c2863d2a50c9acad1fb50e53ece60817 # STAN
-    quality_profiles:
+    assign_scores_to:
       - name: SQP-4
         score: 0

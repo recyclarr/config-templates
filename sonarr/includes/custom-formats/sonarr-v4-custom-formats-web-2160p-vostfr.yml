@@ -79,5 +79,5 @@ custom_formats:
       # Subs
       - 07a32f77690263bb9fda1842db7e273f # VOSTFR
       - 84f0acbda9c0c9de783894fb66df25aa # FanSUB
-    quality_profiles:
+    assign_scores_to:
       - name: VOSTFR-WEB-2160p

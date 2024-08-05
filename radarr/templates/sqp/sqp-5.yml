@@ -24,14 +24,14 @@ radarr:
       # Movie Versions
       - trash_ids:
           - 9f6cbff8cfe4ebbc1bde14c7b7bec0de # IMAX Enhanced
-        quality_profiles:
+        assign_scores_to:
           - name: SQP-5
             # score: 0 # Uncomment this line to disable prioritised IMAX Enhanced releases
 
       # Misc
       - trash_ids:
           - 2899d84dc9372de3408e6d8cc18e9666 # x264
-        quality_profiles:
+        assign_scores_to:
           - name: SQP-5
             # score: 0 # Uncomment this line to enable x264 releases
 
@@ -39,12 +39,12 @@ radarr:
       - trash_ids:
           # Uncomment the next six lines to block all x265 HD releases
           # - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
-        # quality_profiles:
+        # assign_scores_to:
           # - name: SQP-5
             # score: 0
       # - trash_ids:
           # - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
-        quality_profiles:
+        assign_scores_to:
           - name: SQP-5
 
       # Optional
@@ -64,7 +64,7 @@ radarr:
           # - 5c44f52a8714fdd79bb4d98e2673be1f # Retags
           # - f537cf427b64c38c8e36298f657e4828 # Scene
           # - f700d29429c023a5734505e77daeaea7 # DV (Disk)
-        quality_profiles:
+        assign_scores_to:
           - name: SQP-5
 
       # Optional SDR
@@ -74,5 +74,5 @@ radarr:
       - trash_ids:
           - 9c38ebb7384dada637be8899efa68e6f # SDR
           # - 25c12f78430a3a23413652cbd1d48d77 # SDR (no WEBDL)
-        quality_profiles:
+        assign_scores_to:
           - name: SQP-5
