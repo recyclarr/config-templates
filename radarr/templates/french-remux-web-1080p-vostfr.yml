@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: French HD Remux + WEB (VOSTFR)                                #
-# Updated: 2024-01-10                                                                             #
+# Updated: 2024-08-08                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -12,7 +12,7 @@
 
 ###################################################################################################
 # Modèle de configuration Recyclarr : French HD Remux + WEB (VOSTFR)                              #
-# Mis à jour : 2024-01-10                                                                         #
+# Mis à jour : 2024-08-08                                                                         #
 # Documentation (en anglais) : https://recyclarr.dev                                              #
 # Note: Si vous utilisez plusieurs profils dans une seule instance, veuillez lire                 #
 # documentation suivante sur la mise en commun des instances (en anglais) :                       #
