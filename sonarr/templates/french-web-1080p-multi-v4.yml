@@ -30,18 +30,18 @@ sonarr:
           # - e1a997ddb54e3ecbfe06341ad323c458 # Obfuscated
           # - 06d66ab109d4d2eddb2794d21526d140 # Retags
           # - 1b3994c551cbb92a2c781af061f4ab44 # Scene
-        quality_profiles:
+        assign_scores_to:
           - name: FR-MULTi-WEB-1080p
 
       - trash_ids:
           # Décommenter les six lignes suivantes pour accepter les publications HD x265 avec HDR/DV
           # - 47435ece6b99a0b477caf360e79ba0bb # x265 (HD)
-        # quality_profiles:
+        # assign_scores_to:
           # - name: FR-MULTi-WEB-1080p
             # score: 0
       # - trash_ids:
           # - 9b64dff695c2115facf1b6ea59c9bd07 # x265 (no HDR/DV)
-        quality_profiles:
+        assign_scores_to:
           - name: FR-MULTi-WEB-1080p
 
       - trash_ids:
@@ -50,7 +50,7 @@ sonarr:
           # - 58790d4e2fdcd9733aa7ae68ba2bb503 # WEB Tier 02
           # - d84935abd3f8556dcd51d4f27e22d0a6 # WEB Tier 03
           # - d0c516558625b04b363fa6c5c2c7cfd4 # WEB Scene
-        # quality_profiles:
+        # assign_scores_to:
           # - name: FR-MULTi-WEB-1080p
             # score: 0
 
@@ -63,48 +63,48 @@ sonarr:
       # https://trash-guides.info/Radarr/radarr-setup-quality-profiles-french-en/#french-audio-versions
       - trash_ids:
           - 2c29a39a4fdfd6d258799bc4c09731b9 # VFF
-        quality_profiles:
+        assign_scores_to:
           - name: FR-MULTi-WEB-1080p
             # score: 101
 
       - trash_ids:
           - 7ae924ee9b2f39df3283c6c0beb8a2aa # VOF
-        quality_profiles:
+        assign_scores_to:
           - name: FR-MULTi-WEB-1080p
             # score: 101
 
       - trash_ids:
           - b6816a0e1d4b64bf3550ad3b74b009b6 # VFI
-        quality_profiles:
+        assign_scores_to:
           - name: FR-MULTi-WEB-1080p
             # score: 101
 
       - trash_ids:
           - 34789ec3caa819f087e23bbf9999daf7 # VF2
-        quality_profiles:
+        assign_scores_to:
           - name: FR-MULTi-WEB-1080p
             # score: 101
 
       - trash_ids:
           - 7a7f4e4f58bd1058440236d033a90b67 # VFQ
-        quality_profiles:
+        assign_scores_to:
           - name: FR-MULTi-WEB-1080p
             # score: 101
 
       - trash_ids:
           - 802dd70b856c423a9b0cb7f34ac42be1 # VOQ
-        quality_profiles:
+        assign_scores_to:
           - name: FR-MULTi-WEB-1080p
             # score: 101
 
       - trash_ids:
           - 82085412d9a53ba8d8e46fc624eb701d # VQ
-        quality_profiles:
+        assign_scores_to:
           - name: FR-MULTi-WEB-1080p
             # score: 101
 
       - trash_ids:
           - 0ce1e39a4676c6692ce47935278dac76 # VFB
-        quality_profiles:
+        assign_scores_to:
           - name: FR-MULTi-WEB-1080p
             # score: 101

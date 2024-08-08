@@ -35,7 +35,7 @@ sonarr:
           # Décommentez les deux lignes suivantes si l'un de vos appareils supporte HDR10+.
           # - 0dad0a507451acddd754fe6dc3a7f5e7 # HDR10+ Boost
           # - 385e9e8581d33133c3961bdcdeffb7b4 # DV HDR10+ Boost
-        quality_profiles:
+        assign_scores_to:
           - name: VOSTFR-WEB-2160p
 
       # Optional
@@ -44,23 +44,23 @@ sonarr:
           # - e1a997ddb54e3ecbfe06341ad323c458 # Obfuscated
           # - 06d66ab109d4d2eddb2794d21526d140 # Retags
           # - 1b3994c551cbb92a2c781af061f4ab44 # Scene
-        quality_profiles:
+        assign_scores_to:
           - name: VOSTFR-WEB-2160p
 
       - trash_ids:
           # Décommenter les six lignes suivantes pour accepter les publications HD x265 avec HDR/DV
           # - 47435ece6b99a0b477caf360e79ba0bb # x265 (HD)
-        # quality_profiles:
+        # assign_scores_to:
           # - name: VOSTFR-WEB-2160p
             # score: 0
       # - trash_ids:
           # - 9b64dff695c2115facf1b6ea59c9bd07 # x265 (no HDR/DV)
-        quality_profiles:
+        assign_scores_to:
           - name: VOSTFR-WEB-2160p
 
       - trash_ids:
           # Décommenter le score associé si vous ne voulez pas de FanSUB.
           - 84f0acbda9c0c9de783894fb66df25aa  # FanSUB
-        quality_profiles:
+        assign_scores_to:
           - name: VOSTFR-WEB-2160p
             # score: -10000

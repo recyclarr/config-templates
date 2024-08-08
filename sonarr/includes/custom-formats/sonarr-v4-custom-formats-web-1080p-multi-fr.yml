@@ -14,5 +14,5 @@ custom_formats:
       - 802dd70b856c423a9b0cb7f34ac42be1 # VOQ
       - 82085412d9a53ba8d8e46fc624eb701d # VQ
       - 0ce1e39a4676c6692ce47935278dac76 # VFB
-    quality_profiles:
+    assign_scores_to:
       - name: FR-MULTi-WEB-1080p

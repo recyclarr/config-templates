@@ -79,5 +79,5 @@ custom_formats:
       - 2f6e84efc47246ec9071e311e71c4953 # Multi-Audio
       - 7982e39789f17864f57b11f1996844f4 # Multi-French
       - 4721382d9ee05f1b4967a25e75072911 # French Audio
-    quality_profiles:
+    assign_scores_to:
       - name: FR-MULTi-ANIME

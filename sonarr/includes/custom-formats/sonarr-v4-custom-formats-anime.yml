@@ -48,5 +48,5 @@ custom_formats:
       - e6258996055b9fbab7e9cb2f75819294 # WEB Tier 01
       - 58790d4e2fdcd9733aa7ae68ba2bb503 # WEB Tier 02
       - d84935abd3f8556dcd51d4f27e22d0a6 # WEB Tier 03
-    quality_profiles:
+    assign_scores_to:
       - name: Remux-1080p - Anime

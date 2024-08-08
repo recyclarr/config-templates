@@ -61,5 +61,5 @@ custom_formats:
       - a4c51febd4d8b2a0db10a3c974f21d92 # FR WEB Tier 02
       - dbfc0a4b5cb4cbd693311c4482ae9683 # FR WEB Tier 03
       - 2f3422339d185eb227a324644a2fbfca # FR Scene Groups
-    quality_profiles:
+    assign_scores_to:
       - name: FR-MULTi-WEB-1080p

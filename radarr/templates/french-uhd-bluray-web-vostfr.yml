@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: French UHD Bluray + WEB (VOSTFR)                              #
-# Updated: 2024-01-10                                                                             #
+# Updated: 2024-08-08                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -12,7 +12,7 @@
 
 ###################################################################################################
 # Modèle de configuration Recyclarr : French UHD Bluray + WEB (VOSTFR)                            #
-# Mis à jour : 2024-01-10                                                                         #
+# Mis à jour : 2024-08-08                                                                         #
 # Documentation (en anglais) : https://recyclarr.dev                                              #
 # Note: Si vous utilisez plusieurs profils dans une seule instance, veuillez lire                 #
 # documentation suivante sur la mise en commun des instances (en anglais) :                       #
@@ -160,12 +160,12 @@ radarr:
           - c9fd353f8f5f1baf56dc601c4cb29920  # PCOK
           - e36a0ba1bc902b26ee40818a1d59b8bd  # PMTP
           - c2863d2a50c9acad1fb50e53ece60817  # STAN
-        quality_profiles:
+        assign_scores_to:
           - name: FR UHD Bluray + WEB (VOSTFR)
 
       # Si vous ne voulez pas non-plus de FanSUB.
       - trash_ids:
           - 02e48d30a176c91baf9e15de05e5dc6a  # FanSUB
-        quality_profiles:
+        assign_scores_to:
           - name: FR UHD Bluray + WEB (VOSTFR)
             # score: -10000
