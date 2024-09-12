@@ -18,6 +18,7 @@ custom_formats:
       - f67c9ca88f463a48346062e8ad07713f # ATVP
       - 77a7b25585c18af08f60b1547bb9b4fb # CC
       - 36b72f59f4ea20aad9316f475f2d9fbb # DCU
+      - dc5f2bb0e0262155b5fedd0f6c5d2b55 # DSCP
       - 89358767a60cc28783cdc3d0be9388a4 # DSNP
       - 7a235133c87f7da4c8cccceca7e3c7a6 # HBO
       - a880d6abc21e7c16884f3ae393f84179 # HMAX
@@ -29,6 +30,7 @@ custom_formats:
       - c67a75ae4a1715f2bb4d492755ba4195 # PMTP
       - ae58039e1319178e6be73caab5c42166 # SHO
       - 1efe8da11bfd74fbbcd4d8117ddb9213 # STAN
+      - 9623c5c9cac8e939c1b9aedd32f640bf # SYFY
 
       # HQ Source Groups
       - e6258996055b9fbab7e9cb2f75819294 # WEB Tier 01
