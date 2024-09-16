@@ -38,5 +38,5 @@ radarr:
           # - 7357cf5161efbf8c4d5d0c30b4815ee2 # Obfuscated
           # - 5c44f52a8714fdd79bb4d98e2673be1f # Retags
           # - f537cf427b64c38c8e36298f657e4828 # Scene
-        quality_profiles:
+        assign_scores_to:
           - name: SQP-1 (1080p)
