@@ -40,11 +40,11 @@ radarr:
 
       - trash_ids:
           # Uncomment the next six lines to allow x265 HD releases with HDR/DV
-          # - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
-        # quality_profiles:
-          # - name: HD Bluray + WEB
-            # score: 0
+      #     - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
+      #   assign_scores_to:
+      #     - name: HD Bluray + WEB
+      #       score: 0
       # - trash_ids:
-          # - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
+      #     - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
         assign_scores_to:
           - name: HD Bluray + WEB
