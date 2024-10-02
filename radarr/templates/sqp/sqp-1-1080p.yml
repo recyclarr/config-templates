@@ -28,6 +28,13 @@ radarr:
     custom_formats:
       # Movie Versions
       - trash_ids:
+      # Uncomment any of the next six lines to prefer these movie versions
+          # - 570bc9ebecd92723d2d21500f4be314c # Remaster
+          # - eca37840c13c6ef2dd0262b141a5482f # 4K Remaster
+          # - e0c07d59beb37348e975a930d5e50319 # Criterion Collection
+          # - 9d27d9d2181838f76dee150882bdc58c # Masters of Cinema
+          # - db9b4c4b53d312a3ca5f1378f6440fc9 # Vinegar Syndrome
+          # - 957d0f44b592285f26449575e8b1167e # Special Edition
       # Uncomment the next line if you prefer WEBDL with IMAX Enhanced to BHDStudio
           # - 9f6cbff8cfe4ebbc1bde14c7b7bec0de # IMAX Enhanced
 
