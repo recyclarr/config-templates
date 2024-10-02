@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: HD Bluray + WEB                                               #
-# Updated: 2024-08-08                                                                             #
+# Updated: 2024-10-02                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -41,7 +41,7 @@ radarr:
       - trash_ids:
           # Uncomment the next six lines to allow x265 HD releases with HDR/DV
           # - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
-        # quality_profiles:
+        # assign_scores_to:
           # - name: HD Bluray + WEB
             # score: 0
       # - trash_ids:
