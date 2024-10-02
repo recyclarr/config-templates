@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: WEB-2160p (V4)                                                #
-# Updated: 2024-08-08                                                                             #
+# Updated: 2024-10-02                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -17,7 +17,9 @@ sonarr:
     include:
       # Comment out any of the following includes to disable them
       - template: sonarr-quality-definition-series
+      # Choose between the standard or alternative quality profile setup (choose one only)
       - template: sonarr-v4-quality-profile-web-2160p
+      # - template: sonarr-v4-quality-profile-web-2160p-alternative
       - template: sonarr-v4-custom-formats-web-2160p
 
 # Custom Formats: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/

@@ -175,8 +175,16 @@
       "id": "sonarr-v4-quality-profile-web-1080p"
     },
     {
+      "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-web-1080p-alternative.yml",
+      "id": "sonarr-v4-quality-profile-web-1080p-alternative"
+    },
+    {
       "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-web-2160p.yml",
       "id": "sonarr-v4-quality-profile-web-2160p"
+    },
+    {
+      "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-web-2160p-alternative.yml",
+      "id": "sonarr-v4-quality-profile-web-2160p-alternative"
     },
     {
       "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-anime-fr.yml",
