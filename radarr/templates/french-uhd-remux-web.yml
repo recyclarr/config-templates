@@ -55,11 +55,11 @@ radarr:
           - name: FR-REMUX-MULTi-VO-UHD
 
       - trash_ids:
-          # Commentez la ligne suivante si vous et tous vos utilisateurs 
+          # Commentez la ligne suivante si vous et tous vos utilisateurs
           # avez des configurations entièrement compatibles DV
           - 923b6abef9b17f937fab56cfcf89e1f1 # DV (WEBDL)
           # HDR10+ Boost
-          # Décommentez les deux lignes suivantes si l'un de vos appareils prend  en charge le HDR10+
+          # Décommentez les deux lignes suivantes si l'un de vos appareils prend en charge le HDR10+
           # - b17886cb4158d9fea189859409975758 # HDR10Plus Boost
           # - 55a5b50cb416dea5a50c4955896217ab # DV HDR10+ Boost
         assign_scores_to:

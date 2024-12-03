@@ -89,7 +89,7 @@
       "id": "french-bluray-web-2160p-v4"
     },
     {
-      "template": "sonarr/templates/french-anime-1080p-v4",
+      "template": "sonarr/templates/french-anime-1080p-v4.yml",
       "id": "french-anime-1080p-v4"
     }
   ]
