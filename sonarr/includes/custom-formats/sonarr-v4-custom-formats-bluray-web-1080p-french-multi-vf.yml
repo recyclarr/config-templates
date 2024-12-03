@@ -1,0 +1,72 @@
+custom_formats:
+  - trash_ids:
+      # Language CFs
+      - ae575f95ab639ba5d15f663bf019e3e8 # Language: Not Original
+      - 322fca6f8f3694acc1401ddb530fd33d # Language: Not French
+      - 10e77b96ae4770a7de645a91a53ce29a # Language: Original + French
+      - 7ba05c6e0e14e793538174c679126996 # MULTi
+
+      # Unwanted
+      - 85c61753df5da1fb2aab6f2a47426b09 # BR-DISK
+      - 9c11cd3f07101cdba90a2d81cf0e56b4 # LQ
+      - e2315f990da2e2cbfc9fa5b7a6fcfe48 # LQ (Release Title)
+      - 3ba797e5dc13af4b8d9bb25e83d90de2 # FR LQ
+      - 47435ece6b99a0b477caf360e79ba0bb # x265 (HD)
+      - fbcb31d8dabd2a319072b84fc0b7249c # Extras
+      - 15a05bc7c1a36e2b57fd628f8977e2fc # AV1
+      - ea0bb4b6ba388992fad1092703b5ff7b # FastSUB
+
+      # Misc
+      - ec8fa7296b64e8cd390a1600981f3923 # Repack/Proper
+      - eb3d5cc0a2be0db205fb823640db6a3c # Repack v2
+      - 44e7c4de10ae50265753082e5dc76047 # Repack v3
+
+      # Streaming Services
+      - bbcaf03147de0f73be2be4a9078dfa03 # 4OD
+      - fcc09418f67ccaddcf3b641a22c5cfd7 # ALL4
+      - d660701077794679fd59e8bdf4ce3a29 # AMZN
+      - f67c9ca88f463a48346062e8ad07713f # ATVP
+      - 77a7b25585c18af08f60b1547bb9b4fb # CC
+      - 4e9a630db98d5391aec1368a0256e2fe # CRAV
+      - 36b72f59f4ea20aad9316f475f2d9fbb # DCU
+      - 89358767a60cc28783cdc3d0be9388a4 # DSNP
+      - 7be9c0572d8cd4f81785dacf7e85985e # FOD
+      - 7a235133c87f7da4c8cccceca7e3c7a6 # HBO
+      - a880d6abc21e7c16884f3ae393f84179 # HMAX
+      - 4404ad44d87ccbb82746e180713112fb # HTSR
+      - f6cce30f1733d5c8194222a7507909bb # Hulu
+      - dc503e2425126fa1d0a9ad6168c83b3f # iP
+      - 0ac24a2a68a9700bcb7eeca8e5cd644c # iT
+      - fa5a16b951004c23e980d2913694a137 # ITVX
+      - 81d1fbf600e2540cee87f3a23f9d3c1c # MAX
+      - d34870697c9db575f17700212167be23 # NF
+      - b2b980877494b560443631eb1f473867 # NLZ
+      - fb1a91cdc0f26f7ca0696e0e95274645 # OViD
+      - 1656adc6d7bb2c8cca6acfb6592db421 # PCOK
+      - c67a75ae4a1715f2bb4d492755ba4195 # PMTP
+      - 3ac5d84fce98bab1b531393e9c82f467 # QIBI
+      - c30d2958827d1867c73318a5a2957eb1 # RED
+      - ae58039e1319178e6be73caab5c42166 # SHO
+      - 1efe8da11bfd74fbbcd4d8117ddb9213 # STAN
+      - d100ea972d1af2150b65b1cffb80f6b5 # TVer
+      - 0e99e7cc719a8a73b2668c3a0c3fe10c # U-NEXT
+      - 5d2317d99af813b6529c7ebf01c83533 # VDL
+      - 93c9d1e566dca8b34d57f5efbbf85f28 # VIU
+
+      # French Streaming Services
+      - b0d6195c23ae254932da00512db7e8a8 # AUViO
+      - f27d46a831e6b16fa3fee2c4e5d10984 # MyCanal
+      - 0455d6519a550dbf648c97b56e7231d2 # SALTO
+
+      # FR HQ Source Groups
+      - d844321db5e126d2e7e46152f0706532 # FR HD Bluray Tier 01
+      - ddb8eaa9c85a549c50034d280539d54d # FR WEB Tier 01
+      - a4c51febd4d8b2a0db10a3c974f21d92 # FR WEB Tier 02
+      - dbfc0a4b5cb4cbd693311c4482ae9683 # FR WEB Tier 03
+      - 2f3422339d185eb227a324644a2fbfca # FR Scene Groups
+
+      # Subs
+      - 07a32f77690263bb9fda1842db7e273f # VOSTFR
+      - 84f0acbda9c0c9de783894fb66df25aa # FanSUB
+    assign_scores_to:
+      - name: FR-MULTi-VF-WEB-1080p

@@ -1,0 +1,18 @@
+quality_profiles:
+  - name: FR-REMUX-MULTi-VF-UHD
+    reset_unmatched_scores:
+      enabled: true
+    upgrade:
+      allowed: true
+      until_quality: Remux-2160p
+      until_score: 10000
+    min_format_score: 0
+    score_set: french-multi-vf
+    quality_sort: top
+    qualities:
+      - name: Remux-2160p
+      - name: Bluray|WEB 2160p
+        qualities:
+          - Bluray-2160p
+          - WEBDL-2160p
+          - WEBRip-2160p

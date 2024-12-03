@@ -1,0 +1,34 @@
+quality_profiles:
+  - name: FR-ANIME-VOSTFR
+    reset_unmatched_scores:
+      enabled: true
+    upgrade:
+      allowed: true
+      until_quality: Bluray-1080p
+      until_score: 10000
+    min_format_score: 100
+    score_set: french-anime-vostfr
+    quality_sort: top
+    qualities:
+      - name: Bluray-1080p
+        qualities:
+          - Bluray-1080p Remux
+          - Bluray-1080p
+      - name: WEB 1080p
+        qualities:
+          - WEBDL-1080p
+          - WEBRip-1080p
+          - HDTV-1080p
+      - name: Bluray-720p
+      - name: WEB 720p
+        qualities:
+          - WEBDL-720p
+          - WEBRip-720p
+          - HDTV-720p
+      - name: Bluray-480p
+      - name: WEB 480p
+        qualities:
+          - WEBDL-480p
+          - WEBRip-480p
+      - name: DVD
+      - name: SDTV

@@ -1,0 +1,18 @@
+quality_profiles:
+  - name: FR-VOSTFR-UHD
+    reset_unmatched_scores:
+      enabled: true
+    upgrade:
+      allowed: true
+      until_quality: Bluray|WEB 2160p
+      until_score: 10000
+    min_format_score: 0
+    score_set: french-vostfr
+    quality_sort: top
+    qualities:
+      - name: Bluray|WEB 2160p
+        qualities:
+          - Bluray-2160p
+          - WEBDL-2160p
+          - WEBRip-2160p
+      - name: Remux-1080p

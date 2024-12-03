@@ -1,0 +1,218 @@
+###################################################################################################
+# Recyclarr Configuration Template: FR UHD Bluray + WEB                                           #
+# Updated: 2024-12-03                                                                             #
+# Documentation: https://recyclarr.dev                                                            #
+# Note: The following will be in French but hold basically the same info as the other template    #
+# ----------------------------------------------------------------------------------------------- #
+# Si vous utilisez plusieurs profiles dans une seule instance merci de vous référez               #
+# à la documentation suivante (en anglais) pour les combiner :                                    #
+# https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
+###################################################################################################
+
+# Definition d'une instance : https://recyclarr.dev/wiki/yaml/config-reference/basic/
+radarr:
+  french-uhd-bluray-web:
+    base_url: Put your Radarr URL here
+    api_key: Put your API key here
+
+    include:
+      - template: radarr-quality-definition-movie
+      # Profile souhaité - veuillez à avoir les lignes correspondantes activées
+      # --- Profile VOSTFR ---
+      # - template: sonarr-v4-quality-profile-uhd-bluray-web-french-vostfr
+      # - template: sonarr-v4-custom-formats-uhd-bluray-web-french-vostfr
+      # --- Profile MULTi.VF ---
+      # - template: sonarr-v4-quality-profile-uhd-bluray-web-french-multi-vf
+      # - template: sonarr-v4-custom-formats-uhd-bluray-web-french-multi-vf
+      # --- Profile MULTi.VO ---
+      - template: radarr-quality-profile-uhd-bluray-web-french-multi-vo
+      - template: radarr-custom-formats-uhd-bluray-web-french-multi-vo
+
+    # Formats Personnalisés (Custom Formats) :
+    # https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
+    custom_formats:
+      # Audio si vous souhaitez les activer merci de lire attentivement les informations suivantes :
+      # https://trash-guides.info/Radarr/radarr-setup-quality-profiles-french-fr/#hd-remux-1080p
+      - trash_ids:
+          # Uncomment the next section to enable Advanced Audio Formats
+          # - 496f355514737f7d83bf7aa4d24f8169 # TrueHD Atmos
+          # - 2f22d89048b01681dde8afe203bf2e95 # DTS X
+          # - 417804f7f2c4308c1f4c5d380d4c4475 # ATMOS (undefined)
+          # - 1af239278386be2919e1bcee0bde047e # DD+ ATMOS
+          # - 3cafb66171b47f226146a0770576870f # TrueHD
+          # - dcf3ec6938fa32445f590a4da84256cd # DTS-HD MA
+          # - a570d4a0e56a2874b64e5bfa55202a1b # FLAC
+          # - e7c2fcae07cbada050a0af3357491d7b # PCM
+          # - 8e109e50e0a0b83a5098b056e13bf6db # DTS-HD HRA
+          # - 185f1dd7264c4562b9022d963ac37424 # DD+
+          # - f9f847ac70a0af62ea4a08280b859636 # DTS-ES
+          # - 1c1a4c5e823891c75bc50380a6866f73 # DTS
+          # - 240770601cc226190c367ef59aba7463 # AAC
+          # - c2998bd0d90ed5621d8df281e839436e # DD
+        assign_scores_to:
+          # - name: FR-VOSTFR-UHD
+          # - name: FR-MULTi-VF-UHD
+          - name: FR-MULTi-VO-UHD
+
+      - trash_ids:
+          # Commentez la ligne suivante si vous et tous vos utilisateurs
+          # avez des configurations entièrement compatibles DV
+          - 923b6abef9b17f937fab56cfcf89e1f1 # DV (WEBDL)
+          # HDR10+ Boost
+          # Décommentez les deux lignes suivantes si l'un de vos appareils prend en charge le HDR10+
+          # - b17886cb4158d9fea189859409975758 # HDR10Plus Boost
+          # - 55a5b50cb416dea5a50c4955896217ab # DV HDR10+ Boost
+        assign_scores_to:
+          # - name: FR-VOSTFR-UHD
+          # - name: FR-MULTi-VF-UHD
+          - name: FR-MULTi-VO-UHD
+
+      # SDR Optionnel
+      # N'utilisez qu'UN SEUL des Formats Personnalisés suivants :
+      # SDR - bloque TOUTES les versions SDR
+      # SDR (no WEBDL) - autorise seulement les SDR WEB
+      - trash_ids:
+          - 9c38ebb7384dada637be8899efa68e6f # SDR
+          # - 25c12f78430a3a23413652cbd1d48d77 # SDR (no WEBDL)
+        assign_scores_to:
+          # - name: FR-VOSTFR-UHD
+          # - name: FR-MULTi-VF-UHD
+          - name: FR-MULTi-VO-UHD
+
+      # Movie Versions
+      - trash_ids:
+      # Décommentez n'importe laquelle des lignes suivantes pour préférer ces versions de films
+          # - 570bc9ebecd92723d2d21500f4be314c # Remaster
+          # - eca37840c13c6ef2dd0262b141a5482f # 4K Remaster
+          # - e0c07d59beb37348e975a930d5e50319 # Criterion Collection
+          # - 9d27d9d2181838f76dee150882bdc58c # Masters of Cinema
+          # - db9b4c4b53d312a3ca5f1378f6440fc9 # Vinegar Syndrome
+          # - 957d0f44b592285f26449575e8b1167e # Special Edition
+          # - eecf3a857724171f968a66cb5719e152 # IMAX
+          # - 9f6cbff8cfe4ebbc1bde14c7b7bec0de # IMAX Enhanced
+        assign_scores_to:
+          # - name: FR-VOSTFR-UHD
+          # - name: FR-MULTi-VF-UHD
+          - name: FR-MULTi-VO-UHD
+
+      # Optionnels
+      # Ils sont optionnels et peuvent ne pas fonctionner correctement avec les profiles FR
+      - trash_ids:
+          # - b6832f586342ef70d9c128d40c07b872 # Bad Dual Groups
+          # - 90cedc1fea7ea5d11298bebd3d1d3223 # EVO (no WEBDL)
+          # - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5 # No-RlsGroup
+          # - 7357cf5161efbf8c4d5d0c30b4815ee2 # Obfuscated
+          # - 5c44f52a8714fdd79bb4d98e2673be1f # Retags
+          # - f537cf427b64c38c8e36298f657e4828 # Scene
+        assign_scores_to:
+          # - name: FR-VOSTFR-UHD
+          # - name: FR-MULTi-VF-UHD
+          - name: FR-MULTi-VO-UHD
+
+      # Décommentez les lignes suivantes pour accepter les releases en x265 HD avec du HDR/DV
+      - trash_ids:
+          # - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
+        # assign_scores_to:
+          # - name: FR-VOSTFR-UHD
+            # score: 0
+          # - name: FR-MULTi-VF-UHD
+            # score: 0
+          # - name: FR-MULTi-VO-UHD
+            # score: 0
+      # - trash_ids:
+          # - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
+        assign_scores_to:
+          # - name: FR-VOSTFR-UHD
+          # - name: FR-MULTi-VF-UHD
+          - name: FR-MULTi-VO-UHD
+
+      # Décommenter le score associé si vous ne voulez pas de FanSUB.
+      - trash_ids:
+          - 02e48d30a176c91baf9e15de05e5dc6a  # FanSUB
+        assign_scores_to:
+          # - name: FR-VOSTFR-UHD
+            # score: -10000
+          # - name: FR-MULTi-VF-UHD
+            # score: -10000
+          # - name: FR-MULTi-VO-UHD
+            # score: -10000
+
+      # ===== Versions françaises =====
+      # Activez ou désactiver les Formats Personnalisés suivant si vous souhaitez noter vos releases
+      # avec. Vous pouvez aussi leur attribuer un score en fonction de si vous souhaitez préférer un
+      # certain type d'audio français.
+      # Par exemple si vous préférez la VFF : VFF + VF2 à 101, VFQ à -101, le reste à 0.
+      # Pensez à vérifier aussi à quoi corresponde les différents types de version francophones :
+      # https://trash-guides.info/Radarr/radarr-setup-quality-profiles-french-en/#french-audio-versions
+      - trash_ids:
+          - 404c08fd0bd67f39b4d8e5709319094e # VFF
+        assign_scores_to:
+          # - name: FR-VOSTFR-UHD
+            # score: 101
+          # - name: FR-MULTi-VF-UHD
+            # score: 101
+          - name: FR-MULTi-VO-UHD
+            # score: 101
+      - trash_ids:
+          - 4cafa20d5584f6ba1871d1b8941aa3cb # VOF
+        assign_scores_to:
+          # - name: FR-VOSTFR-UHD
+            # score: 101
+          # - name: FR-MULTi-VF-UHD
+            # score: 101
+          - name: FR-MULTi-VO-UHD
+            # score: 101
+      - trash_ids:
+          - 52772f1cad6b5d26c2551f79bc538a50 # VFI
+        assign_scores_to:
+          # - name: FR-VOSTFR-UHD
+            # score: 101
+          # - name: FR-MULTi-VF-UHD
+            # score: 101
+          - name: FR-MULTi-VO-UHD
+            # score: 101
+      - trash_ids:
+          - 29b5f7b1a5f20f64228786c3ab1bdc7d # VF2
+        assign_scores_to:
+          # - name: FR-VOSTFR-UHD
+            # score: 101
+          # - name: FR-MULTi-VF-UHD
+            # score: 101
+          - name: FR-MULTi-VO-UHD
+            # score: 101
+      - trash_ids:
+          - b6ace47331a1d3b77942fc18156f6df6 # VFQ
+        assign_scores_to:
+          # - name: FR-VOSTFR-UHD
+            # score: 101
+          # - name: FR-MULTi-VF-UHD
+            # score: 101
+          - name: FR-MULTi-VO-UHD
+            # score: 101
+      - trash_ids:
+          - f7caa1942be5cc547c266bd3dbc2cda9 # VOQ
+        assign_scores_to:
+          # - name: FR-VOSTFR-UHD
+            # score: 101
+          # - name: FR-MULTi-VF-UHD
+            # score: 101
+          - name: FR-MULTi-VO-UHD
+            # score: 101
+      - trash_ids:
+          - 95aa50f71a01c82354a7a2b385f1c4d8 # VQ
+        assign_scores_to:
+          # - name: FR-VOSTFR-UHD
+            # score: 101
+          # - name: FR-MULTi-VF-UHD
+            # score: 101
+          - name: FR-MULTi-VO-UHD
+            # score: 101
+      - trash_ids:
+          - b3fb499641d7b3c2006be1d9eb014cb3 # VFB
+        assign_scores_to:
+          # - name: FR-VOSTFR-UHD
+            # score: 101
+          # - name: FR-MULTi-VF-UHD
+            # score: 101
+          - name: FR-MULTi-VO-UHD
+            # score: 101
