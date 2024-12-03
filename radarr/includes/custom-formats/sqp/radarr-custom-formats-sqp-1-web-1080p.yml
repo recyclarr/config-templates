@@ -52,7 +52,7 @@ custom_formats:
       - 16622a6911d1ab5d5b8b713d5b0036d4 # CRiT
       - 2a6039655313bf5dab1e43523b62c374 # MA
     assign_scores_to:
-      - name: SQP-1 (1080p)
+      - name: SQP-1 WEB (1080p)
 
   - trash_ids:
       # Streaming Services
@@ -69,5 +69,5 @@ custom_formats:
       - e36a0ba1bc902b26ee40818a1d59b8bd # PMTP
       - c2863d2a50c9acad1fb50e53ece60817 # STAN
     assign_scores_to:
-      - name: SQP-1 (1080p)
+      - name: SQP-1 WEB (1080p)
         score: 0
