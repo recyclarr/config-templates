@@ -25,6 +25,10 @@
       "id": "radarr-custom-formats-sqp-1-1080p"
     },
     {
+      "template": "radarr/includes/custom-formats/sqp/radarr-custom-formats-sqp-1-web-1080p.yml",
+      "id": "radarr-custom-formats-sqp-1-web-1080p"
+    },
+    {
       "template": "radarr/includes/custom-formats/sqp/radarr-custom-formats-sqp-1-2160p.yml",
       "id": "radarr-custom-formats-sqp-1-2160p"
     },
@@ -79,6 +83,10 @@
     {
       "template": "radarr/includes/quality-profiles/sqp/radarr-quality-profile-sqp-1-1080p.yml",
       "id": "radarr-quality-profile-sqp-1-1080p"
+    },
+    {
+      "template": "radarr/includes/quality-profiles/sqp/radarr-quality-profile-sqp-1-web-1080p.yml",
+      "id": "radarr-quality-profile-sqp-1-web-1080p"
     },
     {
       "template": "radarr/includes/quality-profiles/sqp/radarr-quality-profile-sqp-1-2160p-4k-only-default.yml",

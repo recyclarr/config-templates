@@ -42,6 +42,11 @@
       "hidden": false
     },
     {
+      "template": "radarr/templates/sqp/sqp-1-web-1080p.yml",
+      "id": "sqp-1-web-1080p",
+      "hidden": false
+    },
+    {
       "template": "radarr/templates/sqp/sqp-1-2160p.yml",
       "id": "sqp-1-2160p",
       "hidden": false
