@@ -21,36 +21,20 @@
       "id": "anime-radarr"
     },
     {
-      "template": "radarr/templates/french-hd-bluray-web-multi.yml",
-      "id": "french-hd-bluray-web-multi"
+      "template": "radarr/templates/french-hd-bluray-web.yml",
+      "id": "french-hd-bluray-web"
     },
     {
-      "template": "radarr/templates/french-hd-bluray-web-vostfr.yml",
-      "id": "french-hd-bluray-web-vostfr"
+      "template": "radarr/templates/french-hd-remux-web.yml",
+      "id": "french-hd-remux-web"
     },
     {
-      "template": "radarr/templates/french-remux-web-1080p-multi.yml",
-      "id": "french-remux-web-1080p-multi"
+      "template": "radarr/templates/french-uhd-bluray-web.yml",
+      "id": "french-uhd-bluray-web"
     },
     {
-      "template": "radarr/templates/french-remux-web-1080p-vostfr.yml",
-      "id": "french-remux-web-1080p-vostfr"
-    },
-    {
-      "template": "radarr/templates/french-uhd-bluray-web-multi.yml",
-      "id": "french-uhd-bluray-web-multi"
-    },
-    {
-      "template": "radarr/templates/french-uhd-bluray-web-vostfr.yml",
-      "id": "french-uhd-bluray-web-vostfr"
-    },
-    {
-      "template": "radarr/templates/french-remux-web-2160p-multi.yml",
-      "id": "french-remux-web-2160p-multi"
-    },
-    {
-      "template": "radarr/templates/french-remux-web-2160p-vostfr.yml",
-      "id": "french-remux-web-2160p-vostfr"
+      "template": "radarr/templates/french-uhd-remux-web.yml",
+      "id": "french-uhd-remux-web"
     },
     {
       "template": "radarr/templates/sqp/sqp-1-1080p.yml",
@@ -97,28 +81,16 @@
       "id": "anime-sonarr-v4"
     },
     {
-      "template": "sonarr/templates/french-web-1080p-multi-v4.yml",
-      "id": "french-web-1080p-multi-v4"
+      "template": "sonarr/templates/french-bluray-web-1080p-v4.yml",
+      "id": "french-bluray-web-1080p-v4"
     },
     {
-      "template": "sonarr/templates/french-web-1080p-vostfr-v4.yml",
-      "id": "french-web-1080p-vostfr-v4"
+      "template": "sonarr/templates/french-bluray-web-2160p-v4.yml",
+      "id": "french-bluray-web-2160p-v4"
     },
     {
-      "template": "sonarr/templates/french-web-2160p-multi-v4.yml",
-      "id": "french-web-2160p-multi-v4"
-    },
-    {
-      "template": "sonarr/templates/french-web-2160p-vostfr-v4.yml",
-      "id": "french-web-2160p-vostfr-v4"
-    },
-    {
-      "template": "sonarr/templates/french-anime-multi-v4.yml",
-      "id": "french-anime-multi-v4"
-    },
-    {
-      "template": "sonarr/templates/french-anime-vostfr-v4.yml",
-      "id": "french-anime-vostfr-v4"
+      "template": "sonarr/templates/french-anime-1080p-v4",
+      "id": "french-anime-1080p-v4"
     }
   ]
 }
