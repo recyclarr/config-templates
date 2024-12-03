@@ -1,0 +1,168 @@
+###################################################################################################
+# Recyclarr Configuration Template: FR HD Remux + WEB                                             #
+# Updated: 2024-12-03                                                                             #
+# Documentation: https://recyclarr.dev                                                            #
+# Note: The following will be in French but hold basically the same info as the other template    #
+# ----------------------------------------------------------------------------------------------- #
+# Si vous utilisez plusieurs profiles dans une seule instance merci de vous référez               #
+# à la documentation suivante (en anglais) pour les combiner :                                    #
+# https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
+###################################################################################################
+
+# Definition d'une instance : https://recyclarr.dev/wiki/yaml/config-reference/basic/
+radarr:
+  french-hd-remux-web:
+    base_url: Put your Radarr URL here
+    api_key: Put your API key here
+
+    include:
+      - template: radarr-quality-definition-movie
+      # Choississez le type de profile que vous souhaitez, veuillez seulement avoir les lignes correspondantes activées.
+      # Pour ce faire : commentez toutes lignes que vous souhaitez désactiver, décommentez pour activer (sigle #).
+      # --- Profile VOSTFR ---
+      # - template: sonarr-v4-quality-profile-hd-remux-web-french-vostfr
+      # - template: sonarr-v4-custom-formats-hd-remux-web-french-vostfr
+      # --- Profile MULTi.VF ---
+      # - template: sonarr-v4-quality-profile-hd-remux-web-french-multi-vf
+      # - template: sonarr-v4-custom-formats-hd-remux-web-french-multi-vf
+      # --- Profile MULTi.VO ---
+      - template: radarr-quality-profile-hd-remux-web-french-multi-vo
+      - template: radarr-custom-formats-hd-remux-web-french-multi-vo
+
+    custom_formats:
+      # Movie Versions
+      - trash_ids:
+      # Décommentez n'importe laquelle des lignes suivantes pour préférer ces versions de films
+          # - 570bc9ebecd92723d2d21500f4be314c # Remaster
+          # - eca37840c13c6ef2dd0262b141a5482f # 4K Remaster
+          # - e0c07d59beb37348e975a930d5e50319 # Criterion Collection
+          # - 9d27d9d2181838f76dee150882bdc58c # Masters of Cinema
+          # - db9b4c4b53d312a3ca5f1378f6440fc9 # Vinegar Syndrome
+          # - 957d0f44b592285f26449575e8b1167e # Special Edition
+          # - eecf3a857724171f968a66cb5719e152 # IMAX
+          # - 9f6cbff8cfe4ebbc1bde14c7b7bec0de # IMAX Enhanced
+        assign_scores_to:
+          # - name: FR-REMUX-VOSTFR-HD
+          # - name: FR-REMUX-MULTi-VF-HD
+          - name: FR-REMUX-MULTi-VO-HD
+
+      # Optionnels, ces Formats Personnalisés sont optionnels et peuvent ne pas fonctionner correctement avec les profiles FR
+      - trash_ids:
+          # - b6832f586342ef70d9c128d40c07b872 # Bad Dual Groups
+          # - 90cedc1fea7ea5d11298bebd3d1d3223 # EVO (no WEBDL)
+          # - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5 # No-RlsGroup
+          # - 7357cf5161efbf8c4d5d0c30b4815ee2 # Obfuscated
+          # - 5c44f52a8714fdd79bb4d98e2673be1f # Retags
+          # - f537cf427b64c38c8e36298f657e4828 # Scene
+        assign_scores_to:
+          # - name: FR-REMUX-VOSTFR-HD
+          # - name: FR-REMUX-MULTi-VF-HD
+          - name: FR-REMUX-MULTi-VO-HD
+
+      # Décommentez les lignes suivantes pour accepter les releases en x265 HD avec du HDR/DV
+      - trash_ids:
+          # - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
+        # assign_scores_to:
+          # - name: FR-REMUX-VOSTFR-HD
+            # score: 0
+          # - name: FR-REMUX-MULTi-VF-HD
+            # score: 0
+          # - name: FR-REMUX-MULTi-VO-HD
+            # score: 0
+      # - trash_ids:
+          # - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
+        assign_scores_to:
+          # - name: FR-REMUX-VOSTFR-HD
+          # - name: FR-REMUX-MULTi-VF-HD
+          - name: FR-REMUX-MULTi-VO-HD
+
+      # Décommenter le score associé si vous ne voulez pas de FanSUB.
+      - trash_ids:
+          - 02e48d30a176c91baf9e15de05e5dc6a # FanSUB
+        assign_scores_to:
+          # - name: FR-REMUX-VOSTFR-HD
+            # score: -10000
+          # - name: FR-REMUX-MULTi-VF-HD
+            # score: -10000
+          # - name: FR-REMUX-MULTi-VO-HD
+            # score: -10000
+
+      # ===== Versions françaises =====
+      # Activez ou désactiver les Formats Personnalisés suivant si vous souhaitez noter vos releases
+      # avec. Vous pouvez aussi leur attribuer un score en fonction de si vous souhaitez préférer un
+      # certain type d'audio français. 
+      # Par exemple si vous préférez la VFF : VFF + VF2 à 101, VFQ à -101, le reste à 0.
+      # Pensez à vérifier aussi à quoi corresponde les différents types de version francophones :
+      # https://trash-guides.info/Radarr/radarr-setup-quality-profiles-french-en/#french-audio-versions
+      - trash_ids:
+          - 404c08fd0bd67f39b4d8e5709319094e # VFF
+        assign_scores_to:
+          # - name: FR-REMUX-VOSTFR-HD
+            # score: 101
+          # - name: FR-REMUX-MULTi-VF-HD
+            # score: 101
+          - name: FR-REMUX-MULTi-VO-HD
+            # score: 101
+      - trash_ids:
+          - 4cafa20d5584f6ba1871d1b8941aa3cb # VOF
+        assign_scores_to:
+          # - name: FR-REMUX-VOSTFR-HD
+            # score: 101
+          # - name: FR-REMUX-MULTi-VF-HD
+            # score: 101
+          - name: FR-REMUX-MULTi-VO-HD
+            # score: 101
+      - trash_ids:
+          - 52772f1cad6b5d26c2551f79bc538a50 # VFI
+        assign_scores_to:
+          # - name: FR-REMUX-VOSTFR-HD
+            # score: 101
+          # - name: FR-REMUX-MULTi-VF-HD
+            # score: 101
+          - name: FR-REMUX-MULTi-VO-HD
+            # score: 101
+      - trash_ids:
+          - 29b5f7b1a5f20f64228786c3ab1bdc7d # VF2
+        assign_scores_to:
+          # - name: FR-REMUX-VOSTFR-HD
+            # score: 101
+          # - name: FR-REMUX-MULTi-VF-HD
+            # score: 101
+          - name: FR-REMUX-MULTi-VO-HD
+            # score: 101
+      - trash_ids:
+          - b6ace47331a1d3b77942fc18156f6df6 # VFQ
+        assign_scores_to:
+          # - name: FR-REMUX-VOSTFR-HD
+            # score: 101
+          # - name: FR-REMUX-MULTi-VF-HD
+            # score: 101
+          - name: FR-REMUX-MULTi-VO-HD
+            # score: 101
+      - trash_ids:
+          - f7caa1942be5cc547c266bd3dbc2cda9 # VOQ
+        assign_scores_to:
+          # - name: FR-REMUX-VOSTFR-HD
+            # score: 101
+          # - name: FR-REMUX-MULTi-VF-HD
+            # score: 101
+          - name: FR-REMUX-MULTi-VO-HD
+            # score: 101
+      - trash_ids:
+          - 95aa50f71a01c82354a7a2b385f1c4d8 # VQ
+        assign_scores_to:
+          # - name: FR-REMUX-VOSTFR-HD
+            # score: 101
+          # - name: FR-REMUX-MULTi-VF-HD
+            # score: 101
+          - name: FR-REMUX-MULTi-VO-HD
+            # score: 101
+      - trash_ids:
+          - b3fb499641d7b3c2006be1d9eb014cb3 # VFB
+        assign_scores_to:
+          # - name: FR-REMUX-VOSTFR-HD
+            # score: 101
+          # - name: FR-REMUX-MULTi-VF-HD
+            # score: 101
+          - name: FR-REMUX-MULTi-VO-HD
+            # score: 101
