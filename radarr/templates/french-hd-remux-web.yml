@@ -17,8 +17,7 @@ radarr:
 
     include:
       - template: radarr-quality-definition-movie
-      # Choississez le type de profile que vous souhaitez, veuillez seulement avoir les lignes correspondantes activées.
-      # Pour ce faire : commentez toutes lignes que vous souhaitez désactiver, décommentez pour activer (sigle #).
+      # Profile souhaité - veuillez à avoir les lignes correspondantes activées
       # --- Profile VOSTFR ---
       # - template: sonarr-v4-quality-profile-hd-remux-web-french-vostfr
       # - template: sonarr-v4-custom-formats-hd-remux-web-french-vostfr
@@ -29,10 +28,36 @@ radarr:
       - template: radarr-quality-profile-hd-remux-web-french-multi-vo
       - template: radarr-custom-formats-hd-remux-web-french-multi-vo
 
+    # Formats Personnalisés (Custom Formats) :
+    # https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
     custom_formats:
+      # Audio si vous souhaitez les activer merci de lire attentivement les informations suivantes :
+      # https://trash-guides.info/Radarr/radarr-setup-quality-profiles-french-fr/#hd-remux-1080p
+      - trash_ids:
+          # Uncomment the next section to enable Advanced Audio Formats
+          # - 496f355514737f7d83bf7aa4d24f8169 # TrueHD Atmos
+          # - 2f22d89048b01681dde8afe203bf2e95 # DTS X
+          # - 417804f7f2c4308c1f4c5d380d4c4475 # ATMOS (undefined)
+          # - 1af239278386be2919e1bcee0bde047e # DD+ ATMOS
+          # - 3cafb66171b47f226146a0770576870f # TrueHD
+          # - dcf3ec6938fa32445f590a4da84256cd # DTS-HD MA
+          # - a570d4a0e56a2874b64e5bfa55202a1b # FLAC
+          # - e7c2fcae07cbada050a0af3357491d7b # PCM
+          # - 8e109e50e0a0b83a5098b056e13bf6db # DTS-HD HRA
+          # - 185f1dd7264c4562b9022d963ac37424 # DD+
+          # - f9f847ac70a0af62ea4a08280b859636 # DTS-ES
+          # - 1c1a4c5e823891c75bc50380a6866f73 # DTS
+          # - 240770601cc226190c367ef59aba7463 # AAC
+          # - c2998bd0d90ed5621d8df281e839436e # DD
+        assign_scores_to:
+          # - name: FR-REMUX-VOSTFR-HD
+          # - name: FR-REMUX-MULTi-VF-HD
+          - name: FR-REMUX-MULTi-VO-HD
+
       # Movie Versions
       - trash_ids:
       # Décommentez n'importe laquelle des lignes suivantes pour préférer ces versions de films
+          # - 0f12c086e289cf966fa5948eac571f44 # Hybrid
           # - 570bc9ebecd92723d2d21500f4be314c # Remaster
           # - eca37840c13c6ef2dd0262b141a5482f # 4K Remaster
           # - e0c07d59beb37348e975a930d5e50319 # Criterion Collection
@@ -46,7 +71,8 @@ radarr:
           # - name: FR-REMUX-MULTi-VF-HD
           - name: FR-REMUX-MULTi-VO-HD
 
-      # Optionnels, ces Formats Personnalisés sont optionnels et peuvent ne pas fonctionner correctement avec les profiles FR
+      # Optionnels
+      # Ils sont optionnels et peuvent ne pas fonctionner correctement avec les profiles FR
       - trash_ids:
           # - b6832f586342ef70d9c128d40c07b872 # Bad Dual Groups
           # - 90cedc1fea7ea5d11298bebd3d1d3223 # EVO (no WEBDL)
@@ -90,7 +116,7 @@ radarr:
       # ===== Versions françaises =====
       # Activez ou désactiver les Formats Personnalisés suivant si vous souhaitez noter vos releases
       # avec. Vous pouvez aussi leur attribuer un score en fonction de si vous souhaitez préférer un
-      # certain type d'audio français. 
+      # certain type d'audio français.
       # Par exemple si vous préférez la VFF : VFF + VF2 à 101, VFQ à -101, le reste à 0.
       # Pensez à vérifier aussi à quoi corresponde les différents types de version francophones :
       # https://trash-guides.info/Radarr/radarr-setup-quality-profiles-french-en/#french-audio-versions

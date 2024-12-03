@@ -17,8 +17,7 @@ radarr:
 
     include:
       - template: radarr-quality-definition-movie
-      # Choississez le type de profile que vous souhaitez, veuillez seulement avoir les lignes correspondantes activées.
-      # Pour ce faire : commentez toutes lignes que vous souhaitez désactiver, décommentez pour activer (sigle #).
+      # Profile souhaité - veuillez à avoir les lignes correspondantes activées
       # --- Profile VOSTFR ---
       # - template: sonarr-v4-quality-profile-uhd-remux-web-french-vostfr
       # - template: sonarr-v4-custom-formats-uhd-remux-web-french-vostfr
@@ -29,9 +28,11 @@ radarr:
       - template: radarr-quality-profile-uhd-remux-web-french-multi-vo
       - template: radarr-custom-formats-uhd-remux-web-french-multi-vo
 
+    # Formats Personnalisés (Custom Formats) :
+    # https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
     custom_formats:
-      # Audio, si vous souhaitez les activer, merci de lire attentivement les informations suivantes :
-      # https://trash-guides.info/Radarr/radarr-setup-quality-profiles-french-fr/#uhd-remux-2160p
+      # Audio si vous souhaitez les activer merci de lire attentivement les informations suivantes :
+      # https://trash-guides.info/Radarr/radarr-setup-quality-profiles-french-fr/#hd-remux-1080p
       - trash_ids:
           # Uncomment the next section to enable Advanced Audio Formats
           # - 496f355514737f7d83bf7aa4d24f8169 # TrueHD Atmos
@@ -48,6 +49,31 @@ radarr:
           # - 1c1a4c5e823891c75bc50380a6866f73 # DTS
           # - 240770601cc226190c367ef59aba7463 # AAC
           # - c2998bd0d90ed5621d8df281e839436e # DD
+        assign_scores_to:
+          # - name: FR-REMUX-VOSTFR-UHD
+          # - name: FR-REMUX-MULTi-VF-UHD
+          - name: FR-REMUX-MULTi-VO-UHD
+
+      - trash_ids:
+          # Commentez la ligne suivante si vous et tous vos utilisateurs 
+          # avez des configurations entièrement compatibles DV
+          - 923b6abef9b17f937fab56cfcf89e1f1 # DV (WEBDL)
+          # HDR10+ Boost
+          # Décommentez les deux lignes suivantes si l'un de vos appareils prend  en charge le HDR10+
+          # - b17886cb4158d9fea189859409975758 # HDR10Plus Boost
+          # - 55a5b50cb416dea5a50c4955896217ab # DV HDR10+ Boost
+        assign_scores_to:
+          # - name: FR-REMUX-VOSTFR-UHD
+          # - name: FR-REMUX-MULTi-VF-UHD
+          - name: FR-REMUX-MULTi-VO-UHD
+
+      # SDR Optionnel
+      # N'utilisez qu'UN SEUL des Formats Personnalisés suivants :
+      # SDR - bloque TOUTES les versions SDR
+      # SDR (no WEBDL) - autorise seulement les SDR WEB
+      - trash_ids:
+          - 9c38ebb7384dada637be8899efa68e6f # SDR
+          # - 25c12f78430a3a23413652cbd1d48d77 # SDR (no WEBDL)
         assign_scores_to:
           # - name: FR-REMUX-VOSTFR-UHD
           # - name: FR-REMUX-MULTi-VF-UHD
@@ -70,7 +96,8 @@ radarr:
           # - name: FR-REMUX-MULTi-VF-UHD
           - name: FR-REMUX-MULTi-VO-UHD
 
-      # Optionnels, ces Formats Personnalisés sont optionnels et peuvent ne pas fonctionner correctement avec les profiles FR
+      # Optionnels
+      # Ils sont optionnels et peuvent ne pas fonctionner correctement avec les profiles FR
       - trash_ids:
           # - b6832f586342ef70d9c128d40c07b872 # Bad Dual Groups
           # - 90cedc1fea7ea5d11298bebd3d1d3223 # EVO (no WEBDL)
@@ -114,7 +141,7 @@ radarr:
       # ===== Versions françaises =====
       # Activez ou désactiver les Formats Personnalisés suivant si vous souhaitez noter vos releases
       # avec. Vous pouvez aussi leur attribuer un score en fonction de si vous souhaitez préférer un
-      # certain type d'audio français. 
+      # certain type d'audio français.
       # Par exemple si vous préférez la VFF : VFF + VF2 à 101, VFQ à -101, le reste à 0.
       # Pensez à vérifier aussi à quoi corresponde les différents types de version francophones :
       # https://trash-guides.info/Radarr/radarr-setup-quality-profiles-french-en/#french-audio-versions

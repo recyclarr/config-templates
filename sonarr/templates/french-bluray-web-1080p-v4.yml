@@ -18,8 +18,7 @@ sonarr:
 
     include:
       - template: sonarr-quality-definition-series
-      # Choississez le type de profile que vous souhaitez, veuillez seulement avoir les lignes correspondantes activées.
-      # Pour ce faire : commentez toutes lignes que vous souhaitez désactiver, décommentez pour activer (sigle #).
+      # Profile souhaité - veuillez à avoir les lignes correspondantes activées
       # --- Profile VOSTFR ---
       # - template: sonarr-v4-quality-profile-bluray-web-1080p-french-vostfr
       # - template: sonarr-v4-custom-formats-bluray-web-1080p-french-vostfr
@@ -30,9 +29,11 @@ sonarr:
       - template: sonarr-v4-quality-profile-bluray-web-1080p-french-multi-vo
       - template: sonarr-v4-custom-formats-bluray-web-1080p-french-multi-vo
 
-    # Formats Personnalisés (Custom Formats) : https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
+    # Formats Personnalisés (Custom Formats) :
+    # https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
     custom_formats:
-      # Optionnels, ces Formats Personnalisés sont optionnels et peuvent ne pas fonctionner correctement avec les profiles FR
+      # Optionnels
+      # Ils sont optionnels et peuvent ne pas fonctionner correctement avec les profiles FR
       # - trash_ids:
           # - 32b367365729d530ca1c124a0b180c64 # Bad Dual Groups
           # - 82d40da2bc6923f41e14394075dd4b03 # No-RlsGroup
@@ -75,12 +76,12 @@ sonarr:
       # ===== Versions françaises =====
       # Activez ou désactiver les Formats Personnalisés suivant si vous souhaitez noter vos releases
       # avec. Vous pouvez aussi leur attribuer un score en fonction de si vous souhaitez préférer un
-      # certain type d'audio français. 
+      # certain type d'audio français.
       # Par exemple si vous préférez la VFF : VFF + VF2 à 101, VFQ à -101, le reste à 0.
       # Pensez à vérifier aussi à quoi corresponde les différents types de version francophones :
       # https://trash-guides.info/Sadarr/sadarr-setup-quality-profiles-french-fr/#french-audio-versions
       - trash_ids:
-          - 2c29a39a4fdfd6d258799bc4c09731b9  # VFF
+          - 2c29a39a4fdfd6d258799bc4c09731b9 # VFF
         assign_scores_to:
           # - name: FR-VOSTFR-WEB-1080p
             # score: 101
@@ -89,7 +90,7 @@ sonarr:
           # - name: FR-MULTi-VO-WEB-1080p
             # score: 101
       - trash_ids:
-          - 7ae924ee9b2f39df3283c6c0beb8a2aa  # VOF
+          - 7ae924ee9b2f39df3283c6c0beb8a2aa # VOF
         assign_scores_to:
           # - name: FR-VOSTFR-WEB-1080p
             # score: 101
@@ -98,7 +99,7 @@ sonarr:
           # - name: FR-MULTi-VO-WEB-1080p
             # score: 101
       - trash_ids:
-          - b6816a0e1d4b64bf3550ad3b74b009b6  # VFI
+          - b6816a0e1d4b64bf3550ad3b74b009b6 # VFI
         assign_scores_to:
           # - name: FR-VOSTFR-WEB-1080p
             # score: 101
@@ -107,7 +108,7 @@ sonarr:
           # - name: FR-MULTi-VO-WEB-1080p
             # score: 101
       - trash_ids:
-          - 34789ec3caa819f087e23bbf9999daf7  # VF2
+          - 34789ec3caa819f087e23bbf9999daf7 # VF2
         assign_scores_to:
           # - name: FR-VOSTFR-WEB-1080p
             # score: 101
@@ -116,7 +117,7 @@ sonarr:
           # - name: FR-MULTi-VO-WEB-1080p
             # score: 101
       - trash_ids:
-          - 7a7f4e4f58bd1058440236d033a90b67  # VFQ
+          - 7a7f4e4f58bd1058440236d033a90b67 # VFQ
         assign_scores_to:
           # - name: FR-VOSTFR-WEB-1080p
             # score: 101
@@ -125,7 +126,7 @@ sonarr:
           # - name: FR-MULTi-VO-WEB-1080p
             # score: 101
       - trash_ids:
-          - 802dd70b856c423a9b0cb7f34ac42be1  # VOQ
+          - 802dd70b856c423a9b0cb7f34ac42be1 # VOQ
         assign_scores_to:
           # - name: FR-VOSTFR-WEB-1080p
             # score: 101
@@ -134,7 +135,7 @@ sonarr:
           # - name: FR-MULTi-VO-WEB-1080p
             # score: 101
       - trash_ids:
-          - 82085412d9a53ba8d8e46fc624eb701d  # VQ
+          - 82085412d9a53ba8d8e46fc624eb701d # VQ
         assign_scores_to:
           # - name: FR-VOSTFR-WEB-1080p
             # score: 101
@@ -143,7 +144,7 @@ sonarr:
           # - name: FR-MULTi-VO-WEB-1080p
             # score: 101
       - trash_ids:
-          - 0ce1e39a4676c6692ce47935278dac76  # VFB
+          - 0ce1e39a4676c6692ce47935278dac76 # VFB
         assign_scores_to:
           # - name: FR-VOSTFR-WEB-1080p
             # score: 101

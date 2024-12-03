@@ -17,8 +17,7 @@ radarr:
 
     include:
       - template: radarr-quality-definition-movie
-      # Choississez le type de profile que vous souhaitez, veuillez seulement avoir les lignes correspondantes activées.
-      # Pour ce faire : commentez toutes lignes que vous souhaitez désactiver, décommentez pour activer (sigle #).
+      # Profile souhaité - veuillez à avoir les lignes correspondantes activées
       # --- Profile VOSTFR ---
       # - template: sonarr-v4-quality-profile-hd-bluray-web-french-vostfr
       # - template: sonarr-v4-custom-formats-hd-bluray-web-french-vostfr
@@ -29,6 +28,8 @@ radarr:
       - template: radarr-quality-profile-hd-bluray-web-french-multi-vo
       - template: radarr-custom-formats-hd-bluray-web-french-multi-vo
 
+    # Formats Personnalisés (Custom Formats) :
+    # https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
     custom_formats:
       # Movie Versions
       - trash_ids:
@@ -46,7 +47,8 @@ radarr:
           # - name: FR-MULTi-VF-HD
           - name: FR-MULTi-VO-HD
 
-      # Optionnels, ces Formats Personnalisés sont optionnels et peuvent ne pas fonctionner correctement avec les profiles FR
+      # Optionnels
+      # Ils sont optionnels et peuvent ne pas fonctionner correctement avec les profiles FR
       - trash_ids:
           # - b6832f586342ef70d9c128d40c07b872 # Bad Dual Groups
           # - 90cedc1fea7ea5d11298bebd3d1d3223 # EVO (no WEBDL)
@@ -90,7 +92,7 @@ radarr:
       # ===== Versions françaises =====
       # Activez ou désactiver les Formats Personnalisés suivant si vous souhaitez noter vos releases
       # avec. Vous pouvez aussi leur attribuer un score en fonction de si vous souhaitez préférer un
-      # certain type d'audio français. 
+      # certain type d'audio français.
       # Par exemple si vous préférez la VFF : VFF + VF2 à 101, VFQ à -101, le reste à 0.
       # Pensez à vérifier aussi à quoi corresponde les différents types de version francophones :
       # https://trash-guides.info/Radarr/radarr-setup-quality-profiles-french-en/#french-audio-versions

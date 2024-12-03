@@ -18,8 +18,7 @@ sonarr:
 
     include:
       - template: sonarr-quality-definition-anime
-      # Choississez le type de profile que vous souhaitez, veuillez seulement avoir les lignes correspondantes activées.
-      # Pour ce faire : commentez toutes lignes que vous souhaitez désactiver, décommentez pour activer (sigle #).
+      # Profile souhaité - veuillez à avoir les lignes correspondantes activées
       # --- Profile VOSTFR ---
       # - template: sonarr-v4-quality-profile-1080p-french-anime-vostfr
       # - template: sonarr-v4-custom-formats-1080p-french-anime-vostfr
@@ -27,7 +26,8 @@ sonarr:
       - template: sonarr-v4-quality-profile-1080p-french-anime-multi
       - template: sonarr-v4-custom-formats-1080p-french-anime-multi
 
-    # Formats Personnalisés (Custom Formats) : https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
+    # Formats Personnalisés (Custom Formats) :
+    # https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
     custom_formats:
       # Décommenter le score associé si vous préférez les groupes de FanSUB.
       - trash_ids:
