@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: FR UHD Remux + WEB                                            #
-# Updated: 2024-12-03                                                                             #
+# Updated: 2024-12-05                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: The following will be in French but hold basically the same info as the other template    #
 # ----------------------------------------------------------------------------------------------- #
@@ -19,11 +19,11 @@ radarr:
       - template: radarr-quality-definition-movie
       # Profile souhaité - veuillez à avoir les lignes correspondantes activées
       # --- Profile VOSTFR ---
-      # - template: sonarr-v4-quality-profile-uhd-remux-web-french-vostfr
-      # - template: sonarr-v4-custom-formats-uhd-remux-web-french-vostfr
+      # - template: radarr-quality-profile-uhd-remux-web-french-vostfr
+      # - template: radarr-custom-formats-uhd-remux-web-french-vostfr
       # --- Profile MULTi.VF ---
-      # - template: sonarr-v4-quality-profile-uhd-remux-web-french-multi-vf
-      # - template: sonarr-v4-custom-formats-uhd-remux-web-french-multi-vf
+      # - template: radarr-quality-profile-uhd-remux-web-french-multi-vf
+      # - template: radarr-custom-formats-uhd-remux-web-french-multi-vf
       # --- Profile MULTi.VO ---
       - template: radarr-quality-profile-uhd-remux-web-french-multi-vo
       - template: radarr-custom-formats-uhd-remux-web-french-multi-vo
