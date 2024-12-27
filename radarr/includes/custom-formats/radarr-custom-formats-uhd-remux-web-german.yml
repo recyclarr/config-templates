@@ -3,7 +3,7 @@ custom_formats:
       # German Audio
       - f845be10da4f442654c13e1f2c3d6cd5 # German DL
     assign_scores_to:
-    - name: HD Bluray + WEB (GER)
+    - name: Remux + WEB 2160p (GER)
       score: 10001
 
   - trash_ids:
@@ -65,7 +65,7 @@ custom_formats:
       - 16622a6911d1ab5d5b8b713d5b0036d4 # CRiT
       - 2a6039655313bf5dab1e43523b62c374 # MA
     assign_scores_to:
-      - name: Remux + WEB 2160p
+      - name: Remux + WEB 2160p (GER)
 
   - trash_ids:
       # Streaming Services
@@ -82,4 +82,4 @@ custom_formats:
       - e36a0ba1bc902b26ee40818a1d59b8bd # PMTP
       - c2863d2a50c9acad1fb50e53ece60817 # STAN
     assign_scores_to:
-      - name: Remux + WEB 2160p
+      - name: Remux + WEB 2160p (GER)
