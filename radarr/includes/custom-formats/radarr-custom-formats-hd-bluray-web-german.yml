@@ -3,8 +3,8 @@ custom_formats:
       # German Audio
       - f845be10da4f442654c13e1f2c3d6cd5 # German DL
     assign_scores_to:
-    - name: HD Bluray + WEB (GER)
-      score: 10001
+      - name: HD Bluray + WEB (GER)
+        score: 10001
 
   - trash_ids:
       # German Audio

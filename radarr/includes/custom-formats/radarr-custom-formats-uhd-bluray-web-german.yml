@@ -3,8 +3,8 @@ custom_formats:
       # German Audio
       - f845be10da4f442654c13e1f2c3d6cd5 # German DL
     assign_scores_to:
-    - name: UHD Bluray + WEB (GER)
-      score: 10001
+      - name: UHD Bluray + WEB (GER)
+        score: 10001
 
   - trash_ids:
       # German Audio
@@ -23,7 +23,7 @@ custom_formats:
       # German Unwanted
       - 263943bc5d99550c68aad0c4278ba1c7 # German LQ
       - 03c430f326f10a27a9739b8bc83c30e4 # German Microsized
-      
+
       # All HDR Formats
       - c53085ddbd027d9624b320627748612f # DV HDR10Plus
       - e23edd2482476e595fb990b12e7c609c # DV HDR10
