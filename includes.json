@@ -97,6 +97,18 @@
       "id": "radarr-custom-formats-sqp-5"
     },
     {
+      "template": "radarr/includes/custom-formats/radarr-custom-formats-hd-bluray-web-german.yml",
+      "id": "radarr-custom-formats-hd-bluray-web-german"
+    },
+    {
+      "template": "radarr/includes/custom-formats/radarr-custom-formats-uhd-bluray-web-german.yml",
+      "id": "radarr-custom-formats-uhd-bluray-web-german"
+    },
+    {
+      "template": "radarr/includes/custom-formats/radarr-custom-formats-uhd-remux-web-german.yml",
+      "id": "radarr-custom-formats-uhd-remux-web-german"
+    },
+    {
       "template": "radarr/includes/quality-definitions/radarr-quality-definition-movie.yml",
       "id": "radarr-quality-definition-movie"
     },
