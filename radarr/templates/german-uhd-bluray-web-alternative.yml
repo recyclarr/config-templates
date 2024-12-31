@@ -97,7 +97,7 @@ radarr:
 #      - trash_ids:
 #          - e6886871085226c3da1830830146846c # Generated Dynamic HDR
 #        assign_scores_to:
-#          - name: UHD Bluray + WEB (GER)
+#          - name: UHD Bluray + WEB (GER) (Alternative)
 #            score: 0
 
 ### x265 Releases
