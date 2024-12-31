@@ -77,7 +77,7 @@ custom_formats:
       - 16622a6911d1ab5d5b8b713d5b0036d4 # CRiT
       - 2a6039655313bf5dab1e43523b62c374 # MA
     assign_scores_to:
-      - name: UHD Bluray + WEB (GER)
+      - name: UHD Bluray + WEB (GER) (Alternative)
 
   - trash_ids:
       # Streaming Services
