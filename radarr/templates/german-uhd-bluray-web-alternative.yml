@@ -10,16 +10,16 @@
 # Instance Definition: https://recyclarr.dev/wiki/yaml/config-reference/basic/
 
 radarr:
-  uhd-remux-web-ger:
+  uhd-bluray-web-ger-alternative:
     base_url: Put your Radarr URL here
     api_key: Put your API key here
 
     include:
       - template: radarr-quality-definition-movie
-      - template: radarr-custom-formats-uhd-remux-web-german
+      - template: radarr-custom-formats-uhd-bluray-web-german-alternative
 
     quality_profiles:
-      - name: Remux + WEB 2160p (GER)
+      - name: UHD Bluray + WEB (GER) (Alternative)
         reset_unmatched_scores:
           enabled: false
         upgrade:
@@ -34,9 +34,15 @@ radarr:
           - name: Merged QPs
 # Comment any qualities you are not interested in
             qualities:
-              - Remux-2160p
+              - Bluray-2160p
               - WEBDL-2160p
               - WEBRip-2160p
+              - Bluray-1080p
+              - WEBRip-1080p
+              - WEBDL-1080p
+              - Bluray-720p
+              - WEBDL-720p
+              - WEBRip-720p
 
     custom_formats:
 
@@ -58,7 +64,7 @@ radarr:
 #          - 240770601cc226190c367ef59aba7463 # AAC
 #          - c2998bd0d90ed5621d8df281e839436e # DD
         assign_scores_to:
-          - name: Remux + WEB 2160p (GER)
+          - name: UHD Bluray + WEB (GER) (Alternative)
 
 ### Movie Versions
       - trash_ids:
@@ -73,7 +79,7 @@ radarr:
 #          - eecf3a857724171f968a66cb5719e152 # IMAX
 #          - 9f6cbff8cfe4ebbc1bde14c7b7bec0de # IMAX Enhanced
         assign_scores_to:
-          - name: Remux + WEB 2160p (GER)
+          - name: UHD Bluray + WEB (GER) (Alternative)
 
 ### Optional
       - trash_ids:
@@ -84,14 +90,14 @@ radarr:
 #          - 5c44f52a8714fdd79bb4d98e2673be1f # Retags
 #          - f537cf427b64c38c8e36298f657e4828 # Scene
         assign_scores_to:
-          - name: Remux + WEB 2160p (GER)
+          - name: UHD Bluray + WEB (GER) (Alternative)
 
 ### Generated Dynamic HDR
 # Uncomment the next 5 lines if you dont care about Generated Dynamic HDR and/or want to grab VECTOR
 #      - trash_ids:
 #          - e6886871085226c3da1830830146846c # Generated Dynamic HDR
 #        assign_scores_to:
-#          - name: Remux + WEB 2160p (GER)
+#          - name: UHD Bluray + WEB (GER) (Alternative)
 #            score: 0
 
 ### x265 Releases
@@ -99,12 +105,12 @@ radarr:
 # Uncomment the next line to allow x265 HD releases with HDR/DV
 #          - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
         assign_scores_to:
-          - name: Remux + WEB 2160p (GER)
+          - name: UHD Bluray + WEB (GER) (Alternative)
       - trash_ids:
 # Uncomment the next line to allow any x265 HD releases
 #          - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
         assign_scores_to:
-          - name: Remux + WEB 2160p (GER)
+          - name: UHD Bluray + WEB (GER) (Alternative)
             score: 0
 
 ### HDR / DV
@@ -116,7 +122,7 @@ radarr:
 #          - b17886cb4158d9fea189859409975758 # HDR10Plus Boost
 #          - 55a5b50cb416dea5a50c4955896217ab # DV HDR10+ Boost
         assign_scores_to:
-          - name: Remux + WEB 2160p (GER)
+          - name: UHD Bluray + WEB (GER) (Alternative)
 
 ### Optional SDR
 # Only ever use ONE of the following custom formats:
@@ -126,4 +132,4 @@ radarr:
 #          - 9c38ebb7384dada637be8899efa68e6f # SDR
 #          - 25c12f78430a3a23413652cbd1d48d77 # SDR (no WEBDL)
         assign_scores_to:
-          - name: Remux + WEB 2160p (GER)
+          - name: UHD Bluray + WEB (GER) (Alternative)

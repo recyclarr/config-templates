@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: HD Bluray + WEB (GER)                                         #
-# Updated: 2024-12-29                                                                             #
+# Updated: 2024-12-31                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -37,12 +37,6 @@ radarr:
               - Bluray-2160p
               - WEBDL-2160p
               - WEBRip-2160p
-#              - Bluray-1080p
-#              - WEBRip-1080p
-#              - WEBDL-1080p
-#              - Bluray-720p
-#              - WEBDL-720p
-#              - WEBRip-720p
 
     custom_formats:
 
@@ -69,6 +63,7 @@ radarr:
 ### Movie Versions
       - trash_ids:
 # Uncomment any of the following lines to prefer these movie versions
+#          - 0f12c086e289cf966fa5948eac571f44 # Hybrid
 #          - 570bc9ebecd92723d2d21500f4be314c # Remaster
 #          - eca37840c13c6ef2dd0262b141a5482f # 4K Remaster
 #          - e0c07d59beb37348e975a930d5e50319 # Criterion Collection
@@ -79,6 +74,7 @@ radarr:
 #          - 9f6cbff8cfe4ebbc1bde14c7b7bec0de # IMAX Enhanced
         assign_scores_to:
           - name: UHD Bluray + WEB (GER)
+
 ### Optional
       - trash_ids:
 #          - b6832f586342ef70d9c128d40c07b872 # Bad Dual Groups
@@ -87,17 +83,6 @@ radarr:
 #          - 7357cf5161efbf8c4d5d0c30b4815ee2 # Obfuscated
 #          - 5c44f52a8714fdd79bb4d98e2673be1f # Retags
 #          - f537cf427b64c38c8e36298f657e4828 # Scene
-        assign_scores_to:
-          - name: UHD Bluray + WEB (GER)
-
-### Resolution Boosters
-# Comment any ID corresponding to resolutions you are not interested in
-      - trash_ids:
-          - 3bc8df3a71baaac60a31ef696ea72d36 # German 1080p Booster
-          - cc7b1e64e2513a6a271090cdfafaeb55 # German 2160p Booster
-          - b2be17d608fc88818940cd1833b0b24c # 720p
-          - 820b09bb9acbfde9c35c71e0e565dad8 # 1080p
-          - fb392fb0d61a010ae38e49ceaa24a1ef # 2160p
         assign_scores_to:
           - name: UHD Bluray + WEB (GER)
 
@@ -111,14 +96,16 @@ radarr:
 
 ### x265 Releases
       - trash_ids:
-# Uncomment the next six lines to allow x265 HD releases with HDR/DV
-# Uncomment the next four lines to allow any x265 HD releases
-#          - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
-#        assign_scores_to:
-#          - name: UHD Bluray + WEB (GER)
-#            score: 0
-#      - trash_ids:
+# Uncomment the next line to allow x265 HD releases with HDR/DV
 #          - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
+        assign_scores_to:
+          - name: UHD Bluray + WEB (GER)
+      - trash_ids:
+# Uncomment the next line to allow any x265 HD releases
+#          - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
+        assign_scores_to:
+          - name: UHD Bluray + WEB (GER)
+            score: 0
 
 ### HDR / DV
       - trash_ids:
