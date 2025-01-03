@@ -1,0 +1,16 @@
+quality_profiles:
+  - name: Remux + WEB 2160p (GER)
+    reset_unmatched_scores:
+      enabled: false
+    upgrade:
+      allowed: true
+      until_quality: Merged QPs
+      until_score: 25000
+    min_format_score: 0
+    quality_sort: top
+    qualities:
+      - name: Merged QPs
+        qualities:
+          - Remux-2160p
+          - WEBDL-2160p
+          - WEBRip-2160p
