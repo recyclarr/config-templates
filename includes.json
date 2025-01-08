@@ -105,10 +105,6 @@
       "id": "radarr-custom-formats-uhd-bluray-web-german"
     },
     {
-      "template": "radarr/includes/custom-formats/radarr-custom-formats-uhd-bluray-web-german-alternative.yml",
-      "id": "radarr-custom-formats-uhd-bluray-web-german-alternative"
-    },
-    {
       "template": "radarr/includes/custom-formats/radarr-custom-formats-uhd-remux-web-german.yml",
       "id": "radarr-custom-formats-uhd-remux-web-german"
     },
@@ -239,10 +235,6 @@
     {
       "template": "radarr/includes/quality-profiles/radarr-custom-formats-uhd-bluray-web-german.yml",
       "id": "radarr-quality-profiles-uhd-bluray-web-german"
-    },
-    {
-      "template": "radarr/includes/quality-profiles/radarr-custom-formats-uhd-bluray-web-german-alternative.yml",
-      "id": "radarr-quality-profiles-uhd-bluray-web-german-alternative"
     },
     {
       "template": "radarr/includes/quality-profiles/radarr-custom-formats-uhd-remux-web-german.yml",
