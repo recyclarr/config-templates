@@ -6,8 +6,6 @@
 # documentation about file merging:                                                               #
 # https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
 ###################################################################################################
-# yamllint disable rule:line-length
-
 # Instance Definition: https://recyclarr.dev/wiki/yaml/config-reference/basic/
 
 radarr:
@@ -94,13 +92,13 @@ radarr:
 
 ### Others
       - trash_ids:
-#          - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV) - Uncomment this line to allow x265 HD releases with HDR/DV
+#          - 839bea857ed2c0a8e084f3cbdbd65ecb # Uncomment this line to allow HDR/DV x265 HD releases
         assign_scores_to:
           - name: HD Bluray + WEB (GER)
 
       - trash_ids:
-#          - dc98083864ea246d05a42df0d05f81cc # x265 (HD) - Uncomment this line to allow any x265 HD releases
-#          - e6886871085226c3da1830830146846c # Generated Dynamic HDR - Uncomment this line if you dont care about Generated Dynamic HDR and/or want to grab VECTOR
+#          - dc98083864ea246d05a42df0d05f81cc # Uncomment this line to allow any x265 HD releases
+#          - e6886871085226c3da1830830146846c # Uncomment this line to allow Generated Dynamic HDR
         assign_scores_to:
           - name: HD Bluray + WEB (GER)
             score: 0
