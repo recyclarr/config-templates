@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: HD Bluray + WEB (GER)                                         #
-# Updated: 2025-01-08                                                                             #
+# Updated: 2025-01-09                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -23,7 +23,7 @@ radarr:
       - name: UHD Bluray + WEB (GER)
 #        min_format_score: 10000 # Uncomment this line to skip English Releases
 ### Alternative Quality Profile (upgrades 720p > 1080p > 2160p)
-# Uncomment the next 6 lines to use the alternative quality profile
+# Uncomment the next 12 lines to use the alternative quality profile
 #        qualities:
 #          - name: Merged QPs
 #            qualities:
