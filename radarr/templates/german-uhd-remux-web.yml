@@ -1,11 +1,12 @@
 ###################################################################################################
 # Recyclarr Configuration Template: HD Bluray + WEB (GER)                                         #
-# Updated: 2025-01-08                                                                             #
+# Updated: 2025-01-09                                                                           #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
 # https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
 ###################################################################################################
+# yamllint disable rule:line-length
 
 # Instance Definition: https://recyclarr.dev/wiki/yaml/config-reference/basic/
 
@@ -70,27 +71,6 @@ radarr:
         assign_scores_to:
           - name: Remux + WEB 2160p (GER)
 
-### Generated Dynamic HDR
-# Uncomment the next 5 lines if you dont care about Generated Dynamic HDR and/or want to grab VECTOR
-#      - trash_ids:
-#          - e6886871085226c3da1830830146846c # Generated Dynamic HDR
-#        assign_scores_to:
-#          - name: Remux + WEB 2160p (GER)
-#            score: 0
-
-### x265 Releases
-      - trash_ids:
-# Uncomment the next line to allow x265 HD releases with HDR/DV
-#          - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
-        assign_scores_to:
-          - name: Remux + WEB 2160p (GER)
-      - trash_ids:
-# Uncomment the next line to allow any x265 HD releases
-#          - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
-        assign_scores_to:
-          - name: Remux + WEB 2160p (GER)
-            score: 0
-
 ### HDR / DV
       - trash_ids:
 # Comment out the next line if you and all of your users' setups are fully DV compatible
@@ -111,3 +91,16 @@ radarr:
 #          - 25c12f78430a3a23413652cbd1d48d77 # SDR (no WEBDL)
         assign_scores_to:
           - name: Remux + WEB 2160p (GER)
+
+### Others
+      - trash_ids:
+#          - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV) - Uncomment this line to allow x265 HD releases with HDR/DV
+        assign_scores_to:
+          - name: HD Bluray + WEB (GER)
+
+      - trash_ids:
+#          - dc98083864ea246d05a42df0d05f81cc # x265 (HD) - Uncomment this line to allow any x265 HD releases
+#          - e6886871085226c3da1830830146846c # Generated Dynamic HDR - Uncomment this line if you dont care about Generated Dynamic HDR and/or want to grab VECTOR
+        assign_scores_to:
+          - name: HD Bluray + WEB (GER)
+            score: 0
