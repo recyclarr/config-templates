@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: HD Bluray + WEB (GER)                                         #
-# Updated: 2025-01-09                                                                           #
+# Updated: 2025-01-10                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -94,11 +94,11 @@ radarr:
       - trash_ids:
 #          - 839bea857ed2c0a8e084f3cbdbd65ecb # Uncomment this line to allow HDR/DV x265 HD releases
         assign_scores_to:
-          - name: HD Bluray + WEB (GER)
+          - name: Remux + WEB 2160p (GER)
 
       - trash_ids:
 #          - dc98083864ea246d05a42df0d05f81cc # Uncomment this line to allow any x265 HD releases
 #          - e6886871085226c3da1830830146846c # Uncomment this line to allow Generated Dynamic HDR
         assign_scores_to:
-          - name: HD Bluray + WEB (GER)
+          - name: Remux + WEB 2160p (GER)
             score: 0
