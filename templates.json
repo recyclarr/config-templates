@@ -45,10 +45,6 @@
       "id": "german-uhd-bluray-web"
     },
     {
-      "template": "radarr/templates/german-uhd-bluray-web-alternative.yml",
-      "id": "german-uhd-bluray-web-alternative"
-    },
-    {
       "template": "radarr/templates/german-uhd-remux-web.yml",
       "id": "german-uhd-remux-web"
     },

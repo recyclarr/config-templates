@@ -24,6 +24,11 @@ custom_formats:
       - 263943bc5d99550c68aad0c4278ba1c7 # German LQ
       - 03c430f326f10a27a9739b8bc83c30e4 # German Microsized
 
+      # Resolution
+      - 3bc8df3a71baaac60a31ef696ea72d36 # German 1080p Booster
+      - b2be17d608fc88818940cd1833b0b24c # 720p
+      - 820b09bb9acbfde9c35c71e0e565dad8 # 1080p
+
       # HQ Release Groups
       - ed27ebfef2f323e964fb1f61391bcb35 # HD Bluray Tier 01
       - c20c8647f2746a1f4c4262b0fbbeeeae # HD Bluray Tier 02
