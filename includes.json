@@ -229,15 +229,15 @@
       "id": "radarr-quality-profile-sqp-5"
     },
     {
-      "template": "radarr/includes/quality-profiles/radarr-custom-formats-hd-bluray-web-german.yml",
+      "template": "radarr/includes/quality-profiles/radarr-quality-profile-hd-bluray-web-german.yml",
       "id": "radarr-quality-profile-hd-bluray-web-german"
     },
     {
-      "template": "radarr/includes/quality-profiles/radarr-custom-formats-uhd-bluray-web-german.yml",
+      "template": "radarr/includes/quality-profiles/radarr-quality-profile-uhd-bluray-web-german.yml",
       "id": "radarr-quality-profile-uhd-bluray-web-german"
     },
     {
-      "template": "radarr/includes/quality-profiles/radarr-custom-formats-uhd-remux-web-german.yml",
+      "template": "radarr/includes/quality-profiles/radarr-quality-profile-uhd-remux-web-german.yml",
       "id": "radarr-quality-profile-uhd-remux-web-german"
     }
   ],
