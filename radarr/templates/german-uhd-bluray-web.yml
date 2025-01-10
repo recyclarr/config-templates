@@ -118,7 +118,7 @@ radarr:
             score: 0
 
 ### Alternative Quality Profile (upgrades 720p > 1080p > 2160p)
-# Uncomment the next 6 lines to use the alternative quality profile
+# Uncomment the next 6 lines to use the alternative quality profile with english releases
 #      - trash_ids:
 #          - ed27ebfef2f323e964fb1f61391bcb35 # HD Bluray Tier 01
 #          - c20c8647f2746a1f4c4262b0fbbeeeae # HD Bluray Tier 02
