@@ -1,0 +1,20 @@
+quality_profiles:
+  - name: HD Bluray + WEB (GER)
+    reset_unmatched_scores:
+      enabled: false
+    score_set: german
+    upgrade:
+      allowed: true
+      until_quality: Merged QPs
+      until_score: 25000
+    min_format_score: 0
+    quality_sort: top
+    qualities:
+      - name: Merged QPs
+        qualities:
+          - Bluray-1080p
+          - WEBDL-1080p
+          - WEBRip-1080p
+          - Bluray-720p
+          - WEBDL-720p
+          - WEBRip-720p

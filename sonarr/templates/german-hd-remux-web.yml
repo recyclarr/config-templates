@@ -1,0 +1,46 @@
+###################################################################################################
+# Recyclarr Configuration Template: HD Remux + WEB (GER)                                          #
+# Updated: 2025-01-14                                                                             #
+# Documentation: https://recyclarr.dev                                                            #
+# Note: If you are using multiple profiles in a single instance, please read the following        #
+# documentation about file merging:                                                               #
+# https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
+###################################################################################################
+# Instance Definition: https://recyclarr.dev/wiki/yaml/config-reference/basic/
+
+sonarr:
+  hd-remux-web-ger:
+    base_url: Put your Sonarr URL here
+    api_key: Put your API key here
+
+    include:
+      - template: sonarr-quality-definition-series
+      - template: sonarr-v4-custom-formats-hd-remux-web-german
+      - template: sonarr-v4-quality-profile-hd-remux-web-german
+
+    quality_profiles:
+      - name: HD Remux + WEB (GER)
+#        min_format_score: 10000 # Uncomment this line to skip English Releases
+
+    custom_formats:
+### Optional
+      - trash_ids:
+#          - 32b367365729d530ca1c124a0b180c64 # Bad Dual Groups
+#          - 82d40da2bc6923f41e14394075dd4b03 # No-RlsGroup
+#          - e1a997ddb54e3ecbfe06341ad323c458 # Obfuscated
+#          - 06d66ab109d4d2eddb2794d21526d140 # Retags
+#          - 1b3994c551cbb92a2c781af061f4ab44 # Scene
+        assign_scores_to:
+          - name: HD Remux + WEB (GER)
+
+# x265 - IMPORTANT: Only use on of below options.
+      - trash_ids:
+#          - 9b64dff695c2115facf1b6ea59c9bd07 # Uncomment this to allow only HDR/DV x265 HD releases
+        assign_scores_to:
+          - name: HD Remux + WEB (GER)
+
+      - trash_ids:
+#          - 47435ece6b99a0b477caf360e79ba0bb # Uncomment this to block all x265 HD releases
+        assign_scores_to:
+          - name: HD Remux + WEB (GER)
+            score: -30000

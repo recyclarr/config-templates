@@ -1,0 +1,17 @@
+quality_profiles:
+  - name: UHD Remux + WEB (GER)
+    reset_unmatched_scores:
+      enabled: false
+    score_set: german
+    upgrade:
+      allowed: true
+      until_quality: Merged QPs
+      until_score: 25000
+    min_format_score: 0
+    quality_sort: top
+    qualities:
+      - name: Merged QPs
+        qualities:
+          - Bluray-2160p Remux
+          - WEBDL-2160p
+          - WEBRip-2160p
