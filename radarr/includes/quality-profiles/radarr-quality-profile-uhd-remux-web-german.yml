@@ -2,6 +2,7 @@ quality_profiles:
   - name: Remux + WEB 2160p (GER)
     reset_unmatched_scores:
       enabled: false
+    score_set: german
     upgrade:
       allowed: true
       until_quality: Merged QPs

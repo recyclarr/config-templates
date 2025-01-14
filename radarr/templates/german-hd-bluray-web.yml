@@ -48,15 +48,21 @@ radarr:
         assign_scores_to:
           - name: HD Bluray + WEB (GER)
 
-### Others
+### x265 - IMPORTANT: Only use on of the options below.
       - trash_ids:
 #          - 839bea857ed2c0a8e084f3cbdbd65ecb # Uncomment this line to allow HDR/DV x265 HD releases
         assign_scores_to:
           - name: HD Bluray + WEB (GER)
 
       - trash_ids:
-#          - dc98083864ea246d05a42df0d05f81cc # Uncomment this line to allow any x265 HD releases
-#          - e6886871085226c3da1830830146846c # Uncomment this line to allow Generated Dynamic HDR
+#          - dc98083864ea246d05a42df0d05f81cc # Uncomment this line to block all x265 HD releases
         assign_scores_to:
           - name: HD Bluray + WEB (GER)
-            score: 0
+            score: -30000
+
+### Generated Dynamic HDR
+      - trash_ids:
+#          - e6886871085226c3da1830830146846c # Uncomment this line to block Generated Dynamic HDR
+        assign_scores_to:
+          - name: HD Bluray + WEB (GER)
+            score: -30000

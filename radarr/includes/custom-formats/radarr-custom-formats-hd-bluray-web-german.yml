@@ -1,15 +1,10 @@
 custom_formats:
   - trash_ids:
       # German Audio
-      - f845be10da4f442654c13e1f2c3d6cd5 # German DL
-    assign_scores_to:
-      - name: HD Bluray + WEB (GER)
-        score: 10001
-
-  - trash_ids:
-      # German Audio
       - 86bc3115eb4e9873ac96904a4a68e19e # German
       - 6aad77771dabe9d3e9d7be86f310b867 # German DL (undefined)
+      - f845be10da4f442654c13e1f2c3d6cd5 # German DL
+      - 4eadb75fb23d09dfc0a8e3f687e72287 # Not German or English
 
       # German HQ Release Groups
       - 54795711b78ea87e56127928c423689b # German Bluray Tier 01
