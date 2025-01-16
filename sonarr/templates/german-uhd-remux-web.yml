@@ -36,7 +36,7 @@ sonarr:
 ### HDR / DV
       - trash_ids:
 # Comment out the next line if you and all of your users' setups are fully DV compatible
-#          - 9b27ab6498ec0f31a3353992e19434ca # DV (WEBDL)
+          - 9b27ab6498ec0f31a3353992e19434ca # DV (WEBDL)
 
 # HDR10+ Boost - Uncomment the next two lines if any of your devices DO support HDR10+
 #          - 0dad0a507451acddd754fe6dc3a7f5e7 # HDR10Plus Boost
