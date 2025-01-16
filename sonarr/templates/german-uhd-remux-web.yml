@@ -64,4 +64,4 @@ sonarr:
 #          - 47435ece6b99a0b477caf360e79ba0bb # Uncomment this to block all x265 HD releases
         assign_scores_to:
           - name: UHD Remux + WEB (GER)
-            score: -30000
+            score: -35000
