@@ -72,7 +72,7 @@ radarr:
 ### HDR / DV
       - trash_ids:
 # Comment out the next line if you and all of your users' setups are fully DV compatible
-#          - 923b6abef9b17f937fab56cfcf89e1f1 # DV (WEBDL)
+          - 923b6abef9b17f937fab56cfcf89e1f1 # DV (WEBDL)
 
 # HDR10+ Boost - Uncomment the next two lines if any of your devices DO support HDR10+
 #          - b17886cb4158d9fea189859409975758 # HDR10Plus Boost
