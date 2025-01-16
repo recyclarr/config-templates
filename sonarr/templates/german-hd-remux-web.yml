@@ -33,7 +33,7 @@ sonarr:
         assign_scores_to:
           - name: HD Remux + WEB (GER)
 
-# x265 - IMPORTANT: Only use on of below options.
+### x265 - IMPORTANT: Only use on of below options.
       - trash_ids:
 #          - 9b64dff695c2115facf1b6ea59c9bd07 # Uncomment this to allow only HDR/DV x265 HD releases
         assign_scores_to:
