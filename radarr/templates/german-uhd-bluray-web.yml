@@ -1,6 +1,6 @@
 ###################################################################################################
-# Recyclarr Configuration Template: HD Bluray + WEB (GER)                                         #
-# Updated: 2025-01-10                                                                             #
+# Recyclarr Configuration Template: UHD Bluray + WEB (GER)                                        #
+# Updated: 2025-01-16                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -114,14 +114,14 @@ radarr:
 #          - dc98083864ea246d05a42df0d05f81cc # Uncomment this line to block all x265 HD releases
         assign_scores_to:
           - name: UHD Bluray + WEB (GER)
-            score: -30000
+            score: -35000
 
 ### Generated Dynamic HDR
       - trash_ids:
 #          - e6886871085226c3da1830830146846c # Uncomment this line to block Generated Dynamic HDR
         assign_scores_to:
           - name: UHD Bluray + WEB (GER)
-            score: -30000
+            score: -35000
 
 ### Alternative Quality Profile (upgrades 720p > 1080p > 2160p)
 # Uncomment the next 6 lines to use the alternative quality profile with english releases
