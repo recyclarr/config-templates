@@ -14,7 +14,7 @@ sonarr:
     api_key: Put your API key here
 
     include:
-      - template: sonarr-quality-definition-movie
+      - template: sonarr-quality-definition-series
       - template: sonarr-v4-custom-formats-uhd-remux-web-german
       - template: sonarr-v4-quality-profile-uhd-remux-web-german
 
