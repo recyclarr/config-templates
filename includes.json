@@ -299,8 +299,8 @@
       "id": "sonarr-v4-custom-formats-uhd-bluray-web-german"
     },
     {
-      "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-uhd-bluray-web-german.yml",
-      "id": "sonarr-v4-custom-formats-uhd-bluray-web-german"
+      "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-uhd-remux-web-german.yml",
+      "id": "sonarr-v4-custom-formats-uhd-remux-web-german"
     },
     {
       "template": "sonarr/includes/quality-definitions/sonarr-quality-definition-anime.yml",
