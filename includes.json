@@ -287,6 +287,22 @@
       "id": "sonarr-v4-custom-formats-bluray-web-2160p-french-multi-vo"
     },
     {
+      "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-hd-bluray-web-german.yml",
+      "id": "sonarr-v4-custom-formats-hd-bluray-web-german"
+    },
+    {
+      "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-hd-remux-web-german.yml",
+      "id": "sonarr-v4-custom-formats-hd-remux-web-german"
+    },
+    {
+      "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-uhd-bluray-web-german.yml",
+      "id": "sonarr-v4-custom-formats-uhd-bluray-web-german"
+    },
+    {
+      "template": "sonarr/includes/custom-formats/sonarr-v4-custom-formats-uhd-bluray-web-german.yml",
+      "id": "sonarr-v4-custom-formats-uhd-bluray-web-german"
+    },
+    {
       "template": "sonarr/includes/quality-definitions/sonarr-quality-definition-anime.yml",
       "id": "sonarr-quality-definition-anime"
     },
@@ -345,6 +361,22 @@
     {
       "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-bluray-web-2160p-french-multi-vo.yml",
       "id": "sonarr-v4-quality-profile-bluray-web-2160p-french-multi-vo"
+    },
+    {
+      "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-hd-bluray-web-german.yml",
+      "id": "sonarr-v4-quality-profile-hd-bluray-web-german"
+    },
+    {
+      "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-hd-remux-web-german.yml",
+      "id": "sonarr-v4-quality-profile-hd-remux-web-german"
+    },
+    {
+      "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-uhd-bluray-web-german.yml",
+      "id": "sonarr-v4-quality-profile-uhd-bluray-web-german"
+    },
+    {
+      "template": "sonarr/includes/quality-profiles/sonarr-v4-quality-profile-uhd-remux-web-german.yml",
+      "id": "sonarr-v4-quality-profile-uhd-remux-web-german"
     }
   ]
 }
