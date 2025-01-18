@@ -2,10 +2,11 @@ quality_profiles:
   - name: UHD Bluray + WEB (GER)
     reset_unmatched_scores:
       enabled: false
+    score_set: german
     upgrade:
       allowed: true
       until_quality: Merged QPs
-      until_score: 25000
+      until_score: 35000
     min_format_score: 0
     quality_sort: top
     qualities:
