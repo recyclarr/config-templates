@@ -110,20 +110,20 @@
       "id": "french-anime-1080p-v4"
     },
     {
-      "template": "sonarr/templates/german-hd-bluray-web.yml",
-      "id": "german-hd-bluray-web"
+      "template": "sonarr/templates/german-hd-bluray-web-v4.yml",
+      "id": "german-hd-bluray-web-v4"
     },
     {
-      "template": "sonarr/templates/german-hd-remux-web.yml",
-      "id": "german-hd-remux-web"
+      "template": "sonarr/templates/german-hd-remux-web-v4.yml",
+      "id": "german-hd-remux-web-v4"
     },
     {
-      "template": "sonarr/templates/german-uhd-bluray-web.yml",
-      "id": "german-uhd-bluray-web"
+      "template": "sonarr/templates/german-uhd-bluray-web-v4.yml",
+      "id": "german-uhd-bluray-web-v4"
     },
     {
-      "template": "sonarr/templates/german-uhd-remux-web.yml",
-      "id": "german-uhd-remux-web"
+      "template": "sonarr/templates/german-uhd-remux-web-v4.yml",
+      "id": "german-uhd-remux-web-v4"
     }
   ]
 }
