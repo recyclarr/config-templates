@@ -1,7 +1,7 @@
 quality_profiles:
   - name: UHD Remux + WEB (GER)
     reset_unmatched_scores:
-      enabled: false
+      enabled: true
     score_set: german
     upgrade:
       allowed: true
