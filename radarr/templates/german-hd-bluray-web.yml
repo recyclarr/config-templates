@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: HD Bluray + WEB (GER)                                         #
-# Updated: 2025-01-18                                                                             #
+# Updated: 2025-01-26                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -30,7 +30,6 @@ radarr:
 #          - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5 # No-RlsGroup
 #          - 7357cf5161efbf8c4d5d0c30b4815ee2 # Obfuscated
 #          - 5c44f52a8714fdd79bb4d98e2673be1f # Retags
-#          - f537cf427b64c38c8e36298f657e4828 # Scene
         assign_scores_to:
           - name: HD Bluray + WEB (GER)
 
