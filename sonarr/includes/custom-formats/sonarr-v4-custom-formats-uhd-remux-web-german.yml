@@ -17,6 +17,7 @@ custom_formats:
       # German Unwanted
       - a6a6c33d057406aaad978a6902823c35 # German LQ
       - 237eda4ef550a97da2c9d87b437e500b # German Microsized
+      - d80c9f7cd2aad50271f1bd4e53125778 # German LQ (Release Title)
 
       # All HDR Formats
       - 2b239ed870daba8126a53bd5dc8dc1c8 # DV HDR10Plus

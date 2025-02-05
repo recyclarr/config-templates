@@ -17,6 +17,7 @@ custom_formats:
       # German Unwanted
       - a6a6c33d057406aaad978a6902823c35 # German LQ
       - 237eda4ef550a97da2c9d87b437e500b # German Microsized
+      - d80c9f7cd2aad50271f1bd4e53125778 # German LQ (Release Title)
 
       # Resolution
       - 9aa0ca0d2d66b6f6ee51fc630f46cf6f # German 1080p Booster

@@ -18,6 +18,7 @@ custom_formats:
       # German Unwanted
       - 263943bc5d99550c68aad0c4278ba1c7 # German LQ
       - 03c430f326f10a27a9739b8bc83c30e4 # German Microsized
+      - a826ee9e46607bc61795c85a6f2b1279 # German LQ (Release Title)
 
       # Resolution
       - 3bc8df3a71baaac60a31ef696ea72d36 # German 1080p Booster
@@ -41,7 +42,6 @@ custom_formats:
       - ed38b889b31be83fda192888e2286d83 # BR-DISK
       - e6886871085226c3da1830830146846c # Generated Dynamic HDR
       - 90a6f9a284dff5103f6346090e6280c8 # LQ
-      - e204b80c87be9497a8a6eaff48f72905 # LQ (Release Title)
       - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
       - b8cd450cbfa689c0259a01d9e29ba3d6 # 3D
       - bfd8eb01832d646a0a89c4deb46f8564 # Upscaled
