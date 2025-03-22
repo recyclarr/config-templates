@@ -62,7 +62,6 @@ custom_formats:
 
       # Optional
       - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
-      - cae4ca30163749b891686f95532519bd # AV1
 
       # Resolution
       - 820b09bb9acbfde9c35c71e0e565dad8 # 1080p
