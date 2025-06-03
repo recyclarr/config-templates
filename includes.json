@@ -113,6 +113,10 @@
       "id": "radarr-quality-definition-movie"
     },
     {
+      "template": "radarr/includes/quality-definitions/radarr-quality-definition-anime.yml",
+      "id": "radarr-quality-definition-anime"
+    },
+    {
       "template": "radarr/includes/quality-definitions/sqp/radarr-quality-definition-sqp-streaming.yml",
       "id": "radarr-quality-definition-sqp-streaming"
     },
