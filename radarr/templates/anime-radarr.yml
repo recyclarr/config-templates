@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: Anime Radarr                                                  #
-# Updated: 2024-08-08                                                                             #
+# Updated: 2025-06-03                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -15,7 +15,7 @@ radarr:
 
     include:
       # Comment out any of the following includes to disable them
-      - template: radarr-quality-definition-movie
+      - template: radarr-quality-definition-anime
       - template: radarr-quality-profile-anime
       - template: radarr-custom-formats-anime
 
