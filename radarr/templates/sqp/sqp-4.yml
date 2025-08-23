@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: SQP-4                                                         #
-# Updated: 2025-05-04                                                                             #
+# Updated: 2025-08-28                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -57,9 +57,11 @@ radarr:
 
       # Optional
       - trash_ids:
-          # Uncomment the next two lines if you have a setup that supports HDR10+
-          # - b17886cb4158d9fea189859409975758 # HDR10+ Boost
-          # - 55a5b50cb416dea5a50c4955896217ab # DV HDR10+ Boost
+          # HDR10+ Boost - Uncomment the HDR10+ Boost line if you want to prefer HDR10+ releases
+          # DV Boost - Uncomment the DV Boost line if you want to prefer DV releases
+          # Uncomment both lines if you want to prefer both (DV HDR10+)
+          # - b337d6812e06c200ec9a2d3cfa9d20a7 # DV Boost
+          # - caa37d0df9c348912df1fb1d88f9273a # HDR10+ Boost
 
           # Comment out the next line if you and all of your users' setups are fully DV compatible
           - 923b6abef9b17f937fab56cfcf89e1f1 # DV (WEBDL)
