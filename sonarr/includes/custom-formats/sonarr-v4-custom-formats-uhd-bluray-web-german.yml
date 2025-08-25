@@ -18,6 +18,7 @@ custom_formats:
       # German Unwanted
       - a6a6c33d057406aaad978a6902823c35 # German LQ
       - 237eda4ef550a97da2c9d87b437e500b # German Microsized
+      - d80c9f7cd2aad50271f1bd4e53125778 # German LQ (Release Title)
 
         # Unified HDR
       - 505d871304820ba7106b693be6fe4a9e # HDR
@@ -43,6 +44,7 @@ custom_formats:
       # Unwanted
       - 85c61753df5da1fb2aab6f2a47426b09 # BR-DISK
       - 9c11cd3f07101cdba90a2d81cf0e56b4 # LQ
+      - e2315f990da2e2cbfc9fa5b7a6fcfe48 # LQ (Release Title)
       - 47435ece6b99a0b477caf360e79ba0bb # x265 (HD)
       - 23297a736ca77c0fc8e70f8edd7ee56c # Upscaled
       - fbcb31d8dabd2a319072b84fc0b7249c # Extras

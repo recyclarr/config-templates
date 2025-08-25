@@ -48,4 +48,3 @@ custom_formats:
       - c2863d2a50c9acad1fb50e53ece60817 # STAN
     assign_scores_to:
       - name: HD Bluray + WEB
-        score: 0

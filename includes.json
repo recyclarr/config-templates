@@ -113,6 +113,10 @@
       "id": "radarr-quality-definition-movie"
     },
     {
+      "template": "radarr/includes/quality-definitions/radarr-quality-definition-anime.yml",
+      "id": "radarr-quality-definition-anime"
+    },
+    {
       "template": "radarr/includes/quality-definitions/sqp/radarr-quality-definition-sqp-streaming.yml",
       "id": "radarr-quality-definition-sqp-streaming"
     },
@@ -145,7 +149,7 @@
       "id": "radarr-quality-profile-remux-web-1080p"
     },
     {
-      "template": "radarr/includes/quality-profiles/radarr-quality-profile-hd-remux-web-french-vstfr.yml",
+      "template": "radarr/includes/quality-profiles/radarr-quality-profile-hd-remux-web-french-vostfr.yml",
       "id": "radarr-quality-profile-hd-remux-web-french-vostfr"
     },
     {
@@ -380,4 +384,3 @@
     }
   ]
 }
-
