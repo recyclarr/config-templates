@@ -6,6 +6,9 @@ custom_formats:
       - 0542a48746585dc4444bbbb8a6bdf6ea # Language: Original + French
       - 4b900e171accbfb172729b63323ea8ca # MULTi
 
+      # Unified HDR
+      - 493b6d1dbec3c3364c59d7607f7e3405 # HDR
+
       # FR HQ Source Groups
       - 5583260016e0b9f683f53af41fb42e4a # FR Remux Tier 01
       - 9019d81307e68cd4a7eb06a567e833b8 # FR Remux Tier 02
