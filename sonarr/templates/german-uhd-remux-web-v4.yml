@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: UHD Remux + WEB (GER)                                         #
-# Updated: 2025-01-20                                                                             #
+# Updated: 2025-08-28                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -38,9 +38,11 @@ sonarr:
 # Comment out the next line if you and all of your users' setups are fully DV compatible
           - 9b27ab6498ec0f31a3353992e19434ca # DV (WEBDL)
 
-# HDR10+ Boost - Uncomment the next two lines if any of your devices DO support HDR10+
-#          - 0dad0a507451acddd754fe6dc3a7f5e7 # HDR10Plus Boost
-#          - 385e9e8581d33133c3961bdcdeffb7b4 # DV HDR10+ Boost
+# HDR10+ Boost - Uncomment the HDR10+ Boost line if you want to prefer HDR10+ releases
+# DV Boost - Uncomment the DV Boost line if you want to prefer DV releases
+# Uncomment both lines if you want to prefer both (DV HDR10+)
+#         - 0c4b99df9206d2cfac3c05ab897dd62a # HDR10+ Boost
+#         - 7c3a61a9c6cb04f52f1544be6d44a026 # DV Boost
         assign_scores_to:
           - name: UHD Remux + WEB (GER)
 
