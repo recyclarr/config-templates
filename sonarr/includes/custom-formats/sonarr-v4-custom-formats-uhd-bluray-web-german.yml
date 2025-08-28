@@ -20,18 +20,8 @@ custom_formats:
       - 237eda4ef550a97da2c9d87b437e500b # German Microsized
       - d80c9f7cd2aad50271f1bd4e53125778 # German LQ (Release Title)
 
-      # All HDR Formats
-      - 2b239ed870daba8126a53bd5dc8dc1c8 # DV HDR10Plus
-      - 7878c33f1963fefb3d6c8657d46c2f0a # DV HDR10
-      - 1f733af03141f068a540eec352589a89 # DV HLG
-      - 27954b0a80aab882522a88a4d9eae1cd # DV SDR
-      - 6d0d8de7b57e35518ac0308b0ddf404e # DV
-      - bb019e1cd00f304f80971c965de064dc # HDR (undefined)
-      - 3e2c4e748b64a1a1118e0ea3f4cf6875 # HDR
-      - 3497799d29a085e2ac2df9d468413c94 # HDR10
-      - a3d82cbef5039f8d295478d28a887159 # HDR10+
-      - 17e889ce13117940092308f48b48b45b # HLG
-      - 2a7e3be05d3861d6df7171ec74cad727 # PQ
+      # Unified HDR
+      - 505d871304820ba7106b693be6fe4a9e # HDR
 
       # HQ Source Groups
       - e6258996055b9fbab7e9cb2f75819294 # WEB Tier 01
