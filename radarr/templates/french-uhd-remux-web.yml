@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: FR UHD Remux + WEB                                            #
-# Updated: 2025-08-28                                                                             #
+# Updated: 2025-09-07                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: The following will be in French but hold basically the same info as the other template    #
 # ----------------------------------------------------------------------------------------------- #
@@ -57,7 +57,7 @@ radarr:
       - trash_ids:
           # Commentez la ligne suivante si vous et tous vos utilisateurs
           # avez des configurations entièrement compatibles DV
-          - 923b6abef9b17f937fab56cfcf89e1f1 # DV (WEBDL)
+          - 923b6abef9b17f937fab56cfcf89e1f1 # DV (w/o HDR fallback)
           # DV Boost - Décommentez la ligne si vous voulez préférer le DV
           # HDR10+ Boost - Décommentez la ligne si vous voulez préférer le HDR10+
           # Décommentez les deux lignes si vous voulez préférer les deux
