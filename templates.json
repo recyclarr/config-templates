@@ -59,6 +59,11 @@
       "hidden": false
     },
     {
+      "template": "radarr/templates/sqp/sqp-1-web-2160p.yml",
+      "id": "sqp-1-web-2160p",
+      "hidden": false
+    },
+    {
       "template": "radarr/templates/sqp/sqp-1-2160p.yml",
       "id": "sqp-1-2160p",
       "hidden": false
