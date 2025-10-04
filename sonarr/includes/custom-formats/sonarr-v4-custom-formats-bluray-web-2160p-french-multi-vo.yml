@@ -56,7 +56,7 @@ custom_formats:
       - 5d2317d99af813b6529c7ebf01c83533 # VDL
       - 93c9d1e566dca8b34d57f5efbbf85f28 # VIU
       - 43b3cf48cb385cd3eac608ee6bca7f09 # UHD Streaming Boost
-      - d2d299244a92b8a52d4921ce3897a256 # UHD Streaming Cut
+      - 218e93e5702f44a68ad9e3c6ba87d2f0 # HD Streaming Boost
 
       # French Streaming Services
       - b0d6195c23ae254932da00512db7e8a8 # AUViO
