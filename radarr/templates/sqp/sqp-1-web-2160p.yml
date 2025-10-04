@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: SQP-1 WEB (2160p)                                             #
-# Updated: 2025-10-03                                                                             #
+# Updated: 2025-10-04                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -50,7 +50,7 @@ radarr:
       # Uncomment the next six lines to block all x265 HD releases
           # - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
         # assign_scores_to:
-          # - name: SQP-1 (2160p)
+          # - name: SQP-1 WEB (2160p)
             # score: 0
       # - trash_ids:
           # - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
