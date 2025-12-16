@@ -4,9 +4,9 @@
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
-# https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
+# https://recyclarr.dev/reference/config-examples/#merge-single-instance                          #
 ###################################################################################################
-# Instance Definition: https://recyclarr.dev/wiki/yaml/config-reference/basic/
+# Instance Definition: https://recyclarr.dev/reference/configuration/basic/
 
 radarr:
   uhd-bluray-web-ger:

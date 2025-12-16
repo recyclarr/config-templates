@@ -4,11 +4,11 @@
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
-# https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
+# https://recyclarr.dev/reference/config-examples/#merge-single-instance                          #
 # This config file is for use with Sonarr V4 only                                                 #
 ###################################################################################################
 
-# Instance Definition: https://recyclarr.dev/wiki/yaml/config-reference/basic/
+# Instance Definition: https://recyclarr.dev/reference/configuration/basic/
 sonarr:
   web-1080p-v4:
     base_url: Put your Sonarr URL here
@@ -22,7 +22,7 @@ sonarr:
       # - template: sonarr-v4-quality-profile-web-1080p-alternative
       - template: sonarr-v4-custom-formats-web-1080p
 
-# Custom Formats: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
+# Custom Formats: https://recyclarr.dev/reference/configuration/custom-formats/
     custom_formats:
       # Optional
       - trash_ids:

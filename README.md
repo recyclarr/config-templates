@@ -18,10 +18,10 @@ To begin using these configuration templates:
 4. For a deeper understanding of template components and customization options, consult the
    [Configuration YAML Reference][4].
 
-[1]: https://recyclarr.dev/wiki/
-[2]: https://recyclarr.dev/wiki/cli/config/create/
-[3]: https://recyclarr.dev/wiki/yaml/config-reference/basic/
-[4]: https://recyclarr.dev/wiki/yaml/config-reference/
+[1]: https://recyclarr.dev/guide/getting-started/
+[2]: https://recyclarr.dev/cli/config/create/
+[3]: https://recyclarr.dev/reference/configuration/basic/
+[4]: https://recyclarr.dev/reference/configuration/
 
 ## Support
 

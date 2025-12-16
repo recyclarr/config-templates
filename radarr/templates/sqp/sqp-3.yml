@@ -4,10 +4,10 @@
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
-# https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
+# https://recyclarr.dev/reference/config-examples/#merge-single-instance                          #
 ###################################################################################################
 
-# Instance Definition: https://recyclarr.dev/wiki/yaml/config-reference/basic/
+# Instance Definition: https://recyclarr.dev/reference/configuration/basic/
 radarr:
   sqp-3:
     base_url: Put your Radarr URL here
@@ -19,7 +19,7 @@ radarr:
       - template: radarr-quality-profile-sqp-3
       - template: radarr-custom-formats-sqp-3
 
-# Custom Formats: https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
+# Custom Formats: https://recyclarr.dev/reference/configuration/custom-formats/
     custom_formats:
       # Movie Versions
       # Uncomment any of the following lines to prefer these movie versions

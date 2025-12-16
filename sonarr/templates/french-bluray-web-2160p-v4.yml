@@ -6,11 +6,11 @@
 # ----------------------------------------------------------------------------------------------- #
 # Si vous utilisez plusieurs profiles dans une seule instance merci de vous référez               #
 # à la documentation suivante (en anglais) pour les combiner :                                    #
-# https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
+# https://recyclarr.dev/reference/config-examples/#merge-single-instance                          #
 # Cette config est valable seulement pour la version 4 de Sonarr                                  #
 ###################################################################################################
 
-# Definition d'une instance : https://recyclarr.dev/wiki/yaml/config-reference/basic/
+# Definition d'une instance : https://recyclarr.dev/reference/configuration/basic/
 sonarr:
   fr-bluray-web-2160p-v4:
     base_url: Put your Sonarr URL here
@@ -30,7 +30,7 @@ sonarr:
       - template: sonarr-v4-custom-formats-bluray-web-2160p-french-multi-vo
 
     # Formats Personnalisés (Custom Formats) :
-    # https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
+    # https://recyclarr.dev/reference/configuration/custom-formats/
     custom_formats:
       # HDR Formats
       - trash_ids:

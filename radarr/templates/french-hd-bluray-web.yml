@@ -6,10 +6,10 @@
 # ----------------------------------------------------------------------------------------------- #
 # Si vous utilisez plusieurs profiles dans une seule instance merci de vous référez               #
 # à la documentation suivante (en anglais) pour les combiner :                                    #
-# https://recyclarr.dev/wiki/yaml/config-examples/#merge-single-instance                          #
+# https://recyclarr.dev/reference/config-examples/#merge-single-instance                          #
 ###################################################################################################
 
-# Definition d'une instance : https://recyclarr.dev/wiki/yaml/config-reference/basic/
+# Definition d'une instance : https://recyclarr.dev/reference/configuration/basic/
 radarr:
   french-hd-bluray-web:
     base_url: Put your Radarr URL here
@@ -29,7 +29,7 @@ radarr:
       - template: radarr-custom-formats-hd-bluray-web-french-multi-vo
 
     # Formats Personnalisés (Custom Formats) :
-    # https://recyclarr.dev/wiki/yaml/config-reference/custom-formats/
+    # https://recyclarr.dev/reference/configuration/custom-formats/
     custom_formats:
       # Movie Versions
       - trash_ids:
