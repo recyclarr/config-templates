@@ -15,8 +15,8 @@ radarr:
 
     quality_profiles:
       - name: SQP-1 WEB (1080p)
-      # Uncomment the below line if you don't have access to top-tier indexers
-      # min_format_score: 10
+        # Uncomment the below line if you don't have access to top-tier indexers
+        # min_format_score: 10
 
     include:
       # Comment out any of the following includes to disable them
