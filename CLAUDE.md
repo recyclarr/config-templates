@@ -83,3 +83,32 @@ Templates follow pattern: `{resolution}-{source}-{language-variant}.yml`
 
 Templates must include an `Updated:` date in the header comment. When modifying a template, update
 this date to the current date in `YYYY-MM-DD` format.
+
+## Conventional Commit Rules
+
+File path-based classification for commit messages:
+
+**Direct path mapping:**
+
+- `ci:` → `.github/workflows/**`
+- `chore:` → `.yamllint`, `.gitignore`, `.vscode/**`, `renovate.json5`, `.renovate/**`
+- `docs:` → `*.md`, `LICENSE`, `CONTRIBUTING.md`
+
+**Template and include files (inspect changes):**
+
+- `feat:` → New templates/includes, new custom formats, new quality profiles
+- `fix:` → Corrections to existing templates/includes (wrong IDs, incorrect scores, broken
+  references)
+- `refactor:` → Reorganizing templates/includes without changing functionality
+
+**Scopes from paths:**
+
+- `radarr/**` → `(radarr)`
+- `sonarr/**` → `(sonarr)`
+- `templates.json`, `includes.json` → `(config)`
+
+**Breaking changes (!):**
+
+- Template ID renames or removals
+- Include ID renames or removals
+- Schema changes requiring user config updates
