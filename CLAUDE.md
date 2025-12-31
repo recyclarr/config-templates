@@ -88,18 +88,12 @@ this date to the current date in `YYYY-MM-DD` format.
 
 File path-based classification for commit messages:
 
-**Direct path mapping:**
-
+- `feat:` → New files in `radarr/templates/**`, `radarr/includes/**`, `sonarr/templates/**`,
+  `sonarr/includes/**`, or new entries in `templates.json`, `includes.json`
+- `fix:` → Modifications to existing files in the above template/include paths
+- `docs:` → `*.md`, `LICENSE`
 - `ci:` → `.github/workflows/**`
-- `chore:` → `.yamllint`, `.gitignore`, `.vscode/**`, `renovate.json5`, `.renovate/**`
-- `docs:` → `*.md`, `LICENSE`, `CONTRIBUTING.md`
-
-**Template and include files (inspect changes):**
-
-- `feat:` → New templates/includes, new custom formats, new quality profiles
-- `fix:` → Corrections to existing templates/includes (wrong IDs, incorrect scores, broken
-  references)
-- `refactor:` → Reorganizing templates/includes without changing functionality
+- `chore:` → Everything else (default)
 
 **Scopes from paths:**
 
