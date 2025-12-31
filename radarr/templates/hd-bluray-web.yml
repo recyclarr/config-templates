@@ -1,6 +1,6 @@
 ###################################################################################################
 # Recyclarr Configuration Template: HD Bluray + WEB                                               #
-# Updated: 2025-05-04                                                                             #
+# Updated: 2025-12-31                                                                             #
 # Documentation: https://recyclarr.dev                                                            #
 # Note: If you are using multiple profiles in a single instance, please read the following        #
 # documentation about file merging:                                                               #
@@ -13,16 +13,49 @@ radarr:
     base_url: Put your Radarr URL here
     api_key: Put your API key here
 
-    include:
-      # Comment out any of the following includes to disable them
-      - template: radarr-quality-definition-movie
-      - template: radarr-quality-profile-hd-bluray-web
-      - template: radarr-custom-formats-hd-bluray-web
+    quality_definition:
+      type: movie
+
+    quality_profiles:
+      - trash_id: d1d67249d3890e49bc12e275d989a7e9  # HD Bluray + WEB
+        reset_unmatched_scores:
+          enabled: true
+
+    custom_format_groups:
+      - trash_id: d9cc9a504e5ede6294c8b973aad4f028  # Streaming Services General
 
     custom_formats:
-      # Movie Versions
+      # Release Groups
       - trash_ids:
+          - ed27ebfef2f323e964fb1f61391bcb35 # HD Bluray Tier 01
+          - c20c8647f2746a1f4c4262b0fbbeeeae # HD Bluray Tier 02
+          - 5608c71bcebba0a5e666223bae8c9227 # HD Bluray Tier 03
+          - c20f169ef63c5f40c2def54abaf4438e # WEB Tier 01
+          - 403816d65392c79236dcb6dd591aeda4 # WEB Tier 02
+          - af94e0fe497124d1f9ce732069ec8c3b # WEB Tier 03
+
+      # Misc
+      - trash_ids:
+          - e7718d7a3ce595f289bfee26adc178f5 # Repack/Proper
+          - ae43b294509409a6a13919dedd4764c4 # Repack2
+          - 5caaaa1c08c1742aa4342d8c4cc463f2 # Repack3
+
+      # Unwanted
+      - trash_ids:
+          - ed38b889b31be83fda192888e2286d83 # BR-DISK
+          - e6886871085226c3da1830830146846c # Generated Dynamic HDR
+          - 90a6f9a284dff5103f6346090e6280c8 # LQ
+          - e204b80c87be9497a8a6eaff48f72905 # LQ (Release Title)
+          - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
+          - b8cd450cbfa689c0259a01d9e29ba3d6 # 3D
+          - bfd8eb01832d646a0a89c4deb46f8564 # Upscaled
+          - 0a3f082873eb454bde444150b70253cc # Extras
+          - 712d74cd88bceb883ee32f773656b1f5 # Sing-Along Versions
+          - cae4ca30163749b891686f95532519bd # AV1
+
+      # Optional - Movie Versions
       # Uncomment any of the following lines to prefer these movie versions
+      # - trash_ids:
           # - 570bc9ebecd92723d2d21500f4be314c # Remaster
           # - eca37840c13c6ef2dd0262b141a5482f # 4K Remaster
           # - e0c07d59beb37348e975a930d5e50319 # Criterion Collection
@@ -31,27 +64,20 @@ radarr:
           # - 957d0f44b592285f26449575e8b1167e # Special Edition
           # - eecf3a857724171f968a66cb5719e152 # IMAX
           # - 9f6cbff8cfe4ebbc1bde14c7b7bec0de # IMAX Enhanced
-        assign_scores_to:
-          - name: HD Bluray + WEB
 
-      # Optional
-      - trash_ids:
+      # Optional - Misc
+      # - trash_ids:
           # - b6832f586342ef70d9c128d40c07b872 # Bad Dual Groups
           # - cc444569854e9de0b084ab2b8b1532b2 # Black and White Editions
           # - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5 # No-RlsGroup
           # - 7357cf5161efbf8c4d5d0c30b4815ee2 # Obfuscated
           # - 5c44f52a8714fdd79bb4d98e2673be1f # Retags
           # - f537cf427b64c38c8e36298f657e4828 # Scene
-        assign_scores_to:
-          - name: HD Bluray + WEB
 
-      - trash_ids:
-          # Uncomment the next six lines to allow x265 HD releases with HDR/DV
+      # Optional - x265 HD with HDR/DV
+      # Uncomment to allow x265 HD releases that have HDR/DV
+      # - trash_ids:
           # - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
-        # assign_scores_to:
-          # - name: HD Bluray + WEB
-            # score: 0
+        # score: 0
       # - trash_ids:
           # - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
-        assign_scores_to:
-          - name: HD Bluray + WEB

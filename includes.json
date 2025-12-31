@@ -5,10 +5,6 @@
       "id": "radarr-custom-formats-anime"
     },
     {
-      "template": "radarr/includes/custom-formats/radarr-custom-formats-hd-bluray-web.yml",
-      "id": "radarr-custom-formats-hd-bluray-web"
-    },
-    {
       "template": "radarr/includes/custom-formats/radarr-custom-formats-hd-bluray-web-french-vostfr.yml",
       "id": "radarr-custom-formats-hd-bluray-web-french-vostfr"
     },
@@ -131,10 +127,6 @@
     {
       "template": "radarr/includes/quality-profiles/radarr-quality-profile-anime.yml",
       "id": "radarr-quality-profile-anime"
-    },
-    {
-      "template": "radarr/includes/quality-profiles/radarr-quality-profile-hd-bluray-web.yml",
-      "id": "radarr-quality-profile-hd-bluray-web"
     },
     {
       "template": "radarr/includes/quality-profiles/radarr-quality-profile-hd-bluray-web-french-vostfr.yml",
