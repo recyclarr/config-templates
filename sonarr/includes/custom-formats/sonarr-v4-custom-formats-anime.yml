@@ -43,10 +43,5 @@ custom_formats:
       # Main Guide Remux Tier Scoring
       - 9965a052eb87b0d10313b1cea89eb451 # Remux Tier 01
       - 8a1d0c3d7497e741736761a1da866a2e # Remux Tier 02
-
-      # Main Guide WEB Tier Scoring
-      - e6258996055b9fbab7e9cb2f75819294 # WEB Tier 01
-      - 58790d4e2fdcd9733aa7ae68ba2bb503 # WEB Tier 02
-      - d84935abd3f8556dcd51d4f27e22d0a6 # WEB Tier 03
     assign_scores_to:
       - name: Remux-1080p - Anime
