@@ -1,88 +1,27 @@
-###################################################################################################
-# Recyclarr Configuration Template: SQP-4                                                         #
-# Updated: 2025-09-07                                                                             #
-# Documentation: https://recyclarr.dev                                                            #
-# Note: If you are using multiple profiles in a single instance, please read the following        #
-# documentation about file merging:                                                               #
-# https://recyclarr.dev/reference/config-examples/#merge-single-instance                          #
-###################################################################################################
+# TRaSH Guides: [SQP] SQP-4
 
-# Instance Definition: https://recyclarr.dev/reference/configuration/basic/
 radarr:
   sqp-4:
     base_url: Put your Radarr URL here
     api_key: Put your API key here
 
-    include:
-      # Comment out any of the following includes to disable them
-      - template: radarr-quality-definition-sqp-uhd
-      - template: radarr-quality-profile-sqp-4
-      - template: radarr-custom-formats-sqp-4
+    quality_definition:
+      type: sqp-uhd
 
-# Custom Formats: https://recyclarr.dev/reference/configuration/custom-formats/
-    custom_formats:
-      # Movie Versions
-      # Uncomment any of the following lines to prefer these movie versions
-      - trash_ids:
-          # - 0f12c086e289cf966fa5948eac571f44 # Hybrid
-          # - 570bc9ebecd92723d2d21500f4be314c # Remaster
-          # - eca37840c13c6ef2dd0262b141a5482f # 4K Remaster
-          # - e0c07d59beb37348e975a930d5e50319 # Criterion Collection
-          # - 9d27d9d2181838f76dee150882bdc58c # Masters of Cinema
-          # - db9b4c4b53d312a3ca5f1378f6440fc9 # Vinegar Syndrome
-          # - 957d0f44b592285f26449575e8b1167e # Special Edition
-          # - eecf3a857724171f968a66cb5719e152 # IMAX
-          # - 9f6cbff8cfe4ebbc1bde14c7b7bec0de # IMAX Enhanced
-        assign_scores_to:
-          - name: SQP-4
+    quality_profiles:
+      - trash_id: 013f89e6da27519fe56cf482702a2db9  # [SQP] SQP-4
+        reset_unmatched_scores:
+          enabled: true
 
-      # Misc
-      - trash_ids:
-          - 2899d84dc9372de3408e6d8cc18e9666 # x264
-        assign_scores_to:
-          - name: SQP-4
-            # score: 0 # Uncomment this line to enable x264 releases
-
-      # Unwanted
-      - trash_ids:
-          # Uncomment the next six lines to block all x265 HD releases
-          # - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
-        # assign_scores_to:
-          # - name: SQP-4
-            # score: 0
-      # - trash_ids:
-          # - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
-        assign_scores_to:
-          - name: SQP-4
-
-      # Optional
-      - trash_ids:
-          # HDR10+ Boost - Uncomment the HDR10+ Boost line if you want to prefer HDR10+ releases
-          # DV Boost - Uncomment the DV Boost line if you want to prefer DV releases
-          # Uncomment both lines if you want to prefer both (DV HDR10+)
-          # - b337d6812e06c200ec9a2d3cfa9d20a7 # DV Boost
-          # - caa37d0df9c348912df1fb1d88f9273a # HDR10+ Boost
-
-          # Comment out the next line if you and all of your users' setups are fully DV compatible
-          - 923b6abef9b17f937fab56cfcf89e1f1 # DV (w/o HDR fallback)
-
-          # Uncomment any of the following if you want them to be added to the quality profile
-          # - b6832f586342ef70d9c128d40c07b872 # Bad Dual Groups
-          # - cc444569854e9de0b084ab2b8b1532b2 # Black and White Editions
-          # - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5 # No-RlsGroup
-          # - 7357cf5161efbf8c4d5d0c30b4815ee2 # Obfuscated
-          # - 5c44f52a8714fdd79bb4d98e2673be1f # Retags
-          # - f537cf427b64c38c8e36298f657e4828 # Scene
-          # - f700d29429c023a5734505e77daeaea7 # DV (Disk)
-        assign_scores_to:
-          - name: SQP-4
-
-      # Optional SDR
-      # Only ever use ONE of the following custom formats:
-      # SDR - block ALL SDR releases
-      # SDR (no WEBDL) - block UHD/4k Remux and Bluray encode SDR releases, but allow SDR WEB
-      - trash_ids:
-          - 9c38ebb7384dada637be8899efa68e6f # SDR
-          # - 25c12f78430a3a23413652cbd1d48d77 # SDR (no WEBDL)
-        assign_scores_to:
-          - name: SQP-4
+    custom_format_groups:
+      add:
+        # - trash_id: 7fc2751eef7e6bdc70b74136e5e35c76  # [HDR Formats] DV (w/o HDR fallback)
+        # - trash_id: 1616617ab3a14397a2b2321bcbda44d1  # [HDR Formats] DV Boost
+        # - trash_id: b29413a7487478fe98228ce79e5689e4  # [HDR Formats] HDR10+ Boost
+        # - trash_id: c4492eebd0c2ddc14c2c91623aa7f95d  # [Optional] Miscellaneous SQP
+        # - trash_id: f4f1474b963b24cf983455743aa9906c  # [Optional] Movie Versions
+        # - trash_id: 47f0d69750de9e16855915fa73bb7b08  # [Optional] SDR
+        # - trash_id: b22449f789b16a4163b59f1b70cbc580  # [Streaming Services] Asian
+        # - trash_id: 088a792e0561c927fb396664b0db5c8f  # [Streaming Services] Dutch
+        # - trash_id: 9fc645b3cef52b149ec13ba3972245d1  # [Streaming Services] Miscellaneous
+        # - trash_id: f737e18b5824d6ebb2d57b957ae2fd6c  # [Streaming Services] UK

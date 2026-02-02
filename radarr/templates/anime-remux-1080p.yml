@@ -1,25 +1,22 @@
-# TRaSH Guides: [SQP] SQP-1 WEB (2160p)
+# TRaSH Guides: [Anime] Remux-1080p
+# https://trash-guides.info/Radarr/radarr-setup-quality-profiles-anime/#quality-profile
 
 radarr:
-  sqp-1-web-2160p:
+  anime-remux-1080p:
     base_url: Put your Radarr URL here
     api_key: Put your API key here
 
     quality_definition:
-      type: sqp-uhd
+      type: anime
 
     quality_profiles:
-      - trash_id: e91c9adaca0231493f4af0d571b907f9  # [SQP] SQP-1 WEB (2160p)
+      - trash_id: 722b624f9af1e492284c4bc842153a38  # [Anime] Remux-1080p
         reset_unmatched_scores:
           enabled: true
 
     custom_format_groups:
       add:
-        # - trash_id: 1616617ab3a14397a2b2321bcbda44d1  # [HDR Formats] DV Boost
-        # - trash_id: b29413a7487478fe98228ce79e5689e4  # [HDR Formats] HDR10+ Boost
         # - trash_id: 9337080378236ce4c0b183e35790d2a7  # [Optional] Miscellaneous
-        # - trash_id: f4f1474b963b24cf983455743aa9906c  # [Optional] Movie Versions
-        # - trash_id: 47f0d69750de9e16855915fa73bb7b08  # [Optional] SDR
         # - trash_id: b22449f789b16a4163b59f1b70cbc580  # [Streaming Services] Asian
         # - trash_id: 088a792e0561c927fb396664b0db5c8f  # [Streaming Services] Dutch
         # - trash_id: 9fc645b3cef52b149ec13ba3972245d1  # [Streaming Services] Miscellaneous

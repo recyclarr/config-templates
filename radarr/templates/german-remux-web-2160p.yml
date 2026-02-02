@@ -1,15 +1,16 @@
-# TRaSH Guides: [SQP] SQP-3
+# TRaSH Guides: [German] Remux + WEB 2160p
+# https://trash-guides.info/Radarr/radarr-setup-quality-profiles-german-en/#uhd-remux-web
 
 radarr:
-  sqp-3:
+  german-remux-web-2160p:
     base_url: Put your Radarr URL here
     api_key: Put your API key here
 
     quality_definition:
-      type: sqp-uhd
+      type: movie
 
     quality_profiles:
-      - trash_id: 2cf36c1f0106ffac993be003ade51865  # [SQP] SQP-3
+      - trash_id: 79faa9943cef2f510b997b1f2a9f3ea6  # [German] Remux + WEB 2160p
         reset_unmatched_scores:
           enabled: true
 
@@ -18,9 +19,11 @@ radarr:
         # - trash_id: 7fc2751eef7e6bdc70b74136e5e35c76  # [HDR Formats] DV (w/o HDR fallback)
         # - trash_id: 1616617ab3a14397a2b2321bcbda44d1  # [HDR Formats] DV Boost
         # - trash_id: b29413a7487478fe98228ce79e5689e4  # [HDR Formats] HDR10+ Boost
-        # - trash_id: c4492eebd0c2ddc14c2c91623aa7f95d  # [Optional] Miscellaneous SQP
+        # - trash_id: 9337080378236ce4c0b183e35790d2a7  # [Optional] Miscellaneous
         # - trash_id: f4f1474b963b24cf983455743aa9906c  # [Optional] Movie Versions
         # - trash_id: 47f0d69750de9e16855915fa73bb7b08  # [Optional] SDR
+        # - trash_id: bc85e56ee3bd0f01467866d5f1261543  # [Release Groups] German
+        # - trash_id: 60f6d50cbd3cfc3e9a8c00e3a30c3114  # [Streaming Services] Anime
         # - trash_id: b22449f789b16a4163b59f1b70cbc580  # [Streaming Services] Asian
         # - trash_id: 088a792e0561c927fb396664b0db5c8f  # [Streaming Services] Dutch
         # - trash_id: 9fc645b3cef52b149ec13ba3972245d1  # [Streaming Services] Miscellaneous

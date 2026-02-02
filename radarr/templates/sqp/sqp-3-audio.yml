@@ -1,7 +1,7 @@
-# TRaSH Guides: [SQP] SQP-3
+# TRaSH Guides: [SQP] SQP-3 (Audio)
 
 radarr:
-  sqp-3:
+  sqp-3-audio:
     base_url: Put your Radarr URL here
     api_key: Put your API key here
 
@@ -9,7 +9,7 @@ radarr:
       type: sqp-uhd
 
     quality_profiles:
-      - trash_id: 2cf36c1f0106ffac993be003ade51865  # [SQP] SQP-3
+      - trash_id: 0ada8e60cc3ddf2733b65de10f4a6c72  # [SQP] SQP-3 (Audio)
         reset_unmatched_scores:
           enabled: true
 
