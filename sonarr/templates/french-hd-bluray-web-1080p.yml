@@ -1,0 +1,24 @@
+# TRaSH Guides: [French MULTi.VO] HD Bluray + WEB (1080p)
+# https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles-french-en/#hd-bluray-web-1080p
+
+sonarr:
+  french-hd-bluray-web-1080p:
+    base_url: Put your Sonarr URL here
+    api_key: Put your API key here
+
+    quality_definition:
+      type: series
+
+    quality_profiles:
+      - trash_id: 4c48f506c1116a3a57ae33f12346bd15  # [French MULTi.VO] HD Bluray + WEB (1080p)
+        reset_unmatched_scores:
+          enabled: true
+
+    custom_format_groups:
+      add:
+        # - trash_id: f4a0410a1df109a66d6e47dcadcce014  # [Optional] Miscellaneous
+        # - trash_id: d920fd959d220306888f40b6f38e1578  # [Optional] Season Packs
+        # - trash_id: 35fb4585dcd9e2a5ac732e4309f5a45a  # [Streaming Services] Asian
+        # - trash_id: f60f4401ce880aad62e9d21c8bb6b91a  # [Streaming Services] Dutch
+        # - trash_id: 7832db22b71ab669458c17a2850d6913  # [Streaming Services] Miscellaneous
+        # - trash_id: ddab3095a5d2f436f369263840af34f9  # [Streaming Services] UK

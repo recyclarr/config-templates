@@ -1,0 +1,26 @@
+# TRaSH Guides: WEB-1080p (Alternative)
+# https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles/#web-1080p
+
+sonarr:
+  web-1080p-alternative:
+    base_url: Put your Sonarr URL here
+    api_key: Put your API key here
+
+    quality_definition:
+      type: series
+
+    quality_profiles:
+      - trash_id: 9d142234e45d6143785ac55f5a9e8dc9  # WEB-1080p (Alternative)
+        reset_unmatched_scores:
+          enabled: true
+
+    custom_format_groups:
+      add:
+        # - trash_id: e9a1944a254e6f8a9da63083f7ae15cb  # [Audio] Audio Formats
+        # - trash_id: f4a0410a1df109a66d6e47dcadcce014  # [Optional] Miscellaneous
+        # - trash_id: d920fd959d220306888f40b6f38e1578  # [Optional] Season Packs
+        # - trash_id: 35fb4585dcd9e2a5ac732e4309f5a45a  # [Streaming Services] Asian
+        # - trash_id: f60f4401ce880aad62e9d21c8bb6b91a  # [Streaming Services] Dutch
+        # - trash_id: 848fd356c200568fc5a6248150e7e7ea  # [Streaming Services] French
+        # - trash_id: 7832db22b71ab669458c17a2850d6913  # [Streaming Services] Miscellaneous
+        # - trash_id: ddab3095a5d2f436f369263840af34f9  # [Streaming Services] UK
