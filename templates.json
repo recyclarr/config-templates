@@ -2,7 +2,7 @@
   "radarr": [
     {
       "template": "radarr/templates/anime-remux-1080p.yml",
-      "id": "anime-remux-1080p"
+      "id": "radarr-anime-remux-1080p"
     },
     {
       "template": "radarr/templates/french-hd-bluray-web.yml",
@@ -22,11 +22,11 @@
     },
     {
       "template": "radarr/templates/german-hd-bluray-web.yml",
-      "id": "german-hd-bluray-web"
+      "id": "radarr-german-hd-bluray-web"
     },
     {
       "template": "radarr/templates/german-hd-remux-web.yml",
-      "id": "german-hd-remux-web"
+      "id": "radarr-german-hd-remux-web"
     },
     {
       "template": "radarr/templates/german-remux-web-2160p.yml",
@@ -34,11 +34,11 @@
     },
     {
       "template": "radarr/templates/german-uhd-bluray-web.yml",
-      "id": "german-uhd-bluray-web"
+      "id": "radarr-german-uhd-bluray-web"
     },
     {
       "template": "radarr/templates/german-uhd-bluray-web-alternative.yml",
-      "id": "german-uhd-bluray-web-alternative"
+      "id": "radarr-german-uhd-bluray-web-alternative"
     },
     {
       "template": "radarr/templates/hd-bluray-web.yml",
@@ -104,7 +104,7 @@
   "sonarr": [
     {
       "template": "sonarr/templates/anime-remux-1080p.yml",
-      "id": "anime-remux-1080p"
+      "id": "sonarr-anime-remux-1080p"
     },
     {
       "template": "sonarr/templates/french-hd-bluray-web-1080p.yml",
@@ -116,19 +116,19 @@
     },
     {
       "template": "sonarr/templates/german-hd-bluray-web.yml",
-      "id": "german-hd-bluray-web"
+      "id": "sonarr-german-hd-bluray-web"
     },
     {
       "template": "sonarr/templates/german-hd-remux-web.yml",
-      "id": "german-hd-remux-web"
+      "id": "sonarr-german-hd-remux-web"
     },
     {
       "template": "sonarr/templates/german-uhd-bluray-web.yml",
-      "id": "german-uhd-bluray-web"
+      "id": "sonarr-german-uhd-bluray-web"
     },
     {
       "template": "sonarr/templates/german-uhd-bluray-web-alternative.yml",
-      "id": "german-uhd-bluray-web-alternative"
+      "id": "sonarr-german-uhd-bluray-web-alternative"
     },
     {
       "template": "sonarr/templates/german-uhd-remux-web.yml",
