@@ -6,7 +6,7 @@ radarr:
     api_key: Put your API key here
 
     quality_definition:
-      type: sqp-uhd
+      type: sqp-streaming
 
     quality_profiles:
       - trash_id: 5128baeb2b081b72126bc8482b2a86a0  # [SQP] SQP-1 (2160p)
