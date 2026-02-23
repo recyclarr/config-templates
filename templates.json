@@ -1,10 +1,6 @@
 {
   "radarr": [
     {
-      "template": "radarr/templates/anime-remux-1080p.yml",
-      "id": "radarr-anime-remux-1080p"
-    },
-    {
       "template": "radarr/templates/french-hd-bluray-web.yml",
       "id": "french-hd-bluray-web"
     },
@@ -21,6 +17,18 @@
       "id": "french-uhd-remux-2160p"
     },
     {
+      "template": "radarr/templates/german-remux-web-2160p.yml",
+      "id": "german-remux-web-2160p"
+    },
+    {
+      "template": "radarr/templates/hd-bluray-web.yml",
+      "id": "hd-bluray-web"
+    },
+    {
+      "template": "radarr/templates/anime-remux-1080p.yml",
+      "id": "radarr-anime-remux-1080p"
+    },
+    {
       "template": "radarr/templates/german-hd-bluray-web.yml",
       "id": "radarr-german-hd-bluray-web"
     },
@@ -29,20 +37,12 @@
       "id": "radarr-german-hd-remux-web"
     },
     {
-      "template": "radarr/templates/german-remux-web-2160p.yml",
-      "id": "german-remux-web-2160p"
-    },
-    {
       "template": "radarr/templates/german-uhd-bluray-web.yml",
       "id": "radarr-german-uhd-bluray-web"
     },
     {
       "template": "radarr/templates/german-uhd-bluray-web-alternative.yml",
       "id": "radarr-german-uhd-bluray-web-alternative"
-    },
-    {
-      "template": "radarr/templates/hd-bluray-web.yml",
-      "id": "hd-bluray-web"
     },
     {
       "template": "radarr/templates/remux-2160p-alternative.yml",
@@ -103,16 +103,20 @@
   ],
   "sonarr": [
     {
-      "template": "sonarr/templates/anime-remux-1080p.yml",
-      "id": "sonarr-anime-remux-1080p"
-    },
-    {
       "template": "sonarr/templates/french-hd-bluray-web-1080p.yml",
       "id": "french-hd-bluray-web-1080p"
     },
     {
       "template": "sonarr/templates/french-uhd-bluray-web-2160p.yml",
       "id": "french-uhd-bluray-web-2160p"
+    },
+    {
+      "template": "sonarr/templates/german-uhd-remux-web.yml",
+      "id": "german-uhd-remux-web"
+    },
+    {
+      "template": "sonarr/templates/anime-remux-1080p.yml",
+      "id": "sonarr-anime-remux-1080p"
     },
     {
       "template": "sonarr/templates/german-hd-bluray-web.yml",
@@ -129,10 +133,6 @@
     {
       "template": "sonarr/templates/german-uhd-bluray-web-alternative.yml",
       "id": "sonarr-german-uhd-bluray-web-alternative"
-    },
-    {
-      "template": "sonarr/templates/german-uhd-remux-web.yml",
-      "id": "german-uhd-remux-web"
     },
     {
       "template": "sonarr/templates/web-1080p.yml",

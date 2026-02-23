@@ -2,7 +2,7 @@
 # https://trash-guides.info/Radarr/radarr-setup-quality-profiles-german-en/#uhd-bluray-web
 
 radarr:
-  german-uhd-bluray-web-alternative:
+  radarr-german-uhd-bluray-web-alternative:
     base_url: Put your Radarr URL here
     api_key: Put your API key here
 

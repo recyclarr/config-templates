@@ -2,7 +2,7 @@
 # https://trash-guides.info/Radarr/radarr-setup-quality-profiles-anime/#quality-profile
 
 radarr:
-  anime-remux-1080p:
+  radarr-anime-remux-1080p:
     base_url: Put your Radarr URL here
     api_key: Put your API key here
 

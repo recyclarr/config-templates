@@ -2,7 +2,7 @@
 # https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles-german-en/#hd-remux-web
 
 sonarr:
-  german-hd-remux-web:
+  sonarr-german-hd-remux-web:
     base_url: Put your Sonarr URL here
     api_key: Put your API key here
 
