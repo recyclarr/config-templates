@@ -4,7 +4,7 @@
   "mcp": {
     "linear": {
       "type": "remote",
-      "url": "https://mcp.linear.app/sse"
+      "url": "https://mcp.linear.app/mcp"
     }
   },
   "permission": {
