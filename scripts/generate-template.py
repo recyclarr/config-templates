@@ -26,11 +26,32 @@ SERVICES = ("radarr", "sonarr")
 
 
 @dataclass
+class CustomFormat:
+    trash_id: str
+    name: str
+    required: bool = False
+    default: bool = False
+
+    @property
+    def is_optional(self) -> bool:
+        return not self.required and not self.default
+
+
+@dataclass
 class CFGroup:
     trash_id: str
     name: str
     is_default: bool = False
     target_profiles: dict[str, str] = field(default_factory=dict)
+    custom_formats: list[CustomFormat] = field(default_factory=list)
+
+    @property
+    def optional_cfs(self) -> list[CustomFormat]:
+        return [cf for cf in self.custom_formats if cf.is_optional]
+
+    @property
+    def has_cf_defaults(self) -> bool:
+        return any(cf.default for cf in self.custom_formats)
 
 
 @dataclass
@@ -54,6 +75,8 @@ class TemplateSpec:
     quality_def: str
     group_name: str | None
     optional_groups: list[CFGroup]
+    default_groups: list[CFGroup]
+    choice_groups: list[CFGroup]
 
 
 def load_guides(guides_path: Path) -> dict:
@@ -97,6 +120,15 @@ def load_cf_groups(
             with open(json_file) as f:
                 data = json.load(f)
             default_val = data.get("default", "")
+            cfs = [
+                CustomFormat(
+                    trash_id=cf.get("trash_id", ""),
+                    name=cf.get("name", ""),
+                    required=cf.get("required", False) is True,
+                    default=cf.get("default", False) is True,
+                )
+                for cf in data.get("custom_formats", [])
+            ]
             group = CFGroup(
                 trash_id=data.get("trash_id", ""),
                 name=data.get("name", ""),
@@ -108,6 +140,7 @@ def load_cf_groups(
                     .get("include", {})
                     .items()
                 },
+                custom_formats=cfs,
             )
             groups[group.trash_id] = group
     return groups
@@ -133,13 +166,13 @@ def get_profile_group_name(
     return None
 
 
-def get_optional_cf_groups(
-    cf_groups: dict[str, CFGroup], profile_trash_id: str
+def get_groups_for_profile(
+    cf_groups: dict[str, CFGroup], profile_trash_id: str, *, default: bool
 ) -> list[CFGroup]:
     result = [
         g
         for g in cf_groups.values()
-        if profile_trash_id in g.target_profiles.values() and not g.is_default
+        if profile_trash_id in g.target_profiles.values() and g.is_default == default
     ]
     result.sort(key=lambda g: g.name)
     return result
@@ -206,7 +239,14 @@ def build_template_specs(guides_path: Path) -> list[TemplateSpec]:
         for profile in sorted(profiles.values(), key=lambda p: p.file_stem):
             group_name = get_profile_group_name(profile_groups, profile.trash_id)
             base_id = derive_base_id(profile, group_name)
-            optional = get_optional_cf_groups(cf_groups, profile.trash_id)
+            optional = get_groups_for_profile(
+                cf_groups, profile.trash_id, default=False
+            )
+            all_default = get_groups_for_profile(
+                cf_groups, profile.trash_id, default=True
+            )
+            choice = [g for g in all_default if g.has_cf_defaults]
+            default = [g for g in all_default if not g.has_cf_defaults]
             quality_def = infer_quality_definition(service, profile, group_name)
 
             specs.append(
@@ -219,6 +259,8 @@ def build_template_specs(guides_path: Path) -> list[TemplateSpec]:
                     quality_def=quality_def,
                     group_name=group_name,
                     optional_groups=optional,
+                    default_groups=default,
+                    choice_groups=choice,
                 )
             )
 
@@ -262,13 +304,45 @@ def generate_yaml(spec: TemplateSpec) -> str:
     lines.append("        reset_unmatched_scores:")
     lines.append("          enabled: true")
 
-    # Optional CF groups (commented)
-    if spec.optional_groups:
+    # CF groups
+    has_optional = bool(spec.optional_groups)
+    has_default = bool(spec.default_groups)
+    has_choice = bool(spec.choice_groups)
+    if has_optional or has_default or has_choice:
         lines.append("")
         lines.append("    custom_format_groups:")
-        lines.append("      add:")
-        for group in spec.optional_groups:
-            lines.append(f"        # - trash_id: {group.trash_id}  # {group.name}")
+
+        if has_optional or has_choice:
+            simple = [g for g in spec.optional_groups if not g.optional_cfs]
+            expanded = [g for g in spec.optional_groups if g.optional_cfs]
+            simple.sort(key=lambda g: g.name)
+            expanded.sort(key=lambda g: g.name)
+
+            lines.append("      add:")
+
+            # Choice groups: uncommented, with select block
+            for group in spec.choice_groups:
+                lines.append(f"        - trash_id: {group.trash_id}  # {group.name}")
+                lines.append("          select:")
+                for cf in group.custom_formats:
+                    if cf.default:
+                        lines.append(f"            - {cf.trash_id}  # {cf.name}")
+                    else:
+                        lines.append(f"            # - {cf.trash_id}  # {cf.name}")
+
+            # Optional groups: commented out
+            for group in simple:
+                lines.append(f"        # - trash_id: {group.trash_id}  # {group.name}")
+            for group in expanded:
+                lines.append(f"        # - trash_id: {group.trash_id}  # {group.name}")
+                lines.append("        #   select:")
+                for cf in group.optional_cfs:
+                    lines.append(f"        #     - {cf.trash_id}  # {cf.name}")
+
+        if has_default:
+            lines.append("      skip:")
+            for group in spec.default_groups:
+                lines.append(f"        # - {group.trash_id}  # {group.name}")
 
     lines.append("")
     return "\n".join(lines)

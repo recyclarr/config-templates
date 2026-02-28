@@ -53,8 +53,13 @@ function CheckTrashIdCorrect($yamlDir, $shouldBeIn, $shouldNotBeIn) {
     }
 }
 
-$radarrTrashIds = GetTrashIds "$PathToTrashRepo/docs/json/radarr/cf"
-$sonarrTrashIds = GetTrashIds "$PathToTrashRepo/docs/json/sonarr/cf"
+$radarrTrashIds = GetTrashIds `
+    "$PathToTrashRepo/docs/json/radarr/cf", `
+    "$PathToTrashRepo/docs/json/radarr/cf-groups"
+
+$sonarrTrashIds = GetTrashIds `
+    "$PathToTrashRepo/docs/json/sonarr/cf", `
+    "$PathToTrashRepo/docs/json/sonarr/cf-groups"
 
 CheckTrashIdCorrect "$PathToConfigRepo/sonarr" $sonarrTrashIds $radarrTrashIds
 CheckTrashIdCorrect "$PathToConfigRepo/radarr" $radarrTrashIds $sonarrTrashIds
