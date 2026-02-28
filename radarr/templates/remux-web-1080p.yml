@@ -16,6 +16,10 @@ radarr:
 
     custom_format_groups:
       add:
+        - trash_id: f8bf8eab4617f12dfdbd16303d8da245  # [Required] Golden Rule HD
+          select:
+            - dc98083864ea246d05a42df0d05f81cc  # x265 (HD)
+            # - 839bea857ed2c0a8e084f3cbdbd65ecb  # x265 (no HDR/DV)
         # - trash_id: 60f6d50cbd3cfc3e9a8c00e3a30c3114  # [Streaming Services] Anime
         # - trash_id: b22449f789b16a4163b59f1b70cbc580  # [Streaming Services] Asian
         # - trash_id: 088a792e0561c927fb396664b0db5c8f  # [Streaming Services] Dutch
@@ -58,5 +62,4 @@ radarr:
         #     - ab56ccdc473a1f2897c76187ea365be2  # STRP
       skip:
         # - 9d5acd8f1da78dfbae788182f7605200  # [Audio] Audio Formats
-        # - f8bf8eab4617f12dfdbd16303d8da245  # [Required] Golden Rule HD
         # - d9cc9a504e5ede6294c8b973aad4f028  # [Streaming Services] General

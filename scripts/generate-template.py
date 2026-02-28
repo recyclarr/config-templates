@@ -49,6 +49,10 @@ class CFGroup:
     def optional_cfs(self) -> list[CustomFormat]:
         return [cf for cf in self.custom_formats if cf.is_optional]
 
+    @property
+    def has_cf_defaults(self) -> bool:
+        return any(cf.default for cf in self.custom_formats)
+
 
 @dataclass
 class QualityProfile:
@@ -72,6 +76,7 @@ class TemplateSpec:
     group_name: str | None
     optional_groups: list[CFGroup]
     default_groups: list[CFGroup]
+    choice_groups: list[CFGroup]
 
 
 def load_guides(guides_path: Path) -> dict:
@@ -237,7 +242,11 @@ def build_template_specs(guides_path: Path) -> list[TemplateSpec]:
             optional = get_groups_for_profile(
                 cf_groups, profile.trash_id, default=False
             )
-            default = get_groups_for_profile(cf_groups, profile.trash_id, default=True)
+            all_default = get_groups_for_profile(
+                cf_groups, profile.trash_id, default=True
+            )
+            choice = [g for g in all_default if g.has_cf_defaults]
+            default = [g for g in all_default if not g.has_cf_defaults]
             quality_def = infer_quality_definition(service, profile, group_name)
 
             specs.append(
@@ -251,6 +260,7 @@ def build_template_specs(guides_path: Path) -> list[TemplateSpec]:
                     group_name=group_name,
                     optional_groups=optional,
                     default_groups=default,
+                    choice_groups=choice,
                 )
             )
 
@@ -297,17 +307,30 @@ def generate_yaml(spec: TemplateSpec) -> str:
     # CF groups
     has_optional = bool(spec.optional_groups)
     has_default = bool(spec.default_groups)
-    if has_optional or has_default:
+    has_choice = bool(spec.choice_groups)
+    if has_optional or has_default or has_choice:
         lines.append("")
         lines.append("    custom_format_groups:")
 
-        if has_optional:
+        if has_optional or has_choice:
             simple = [g for g in spec.optional_groups if not g.optional_cfs]
             expanded = [g for g in spec.optional_groups if g.optional_cfs]
             simple.sort(key=lambda g: g.name)
             expanded.sort(key=lambda g: g.name)
 
             lines.append("      add:")
+
+            # Choice groups: uncommented, with select block
+            for group in spec.choice_groups:
+                lines.append(f"        - trash_id: {group.trash_id}  # {group.name}")
+                lines.append("          select:")
+                for cf in group.custom_formats:
+                    if cf.default:
+                        lines.append(f"            - {cf.trash_id}  # {cf.name}")
+                    else:
+                        lines.append(f"            # - {cf.trash_id}  # {cf.name}")
+
+            # Optional groups: commented out
             for group in simple:
                 lines.append(f"        # - trash_id: {group.trash_id}  # {group.name}")
             for group in expanded:

@@ -16,6 +16,10 @@ sonarr:
 
     custom_format_groups:
       add:
+        - trash_id: 158188097a58d7687dee647e04af0da3  # [Required] Golden Rule HD
+          select:
+            - 47435ece6b99a0b477caf360e79ba0bb  # x265 (HD)
+            # - 9b64dff695c2115facf1b6ea59c9bd07  # x265 (no HDR/DV)
         # - trash_id: e9a1944a254e6f8a9da63083f7ae15cb  # [Audio] Audio Formats
         # - trash_id: d920fd959d220306888f40b6f38e1578  # [Optional] Season Packs
         # - trash_id: 35fb4585dcd9e2a5ac732e4309f5a45a  # [Streaming Services] Asian
@@ -48,5 +52,4 @@ sonarr:
         #     - c30d2958827d1867c73318a5a2957eb1  # RED
         #     - 3ac5d84fce98bab1b531393e9c82f467  # QIBI
       skip:
-        # - 158188097a58d7687dee647e04af0da3  # [Required] Golden Rule HD
         # - abe720fab2d27682adc2a735136cec02  # [Streaming Services] General

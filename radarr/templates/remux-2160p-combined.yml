@@ -16,6 +16,10 @@ radarr:
 
     custom_format_groups:
       add:
+        - trash_id: ff204bbcecdd487d1cefcefdbf0c278d  # [Required] Golden Rule UHD
+          select:
+            # - dc98083864ea246d05a42df0d05f81cc  # x265 (HD)
+            - 839bea857ed2c0a8e084f3cbdbd65ecb  # x265 (no HDR/DV)
         # - trash_id: 7fc2751eef7e6bdc70b74136e5e35c76  # [HDR Formats] DV (w/o HDR fallback)
         # - trash_id: 1616617ab3a14397a2b2321bcbda44d1  # [HDR Formats] DV Boost
         # - trash_id: b29413a7487478fe98228ce79e5689e4  # [HDR Formats] HDR10+ Boost
@@ -66,5 +70,4 @@ radarr:
       skip:
         # - 9d5acd8f1da78dfbae788182f7605200  # [Audio] Audio Formats
         # - ef20e67b95a381fb3bc6d1f06ea24f46  # [HDR Formats] HDR
-        # - ff204bbcecdd487d1cefcefdbf0c278d  # [Required] Golden Rule UHD
         # - d9cc9a504e5ede6294c8b973aad4f028  # [Streaming Services] General
