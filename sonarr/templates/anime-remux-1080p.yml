@@ -1,5 +1,10 @@
-# TRaSH Guides: [Anime] Remux-1080p
-# https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles-anime/#quality-profile
+# yaml-language-server: $schema=https://schemas.recyclarr.dev/v8/config-schema.json
+################################################################################
+## TRaSH Guides: [Anime] Remux-1080p
+##
+## https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles-
+## anime/#quality-profile
+################################################################################
 
 sonarr:
   sonarr-anime-remux-1080p:
@@ -15,6 +20,15 @@ sonarr:
           enabled: true
 
     custom_format_groups:
+      ################################################################################
+      ## These groups are NOT synced by default. Uncomment to enable. Use `select:` to
+      ## choose specific CFs within a group.
+      ##
+      ## To uncomment, remove `# ` (hash + space) so that indentation stays aligned.
+      ## Most editors do this automatically with toggle-comment (Ctrl+/).
+      ##
+      ## https://recyclarr.dev/guide/cf-groups/
+      ################################################################################
       add:
         # - trash_id: 35fb4585dcd9e2a5ac732e4309f5a45a  # [Streaming Services] Asian
         # - trash_id: f60f4401ce880aad62e9d21c8bb6b91a  # [Streaming Services] Dutch

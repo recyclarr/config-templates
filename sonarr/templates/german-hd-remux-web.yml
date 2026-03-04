@@ -1,5 +1,10 @@
-# TRaSH Guides: [German] HD Remux + WEB
-# https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles-german-en/#hd-remux-web
+# yaml-language-server: $schema=https://schemas.recyclarr.dev/v8/config-schema.json
+################################################################################
+## TRaSH Guides: [German] HD Remux + WEB
+##
+## https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles-german-en/#hd-
+## remux-web
+################################################################################
 
 sonarr:
   sonarr-german-hd-remux-web:
@@ -15,6 +20,15 @@ sonarr:
           enabled: true
 
     custom_format_groups:
+      ################################################################################
+      ## These groups are NOT synced by default. Uncomment to enable. Use `select:` to
+      ## choose specific CFs within a group.
+      ##
+      ## To uncomment, remove `# ` (hash + space) so that indentation stays aligned.
+      ## Most editors do this automatically with toggle-comment (Ctrl+/).
+      ##
+      ## https://recyclarr.dev/guide/cf-groups/
+      ################################################################################
       add:
         - trash_id: 158188097a58d7687dee647e04af0da3  # [Required] Golden Rule HD
           select:
@@ -50,5 +64,11 @@ sonarr:
         #     - fe4062eac43d4ea75955f8ae48adcf1e  # STRP
         #     - c30d2958827d1867c73318a5a2957eb1  # RED
         #     - 3ac5d84fce98bab1b531393e9c82f467  # QIBI
+
+      ################################################################################
+      ## These groups ARE synced by default. Uncomment to disable.
+      ##
+      ## https://recyclarr.dev/guide/cf-groups/
+      ################################################################################
       skip:
         # - abe720fab2d27682adc2a735136cec02  # [Streaming Services] General

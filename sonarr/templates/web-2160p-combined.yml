@@ -1,5 +1,9 @@
-# TRaSH Guides: WEB-2160p (Combined)
-# https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles/#web-2160p
+# yaml-language-server: $schema=https://schemas.recyclarr.dev/v8/config-schema.json
+################################################################################
+## TRaSH Guides: WEB-2160p (Combined)
+##
+## https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles/#web-2160p
+################################################################################
 
 sonarr:
   web-2160p-combined:
@@ -15,6 +19,15 @@ sonarr:
           enabled: true
 
     custom_format_groups:
+      ################################################################################
+      ## These groups are NOT synced by default. Uncomment to enable. Use `select:` to
+      ## choose specific CFs within a group.
+      ##
+      ## To uncomment, remove `# ` (hash + space) so that indentation stays aligned.
+      ## Most editors do this automatically with toggle-comment (Ctrl+/).
+      ##
+      ## https://recyclarr.dev/guide/cf-groups/
+      ################################################################################
       add:
         - trash_id: e3f37512790f00d0e89e54fe5e790d1c  # [Required] Golden Rule UHD
           select:
@@ -57,6 +70,12 @@ sonarr:
         #     - fe4062eac43d4ea75955f8ae48adcf1e  # STRP
         #     - c30d2958827d1867c73318a5a2957eb1  # RED
         #     - 3ac5d84fce98bab1b531393e9c82f467  # QIBI
+
+      ################################################################################
+      ## These groups ARE synced by default. Uncomment to disable.
+      ##
+      ## https://recyclarr.dev/guide/cf-groups/
+      ################################################################################
       skip:
         # - 7e1724c5da59e7474803ad25be98f6a3  # [HDR Formats] HDR
         # - abe720fab2d27682adc2a735136cec02  # [Streaming Services] General

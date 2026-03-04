@@ -1,4 +1,7 @@
-# TRaSH Guides: [SQP] SQP-1 WEB (1080p)
+# yaml-language-server: $schema=https://schemas.recyclarr.dev/v8/config-schema.json
+################################################################################
+## TRaSH Guides: [SQP] SQP-1 WEB (1080p)
+################################################################################
 
 radarr:
   sqp-1-web-1080p:
@@ -14,6 +17,15 @@ radarr:
           enabled: true
 
     custom_format_groups:
+      ################################################################################
+      ## These groups are NOT synced by default. Uncomment to enable. Use `select:` to
+      ## choose specific CFs within a group.
+      ##
+      ## To uncomment, remove `# ` (hash + space) so that indentation stays aligned.
+      ## Most editors do this automatically with toggle-comment (Ctrl+/).
+      ##
+      ## https://recyclarr.dev/guide/cf-groups/
+      ################################################################################
       add:
         # - trash_id: b22449f789b16a4163b59f1b70cbc580  # [Streaming Services] Asian
         # - trash_id: 088a792e0561c927fb396664b0db5c8f  # [Streaming Services] Dutch
@@ -54,5 +66,11 @@ radarr:
         #     - f6ff65b3f4b464a79dcc75950fe20382  # CRAV
         #     - fbca986396c5e695ef7b2def3c755d01  # OViD
         #     - ab56ccdc473a1f2897c76187ea365be2  # STRP
+
+      ################################################################################
+      ## These groups ARE synced by default. Uncomment to disable.
+      ##
+      ## https://recyclarr.dev/guide/cf-groups/
+      ################################################################################
       skip:
         # - d9cc9a504e5ede6294c8b973aad4f028  # [Streaming Services] General
