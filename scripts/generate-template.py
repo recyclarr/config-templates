@@ -18,10 +18,12 @@ import argparse
 import json
 import re
 import sys
+import textwrap
 from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
 
+COMMENT_BLOCK_WIDTH = 80
 SERVICES = ("radarr", "sonarr")
 
 
@@ -276,13 +278,44 @@ def build_template_specs(guides_path: Path) -> list[TemplateSpec]:
     return specs
 
 
+def comment_block(paragraphs: list[str], indent: int = 0) -> list[str]:
+    """Build a bordered comment block with word-wrapped paragraphs.
+
+    Each string in `paragraphs` becomes a separate paragraph, separated by
+    blank comment lines. Text is wrapped to fit within COMMENT_BLOCK_WIDTH
+    including the `## ` prefix.
+
+    Returns lines with `indent` spaces prepended, ready to append to output.
+    """
+    prefix = "## "
+    text_width = COMMENT_BLOCK_WIDTH - len(prefix)
+    border = "#" * COMMENT_BLOCK_WIDTH
+    pad = " " * indent
+
+    lines = [f"{pad}{border}"]
+    for i, para in enumerate(paragraphs):
+        if i > 0:
+            lines.append(f"{pad}##")
+        for wrapped in textwrap.wrap(para, width=text_width):
+            lines.append(f"{pad}{prefix}{wrapped}")
+    lines.append(f"{pad}{border}")
+    return lines
+
+
 def generate_yaml(spec: TemplateSpec) -> str:
     lines = []
 
+    # Schema directive (must be line 1 for Red Hat YAML extension)
+    lines.append(
+        "# yaml-language-server:"
+        " $schema=https://schemas.recyclarr.dev/v8/config-schema.json"
+    )
+
     # Header
-    lines.append(f"# TRaSH Guides: {spec.profile.name}")
+    header_paras = [f"TRaSH Guides: {spec.profile.name}"]
     if spec.profile.trash_url:
-        lines.append(f"# {spec.profile.trash_url}")
+        header_paras.append(spec.profile.trash_url)
+    lines.extend(comment_block(header_paras))
     lines.append("")
 
     # Instance block
@@ -318,6 +351,20 @@ def generate_yaml(spec: TemplateSpec) -> str:
             simple.sort(key=lambda g: g.name)
             expanded.sort(key=lambda g: g.name)
 
+            lines.extend(
+                comment_block(
+                    [
+                        "These groups are NOT synced by default. Uncomment to"
+                        " enable. Use `select:` to choose specific CFs within"
+                        " a group.",
+                        "To uncomment, remove `# ` (hash + space) so that"
+                        " indentation stays aligned. Most editors do this"
+                        " automatically with toggle-comment (Ctrl+/).",
+                        "https://recyclarr.dev/guide/cf-groups/",
+                    ],
+                    indent=6,
+                )
+            )
             lines.append("      add:")
 
             # Choice groups: uncommented, with select block
@@ -340,6 +387,16 @@ def generate_yaml(spec: TemplateSpec) -> str:
                     lines.append(f"        #     - {cf.trash_id}  # {cf.name}")
 
         if has_default:
+            lines.append("")
+            lines.extend(
+                comment_block(
+                    [
+                        "These groups ARE synced by default. Uncomment to disable.",
+                        "https://recyclarr.dev/guide/cf-groups/",
+                    ],
+                    indent=6,
+                )
+            )
             lines.append("      skip:")
             for group in spec.default_groups:
                 lines.append(f"        # - {group.trash_id}  # {group.name}")

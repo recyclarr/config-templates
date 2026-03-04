@@ -1,5 +1,10 @@
-# TRaSH Guides: [German] UHD Bluray + WEB (Alternative)
-# https://trash-guides.info/Radarr/radarr-setup-quality-profiles-german-en/#uhd-bluray-web
+# yaml-language-server: $schema=https://schemas.recyclarr.dev/v8/config-schema.json
+################################################################################
+## TRaSH Guides: [German] UHD Bluray + WEB (Alternative)
+##
+## https://trash-guides.info/Radarr/radarr-setup-quality-profiles-german-
+## en/#uhd-bluray-web
+################################################################################
 
 radarr:
   radarr-german-uhd-bluray-web-alternative:
@@ -15,6 +20,15 @@ radarr:
           enabled: true
 
     custom_format_groups:
+      ################################################################################
+      ## These groups are NOT synced by default. Uncomment to enable. Use `select:` to
+      ## choose specific CFs within a group.
+      ##
+      ## To uncomment, remove `# ` (hash + space) so that indentation stays aligned.
+      ## Most editors do this automatically with toggle-comment (Ctrl+/).
+      ##
+      ## https://recyclarr.dev/guide/cf-groups/
+      ################################################################################
       add:
         - trash_id: ff204bbcecdd487d1cefcefdbf0c278d  # [Required] Golden Rule UHD
           select:
@@ -78,6 +92,12 @@ radarr:
         #     - f6ff65b3f4b464a79dcc75950fe20382  # CRAV
         #     - fbca986396c5e695ef7b2def3c755d01  # OViD
         #     - ab56ccdc473a1f2897c76187ea365be2  # STRP
+
+      ################################################################################
+      ## These groups ARE synced by default. Uncomment to disable.
+      ##
+      ## https://recyclarr.dev/guide/cf-groups/
+      ################################################################################
       skip:
         # - 9d5acd8f1da78dfbae788182f7605200  # [Audio] Audio Formats
         # - ef20e67b95a381fb3bc6d1f06ea24f46  # [HDR Formats] HDR
