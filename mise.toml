@@ -1,0 +1,2 @@
+[env]
+OPENCODE_CONFIG_DIR = "{{config_root}}/../.opencode"
