@@ -6,10 +6,7 @@ ignore:
   - .github
 
 rules:
-  line-length:
-    max: 100
-    allow-non-breakable-words: true
-    allow-non-breakable-inline-mappings: true
+  line-length: disable
   document-start: disable
   comments-indentation: disable
   comments:
