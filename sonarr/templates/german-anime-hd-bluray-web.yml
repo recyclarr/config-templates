@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://schemas.recyclarr.dev/v8/config-schema.json
+################################################################################
+## TRaSH Guides: [German] Anime HD Bluray + WEB
+################################################################################
+
+sonarr:
+  sonarr-german-anime-hd-bluray-web:
+    base_url: Put your Sonarr URL here
+    api_key: Put your API key here
+
+    quality_definition:
+      type: series
+
+    quality_profiles:
+      - trash_id: 6fe5937e1dcc2269e23b49eb46dfe6d6  # [German] Anime HD Bluray + WEB
+        reset_unmatched_scores:
+          enabled: true

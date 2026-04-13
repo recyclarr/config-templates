@@ -1,13 +1,13 @@
 # yaml-language-server: $schema=https://schemas.recyclarr.dev/v8/config-schema.json
 ################################################################################
-## TRaSH Guides: [German] HD Remux + WEB
+## TRaSH Guides: [French MULTi.VO] HD Bluray + WEB (1080p)
 ##
-## https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles-german-en/#hd-
-## remux-web
+## https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles-french-en/#hd-
+## bluray-web-1080p
 ################################################################################
 
 sonarr:
-  sonarr-german-hd-remux-web:
+  french-multi-vo-bluray-web-1080p:
     base_url: Put your Sonarr URL here
     api_key: Put your API key here
 
@@ -15,7 +15,7 @@ sonarr:
       type: series
 
     quality_profiles:
-      - trash_id: 0dd5f085ed61a1e01f6d347779dfa1bc  # [German] HD Remux + WEB
+      - trash_id: 4c48f506c1116a3a57ae33f12346bd15  # [French MULTi.VO] HD Bluray + WEB (1080p)
         reset_unmatched_scores:
           enabled: true
 

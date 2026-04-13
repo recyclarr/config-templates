@@ -1,13 +1,13 @@
 # yaml-language-server: $schema=https://schemas.recyclarr.dev/v8/config-schema.json
 ################################################################################
-## TRaSH Guides: [German] UHD Bluray + WEB
+## TRaSH Guides: [French MULTi.VF] HD Bluray + WEB
 ##
-## https://trash-guides.info/Radarr/radarr-setup-quality-profiles-german-
-## en/#uhd-bluray-web
+## https://trash-guides.info/Radarr/radarr-setup-quality-profiles-french-en/#hd-
+## bluray-web-1080p
 ################################################################################
 
 radarr:
-  radarr-german-uhd-bluray-web:
+  french-multi-vf-hd-bluray-web:
     base_url: Put your Radarr URL here
     api_key: Put your API key here
 
@@ -15,7 +15,7 @@ radarr:
       type: movie
 
     quality_profiles:
-      - trash_id: 27cc3d153c0a799fd139ef1ff4c4cc42  # [German] UHD Bluray + WEB
+      - trash_id: 500ecc23572575511fd81893777d1e06  # [French MULTi.VF] HD Bluray + WEB
         reset_unmatched_scores:
           enabled: true
 
@@ -30,13 +30,10 @@ radarr:
       ## https://recyclarr.dev/guide/cf-groups/
       ################################################################################
       add:
-        - trash_id: ff204bbcecdd487d1cefcefdbf0c278d  # [Required] Golden Rule UHD
+        - trash_id: f8bf8eab4617f12dfdbd16303d8da245  # [Required] Golden Rule HD
           select:
-            # - dc98083864ea246d05a42df0d05f81cc  # x265 (HD)
-            - 839bea857ed2c0a8e084f3cbdbd65ecb  # x265 (no HDR/DV)
-        # - trash_id: 7fc2751eef7e6bdc70b74136e5e35c76  # [HDR Formats] DV (w/o HDR fallback)
-        # - trash_id: 1616617ab3a14397a2b2321bcbda44d1  # [HDR Formats] DV Boost
-        # - trash_id: b29413a7487478fe98228ce79e5689e4  # [HDR Formats] HDR10+ Boost
+            - dc98083864ea246d05a42df0d05f81cc  # x265 (HD)
+            # - 839bea857ed2c0a8e084f3cbdbd65ecb  # x265 (no HDR/DV)
         # - trash_id: f993ad37540147e4d00e66503545d81b  # [Streaming Services] Anime
         # - trash_id: b22449f789b16a4163b59f1b70cbc580  # [Streaming Services] Asian
         # - trash_id: 088a792e0561c927fb396664b0db5c8f  # [Streaming Services] Dutch
@@ -71,21 +68,17 @@ radarr:
         #     - 0f12c086e289cf966fa5948eac571f44  # Hybrid
         #     - eecf3a857724171f968a66cb5719e152  # IMAX
         #     - 9f6cbff8cfe4ebbc1bde14c7b7bec0de  # IMAX Enhanced
-        # - trash_id: 47f0d69750de9e16855915fa73bb7b08  # [Optional] SDR
+        # - trash_id: 12a919c8a5e2342db6e9c0b4e3c0756e  # [Release Groups] French
         #   select:
-        #     - 9c38ebb7384dada637be8899efa68e6f  # SDR
-        #     - 25c12f78430a3a23413652cbd1d48d77  # SDR (no WEBDL)
-        # - trash_id: bc85e56ee3bd0f01467866d5f1261543  # [Release Groups] German
-        #   select:
-        #     - 8608a2ed20c636b8a62de108e9147713  # German Remux Tier 01
-        #     - f9cf598d55ce532d63596b060a6db9ee  # German Remux Tier 02
-        #     - 54795711b78ea87e56127928c423689b  # German Bluray Tier 01
-        #     - 1bfc773c53283d47c68e535811da30b7  # German Bluray Tier 02
-        #     - aee01d40cd1bf4bcded81ee62f0f3659  # German Bluray Tier 03
-        #     - a2ab25194f463f057a5559c03c84a3df  # German Web Tier 01
-        #     - 08d120d5a003ec4954b5b255c0691d79  # German Web Tier 02
-        #     - 439f9d71becaed589058ec949e037ff3  # German Web Tier 03
-        #     - 2d136d4e33082fe573d06b1f237c40dd  # German Scene
+        #     - 5583260016e0b9f683f53af41fb42e4a  # FR Remux Tier 01
+        #     - 9019d81307e68cd4a7eb06a567e833b8  # FR Remux Tier 02
+        #     - 64f8f12bbf7472a6ccf838bfd6b5e3e8  # FR UHD Bluray Tier 01
+        #     - 0dcf0c8a386d82e3f2d424189af14065  # FR UHD Bluray Tier 02
+        #     - 5322da05b19d857acc1e75be3edf47b3  # FR HD Bluray Tier 01
+        #     - 57f34251344be2e283fc30e00e458be6  # FR HD Bluray Tier 02
+        #     - 9790a618cec1aeac8ce75601a17ea40d  # FR WEB Tier 01
+        #     - 3c83a765f84239716bd5fd2d7af188f9  # FR WEB Tier 02
+        #     - 0d94489c0d5828cd3bf9409d309fb32b  # FR Scene Groups
         # - trash_id: 9fc645b3cef52b149ec13ba3972245d1  # [Streaming Services] Miscellaneous
         #   select:
         #     - 3bf143ecd06f66ed88da4c704350af1d  # AUBC
@@ -100,6 +93,4 @@ radarr:
       ## https://recyclarr.dev/guide/cf-groups/
       ################################################################################
       skip:
-        # - 9d5acd8f1da78dfbae788182f7605200  # [Audio] Audio Formats
-        # - ef20e67b95a381fb3bc6d1f06ea24f46  # [HDR Formats] HDR
         # - d9cc9a504e5ede6294c8b973aad4f028  # [Streaming Services] General

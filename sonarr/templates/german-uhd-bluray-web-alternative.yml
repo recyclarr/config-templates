@@ -54,6 +54,7 @@ sonarr:
         #     - 7ba05c6e0e14e793538174c679126996  # MULTi
         #     - 82d40da2bc6923f41e14394075dd4b03  # No-RlsGroup
         #     - e1a997ddb54e3ecbfe06341ad323c458  # Obfuscated
+        #     - 09654d13ce1f0453496546dfd875b2a5  # P2P Internal
         #     - 06d66ab109d4d2eddb2794d21526d140  # Retags
         #     - 1b3994c551cbb92a2c781af061f4ab44  # Scene
         #     - 7470a681e6205243983c4410ee4c920f  # VC-1

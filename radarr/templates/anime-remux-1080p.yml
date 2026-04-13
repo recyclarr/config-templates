@@ -39,9 +39,10 @@ radarr:
         #     - cc444569854e9de0b084ab2b8b1532b2  # Black and White Editions
         #     - f700d29429c023a5734505e77daeaea7  # DV (Disk)
         #     - 73613461ac2cea99d52c4cd6e177ab82  # HFR
-        #     - 4b900e171accbfb172729b63323ea8ca  # Multi
+        #     - 4b900e171accbfb172729b63323ea8ca  # MULTi
         #     - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5  # No-RlsGroup
         #     - 7357cf5161efbf8c4d5d0c30b4815ee2  # Obfuscated
+        #     - 80f51de4636a294e31552e90d2e1decb  # P2P Internal
         #     - 5c44f52a8714fdd79bb4d98e2673be1f  # Retags
         #     - f537cf427b64c38c8e36298f657e4828  # Scene
         #     - 11cd1db7165d6a7ad9a83bc97b8b1060  # VC-1

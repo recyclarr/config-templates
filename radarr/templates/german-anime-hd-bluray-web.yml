@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://schemas.recyclarr.dev/v8/config-schema.json
+################################################################################
+## TRaSH Guides: [German] Anime HD Bluray + WEB
+################################################################################
+
+radarr:
+  radarr-german-anime-hd-bluray-web:
+    base_url: Put your Radarr URL here
+    api_key: Put your API key here
+
+    quality_definition:
+      type: movie
+
+    quality_profiles:
+      - trash_id: bf3cc2e99ad9a804a9b0d0e538e1fbba  # [German] Anime HD Bluray + WEB
+        reset_unmatched_scores:
+          enabled: true
+
+    custom_format_groups:
+      ################################################################################
+      ## These groups are NOT synced by default. Uncomment to enable. Use `select:` to
+      ## choose specific CFs within a group.
+      ##
+      ## To uncomment, remove `# ` (hash + space) so that indentation stays aligned.
+      ## Most editors do this automatically with toggle-comment (Ctrl+/).
+      ##
+      ## https://recyclarr.dev/guide/cf-groups/
+      ################################################################################
+      add:
+        # - trash_id: bc85e56ee3bd0f01467866d5f1261543  # [Release Groups] German
+        #   select:
+        #     - 8608a2ed20c636b8a62de108e9147713  # German Remux Tier 01
+        #     - f9cf598d55ce532d63596b060a6db9ee  # German Remux Tier 02
+        #     - 54795711b78ea87e56127928c423689b  # German Bluray Tier 01
+        #     - 1bfc773c53283d47c68e535811da30b7  # German Bluray Tier 02
+        #     - aee01d40cd1bf4bcded81ee62f0f3659  # German Bluray Tier 03
+        #     - a2ab25194f463f057a5559c03c84a3df  # German Web Tier 01
+        #     - 08d120d5a003ec4954b5b255c0691d79  # German Web Tier 02
+        #     - 439f9d71becaed589058ec949e037ff3  # German Web Tier 03
+        #     - 2d136d4e33082fe573d06b1f237c40dd  # German Scene

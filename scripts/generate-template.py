@@ -16,7 +16,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import sys
 import textwrap
 from collections import Counter
@@ -180,27 +179,8 @@ def get_groups_for_profile(
     return result
 
 
-def derive_base_id(profile: QualityProfile, group_name: str | None) -> str:
-    name = profile.name
-
-    # Remove bracketed prefixes like [French MULTi.VO], [SQP]
-    name = re.sub(r"\[.*?\]\s*", "", name)
-    # Replace spaces, underscores, dots with hyphens
-    name = re.sub(r"[\s_.]+", "-", name)
-    # Convert parenthesized content to suffix: "SQP-1 (2160p)" -> "sqp-1-2160p"
-    name = re.sub(r"\(([^)]+)\)", r"-\1", name)
-    # Remove remaining special characters
-    name = re.sub(r"[^a-zA-Z0-9-]", "", name)
-    # Collapse multiple hyphens, strip edges, lowercase
-    name = re.sub(r"-+", "-", name).strip("-").lower()
-
-    # Add group prefix for non-standard groups
-    if group_name and group_name.lower() not in ["standard"]:
-        prefix = group_name.lower()
-        if not name.startswith(prefix):
-            name = f"{prefix}-{name}"
-
-    return name
+def derive_base_id(profile: QualityProfile) -> str:
+    return profile.file_stem
 
 
 def derive_output_path(service: str, base_id: str, group_name: str | None) -> str:
@@ -240,7 +220,7 @@ def build_template_specs(guides_path: Path) -> list[TemplateSpec]:
 
         for profile in sorted(profiles.values(), key=lambda p: p.file_stem):
             group_name = get_profile_group_name(profile_groups, profile.trash_id)
-            base_id = derive_base_id(profile, group_name)
+            base_id = derive_base_id(profile)
             optional = get_groups_for_profile(
                 cf_groups, profile.trash_id, default=False
             )

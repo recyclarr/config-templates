@@ -1,13 +1,13 @@
 # yaml-language-server: $schema=https://schemas.recyclarr.dev/v8/config-schema.json
 ################################################################################
-## TRaSH Guides: [German] HD Remux + WEB
+## TRaSH Guides: [French MULTi.VO] UHD Bluray + WEB (2160p)
 ##
-## https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles-german-en/#hd-
-## remux-web
+## https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles-french-
+## en/#uhd-bluray-web-2160p
 ################################################################################
 
 sonarr:
-  sonarr-german-hd-remux-web:
+  french-multi-vo-bluray-web-2160p:
     base_url: Put your Sonarr URL here
     api_key: Put your API key here
 
@@ -15,7 +15,7 @@ sonarr:
       type: series
 
     quality_profiles:
-      - trash_id: 0dd5f085ed61a1e01f6d347779dfa1bc  # [German] HD Remux + WEB
+      - trash_id: 6fa7364373e8f06206871d9c20a4fb3e  # [French MULTi.VO] UHD Bluray + WEB (2160p)
         reset_unmatched_scores:
           enabled: true
 
@@ -30,10 +30,13 @@ sonarr:
       ## https://recyclarr.dev/guide/cf-groups/
       ################################################################################
       add:
-        - trash_id: 158188097a58d7687dee647e04af0da3  # [Required] Golden Rule HD
+        - trash_id: e3f37512790f00d0e89e54fe5e790d1c  # [Required] Golden Rule UHD
           select:
-            - 47435ece6b99a0b477caf360e79ba0bb  # x265 (HD)
-            # - 9b64dff695c2115facf1b6ea59c9bd07  # x265 (no HDR/DV)
+            # - 47435ece6b99a0b477caf360e79ba0bb  # x265 (HD)
+            - 9b64dff695c2115facf1b6ea59c9bd07  # x265 (no HDR/DV)
+        # - trash_id: d776a1ea912a117d66d83b880ff2055d  # [HDR Formats] DV (w/o HDR fallback)
+        # - trash_id: e0b2774083df4265f25c9e5bc6c80940  # [HDR Formats] DV Boost
+        # - trash_id: 7d366c213e5c23a052b157356fac1921  # [HDR Formats] HDR10+ Boost
         # - trash_id: d920fd959d220306888f40b6f38e1578  # [Optional] Season Packs
         # - trash_id: 35fb4585dcd9e2a5ac732e4309f5a45a  # [Streaming Services] Asian
         # - trash_id: f60f4401ce880aad62e9d21c8bb6b91a  # [Streaming Services] Dutch
@@ -55,6 +58,10 @@ sonarr:
         #     - cddfb4e32db826151d97352b8e37c648  # x264
         #     - c9eafd50846d299b862ca9bb6ea91950  # x265
         #     - 041d90b435ebd773271cea047a457a6a  # x266
+        # - trash_id: e1053c0ef622df3749fa43c22865663a  # [Optional] SDR
+        #   select:
+        #     - 2016d1676f5ee13a5b7257ff86ac9a93  # SDR
+        #     - 83304f261cf516bb208c18c54c0adf97  # SDR (no WEBDL)
         # - trash_id: 7832db22b71ab669458c17a2850d6913  # [Streaming Services] Miscellaneous
         #   select:
         #     - e6e299075e22ac8f541f722254c8350a  # AUBC
@@ -72,4 +79,5 @@ sonarr:
       ## https://recyclarr.dev/guide/cf-groups/
       ################################################################################
       skip:
+        # - 7e1724c5da59e7474803ad25be98f6a3  # [HDR Formats] HDR
         # - abe720fab2d27682adc2a735136cec02  # [Streaming Services] General
