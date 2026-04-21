@@ -1,13 +1,13 @@
 # yaml-language-server: $schema=https://schemas.recyclarr.dev/v8/config-schema.json
 ################################################################################
-## TRaSH Guides: [German] UHD Bluray + WEB
+## TRaSH Guides: [German] Remux + WEB 2160p
 ##
 ## https://trash-guides.info/Radarr/radarr-setup-quality-profiles-german-
-## en/#uhd-bluray-web
+## en/#uhd-remux-web
 ################################################################################
 
 radarr:
-  radarr-german-uhd-bluray-web:
+  radarr-german-uhd-remux-web:
     base_url: Put your Radarr URL here
     api_key: Put your API key here
 
@@ -15,7 +15,7 @@ radarr:
       type: movie
 
     quality_profiles:
-      - trash_id: 27cc3d153c0a799fd139ef1ff4c4cc42  # [German] UHD Bluray + WEB
+      - trash_id: 79faa9943cef2f510b997b1f2a9f3ea6  # [German] Remux + WEB 2160p
         reset_unmatched_scores:
           enabled: true
 
