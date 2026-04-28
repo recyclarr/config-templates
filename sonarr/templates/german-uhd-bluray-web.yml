@@ -30,14 +30,28 @@ sonarr:
       ## https://recyclarr.dev/guide/cf-groups/
       ################################################################################
       add:
-        - trash_id: 158188097a58d7687dee647e04af0da3  # [Required] Golden Rule HD
+        - trash_id: 158188097a58d7687dee647e04af0da3  # [Optional] Golden Rule HD
           select:
             - 47435ece6b99a0b477caf360e79ba0bb  # x265 (HD)
             # - 9b64dff695c2115facf1b6ea59c9bd07  # x265 (no HDR/DV)
-        - trash_id: e3f37512790f00d0e89e54fe5e790d1c  # [Required] Golden Rule UHD
+        - trash_id: e3f37512790f00d0e89e54fe5e790d1c  # [Optional] Golden Rule UHD
           select:
             # - 47435ece6b99a0b477caf360e79ba0bb  # x265 (HD)
             - 9b64dff695c2115facf1b6ea59c9bd07  # x265 (no HDR/DV)
+        - trash_id: 59c3af66780d08332fdc64e68297098f  # [Unwanted] Unwanted Formats
+          select:
+            - 15a05bc7c1a36e2b57fd628f8977e2fc  # AV1
+            - 32b367365729d530ca1c124a0b180c64  # Bad Dual Groups
+            - 85c61753df5da1fb2aab6f2a47426b09  # BR-DISK
+            - 6f808933a71bd9666531610cb8c059cc  # BR-DISK (BTN)
+            - fbcb31d8dabd2a319072b84fc0b7249c  # Extras
+            - 9c11cd3f07101cdba90a2d81cf0e56b4  # LQ
+            - e2315f990da2e2cbfc9fa5b7a6fcfe48  # LQ (Release Title)
+            # - 82d40da2bc6923f41e14394075dd4b03  # No-RlsGroup
+            # - e1a997ddb54e3ecbfe06341ad323c458  # Obfuscated
+            # - 06d66ab109d4d2eddb2794d21526d140  # Retags
+            # - 1b3994c551cbb92a2c781af061f4ab44  # Scene
+            - 23297a736ca77c0fc8e70f8edd7ee56c  # Upscaled
         # - trash_id: d776a1ea912a117d66d83b880ff2055d  # [HDR Formats] DV (w/o HDR fallback)
         # - trash_id: e0b2774083df4265f25c9e5bc6c80940  # [HDR Formats] DV Boost
         # - trash_id: 7d366c213e5c23a052b157356fac1921  # [HDR Formats] HDR10+ Boost
@@ -46,17 +60,23 @@ sonarr:
         # - trash_id: f60f4401ce880aad62e9d21c8bb6b91a  # [Streaming Services] Dutch
         # - trash_id: 848fd356c200568fc5a6248150e7e7ea  # [Streaming Services] French
         # - trash_id: ddab3095a5d2f436f369263840af34f9  # [Streaming Services] UK
+        # - trash_id: bad5bc85573a0134e1e1987c46f67e98  # [Optional] Accessibility
+        #   select:
+        #     - 44ccbcbc74506f208973e1463b11705f  # WiTH AD
+        #     - c196536ea8122397c5854040d01f2aa7  # WiTH ASL
+        #     - b40dc2e630723745aab9f1b94f4aab74  # WiTH BASL
+        #     - 0aef382c4ed4c5eb5d40109dfd351b72  # WiTH BSL
         # - trash_id: f4a0410a1df109a66d6e47dcadcce014  # [Optional] Miscellaneous
         #   select:
-        #     - 32b367365729d530ca1c124a0b180c64  # Bad Dual Groups
         #     - ef4963043b0987f8485bc9106f16db38  # DV (Disk)
+        #     - d7c747094a7c65f4c2de083c24899e8b  # FreeLeech
         #     - 1bd69272e23c5e6c5b1d6c8a36fce95e  # HFR
+        #     - 5ab46ff851b76c337e13e81a4353875f  # INTERNAL
+        #     - 4aee45b0868229c4fbd8bad3e315f1d0  # MPEG2
         #     - 7ba05c6e0e14e793538174c679126996  # MULTi
-        #     - 82d40da2bc6923f41e14394075dd4b03  # No-RlsGroup
-        #     - e1a997ddb54e3ecbfe06341ad323c458  # Obfuscated
+        #     - 4a20cfb76b5f92a8ca22b894b32e71be  # Multi-Episode
         #     - 09654d13ce1f0453496546dfd875b2a5  # P2P Internal
-        #     - 06d66ab109d4d2eddb2794d21526d140  # Retags
-        #     - 1b3994c551cbb92a2c781af061f4ab44  # Scene
+        #     - e0c1a67f23908a55b6ae9834e8ed6727  # Single Episode
         #     - 7470a681e6205243983c4410ee4c920f  # VC-1
         #     - 90501962793d580d011511155c97e4e5  # VP9
         #     - cddfb4e32db826151d97352b8e37c648  # x264
@@ -66,6 +86,17 @@ sonarr:
         #   select:
         #     - 2016d1676f5ee13a5b7257ff86ac9a93  # SDR
         #     - 83304f261cf516bb208c18c54c0adf97  # SDR (no WEBDL)
+        # - trash_id: f54985e5e96747cef58731f1cf4c9181  # [Streaming Services] Anime
+        #   select:
+        #     - a370d974bc7b80374de1d9ba7519760b  # ABEMA
+        #     - d54cd2bf1326287275b56bccedb72ee2  # ADN
+        #     - 7dd31f3dee6d2ef8eeaa156e23c3857e  # B-Global
+        #     - 4c67ff059210182b59cdd41697b8cb08  # Bilibili
+        #     - 3e0b26604165f463f3e8e192261e7284  # CR
+        #     - 1284d18e693de8efe0fe7d6b3e0b9170  # FUNi
+        #     - 570b03b3145a25011bf073274a407259  # HIDIVE
+        #     - 44a8ee6403071dd7b8a3a8dd3fe8cb20  # VRV
+        #     - e5e6405d439dcd1af90962538acd4fe0  # WKN
         # - trash_id: 7832db22b71ab669458c17a2850d6913  # [Streaming Services] Miscellaneous
         #   select:
         #     - e6e299075e22ac8f541f722254c8350a  # AUBC
