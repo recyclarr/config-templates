@@ -24,6 +24,7 @@ from pathlib import Path
 
 COMMENT_BLOCK_WIDTH = 80
 SERVICES = ("radarr", "sonarr")
+EXCLUDED_PROFILE_GROUPS = {"TEST"}
 
 
 @dataclass
@@ -220,6 +221,8 @@ def build_template_specs(guides_path: Path) -> list[TemplateSpec]:
 
         for profile in sorted(profiles.values(), key=lambda p: p.file_stem):
             group_name = get_profile_group_name(profile_groups, profile.trash_id)
+            if group_name in EXCLUDED_PROFILE_GROUPS:
+                continue
             base_id = derive_base_id(profile)
             optional = get_groups_for_profile(
                 cf_groups, profile.trash_id, default=False
