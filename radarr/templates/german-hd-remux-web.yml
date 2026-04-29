@@ -30,26 +30,46 @@ radarr:
       ## https://recyclarr.dev/guide/cf-groups/
       ################################################################################
       add:
-        - trash_id: f8bf8eab4617f12dfdbd16303d8da245  # [Required] Golden Rule HD
+        - trash_id: f8bf8eab4617f12dfdbd16303d8da245  # [Optional] Golden Rule HD
           select:
             - dc98083864ea246d05a42df0d05f81cc  # x265 (HD)
             # - 839bea857ed2c0a8e084f3cbdbd65ecb  # x265 (no HDR/DV)
+        - trash_id: a3ac6af01d78e4f21fcb75f601ac96df  # [Unwanted] Unwanted Formats
+          select:
+            - b8cd450cbfa689c0259a01d9e29ba3d6  # 3D
+            - cae4ca30163749b891686f95532519bd  # AV1
+            - b6832f586342ef70d9c128d40c07b872  # Bad Dual Groups
+            - cc444569854e9de0b084ab2b8b1532b2  # Black and White Editions
+            - ed38b889b31be83fda192888e2286d83  # BR-DISK
+            - 0a3f082873eb454bde444150b70253cc  # Extras
+            - e6886871085226c3da1830830146846c  # Generated Dynamic HDR
+            - 90a6f9a284dff5103f6346090e6280c8  # LQ
+            - e204b80c87be9497a8a6eaff48f72905  # LQ (Release Title)
+            # - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5  # No-RlsGroup
+            # - 7357cf5161efbf8c4d5d0c30b4815ee2  # Obfuscated
+            # - 5c44f52a8714fdd79bb4d98e2673be1f  # Retags
+            # - f537cf427b64c38c8e36298f657e4828  # Scene
+            - 712d74cd88bceb883ee32f773656b1f5  # Sing-Along Versions
+            - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
         # - trash_id: f993ad37540147e4d00e66503545d81b  # [Streaming Services] Anime
         # - trash_id: b22449f789b16a4163b59f1b70cbc580  # [Streaming Services] Asian
         # - trash_id: 088a792e0561c927fb396664b0db5c8f  # [Streaming Services] Dutch
         # - trash_id: f737e18b5824d6ebb2d57b957ae2fd6c  # [Streaming Services] UK
+        # - trash_id: bc3c13e52f2971319bc1748ffa3d1078  # [Optional] Accessibility
+        #   select:
+        #     - 127bdbadcf3e4463a8c707759fbaad75  # WiTH AD
+        #     - 09c60ba54fadb511c6986a7edec4da4b  # WiTH ASL
+        #     - 41e4baea7b10ddefc6609d52f742dacd  # WiTH BASL
+        #     - e205c5ba6be76b472903f4aec97fdb4b  # WiTH BSL
         # - trash_id: 9337080378236ce4c0b183e35790d2a7  # [Optional] Miscellaneous
         #   select:
-        #     - b6832f586342ef70d9c128d40c07b872  # Bad Dual Groups
-        #     - cc444569854e9de0b084ab2b8b1532b2  # Black and White Editions
         #     - f700d29429c023a5734505e77daeaea7  # DV (Disk)
+        #     - 0d91270a7255a1e388fa85e959f359d8  # FreeLeech
         #     - 73613461ac2cea99d52c4cd6e177ab82  # HFR
+        #     - 182fa1c42a2468f8488e6dcf75a81b81  # INTERNAL
+        #     - ff86c4326018682f817830ced463332b  # MPEG2
         #     - 4b900e171accbfb172729b63323ea8ca  # MULTi
-        #     - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5  # No-RlsGroup
-        #     - 7357cf5161efbf8c4d5d0c30b4815ee2  # Obfuscated
         #     - 80f51de4636a294e31552e90d2e1decb  # P2P Internal
-        #     - 5c44f52a8714fdd79bb4d98e2673be1f  # Retags
-        #     - f537cf427b64c38c8e36298f657e4828  # Scene
         #     - 11cd1db7165d6a7ad9a83bc97b8b1060  # VC-1
         #     - ae4cfaa9283a4f2150ac3da08e388723  # VP9
         #     - 2899d84dc9372de3408e6d8cc18e9666  # x264
@@ -57,17 +77,17 @@ radarr:
         #     - 390455c22a9cac81a738f6cbad705c3c  # x266
         # - trash_id: f4f1474b963b24cf983455743aa9906c  # [Optional] Movie Versions
         #   select:
-        #     - 570bc9ebecd92723d2d21500f4be314c  # Remaster
         #     - eca37840c13c6ef2dd0262b141a5482f  # 4K Remaster
         #     - e0c07d59beb37348e975a930d5e50319  # Criterion Collection
-        #     - 9d27d9d2181838f76dee150882bdc58c  # Masters of Cinema
-        #     - 09d9dd29a0fc958f9796e65c2a8864b4  # Open Matte
-        #     - db9b4c4b53d312a3ca5f1378f6440fc9  # Vinegar Syndrome
-        #     - 957d0f44b592285f26449575e8b1167e  # Special Edition
-        #     - e9001909a4c88013a359d0b9920d7bea  # Theatrical Cut
         #     - 0f12c086e289cf966fa5948eac571f44  # Hybrid
         #     - eecf3a857724171f968a66cb5719e152  # IMAX
         #     - 9f6cbff8cfe4ebbc1bde14c7b7bec0de  # IMAX Enhanced
+        #     - 9d27d9d2181838f76dee150882bdc58c  # Masters of Cinema
+        #     - 09d9dd29a0fc958f9796e65c2a8864b4  # Open Matte
+        #     - 570bc9ebecd92723d2d21500f4be314c  # Remaster
+        #     - 957d0f44b592285f26449575e8b1167e  # Special Edition
+        #     - e9001909a4c88013a359d0b9920d7bea  # Theatrical Cut
+        #     - db9b4c4b53d312a3ca5f1378f6440fc9  # Vinegar Syndrome
         # - trash_id: bc85e56ee3bd0f01467866d5f1261543  # [Release Groups] German
         #   select:
         #     - 8608a2ed20c636b8a62de108e9147713  # German Remux Tier 01
