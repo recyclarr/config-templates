@@ -1,16 +1,4 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "instructions": ["../AGENTS.md"],
-  "mcp": {
-    "linear": {
-      "type": "remote",
-      "url": "https://mcp.linear.app/mcp"
-    }
-  },
-  "permission": {
-    // Fine tune linear tools in context
-    "*linear_*": "deny",
-    "*linear_*_comment*": "allow",
-    "*linear_*_issue*": "allow",
-  },
 }
