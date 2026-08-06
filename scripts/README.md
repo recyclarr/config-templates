@@ -21,8 +21,8 @@ custom_format_groups:
     # - trash_id: abc123  # [Optional] Some Group
 ```
 
-If the group contains CFs that are neither `required` nor `default` (i.e. the user must choose which
-to include), a `select:` block is added showing those CFs:
+If the group has CFs the user can toggle, they are listed beneath it. See "CF rendering within a
+group" below.
 
 ```yaml
 custom_format_groups:
@@ -45,47 +45,64 @@ custom_format_groups:
     # - abc123  # [Required] Some Group
 ```
 
-### Default groups with user choices
+### Default groups with adjustable CFs
 
-Groups that are enabled by default but contain mutually exclusive CFs where the user is expected to
-choose one. Detected when a `default: true` group has at least one CF with `default: true` at the CF
-level.
-
-These are rendered under `add:`, **uncommented**, with an explicit `select:` block. CFs marked
-`default: true` are uncommented (active); others are commented out (available as alternatives).
+Groups where `default` is `true` at the group level and at least one CF within the group defines
+`default: true`. Recyclarr syncs these whether or not they appear in the YAML, so they are rendered
+under `add:`, uncommented, to make their CFs adjustable.
 
 ```yaml
 custom_format_groups:
   add:
-    - trash_id: abc123  # [Required] Golden Rule HD
+    - trash_id: abc123  # [Optional] Golden Rule UHD
+      exclude:
+        # - def456  # x265 (no HDR/DV)
       select:
-        - def456  # x265 (HD)
-        # - ghi789  # x265 (no HDR/DV)
+        # - ghi789  # x265 (HD)
 ```
 
-This rendering differs from how Recyclarr would handle the group implicitly (it would just apply the
-`default: true` CF without user intervention). The template deliberately surfaces the choice so
-users can see and swap between alternatives. The template is a presentation layer; it does not need
-to mirror Recyclarr's runtime behavior.
+## CF rendering within a group
 
-Currently only the four Golden Rule groups (HD and UHD, for both Radarr and Sonarr) match this
-pattern.
+One rule covers every group under `add:`, matching Recyclarr 8.1.0+ semantics where the effective
+set is `required + (default - exclude) + select`:
 
-## Design Decisions
+| CF flag | Rendered as |
+| --- | --- |
+| `required` | not listed; always included and cannot be excluded |
+| `default` | commented under `exclude:`; uncomment to turn OFF |
+| neither | commented under `select:`; uncomment to turn ON |
 
-### Template rendering is a presentation concern, not a runtime one (2026-02-28)
+A node with no members is omitted. In an uncommented group the `exclude:` and `select:` keys
+themselves stay uncommented, so toggling a CF is one uncomment rather than two. An empty node is
+valid: Recyclarr's schema types both as `["null", "array"]` and maps null to an empty list.
 
-Recyclarr automatically applies default CF groups and their `default: true` CFs without any YAML
-configuration. The template generation script does not need to mirror that behavior. Its job is to
-present all meaningful user choices explicitly, even when the defaults would produce the correct
-result without intervention.
+Inside a commented (opt-in) group the whole block is commented, so `exclude:` members carry an extra
+comment level. Otherwise enabling the group would also strip its defaults.
 
-This distinction matters for groups like Golden Rule, where two mutually exclusive CFs exist and the
-user is expected to pick one. Recyclarr silently applies the `default: true` CF; a user editing YAML
-by hand would never know the alternative exists. The script renders these as explicit `add:` entries
-with `select:` blocks so the choice is visible. The guide data's `default: true` at the CF level is
-the detection signal for this; no other groups currently use it.
+## Conflicting custom formats
 
-This was a deliberate decision over the simpler approach of putting all `default: true` groups under
-`skip:` uniformly. The trade-off is that the script now has three rendering paths instead of two,
-but the added complexity is justified by the user-facing clarity it provides.
+The guides publish `conflicts.json`, naming sets of CFs that must not be enabled together. Recyclarr
+does not read this file, so the templates handle it themselves. It is loaded via `metadata.json`
+`json_paths.<service>.conflicts` so new sets are picked up without a code change, and it affects
+rendering in two ways.
+
+Groups holding two or more members of one set gain a note:
+
+```yaml
+- trash_id: abc123  # [Optional] Golden Rule UHD
+  # Mutually exclusive: enable only one of the following.
+```
+
+And in a commented group whose conflicting members all sit under `select:`, one member stays at the
+block's own comment level while the rest are nested one level deeper, so uncommenting the block
+enables exactly one:
+
+```yaml
+# - trash_id: abc123  # [HDR Formats] SDR
+#   # Mutually exclusive: enable only one of the following.
+#   select:
+#     - def456  # SDR
+#     # - ghi789  # SDR (no WEBDL)
+```
+
+`ci/check_conflicting_cfs.py` asserts both properties over the committed templates.

@@ -35,6 +35,7 @@ sonarr:
       ################################################################################
       add:
         - trash_id: e3f37512790f00d0e89e54fe5e790d1c  # [Optional] Golden Rule UHD
+          # Mutually exclusive: enable only one of the following.
           exclude:
             # - 9b64dff695c2115facf1b6ea59c9bd07  # x265 (no HDR/DV)
           select:
@@ -83,9 +84,10 @@ sonarr:
         # - trash_id: 848fd356c200568fc5a6248150e7e7ea  # [Streaming Services] French
         # - trash_id: ddab3095a5d2f436f369263840af34f9  # [Streaming Services] UK
         # - trash_id: e1053c0ef622df3749fa43c22865663a  # [HDR Formats] SDR
+        #   # Mutually exclusive: enable only one of the following.
         #   select:
         #     - 2016d1676f5ee13a5b7257ff86ac9a93  # SDR
-        #     - 83304f261cf516bb208c18c54c0adf97  # SDR (no WEBDL)
+        #     # - 83304f261cf516bb208c18c54c0adf97  # SDR (no WEBDL)
         # - trash_id: bad5bc85573a0134e1e1987c46f67e98  # [Optional] Accessibility
         #   select:
         #     - 44ccbcbc74506f208973e1463b11705f  # WiTH AD
