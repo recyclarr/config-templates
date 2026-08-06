@@ -52,6 +52,15 @@ class CFGroup:
         return [cf for cf in self.custom_formats if cf.is_optional]
 
     @property
+    def default_cfs(self) -> list[CustomFormat]:
+        return [cf for cf in self.custom_formats if cf.default]
+
+    @property
+    def has_body(self) -> bool:
+        """True when the group has any CF the user can toggle."""
+        return bool(self.default_cfs or self.optional_cfs)
+
+    @property
     def has_cf_defaults(self) -> bool:
         return any(cf.default for cf in self.custom_formats)
 
@@ -79,6 +88,7 @@ class TemplateSpec:
     optional_groups: list[CFGroup]
     default_groups: list[CFGroup]
     choice_groups: list[CFGroup]
+    conflict_sets: list[frozenset[str]] = field(default_factory=list)
 
 
 def load_guides(guides_path: Path) -> dict:
@@ -285,6 +295,80 @@ def comment_block(paragraphs: list[str], indent: int = 0) -> list[str]:
     return lines
 
 
+def group_has_conflict(group: CFGroup, conflict_sets: list[frozenset[str]]) -> bool:
+    """True when the group holds two or more members of one conflict set."""
+    ids = {cf.trash_id for cf in group.custom_formats}
+    return any(len(ids & cs) >= 2 for cs in conflict_sets)
+
+
+def masked_select_ids(group: CFGroup, conflict_sets: list[frozenset[str]]) -> set[str]:
+    """Optional CFs needing an extra comment level inside a commented block.
+
+    For each conflict set with two or more optional members in this group, the
+    first in guide order stays at the block's level and the rest are masked, so
+    uncommenting the block activates exactly one.
+    """
+    order = [cf.trash_id for cf in group.optional_cfs]
+    masked: set[str] = set()
+    for cs in conflict_sets:
+        present = [t for t in order if t in cs]
+        if len(present) >= 2:
+            masked.update(present[1:])
+    return masked
+
+
+def render_group_entry(
+    group: CFGroup,
+    conflict_sets: list[frozenset[str]],
+    *,
+    commented: bool,
+) -> list[str]:
+    """Render one entry under `add:`.
+
+    Uncommented (a group Recyclarr syncs by default):
+
+        - trash_id: <id>  # <name>
+          exclude:
+            # - <id>  # <name>      each `default` CF; uncomment to turn OFF
+          select:
+            # - <id>  # <name>      each optional CF; uncomment to turn ON
+
+    Commented (an opt-in group) is the same text with `# ` after the indent.
+    Inside a commented block, `exclude:` members carry an extra `# ` so that
+    enabling the group does not also strip its defaults, while `select:`
+    members sit at the block's own level so enabling the group includes them,
+    which is how opt-in groups already behave.
+
+    Required CFs are never listed: they are always included and cannot be
+    excluded.
+    """
+    indent = " " * 8
+    block = "# " if commented else ""
+    lines = [f"{indent}{block}- trash_id: {group.trash_id}  # {group.name}"]
+
+    masked = masked_select_ids(group, conflict_sets) if commented else set()
+    if group_has_conflict(group, conflict_sets):
+        lines.append(
+            f"{indent}{block}  "
+            "# Mutually exclusive: enable only one of the following."
+        )
+
+    for node, cfs in (("exclude", group.default_cfs), ("select", group.optional_cfs)):
+        if not cfs:
+            continue
+        lines.append(f"{indent}{block}  {node}:")
+        for cf in cfs:
+            if not commented:
+                mark = "# "
+            elif node == "exclude":
+                mark = "# "
+            else:
+                mark = "# " if cf.trash_id in masked else ""
+            lines.append(f"{indent}{block}    {mark}- {cf.trash_id}  # {cf.name}")
+
+    return lines
+
+
 def generate_yaml(spec: TemplateSpec) -> str:
     lines = []
 
@@ -329,17 +413,21 @@ def generate_yaml(spec: TemplateSpec) -> str:
         lines.append("    custom_format_groups:")
 
         if has_optional or has_choice:
-            simple = [g for g in spec.optional_groups if not g.optional_cfs]
-            expanded = [g for g in spec.optional_groups if g.optional_cfs]
+            simple = [g for g in spec.optional_groups if not g.has_body]
+            expanded = [g for g in spec.optional_groups if g.has_body]
             simple.sort(key=lambda g: g.name)
             expanded.sort(key=lambda g: g.name)
 
             lines.extend(
                 comment_block(
                     [
-                        "These groups are NOT synced by default. Uncomment to"
-                        " enable. Use `select:` to choose specific CFs within"
-                        " a group.",
+                        "Uncommented groups are synced by default. They are listed"
+                        " here so you can adjust which CFs they include. Commented"
+                        " groups are NOT synced; uncomment one to enable it.",
+                        "Within a group, uncomment a line under `select:` to turn"
+                        " an optional CF on, or under `exclude:` to turn a default"
+                        " CF off. Required CFs are always included and are not"
+                        " listed.",
                         "To uncomment, remove `# ` (hash + space) so that"
                         " indentation stays aligned. Most editors do this"
                         " automatically with toggle-comment (Ctrl+/).",
@@ -350,24 +438,18 @@ def generate_yaml(spec: TemplateSpec) -> str:
             )
             lines.append("      add:")
 
-            # Choice groups: uncommented, with select block
             for group in spec.choice_groups:
-                lines.append(f"        - trash_id: {group.trash_id}  # {group.name}")
-                lines.append("          select:")
-                for cf in group.custom_formats:
-                    if cf.default:
-                        lines.append(f"            - {cf.trash_id}  # {cf.name}")
-                    else:
-                        lines.append(f"            # - {cf.trash_id}  # {cf.name}")
-
-            # Optional groups: commented out
+                lines.extend(
+                    render_group_entry(group, spec.conflict_sets, commented=False)
+                )
             for group in simple:
-                lines.append(f"        # - trash_id: {group.trash_id}  # {group.name}")
+                lines.extend(
+                    render_group_entry(group, spec.conflict_sets, commented=True)
+                )
             for group in expanded:
-                lines.append(f"        # - trash_id: {group.trash_id}  # {group.name}")
-                lines.append("        #   select:")
-                for cf in group.optional_cfs:
-                    lines.append(f"        #     - {cf.trash_id}  # {cf.name}")
+                lines.extend(
+                    render_group_entry(group, spec.conflict_sets, commented=True)
+                )
 
         if has_default:
             lines.append("")

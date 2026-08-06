@@ -21,8 +21,13 @@ radarr:
 
     custom_format_groups:
       ################################################################################
-      ## These groups are NOT synced by default. Uncomment to enable. Use `select:` to
-      ## choose specific CFs within a group.
+      ## Uncommented groups are synced by default. They are listed here so you can
+      ## adjust which CFs they include. Commented groups are NOT synced; uncomment one
+      ## to enable it.
+      ##
+      ## Within a group, uncomment a line under `select:` to turn an optional CF on,
+      ## or under `exclude:` to turn a default CF off. Required CFs are always
+      ## included and are not listed.
       ##
       ## To uncomment, remove `# ` (hash + space) so that indentation stays aligned.
       ## Most editors do this automatically with toggle-comment (Ctrl+/).
