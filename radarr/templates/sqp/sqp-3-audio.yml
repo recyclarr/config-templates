@@ -18,8 +18,13 @@ radarr:
 
     custom_format_groups:
       ################################################################################
-      ## These groups are NOT synced by default. Uncomment to enable. Use `select:` to
-      ## choose specific CFs within a group.
+      ## Uncommented groups are synced by default. They are listed here so you can
+      ## adjust which CFs they include. Commented groups are NOT synced; uncomment one
+      ## to enable it.
+      ##
+      ## Within a group, uncomment a line under `select:` to turn an optional CF on,
+      ## or under `exclude:` to turn a default CF off. Required CFs are always
+      ## included and are not listed.
       ##
       ## To uncomment, remove `# ` (hash + space) so that indentation stays aligned.
       ## Most editors do this automatically with toggle-comment (Ctrl+/).
@@ -28,23 +33,25 @@ radarr:
       ################################################################################
       add:
         - trash_id: ff204bbcecdd487d1cefcefdbf0c278d  # [Optional] Golden Rule UHD
+          exclude:
+            # - 839bea857ed2c0a8e084f3cbdbd65ecb  # x265 (no HDR/DV)
           select:
             # - dc98083864ea246d05a42df0d05f81cc  # x265 (HD)
-            - 839bea857ed2c0a8e084f3cbdbd65ecb  # x265 (no HDR/DV)
         - trash_id: 15b1cf0b6f1a1493856a4355907affee  # [Unwanted] Unwanted Formats SQP
+          exclude:
+            # - b6832f586342ef70d9c128d40c07b872  # Bad Dual Groups
+            # - cc444569854e9de0b084ab2b8b1532b2  # Black and White Editions
+            # - 0a3f082873eb454bde444150b70253cc  # Extras
+            # - e6886871085226c3da1830830146846c  # Generated Dynamic HDR
+            # - c465ccc73923871b3eb1802042331306  # Line/Mic Dubbed
+            # - 712d74cd88bceb883ee32f773656b1f5  # Sing-Along Versions
+            # - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
           select:
             # - a5d148168c4506b55cf53984107c396e  # 10bit
-            - b6832f586342ef70d9c128d40c07b872  # Bad Dual Groups
-            - cc444569854e9de0b084ab2b8b1532b2  # Black and White Editions
-            - 0a3f082873eb454bde444150b70253cc  # Extras
-            - e6886871085226c3da1830830146846c  # Generated Dynamic HDR
-            - c465ccc73923871b3eb1802042331306  # Line/Mic Dubbed
             # - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5  # No-RlsGroup
             # - 7357cf5161efbf8c4d5d0c30b4815ee2  # Obfuscated
             # - 5c44f52a8714fdd79bb4d98e2673be1f  # Retags
             # - f537cf427b64c38c8e36298f657e4828  # Scene
-            - 712d74cd88bceb883ee32f773656b1f5  # Sing-Along Versions
-            - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
         # - trash_id: 7fc2751eef7e6bdc70b74136e5e35c76  # [HDR Formats] DV (w/o HDR fallback)
         # - trash_id: 1616617ab3a14397a2b2321bcbda44d1  # [HDR Formats] DV Boost
         # - trash_id: b29413a7487478fe98228ce79e5689e4  # [HDR Formats] HDR10+ Boost

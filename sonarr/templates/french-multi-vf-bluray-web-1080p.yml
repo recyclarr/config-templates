@@ -21,8 +21,13 @@ sonarr:
 
     custom_format_groups:
       ################################################################################
-      ## These groups are NOT synced by default. Uncomment to enable. Use `select:` to
-      ## choose specific CFs within a group.
+      ## Uncommented groups are synced by default. They are listed here so you can
+      ## adjust which CFs they include. Commented groups are NOT synced; uncomment one
+      ## to enable it.
+      ##
+      ## Within a group, uncomment a line under `select:` to turn an optional CF on,
+      ## or under `exclude:` to turn a default CF off. Required CFs are always
+      ## included and are not listed.
       ##
       ## To uncomment, remove `# ` (hash + space) so that indentation stays aligned.
       ## Most editors do this automatically with toggle-comment (Ctrl+/).
@@ -31,23 +36,25 @@ sonarr:
       ################################################################################
       add:
         - trash_id: 158188097a58d7687dee647e04af0da3  # [Optional] Golden Rule HD
+          exclude:
+            # - 47435ece6b99a0b477caf360e79ba0bb  # x265 (HD)
           select:
-            - 47435ece6b99a0b477caf360e79ba0bb  # x265 (HD)
             # - 9b64dff695c2115facf1b6ea59c9bd07  # x265 (no HDR/DV)
         - trash_id: a23c8675c79118544fd74153394fa589  # [Unwanted] Unwanted Formats French
+          exclude:
+            # - 15a05bc7c1a36e2b57fd628f8977e2fc  # AV1
+            # - 85c61753df5da1fb2aab6f2a47426b09  # BR-DISK
+            # - fbcb31d8dabd2a319072b84fc0b7249c  # Extras
+            # - 3ba797e5dc13af4b8d9bb25e83d90de2  # FR LQ
+            # - 9c11cd3f07101cdba90a2d81cf0e56b4  # LQ
+            # - e2315f990da2e2cbfc9fa5b7a6fcfe48  # LQ (Release Title)
+            # - 23297a736ca77c0fc8e70f8edd7ee56c  # Upscaled
           select:
-            - 15a05bc7c1a36e2b57fd628f8977e2fc  # AV1
-            - 85c61753df5da1fb2aab6f2a47426b09  # BR-DISK
             # - 6f808933a71bd9666531610cb8c059cc  # BR-DISK (BTN)
             # - 21d9d08e39b05523ec36811ab06b8308  # BW
-            - fbcb31d8dabd2a319072b84fc0b7249c  # Extras
-            - 3ba797e5dc13af4b8d9bb25e83d90de2  # FR LQ
-            - 9c11cd3f07101cdba90a2d81cf0e56b4  # LQ
-            - e2315f990da2e2cbfc9fa5b7a6fcfe48  # LQ (Release Title)
             # - 82d40da2bc6923f41e14394075dd4b03  # No-RlsGroup
             # - e1a997ddb54e3ecbfe06341ad323c458  # Obfuscated
             # - 06d66ab109d4d2eddb2794d21526d140  # Retags
-            - 23297a736ca77c0fc8e70f8edd7ee56c  # Upscaled
         # - trash_id: d920fd959d220306888f40b6f38e1578  # [Optional] Season Packs
         # - trash_id: f54985e5e96747cef58731f1cf4c9181  # [Streaming Services] Anime
         # - trash_id: 35fb4585dcd9e2a5ac732e4309f5a45a  # [Streaming Services] Asian
