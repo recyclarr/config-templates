@@ -36,6 +36,7 @@ radarr:
       ################################################################################
       add:
         - trash_id: ff204bbcecdd487d1cefcefdbf0c278d  # [Optional] Golden Rule UHD
+          # Mutually exclusive: enable only one of the following.
           exclude:
             # - 839bea857ed2c0a8e084f3cbdbd65ecb  # x265 (no HDR/DV)
           select:
@@ -66,9 +67,10 @@ radarr:
         # - trash_id: 088a792e0561c927fb396664b0db5c8f  # [Streaming Services] Dutch
         # - trash_id: f737e18b5824d6ebb2d57b957ae2fd6c  # [Streaming Services] UK
         # - trash_id: 47f0d69750de9e16855915fa73bb7b08  # [HDR Formats] SDR
+        #   # Mutually exclusive: enable only one of the following.
         #   select:
         #     - 9c38ebb7384dada637be8899efa68e6f  # SDR
-        #     - 25c12f78430a3a23413652cbd1d48d77  # SDR (no WEBDL)
+        #     # - 25c12f78430a3a23413652cbd1d48d77  # SDR (no WEBDL)
         # - trash_id: bc3c13e52f2971319bc1748ffa3d1078  # [Optional] Accessibility
         #   select:
         #     - 127bdbadcf3e4463a8c707759fbaad75  # WiTH AD

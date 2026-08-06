@@ -169,6 +169,29 @@ def load_profile_groups(
     return []
 
 
+def load_conflicts(
+    guides_path: Path, json_paths: dict, service: str
+) -> list[frozenset[str]]:
+    """Load mutually exclusive CF sets from the guides.
+
+    Unlike the other resources, `conflicts` in metadata.json is a list of file
+    paths, not directories. A missing entry or file yields no sets, which makes
+    every conflict-driven behaviour inert rather than an error.
+    """
+    sets: list[frozenset[str]] = []
+    for rel_path in json_paths.get(service, {}).get("conflicts", []):
+        conflicts_file = guides_path / rel_path
+        if not conflicts_file.exists():
+            continue
+        with open(conflicts_file) as f:
+            data = json.load(f)
+        for entry in data.get("custom_formats", []):
+            ids = frozenset(entry)
+            if len(ids) >= 2:
+                sets.append(ids)
+    return sets
+
+
 def get_profile_group_name(
     profile_groups: list[dict], profile_trash_id: str
 ) -> str | None:
@@ -228,6 +251,7 @@ def build_template_specs(guides_path: Path) -> list[TemplateSpec]:
         profiles = load_profiles(guides_path, json_paths, service)
         cf_groups = load_cf_groups(guides_path, json_paths, service)
         profile_groups = load_profile_groups(guides_path, json_paths, service)
+        conflict_sets = load_conflicts(guides_path, json_paths, service)
 
         for profile in sorted(profiles.values(), key=lambda p: p.file_stem):
             group_name = get_profile_group_name(profile_groups, profile.trash_id)
@@ -256,6 +280,7 @@ def build_template_specs(guides_path: Path) -> list[TemplateSpec]:
                     optional_groups=optional,
                     default_groups=default,
                     choice_groups=choice,
+                    conflict_sets=conflict_sets,
                 )
             )
 

@@ -36,6 +36,7 @@ radarr:
       ################################################################################
       add:
         - trash_id: f8bf8eab4617f12dfdbd16303d8da245  # [Optional] Golden Rule HD
+          # Mutually exclusive: enable only one of the following.
           exclude:
             # - dc98083864ea246d05a42df0d05f81cc  # x265 (HD)
           select:

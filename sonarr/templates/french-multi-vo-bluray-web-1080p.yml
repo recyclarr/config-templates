@@ -36,6 +36,7 @@ sonarr:
       ################################################################################
       add:
         - trash_id: 158188097a58d7687dee647e04af0da3  # [Optional] Golden Rule HD
+          # Mutually exclusive: enable only one of the following.
           exclude:
             # - 47435ece6b99a0b477caf360e79ba0bb  # x265 (HD)
           select:
