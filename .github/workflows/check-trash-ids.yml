@@ -3,6 +3,9 @@ name: Check Trash IDs
 on:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   check_trash_ids:
     name: Check Trash IDs
@@ -10,12 +13,18 @@ jobs:
     steps:
       - name: Checkout Config Repo
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Checkout Trash Repo
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: TRaSH-Guides/Guides
           path: trash
+          persist-credentials: false
 
       - name: Check Trash IDs
         run: pwsh ci/CheckInvalidTrashIds.ps1 trash .
+
+      - name: Check Conflicting Custom Formats
+        run: python3 ci/check_conflicting_cfs.py trash .

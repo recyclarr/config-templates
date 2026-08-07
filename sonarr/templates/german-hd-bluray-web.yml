@@ -1,0 +1,107 @@
+# yaml-language-server: $schema=https://schemas.recyclarr.dev/v8/config-schema.json
+################################################################################
+## TRaSH Guides: [German] HD Bluray + WEB
+##
+## https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles-german-en/#hd-
+## bluray-web
+################################################################################
+
+sonarr:
+  sonarr-german-hd-bluray-web:
+    base_url: Put your Sonarr URL here
+    api_key: Put your API key here
+
+    quality_definition:
+      type: series
+
+    quality_profiles:
+      - trash_id: dca7e5e9e99c703bcbdaaa471dd40e98  # [German] HD Bluray + WEB
+        reset_unmatched_scores:
+          enabled: true
+
+    custom_format_groups:
+      ################################################################################
+      ## Uncommented groups are synced by default. They are listed here so you can
+      ## adjust which CFs they include. Commented groups are NOT synced; uncomment one
+      ## to enable it.
+      ##
+      ## Within a group, uncomment a line under `select:` to turn an optional CF on,
+      ## or under `exclude:` to turn a default CF off. Required CFs are always
+      ## included and are not listed.
+      ##
+      ## To uncomment, remove `# ` (hash + space) so that indentation stays aligned.
+      ## Most editors do this automatically with toggle-comment (Ctrl+/).
+      ##
+      ## https://recyclarr.dev/guide/cf-groups/
+      ################################################################################
+      add:
+        - trash_id: 158188097a58d7687dee647e04af0da3  # [Optional] Golden Rule HD
+          # Mutually exclusive: enable only one of the following.
+          exclude:
+            # - 47435ece6b99a0b477caf360e79ba0bb  # x265 (HD)
+          select:
+            # - 9b64dff695c2115facf1b6ea59c9bd07  # x265 (no HDR/DV)
+        - trash_id: 6f0872eebfc95b1f93474b7ac866ced0  # [Unwanted] Unwanted Formats German
+          exclude:
+            # - 15a05bc7c1a36e2b57fd628f8977e2fc  # AV1
+            # - 85c61753df5da1fb2aab6f2a47426b09  # BR-DISK
+            # - fbcb31d8dabd2a319072b84fc0b7249c  # Extras
+            # - a6a6c33d057406aaad978a6902823c35  # German LQ
+            # - d80c9f7cd2aad50271f1bd4e53125778  # German LQ (release title)
+            # - 237eda4ef550a97da2c9d87b437e500b  # German Microsized
+            # - 9c11cd3f07101cdba90a2d81cf0e56b4  # LQ
+            # - e2315f990da2e2cbfc9fa5b7a6fcfe48  # LQ (Release Title)
+            # - 23297a736ca77c0fc8e70f8edd7ee56c  # Upscaled
+          select:
+            # - 6f808933a71bd9666531610cb8c059cc  # BR-DISK (BTN)
+            # - 21d9d08e39b05523ec36811ab06b8308  # BW
+            # - 82d40da2bc6923f41e14394075dd4b03  # No-RlsGroup
+            # - e1a997ddb54e3ecbfe06341ad323c458  # Obfuscated
+            # - 06d66ab109d4d2eddb2794d21526d140  # Retags
+        # - trash_id: d920fd959d220306888f40b6f38e1578  # [Optional] Season Packs
+        # - trash_id: f54985e5e96747cef58731f1cf4c9181  # [Streaming Services] Anime
+        # - trash_id: 35fb4585dcd9e2a5ac732e4309f5a45a  # [Streaming Services] Asian
+        # - trash_id: f60f4401ce880aad62e9d21c8bb6b91a  # [Streaming Services] Dutch
+        # - trash_id: 848fd356c200568fc5a6248150e7e7ea  # [Streaming Services] French
+        # - trash_id: ddab3095a5d2f436f369263840af34f9  # [Streaming Services] UK
+        # - trash_id: bad5bc85573a0134e1e1987c46f67e98  # [Optional] Accessibility
+        #   select:
+        #     - 44ccbcbc74506f208973e1463b11705f  # WiTH AD
+        #     - c196536ea8122397c5854040d01f2aa7  # WiTH ASL
+        #     - b40dc2e630723745aab9f1b94f4aab74  # WiTH BASL
+        #     - 0aef382c4ed4c5eb5d40109dfd351b72  # WiTH BSL
+        # - trash_id: f4a0410a1df109a66d6e47dcadcce014  # [Optional] Miscellaneous
+        #   select:
+        #     - ef4963043b0987f8485bc9106f16db38  # DV (Disk)
+        #     - d7c747094a7c65f4c2de083c24899e8b  # FreeLeech
+        #     - 1bd69272e23c5e6c5b1d6c8a36fce95e  # HFR
+        #     - 5ab46ff851b76c337e13e81a4353875f  # INTERNAL
+        #     - 4aee45b0868229c4fbd8bad3e315f1d0  # MPEG2
+        #     - 7ba05c6e0e14e793538174c679126996  # MULTi
+        #     - 4a20cfb76b5f92a8ca22b894b32e71be  # Multi-Episode
+        #     - 09654d13ce1f0453496546dfd875b2a5  # P2P Internal
+        #     - e0c1a67f23908a55b6ae9834e8ed6727  # Single Episode
+        #     - 7470a681e6205243983c4410ee4c920f  # VC-1
+        #     - 90501962793d580d011511155c97e4e5  # VP9
+        #     - cddfb4e32db826151d97352b8e37c648  # x264
+        #     - c9eafd50846d299b862ca9bb6ea91950  # x265
+        #     - 041d90b435ebd773271cea047a457a6a  # x266
+        # - trash_id: 7832db22b71ab669458c17a2850d6913  # [Streaming Services] Miscellaneous
+        #   select:
+        #     - e6e299075e22ac8f541f722254c8350a  # AUBC
+        #     - defb0b4c8b3f6a15927c0f14c6e69c94  # CBC
+        #     - 543b0fb529e6b102837b8a9facdd82fb  # CNLP
+        #     - 4e9a630db98d5391aec1368a0256e2fe  # CRAV
+        #     - dc5f2bb0e0262155b5fedd0f6c5d2b55  # DSCP
+        #     - fb1a91cdc0f26f7ca0696e0e95274645  # OViD
+        #     - 3ac5d84fce98bab1b531393e9c82f467  # QIBI
+        #     - c30d2958827d1867c73318a5a2957eb1  # RED
+        #     - fe4062eac43d4ea75955f8ae48adcf1e  # STRP
+
+      ################################################################################
+      ## These groups ARE synced by default. Uncomment to disable.
+      ##
+      ## https://recyclarr.dev/guide/cf-groups/
+      ################################################################################
+      skip:
+        # - abe720fab2d27682adc2a735136cec02  # [Streaming Services] General
