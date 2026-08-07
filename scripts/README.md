@@ -76,8 +76,9 @@ A node with no members is omitted. In an uncommented group the `exclude:` and `s
 themselves stay uncommented, so toggling a CF is one uncomment rather than two. An empty node is
 valid: Recyclarr's schema types both as `["null", "array"]` and maps null to an empty list.
 
-Inside a commented (opt-in) group the whole block is commented, so `exclude:` members carry an extra
-comment level. Otherwise enabling the group would also strip its defaults.
+Inside a commented (opt-in) group the whole block is commented. Default CFs normally carry an extra
+comment level under `exclude:` so enabling the group keeps them. If a default conflicts with a
+required or earlier default CF, its exclusion activates with the group instead.
 
 ## Conflicting custom formats
 
@@ -93,9 +94,10 @@ Groups holding two or more members of one set gain a note:
   # Mutually exclusive: enable only one of the following.
 ```
 
-And in a commented group whose conflicting members all sit under `select:`, one member stays at the
-block's own comment level while the rest are nested one level deeper, so uncommenting the block
-enables exactly one:
+In a commented group, required CFs take precedence because they cannot be disabled. Otherwise the
+first default CF wins, followed by the first optional CF. The generator activates exclusions and
+nests selections as needed, so uncommenting the block enables at most one member of each conflict
+set:
 
 ```yaml
 # - trash_id: abc123  # [HDR Formats] SDR

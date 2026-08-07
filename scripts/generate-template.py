@@ -326,20 +326,38 @@ def group_has_conflict(group: CFGroup, conflict_sets: list[frozenset[str]]) -> b
     return any(len(ids & cs) >= 2 for cs in conflict_sets)
 
 
-def masked_select_ids(group: CFGroup, conflict_sets: list[frozenset[str]]) -> set[str]:
-    """Optional CFs needing an extra comment level inside a commented block.
+def commented_group_overrides(
+    group: CFGroup, conflict_sets: list[frozenset[str]]
+) -> tuple[set[str], set[str]]:
+    """Return default CFs to exclude and optional CFs to mask on opt-in.
 
-    For each conflict set with two or more optional members in this group, the
-    first in guide order stays at the block's level and the rest are masked, so
-    uncommenting the block activates exactly one.
+    Required CFs take precedence because they cannot be disabled. Otherwise,
+    guide order chooses a default CF before an optional CF. Every other member
+    of that conflict set is disabled when the user uncomments the group.
     """
-    order = [cf.trash_id for cf in group.optional_cfs]
-    masked: set[str] = set()
+    excluded_defaults: set[str] = set()
+    masked_optionals: set[str] = set()
     for cs in conflict_sets:
-        present = [t for t in order if t in cs]
+        present = [cf for cf in group.custom_formats if cf.trash_id in cs]
         if len(present) >= 2:
-            masked.update(present[1:])
-    return masked
+            required = [cf for cf in present if cf.required]
+            if len(required) > 1:
+                names = ", ".join(cf.name for cf in required)
+                raise ValueError(
+                    f"Group '{group.name}' has conflicting required CFs: {names}"
+                )
+
+            defaults = [cf for cf in present if cf.default]
+            winner = required[0] if required else (defaults or present)[0]
+            for cf in present:
+                if cf is winner or cf.required:
+                    continue
+                if cf.default:
+                    excluded_defaults.add(cf.trash_id)
+                else:
+                    masked_optionals.add(cf.trash_id)
+
+    return excluded_defaults, masked_optionals
 
 
 def render_group_entry(
@@ -371,11 +389,15 @@ def render_group_entry(
     block = "# " if commented else ""
     lines = [f"{indent}{block}- trash_id: {group.trash_id}  # {group.name}"]
 
-    masked = masked_select_ids(group, conflict_sets) if commented else set()
+    excluded_defaults: set[str] = set()
+    masked_optionals: set[str] = set()
+    if commented:
+        excluded_defaults, masked_optionals = commented_group_overrides(
+            group, conflict_sets
+        )
     if group_has_conflict(group, conflict_sets):
         lines.append(
-            f"{indent}{block}  "
-            "# Mutually exclusive: enable only one of the following."
+            f"{indent}{block}  # Mutually exclusive: enable only one of the following."
         )
 
     for node, cfs in (("exclude", group.default_cfs), ("select", group.optional_cfs)):
@@ -386,9 +408,9 @@ def render_group_entry(
             if not commented:
                 mark = "# "
             elif node == "exclude":
-                mark = "# "
+                mark = "" if cf.trash_id in excluded_defaults else "# "
             else:
-                mark = "# " if cf.trash_id in masked else ""
+                mark = "# " if cf.trash_id in masked_optionals else ""
             lines.append(f"{indent}{block}    {mark}- {cf.trash_id}  # {cf.name}")
 
     return lines

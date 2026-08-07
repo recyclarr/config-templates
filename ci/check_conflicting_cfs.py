@@ -21,32 +21,32 @@ might do after editing a template.
 import importlib.util
 import re
 import sys
+from dataclasses import dataclass, field
 from pathlib import Path
-
-GUIDES = Path(sys.argv[1])
-REPO = Path(sys.argv[2])
-
-_spec = importlib.util.spec_from_file_location(
-    "gen", REPO / "scripts" / "generate-template.py"
-)
-gen = importlib.util.module_from_spec(_spec)
-# Register before exec: @dataclass resolves cls.__module__ via sys.modules.
-sys.modules["gen"] = gen
-_spec.loader.exec_module(gen)
 
 GROUP_RE = re.compile(r"^(?P<pre>[^-]*)- trash_id:\s*(?P<id>[a-f0-9]{32})")
 NODE_RE = re.compile(r"^(?P<pre>[^a-z]*)(?P<node>select|exclude):\s*$")
 BARE_RE = re.compile(r"^(?P<pre>[^-]*)-\s*(?P<id>[a-f0-9]{32})")
 PROFILE_RE = re.compile(r"^\s*- trash_id:\s*([a-f0-9]{32})\s*#")
 
-exit_code = 0
+
+@dataclass
+class AddEntry:
+    active: bool
+    select: set[str] = field(default_factory=set)
+    exclude: set[str] = field(default_factory=set)
 
 
-def error(file: Path, line: int, message: str) -> None:
-    global exit_code
-    rel = file.relative_to(REPO).as_posix()
+@dataclass
+class CommentedEntry:
+    line: int
+    select: dict[str, int] = field(default_factory=dict)
+    exclude: dict[str, int] = field(default_factory=dict)
+
+
+def error(repo: Path, file: Path, line: int, message: str) -> None:
+    rel = file.relative_to(repo).as_posix()
     print(f"::error file={rel},line={line},title=Conflicting Custom Formats::{message}")
-    exit_code = 1
 
 
 def depth(pre: str) -> int:
@@ -54,22 +54,23 @@ def depth(pre: str) -> int:
     return pre.count("#")
 
 
-def check_service(service: str) -> None:
-    json_paths = gen.load_guides(GUIDES)
-    conflict_sets = gen.load_conflicts(GUIDES, json_paths, service)
+def check_service(guides: Path, repo: Path, gen, service: str) -> bool:
+    json_paths = gen.load_guides(guides)
+    conflict_sets = gen.load_conflicts(guides, json_paths, service)
     if not conflict_sets:
         print(
             "::warning title=Conflicting Custom Formats::"
             f"No conflict sets found for {service}; nothing to check"
         )
-        return
+        return True
 
-    cf_groups = gen.load_cf_groups(GUIDES, json_paths, service)
+    cf_groups = gen.load_cf_groups(guides, json_paths, service)
     names = {
         cf.trash_id: cf.name for g in cf_groups.values() for cf in g.custom_formats
     }
 
-    for path in sorted((REPO / service / "templates").rglob("*.yml")):
+    valid = True
+    for path in sorted((repo / service / "templates").rglob("*.yml")):
         print(f"Processing {path}")
         lines = path.read_text(encoding="utf-8").splitlines()
 
@@ -78,10 +79,9 @@ def check_service(service: str) -> None:
         group_id = None
         group_depth = 0
         node = None
-        adds: dict[str, dict] = {}
+        adds: dict[str, AddEntry] = {}
         skips: set[str] = set()
-        # group id -> [(line number, cf id)] for select members at block depth
-        base_level: dict[str, list[tuple[int, str]]] = {}
+        commented: dict[str, CommentedEntry] = {}
 
         for i, raw in enumerate(lines, start=1):
             stripped = raw.strip()
@@ -110,12 +110,9 @@ def check_service(service: str) -> None:
                 if m:
                     group_id = m.group("id")
                     group_depth = depth(m.group("pre"))
-                    adds[group_id] = {
-                        "active": group_depth == 0,
-                        "select": set(),
-                        "exclude": set(),
-                    }
-                    base_level[group_id] = []
+                    adds[group_id] = AddEntry(active=group_depth == 0)
+                    if group_depth > 0:
+                        commented[group_id] = CommentedEntry(line=i)
                     node = None
                     continue
                 m = NODE_RE.match(raw)
@@ -126,9 +123,9 @@ def check_service(service: str) -> None:
                 if m and group_id and node:
                     d = depth(m.group("pre"))
                     if d == 0:
-                        adds[group_id][node].add(m.group("id"))
-                    if node == "select" and d == group_depth and group_depth > 0:
-                        base_level[group_id].append((i, m.group("id")))
+                        getattr(adds[group_id], node).add(m.group("id"))
+                    if d == group_depth and group_id in commented:
+                        getattr(commented[group_id], node)[m.group("id")] = i
                 continue
 
             if section == "skip":
@@ -138,7 +135,8 @@ def check_service(service: str) -> None:
                 continue
 
         if profile_id is None:
-            error(path, 1, "No quality profile trash_id found")
+            error(repo, path, 1, "No quality profile trash_id found")
+            valid = False
             continue
 
         # Pass A: what this template actually syncs
@@ -149,12 +147,12 @@ def check_service(service: str) -> None:
             if group.trash_id in skips:
                 continue
             entry = adds.get(group.trash_id)
-            enabled = group.is_default or (entry is not None and entry["active"])
+            enabled = group.is_default or (entry is not None and entry.active)
             if not enabled:
                 continue
             base = {c.trash_id for c in group.custom_formats if c.required or c.default}
             if entry is not None:
-                base = (base - entry["exclude"]) | entry["select"]
+                base = (base - entry.exclude) | entry.select
             effective |= base
 
         for cs in conflict_sets:
@@ -162,27 +160,70 @@ def check_service(service: str) -> None:
             if len(clash) > 1:
                 labels = ", ".join(f"{names.get(t, t)} ({t})" for t in clash)
                 error(
+                    repo,
                     path,
                     1,
                     f"Effective CF set enables conflicting formats: {labels}",
                 )
+                valid = False
 
         # Pass B: what one uncomment of a commented block would activate
-        for gid, entries in base_level.items():
+        for gid, entry in commented.items():
+            group = cf_groups.get(gid)
+            if group is None:
+                continue
+            base = {
+                cf.trash_id for cf in group.custom_formats if cf.required or cf.default
+            }
+            effective = (base - entry.exclude.keys()) | entry.select.keys()
             for cs in conflict_sets:
-                clash = [(ln, t) for ln, t in entries if t in cs]
+                clash = sorted(effective & cs)
                 if len(clash) > 1:
-                    labels = ", ".join(f"{names.get(t, t)} ({t})" for _, t in clash)
-                    gname = cf_groups[gid].name if gid in cf_groups else gid
+                    labels = ", ".join(f"{names.get(t, t)} ({t})" for t in clash)
+                    lines = [
+                        entry.select.get(t) or entry.exclude.get(t)
+                        for t in clash
+                        if t in entry.select or t in entry.exclude
+                    ]
                     error(
+                        repo,
                         path,
-                        clash[1][0],
-                        f"Group '{gname}': uncommenting this block would enable "
+                        lines[-1] if lines else entry.line,
+                        f"Group '{group.name}': uncommenting this block would enable "
                         f"conflicting formats: {labels}",
                     )
+                    valid = False
+
+    return valid
 
 
-for svc in gen.SERVICES:
-    check_service(svc)
+def load_generator(repo: Path):
+    spec = importlib.util.spec_from_file_location(
+        "template_generator", repo / "scripts" / "generate-template.py"
+    )
+    if spec is None or spec.loader is None:
+        raise RuntimeError("Unable to load template generator")
+    gen = importlib.util.module_from_spec(spec)
+    # @dataclass resolves the module through sys.modules while it executes.
+    sys.modules[spec.name] = gen
+    spec.loader.exec_module(gen)
+    return gen
 
-sys.exit(exit_code)
+
+def main(argv: list[str]) -> int:
+    if len(argv) != 2:
+        print(
+            "Usage: check_conflicting_cfs.py "
+            "<path-to-trash-guides> <path-to-config-repo>",
+            file=sys.stderr,
+        )
+        return 2
+
+    guides, repo = map(Path, argv)
+    gen = load_generator(repo)
+    results = [check_service(guides, repo, gen, svc) for svc in gen.SERVICES]
+    return 0 if all(results) else 1
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))
