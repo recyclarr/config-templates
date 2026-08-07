@@ -29,13 +29,17 @@ radarr:
       add:
         - trash_id: 15b1cf0b6f1a1493856a4355907affee  # [Unwanted] Unwanted Formats SQP
           select:
+            # - a5d148168c4506b55cf53984107c396e  # 10bit
             - b6832f586342ef70d9c128d40c07b872  # Bad Dual Groups
             - cc444569854e9de0b084ab2b8b1532b2  # Black and White Editions
+            - 0a3f082873eb454bde444150b70253cc  # Extras
             - e6886871085226c3da1830830146846c  # Generated Dynamic HDR
+            - c465ccc73923871b3eb1802042331306  # Line/Mic Dubbed
             # - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5  # No-RlsGroup
             # - 7357cf5161efbf8c4d5d0c30b4815ee2  # Obfuscated
             # - 5c44f52a8714fdd79bb4d98e2673be1f  # Retags
             # - f537cf427b64c38c8e36298f657e4828  # Scene
+            - 712d74cd88bceb883ee32f773656b1f5  # Sing-Along Versions
             - bfd8eb01832d646a0a89c4deb46f8564  # Upscaled
         # - trash_id: b22449f789b16a4163b59f1b70cbc580  # [Streaming Services] Asian
         # - trash_id: 088a792e0561c927fb396664b0db5c8f  # [Streaming Services] Dutch
@@ -77,6 +81,7 @@ radarr:
         #   select:
         #     - 3bf143ecd06f66ed88da4c704350af1d  # AUBC
         #     - d9058beaae2e147183870304dd526761  # CBC
+        #     - 1f9dfb4b8d9cae1f6dc0099547d53513  # CNLP
         #     - f6ff65b3f4b464a79dcc75950fe20382  # CRAV
         #     - fbca986396c5e695ef7b2def3c755d01  # OViD
         #     - ab56ccdc473a1f2897c76187ea365be2  # STRP

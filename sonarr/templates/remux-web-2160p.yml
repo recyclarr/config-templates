@@ -1,13 +1,10 @@
 # yaml-language-server: $schema=https://schemas.recyclarr.dev/v8/config-schema.json
 ################################################################################
-## TRaSH Guides: [German] UHD Remux + WEB
-##
-## https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles-german-
-## en/#uhd-remux-web-2160p
+## TRaSH Guides: Remux + WEB 2160p
 ################################################################################
 
 sonarr:
-  sonarr-german-uhd-remux-web:
+  sonarr-remux-web-2160p:
     base_url: Put your Sonarr URL here
     api_key: Put your API key here
 
@@ -15,7 +12,7 @@ sonarr:
       type: series
 
     quality_profiles:
-      - trash_id: 08cececf1840290f6fd490b7d79e8642  # [German] UHD Remux + WEB
+      - trash_id: 76a5053bdb2d1e4a8f16a69a37d46c12  # Remux + WEB 2160p
         reset_unmatched_scores:
           enabled: true
 
@@ -34,23 +31,38 @@ sonarr:
           select:
             # - 47435ece6b99a0b477caf360e79ba0bb  # x265 (HD)
             - 9b64dff695c2115facf1b6ea59c9bd07  # x265 (no HDR/DV)
-        - trash_id: 6f0872eebfc95b1f93474b7ac866ced0  # [Unwanted] Unwanted Formats German
+        - trash_id: 74aff4168620ed49dcc67e92b2c2a5b4  # [Optional] Language Profiles
+          select:
+            # - 8a9fcdbb445f2add0505926df3bb7b8a  # German
+            # - ed51973a811f51985f14e2f6f290e47a  # German DL
+            # - c5dd0fd675f85487ad5bdf97159180bd  # German DL (undefined)
+            # - 69aa1e159f97d860440b04cd6d590c4f  # Language: Not English
+            # - 322fca6f8f3694acc1401ddb530fd33d  # Language: Not French
+            - ae575f95ab639ba5d15f663bf019e3e8  # Language: Not Original
+            # - 10e77b96ae4770a7de645a91a53ce29a  # Language: Original + French
+            # - 133589380b89f8f8394320901529bac1  # Not German or English
+            # - 51ba9721e1d951e9ffccb3d939831941  # Not German, Japanese or English
+            # - 1d1481d01b60a0274d81685b3ccbf7d0  # Not German, Japanese, Korean, Chinese or English
+            # - 1fb6283bd05ab5c6a728cb213e5d07d8  # Wrong Language
+        - trash_id: 85fae4a2294965b75710ef2989c850eb  # [Streaming Services] HD/UHD boost
+          select:
+            - 218e93e5702f44a68ad9e3c6ba87d2f0  # HD Streaming Boost
+            - 43b3cf48cb385cd3eac608ee6bca7f09  # UHD Streaming Boost
+        - trash_id: 59c3af66780d08332fdc64e68297098f  # [Unwanted] Unwanted Formats
           select:
             - 15a05bc7c1a36e2b57fd628f8977e2fc  # AV1
+            - 32b367365729d530ca1c124a0b180c64  # Bad Dual Groups
             - 85c61753df5da1fb2aab6f2a47426b09  # BR-DISK
             # - 6f808933a71bd9666531610cb8c059cc  # BR-DISK (BTN)
             # - 21d9d08e39b05523ec36811ab06b8308  # BW
             - fbcb31d8dabd2a319072b84fc0b7249c  # Extras
-            - a6a6c33d057406aaad978a6902823c35  # German LQ
-            - d80c9f7cd2aad50271f1bd4e53125778  # German LQ (release title)
-            - 237eda4ef550a97da2c9d87b437e500b  # German Microsized
             - 9c11cd3f07101cdba90a2d81cf0e56b4  # LQ
             - e2315f990da2e2cbfc9fa5b7a6fcfe48  # LQ (Release Title)
             # - 82d40da2bc6923f41e14394075dd4b03  # No-RlsGroup
             # - e1a997ddb54e3ecbfe06341ad323c458  # Obfuscated
             # - 06d66ab109d4d2eddb2794d21526d140  # Retags
+            # - 1b3994c551cbb92a2c781af061f4ab44  # Scene
             - 23297a736ca77c0fc8e70f8edd7ee56c  # Upscaled
-        # - trash_id: d776a1ea912a117d66d83b880ff2055d  # [HDR Formats] DV (w/o HDR fallback)
         # - trash_id: e0b2774083df4265f25c9e5bc6c80940  # [HDR Formats] DV Boost
         # - trash_id: 7d366c213e5c23a052b157356fac1921  # [HDR Formats] HDR10+ Boost
         # - trash_id: d920fd959d220306888f40b6f38e1578  # [Optional] Season Packs
@@ -58,7 +70,10 @@ sonarr:
         # - trash_id: 35fb4585dcd9e2a5ac732e4309f5a45a  # [Streaming Services] Asian
         # - trash_id: f60f4401ce880aad62e9d21c8bb6b91a  # [Streaming Services] Dutch
         # - trash_id: 848fd356c200568fc5a6248150e7e7ea  # [Streaming Services] French
-        # - trash_id: ddab3095a5d2f436f369263840af34f9  # [Streaming Services] UK
+        # - trash_id: e9a1944a254e6f8a9da63083f7ae15cb  # [Audio] Audio Formats
+        #   select:
+        #     - 3e8b714263b26f486972ee1e0fe7606c  # MP3
+        #     - 28f6ef16d61e2d1adfce3156ed8257e3  # Opus
         # - trash_id: e1053c0ef622df3749fa43c22865663a  # [HDR Formats] SDR
         #   select:
         #     - 2016d1676f5ee13a5b7257ff86ac9a93  # SDR

@@ -30,6 +30,7 @@ sonarr:
       ## https://recyclarr.dev/guide/cf-groups/
       ################################################################################
       add:
+        # - trash_id: f54985e5e96747cef58731f1cf4c9181  # [Streaming Services] Anime
         # - trash_id: 35fb4585dcd9e2a5ac732e4309f5a45a  # [Streaming Services] Asian
         # - trash_id: f60f4401ce880aad62e9d21c8bb6b91a  # [Streaming Services] Dutch
         # - trash_id: 848fd356c200568fc5a6248150e7e7ea  # [Streaming Services] French
@@ -56,27 +57,17 @@ sonarr:
         #     - cddfb4e32db826151d97352b8e37c648  # x264
         #     - c9eafd50846d299b862ca9bb6ea91950  # x265
         #     - 041d90b435ebd773271cea047a457a6a  # x266
-        # - trash_id: f54985e5e96747cef58731f1cf4c9181  # [Streaming Services] Anime
-        #   select:
-        #     - a370d974bc7b80374de1d9ba7519760b  # ABEMA
-        #     - d54cd2bf1326287275b56bccedb72ee2  # ADN
-        #     - 7dd31f3dee6d2ef8eeaa156e23c3857e  # B-Global
-        #     - 4c67ff059210182b59cdd41697b8cb08  # Bilibili
-        #     - 3e0b26604165f463f3e8e192261e7284  # CR
-        #     - 1284d18e693de8efe0fe7d6b3e0b9170  # FUNi
-        #     - 570b03b3145a25011bf073274a407259  # HIDIVE
-        #     - 44a8ee6403071dd7b8a3a8dd3fe8cb20  # VRV
-        #     - e5e6405d439dcd1af90962538acd4fe0  # WKN
         # - trash_id: 7832db22b71ab669458c17a2850d6913  # [Streaming Services] Miscellaneous
         #   select:
         #     - e6e299075e22ac8f541f722254c8350a  # AUBC
         #     - defb0b4c8b3f6a15927c0f14c6e69c94  # CBC
+        #     - 543b0fb529e6b102837b8a9facdd82fb  # CNLP
         #     - 4e9a630db98d5391aec1368a0256e2fe  # CRAV
         #     - dc5f2bb0e0262155b5fedd0f6c5d2b55  # DSCP
         #     - fb1a91cdc0f26f7ca0696e0e95274645  # OViD
-        #     - fe4062eac43d4ea75955f8ae48adcf1e  # STRP
-        #     - c30d2958827d1867c73318a5a2957eb1  # RED
         #     - 3ac5d84fce98bab1b531393e9c82f467  # QIBI
+        #     - c30d2958827d1867c73318a5a2957eb1  # RED
+        #     - fe4062eac43d4ea75955f8ae48adcf1e  # STRP
 
       ################################################################################
       ## These groups ARE synced by default. Uncomment to disable.
