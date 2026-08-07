@@ -11,13 +11,12 @@ Guidance for AI agents working with this repository.
 
 ## Branching
 
-Version-aware branches track Recyclarr major versions. Recyclarr auto-selects: `v{major}` then
-`master` then `main`.
+`master` contains templates for the current Recyclarr release. A `v{major}` branch exists only while
+an incompatible upcoming major version is in development.
 
 - **Before any work**: Verify checked-out branch matches intent
-- **New features/breaking changes**: Target `v{major}` branch (e.g., `v8` for Recyclarr 8.x)
-- **`master`**: Maintenance mode for older versions - critical fixes only
-- Breaking changes (ID removals, schema changes) are acceptable on version branches
+- Target `master` unless the required version branch exists
+- Merge a released version branch into `master`, then delete it
 
 See `CONTRIBUTING.md` for full branching policy.
 
@@ -52,28 +51,16 @@ To find groups for a profile: search `cf-groups/` for the profile's trash_id.
 
 ## Structure
 
-Two-tier template system:
-
-- `templates.json` - Maps template IDs to top-level files (user-facing entry points)
-- `includes.json` - Maps include IDs to reusable components
-
-Top-level templates reference includes via `include:` directive using IDs from `includes.json`.
+Templates are self-contained and reference guide resources directly. `templates.json` maps
+user-facing IDs to template files.
 
 ```txt
 radarr/
-  templates/           # Top-level templates (referenced in templates.json)
-  includes/
-    custom-formats/    # Custom format definitions
-    quality-definitions/
-    quality-profiles/
-    sqp/               # Special Quality Profiles (storage-optimized)
+  templates/
+    sqp/               # Storage-optimized profiles
 
 sonarr/
-  templates/           # Top-level templates for Sonarr v4
-  includes/
-    custom-formats/
-    quality-definitions/
-    quality-profiles/
+  templates/
 ```
 
 ### Naming Conventions
@@ -87,8 +74,7 @@ Templates: `{resolution}-{source}-{language-variant}.yml`
 
 ## Constraints
 
-- Templates MUST include `Updated:` date in header comment
-- Modified templates MUST update date to current `YYYY-MM-DD`
+- Templates MUST reference the schema for their Recyclarr major version
 - Template headers MUST include documentation links
 
 ## Commits & PRs
@@ -98,8 +84,8 @@ carefully.
 
 ### Type Selection
 
-- `feat:` - New files in `*/templates/**`, `*/includes/**`, or new entries in `*.json`
-- `fix:` - Modifications to existing template/include files
+- `feat:` - New files in `*/templates/**` or new entries in `templates.json`
+- `fix:` - Modifications to existing template files
 - `docs:` - `*.md`, `LICENSE`
 - `ci:` - `.github/workflows/**`
 - `chore:` - Everything else (default)
@@ -108,19 +94,18 @@ carefully.
 
 - `radarr/**` - `(radarr)`
 - `sonarr/**` - `(sonarr)`
-- `templates.json`, `includes.json` - `(config)`
+- `templates.json` - `(config)`
 
 ### Breaking Changes (!)
 
-- Template or include ID renames/removals
+- Template ID renames/removals
 - Schema changes requiring user config updates
 
 ### CI Checks
 
 - `yaml-lint.yml` - YAML syntax (all pushes/PRs)
 - `check-paths.yml` - Paths in `templates.json` exist
-- `check-trash-ids.yml` - Trash IDs valid against TRaSH-Guides (PRs only)
-- `check-dates.yml` - `Updated:` dates in headers (PRs only)
+- `check-trash-ids.yml` - Trash IDs and CF conflicts valid against TRaSH-Guides (PRs only)
 
 ## Skills
 

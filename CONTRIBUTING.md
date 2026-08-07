@@ -10,28 +10,20 @@ TRaSH Guides recommendations to Radarr/Sonarr.
 
 ## Template System
 
-Two-tier structure with registry files at the root:
+Templates are self-contained YAML files that reference quality profiles and custom format groups
+from TRaSH Guides.
 
-- `templates.json` - Maps template IDs to top-level files (user-facing entry points)
-- `includes.json` - Maps include IDs to reusable components
-
-Top-level templates reference includes via `include:` directive using IDs from `includes.json`.
+- `templates.json` maps user-facing template IDs to template files.
+- `radarr/templates/` contains Radarr templates.
+- `sonarr/templates/` contains Sonarr templates.
 
 ```txt
 radarr/
-  templates/           # Top-level templates (referenced in templates.json)
-  includes/
-    custom-formats/    # Custom format definitions
-    quality-definitions/
-    quality-profiles/
-    sqp/               # Special Quality Profiles (storage-optimized)
+  templates/
+    sqp/               # Storage-optimized profiles
 
 sonarr/
-  templates/           # Top-level templates for Sonarr v4
-  includes/
-    custom-formats/
-    quality-definitions/
-    quality-profiles/
+  templates/
 ```
 
 ## File Requirements
@@ -47,18 +39,17 @@ Templates: `{resolution}-{source}-{language-variant}.yml`
 
 ### Header Format
 
-All templates must include a header comment block:
+Each template must start with the schema for its Recyclarr major version and link to the matching
+TRaSH Guides documentation:
 
 ```yaml
-###################################################################################################
-# Recyclarr Configuration Template: {Template Name}                                               #
-# Updated: YYYY-MM-DD                                                                             #
-# Documentation: https://recyclarr.dev                                                            #
-###################################################################################################
+# yaml-language-server: $schema=https://schemas.recyclarr.dev/v8/config-schema.json
+################################################################################
+## TRaSH Guides: {Template Name}
+##
+## https://trash-guides.info/{Guide Path}
+################################################################################
 ```
-
-- `Updated:` date is required and must be current when modifying a template
-- CI will fail if the date is missing or stale on PRs
 
 ## Local Testing
 
@@ -77,9 +68,8 @@ See [yamllint#530](https://github.com/adrienverge/yamllint/issues/530#issuecomme
 PRs are validated by:
 
 - `yaml-lint.yml` - YAML syntax
-- `check-paths.yml` - Paths in `templates.json`/`includes.json` exist
-- `check-trash-ids.yml` - Trash IDs are valid against TRaSH-Guides
-- `check-dates.yml` - `Updated:` dates are present in headers
+- `check-paths.yml` - Paths in `templates.json` exist
+- `check-trash-ids.yml` - Trash IDs and CF conflicts are valid against TRaSH-Guides
 
 ## Commit Conventions
 
@@ -87,8 +77,8 @@ Commits with `feat:` or `fix:` trigger Discord notifications. Choose types caref
 
 ### Type Selection
 
-- `feat:` - New templates, includes, or registry entries
-- `fix:` - Modifications to existing template/include files
+- `feat:` - New templates or registry entries
+- `fix:` - Modifications to existing templates
 - `docs:` - Markdown files, LICENSE
 - `ci:` - Workflow files
 - `chore:` - Everything else
@@ -97,51 +87,47 @@ Commits with `feat:` or `fix:` trigger Discord notifications. Choose types caref
 
 - `(radarr)` - Changes under `radarr/`
 - `(sonarr)` - Changes under `sonarr/`
-- `(config)` - Changes to `templates.json` or `includes.json`
+- `(config)` - Changes to `templates.json`
 
 ### Breaking Changes
 
 Add `!` suffix for breaking changes:
 
-- Template or include ID renames/removals
+- Template ID renames or removals
 - Schema changes requiring user config updates
 
 Example: `feat(radarr)!: rename hd-bluray-web template`
 
 ## Branching Strategy
 
-Config-templates uses version-aware branches to maintain compatibility across Recyclarr major
-versions.
+`master` contains templates for the current Recyclarr release. Version branches isolate changes
+that require an unreleased Recyclarr major version.
 
 ### Branch Structure
 
-- `v{major}` branches (e.g., `v8`, `v9`): Templates for specific Recyclarr major versions
-- `master`: Fallback branch, serves older versions without a dedicated branch
+- `master`: Templates for the current release
+- `v{major}`: Temporary development branch for an incompatible upcoming major release
 
 ### How Recyclarr Selects Branches
 
 Recyclarr automatically selects the appropriate branch:
 
-1. Tries `v{major}` matching its version (e.g., Recyclarr 8.x tries `v8`)
+1. Tries `v{major}` matching its version
 2. Falls back to `master`, then `main`
 
 Users can override with explicit `reference` in `settings.yml`.
 
 ### Which Branch to Target
 
-- **New features**: Target `v{major}` for current/upcoming Recyclarr release
-- **Critical fixes for older versions**: May be applied to `master` on a case-by-case basis
+- Target `master` unless a version branch exists for the change's required Recyclarr major.
+- Target that version branch for changes incompatible with the current release.
 
 ### Support Policy
 
 Template maintainers are not expected to backport updates or maintain multiple versions. Users on
 older Recyclarr versions experiencing template drift should upgrade.
 
-### Creating a New Version Branch
+### Version Branch Lifecycle
 
-When a new Recyclarr major version releases:
-
-1. Create `v{new}` from the previous version branch (or `master` if none exists)
-2. Previous branch enters maintenance mode (critical fixes only)
-
-Example for v9: create `v9` from `v8`, then `v8` becomes maintenance-only.
+Create `v{new}` from `master` when development first requires incompatible templates. After that
+Recyclarr major version is released, merge the version branch into `master` and delete it.
